@@ -47,7 +47,7 @@ export default function App() {
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 transition-all duration-300 py-3"
             >
               Notify Me
             </button>
