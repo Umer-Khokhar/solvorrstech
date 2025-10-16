@@ -1,0 +1,45 @@
+import { services } from "../../constants";
+import Link from 'next/link'
+import { Heading } from "../";
+import Arrow from "../../assets/svg/Arrow";
+import { GradientLight } from "../design/Benefits";
+import SubClip from "@/app/assets/svg/SubClip";
+
+
+const SubServices = () => {
+    return (
+        <div id="sub-services" className={"pt-[5rem] py-12 xl:py-16"}>
+            <div className="container relative z-2">
+                <Heading
+                    className="w-full md:max-w-md lg:max-w-4xl"
+                    title="Build Smart Systems With Solvorr"
+                />
+
+                <div className="flex flex-wrap justify-center gap-10 mb-10">
+                    {services.map((benefit) => (
+                        <div
+                            className="block z-1 relative p-0.5 bg-no-repeat bg-cover bg-center md:max-w-[24rem] max-h-[20rem]"
+                            key={benefit.id}
+                        >
+                                    <img src={benefit.iconUrl} alt={benefit.title} loading="lazy" className={"absolute top-2 left-4 w-12 h-12"} />
+                            <div className="relative z-2 mt-10 flex flex-col min-h-[22rem] p-[2.4rem]">
+                                <h3 className="h5 mb-5">{benefit.title}</h3>
+                                <p className="body-2 text-n-3">{benefit.text}</p>
+                            </div>
+                            <div
+                                className="absolute inset-0.5 bg-[#0A1628]"
+                                style={{
+                                    clipPath: "url(#subCard)",
+                                }}
+                            >
+                            </div>
+                            <SubClip />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SubServices;
