@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Search, Calendar, Clock, ArrowUpRight, Tag, TrendingUp, User } from 'lucide-react';
+import Link from "next/link";
 
 const BlogPage = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -166,6 +167,7 @@ const BlogPage = () => {
                                     border: '1px solid #1E293B'
                                 }}
                             >
+                            <Link href={"/blog/details"}>
                                 {/* Image Container */}
                                 <div className="relative h-64 p-4 overflow-hidden">
                                     <img
@@ -216,6 +218,7 @@ const BlogPage = () => {
                                         <span style={{ color: '#64748B' }}>{post.date}</span>
                                     </div>
                                 </div>
+                            </Link>
                             </article>
                         ))}
                     </div>
