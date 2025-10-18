@@ -6,7 +6,7 @@ const ServiceCard = ({ icon: Icon, title, description, tags, illustration, class
     return (
         <div className={`group relative bg-gradient-to-br ${className} from-slate-800/40 to-slate-900/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1`}>
             {/* Illustration Area */}
-            <div className={`mb-6  ${isTall ? "h-[700px]" : "h-48"} bg-slate-900/50 rounded-xl flex items-center justify-center relative overflow-hidden`}>
+            <div className={`mb-6  ${isTall ? "h-52 md:h-[700px]" : "h-48"} bg-slate-900/50 rounded-xl flex items-center justify-center relative overflow-hidden`}>
                 {illustration}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-slate-900/5"></div>
             </div>
@@ -304,11 +304,11 @@ export default function Benefit() {
                     {services.slice(0, 3).map((service, index) => (
 
                             <ServiceCard {...service} id={service.id} key={service.id}  className={`
-        ${index === 0 ? "row-span-2 col-span-2" : ""} 
+        ${index === 0 ? "md:row-span-2 md:col-span-2" : ""} col-span-1 row-span-1
       `}/>
 
                     ))}
-                    <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="col-span-1 sm:col-span-2 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
                         {services.slice(3, 5).map((service, index) => (
 
                                 <ServiceCard {...service} key={service.id} id={service.id}/>

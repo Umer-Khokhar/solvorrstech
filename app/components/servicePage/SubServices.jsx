@@ -10,10 +10,7 @@ const SubServices = () => {
     return (
         <div id="sub-services" className={"pt-[5rem] py-12 xl:py-16"}>
             <div className="container relative z-2">
-                <Heading
-                    className="w-full md:max-w-md lg:max-w-4xl"
-                    title="Build Smart Systems With Solvorr"
-                />
+                <h2 className="h2 text-center mb-8">Build Smart Systems With Solvorr</h2>
 
                 <div className="flex flex-wrap justify-center gap-10 mb-10">
                     {services.map((benefit) => (

@@ -19,8 +19,8 @@ export default function FloatingGlassHeader() {
     const navItems = [
         { name: 'About', href: '/about' },
         { name: 'Services', href: '/service' },
-        { name: 'Products', href: '/products' },
-        { name: 'Resources', href: '/resources' },
+        { name: 'Portfolio', href: '/portfolio' },
+        { name: 'Blogs', href: '/blogs' },
         { name: 'Pricing', href: '/pricing' }
     ];
 
@@ -31,20 +31,17 @@ export default function FloatingGlassHeader() {
                 <nav className={`
           max-w-7xl mx-auto transition-all duration-300 ease-in-out
           ${isScrolled
-                    ? 'bg-black/30 backdrop-blur-md border border-white/20 shadow-lg shadow-black/5'
-                    : 'bg-black/20 backdrop-blur-sm border border-white/10'
+                    ? 'bg-black/30 backdrop-blur-md border border-white/30 shadow-lg shadow-black/5'
+                    : 'bg-black/20 backdrop-blur-sm border border-white/20'
                 }
-          rounded-full px-6 py-3
+           ${isMobileMenuOpen ? "rounded-lg" : "rounded-full"} px-6 py-3
         `}>
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
-                            <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">S</span>
-                            </div>
-                            <span className="text-white font-semibold text-lg hidden sm:block">
-                Solvorr Tech
-              </span>
+                            <Link href={"/"}>
+                            <img src="/solvorr-logo.svg" alt="website logo" className={'h-8 md:h-10'}/>
+                            </Link>
                         </div>
 
                         {/* Desktop Navigation */}

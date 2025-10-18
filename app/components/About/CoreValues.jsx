@@ -43,7 +43,7 @@ const CoreValuesSection = () => {
     ];
 
     return (
-        <section className="relative py-32 px-5 bg-[#0a0a0f] overflow-hidden">
+        <section className="relative py-16 md:py-32 px-5 bg-[#0a0a0f] overflow-hidden">
             {/* Floating Orbs Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute w-[300px] h-[300px] rounded-full bg-gradient-to-br from-purple-600 to-purple-900 opacity-30 blur-3xl top-[10%] left-[5%] animate-float"></div>
@@ -74,18 +74,13 @@ const CoreValuesSection = () => {
                     {values.map((value, index) => (
                         <div
                             key={index}
-                            className="group relative p-12 bg-white/[0.02] border border-white/[0.08] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:bg-gradient-to-br group cursor-pointer"
+                            className="group relative p-6 md:p-12 bg-white/[0.02] border border-white/[0.08] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:bg-gradient-to-br group cursor-pointer"
                         >
                             {/* Hover Background Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                            {/* Number Badge */}
-                            {/*<div className="absolute top-8 right-8 w-12 h-12 rounded-full border border-purple-500/30 flex items-center justify-center text-xl font-bold bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text text-transparent">*/}
-                            {/*    {value.number}*/}
-                            {/*</div>*/}
-
                             {/* Icon Container */}
-                            <div className="relative w-20 h-20 mb-8 flex items-center justify-center">
+                            <div className="relative w-10 h-10 md:w-20 md:h-20 mb-4 sm:mb-8 flex items-center justify-center">
                                 <div className="absolute inset-0 bg-gradient-to-br from-color-3/20 to-color-1/20 rounded-2xl"></div>
                                 <div className="relative z-10">
                                     <img src={value.icon} alt={'value icon'}/>
@@ -93,10 +88,10 @@ const CoreValuesSection = () => {
                             </div>
 
                             {/* Content */}
-                            <h3 className="relative text-3xl font-bold mb-4 bg-gradient-to-r from-white to-purple-500 bg-clip-text text-transparent">
+                            <h3 className="relative h3 font-bold mb-4 bg-gradient-to-r from-white to-purple-500 bg-clip-text text-transparent">
                                 {value.title}
                             </h3>
-                            <p className="relative text-base leading-relaxed text-white/60">
+                            <p className="relative body-1 leading-relaxed text-white/60">
                                 {value.description}
                             </p>
                         </div>

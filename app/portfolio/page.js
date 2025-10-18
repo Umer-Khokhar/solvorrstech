@@ -3,10 +3,10 @@ import {PortfolioHero, Projects, Project} from "@/app/components";
 
 const Page = () => {
     return (
-        <>
+        <div className={""}>
           <PortfolioHero  />
           <Projects />
-        </>
+        </div>
     );
 };
 

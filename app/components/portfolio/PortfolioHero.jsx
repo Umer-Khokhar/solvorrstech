@@ -3,10 +3,10 @@ import Section from "../Section";
 import { grid, HeroPortfolio } from "../../assets";
 const PortfolioHero = () => {
   return (
-    <div className={"!px-0 !py-4 mb-8 bg-n-7"}>
+    <div className={"!px-0 py-32 md:py-4  mb-8 bg-n-7"}>
     <div className={"!px-0 !py-4 bg-n-7"}>
       <div className="container ">
-        <div className="relative lg:h-screen flex flex-col md:flex-row items-center lg:justify-between max-w-[1600px] xl:mx-auto overflow-hidden">
+        <div className="relative lg:h-screen flex flex-col md:flex-row items-center lg:justify-between xl:mx-auto overflow-hidden">
           {/* content section  */}
           <div className="relative ">
             <h1 className="h1 max-w-xl mb-4 lg:mb-8">Work We're Proud Of</h1>

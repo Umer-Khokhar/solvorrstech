@@ -6,6 +6,8 @@ import Benefit from "@/app/components/Benefit";
 import ServiceProcess from "@/app/components/servicePage/ServiceProcess";
 import TechStack from "@/app/components/servicePage/TechStack";
 import MasonryTestimonials from "@/app/components/Testimonials";
+import Faqs from "@/app/components/Faqs";
+import Cta from "@/app/components/Cta";
 
 
 const Page = () => {
@@ -18,6 +20,8 @@ const Page = () => {
             <ServiceProcess />
             <TechStack />
             <MasonryTestimonials />
+            <Faqs />
+            <Cta />
         </div>
     );
 };

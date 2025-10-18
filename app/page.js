@@ -2,6 +2,9 @@ import { Benefits, Collaboration, Hero, Working } from "@/app/components";
 import { ButtonGradient } from "./assets/svg";
 import PortfolioSection from "@/app/components/PortfolioSection";
 import { robot } from "./assets";
+import MasonryTestimonials from "@/app/components/Testimonials";
+import Faqs from "@/app/components/Faqs";
+import Cta from "@/app/components/Cta";
 const Home = () => {
   return (
     <>
@@ -11,6 +14,9 @@ const Home = () => {
         <Collaboration />
         <Working />
         <PortfolioSection />
+          <MasonryTestimonials />
+          <Faqs />
+          <Cta />
       </div>
       <ButtonGradient/>
     </>

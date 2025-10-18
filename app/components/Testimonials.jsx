@@ -92,7 +92,7 @@ export default function MasonryTestimonials() {
                 ))}
               </div>
               
-              <p className="text-n-2 mb-6 leading-relaxed">
+              <p className="text-n-2 mb-6 text-sm md:leading-relaxed">
                 "{testimonial.content}"
               </p>
               
@@ -106,7 +106,7 @@ export default function MasonryTestimonials() {
                   <h4 className="font-semibold text-slate-500">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-xs text-slate-500">
                     {testimonial.role}
                   </p>
                 </div>

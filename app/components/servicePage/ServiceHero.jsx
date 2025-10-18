@@ -28,7 +28,7 @@ const ServiceHero = () => {
         <div className="bg-[#030718] min-h-screen">
 
             {/* OPTION 1: With Animated Orbs + 2-Column Layout + Stats */}
-            <section className="relative py-32 overflow-hidden">
+            <section className="relative py-20 md:py-32 overflow-hidden">
                 {/* Animated gradient orbs */}
 
                 {/* Grid pattern overlay */}
@@ -47,14 +47,14 @@ const ServiceHero = () => {
 
                         {/* Left: Text Content */}
                         <div className="text-center">
-                            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            <h1 className="h1 font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
                   Web Development
                 </span>{' '}
                                 Solutions That Power Your Digital Growth
                             </h1>
 
-                            <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                            <p className="text-slate-400 body-1 mb-8 leading-relaxed">
                                 At Solvorr Tech, we don't just build websites — we create intelligent digital systems designed to convert, scale, and perform. Whether you're a startup or a growing enterprise, our tailored web solutions bring your brand vision to life.
                             </p>
 
