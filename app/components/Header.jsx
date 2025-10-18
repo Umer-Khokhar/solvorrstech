@@ -20,7 +20,7 @@ export default function FloatingGlassHeader() {
         { name: 'About', href: '/about' },
         { name: 'Services', href: '/service' },
         { name: 'Portfolio', href: '/portfolio' },
-        { name: 'Blogs', href: '/blogs' },
+        { name: 'Blogs', href: '/blog' },
         { name: 'Pricing', href: '/pricing' }
     ];
 
