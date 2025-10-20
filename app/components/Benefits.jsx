@@ -18,7 +18,7 @@ const Benefits = () => {
         <div className="flex flex-wrap justify-center gap-10 mb-10">
           {services.map((benefit) => (
             <div
-              className="block z-1 relative p-0.5 bg-no-repeat bg-cover bg-center md:max-w-[24rem]"
+              className="block border-b border-l border-n-4/80 md:border-n-4/40 rounded-3xl  z-1 relative p-0.5 bg-no-repeat bg-cover bg-center md:max-w-[24rem]"
               key={benefit.id}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
@@ -36,12 +36,12 @@ const Benefits = () => {
               </div>
               {benefit.light && <GradientLight />}
               <div
-                className="absolute inset-0.5 bg-n-7"
+                className="absolute inset-0 bg-n-7/90 backdrop-blur-xl blur-3xl"
                 style={{
                   clipPath: "url(#benefits)",
                 }}
               >
-                <div className="absolute inset-0 transition-opacity opacity-0 hover:opacity-10">
+                <div className="absolute inset-0 opacity-0 hover:opacity-40">
                   {benefit.imageUrl && (
                     <img src={benefit.imageUrl} loading="lazy" alt="benefit url" />
                   )}

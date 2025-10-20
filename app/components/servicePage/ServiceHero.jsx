@@ -1,27 +1,7 @@
-// import React from 'react';
-// import {Button} from "@/app/components";
-//
-// const ServiceHero = () => {
-//     return (
-//         <section className={'py-28'}>
-//             <div className="container">
-//                 <div className="info text-center max-w-5xl mx-auto">
-//                     <h1 className={'h1 mb-8 space-y-2'}><span className={"text-gradient"}>Web Development</span> Solutions That Power Your <span>Digital</span> Growth</h1>
-//                     <p className={"body-1 mx-auto mb-12 text-n-2"}>At Solvorr Tech, we don’t just build websites — we create intelligent digital systems designed to convert, scale, and perform. Whether you’re a startup or a growing enterprise, our tailored web solutions bring your brand vision to life.</p>
-//                     <button className={'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-4 rounded-full text-base cursor-pointer font-medium transition-all duration-200 shadow-lg hover:shadow-xl"'}>
-//                         Get a Free Consultation
-//                     </button>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-//
-// export default ServiceHero;
-
 "use client"
 import React from 'react';
 import { Code, Zap, Shield, Target, CheckCircle, TrendingUp } from 'lucide-react';
+import MagicButton from '../design/MagicButton';
 
 const ServiceHero = () => {
     return (
@@ -58,9 +38,7 @@ const ServiceHero = () => {
                                 At Solvorr Tech, we don't just build websites — we create intelligent digital systems designed to convert, scale, and perform. Whether you're a startup or a growing enterprise, our tailored web solutions bring your brand vision to life.
                             </p>
 
-                            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
-                                Get a Free Consultation
-                            </button>
+                            <MagicButton children='Get a Free Consultation' className='rounded-full'/>
 
                             {/* Stats */}
                         </div>

@@ -1,7 +1,8 @@
 "use client"
 import Link from "next/link"
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
+import MagicButton from "./design/MagicButton";
 
 export default function FloatingGlassHeader() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -31,16 +32,16 @@ export default function FloatingGlassHeader() {
                 <nav className={`
           max-w-7xl mx-auto transition-all duration-300 ease-in-out
           ${isScrolled
-                    ? 'bg-black/30 backdrop-blur-md border border-white/30 shadow-lg shadow-black/5'
-                    : 'bg-black/20 backdrop-blur-sm border border-white/20'
-                }
+                        ? 'bg-black/30 backdrop-blur-md border border-white/30 shadow-lg shadow-black/5'
+                        : 'bg-black/20 backdrop-blur-sm border border-white/20'
+                    }
            ${isMobileMenuOpen ? "rounded-lg" : "rounded-full"} px-6 py-3
         `}>
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
                             <Link href={"/"}>
-                            <img src="/solvorr-logo.svg" alt="website logo" className={'h-8 md:h-10'}/>
+                                <img src="/solvorr-logo.svg" alt="website logo" className={'h-8 md:h-10'} />
                             </Link>
                         </div>
 
@@ -60,9 +61,9 @@ export default function FloatingGlassHeader() {
 
                         {/* CTA Button */}
                         <div className="hidden md:flex items-center space-x-3">
-                            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                                Get Started
-                            </button>
+                            <MagicButton
+                                children="Get Started"
+                            />
                         </div>
 
                         {/* Mobile Menu Button */}

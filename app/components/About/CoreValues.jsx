@@ -25,7 +25,7 @@ const CoreValuesSection = () => {
         {
             number: '04',
             title: 'Excellence',
-            description: 'We obsess over details and maintain the highest standards in every line of code we write.',
+            description: 'We obsess over [postSlug] and maintain the highest standards in every line of code we write.',
             icon: benefitIcon4
         },
         {

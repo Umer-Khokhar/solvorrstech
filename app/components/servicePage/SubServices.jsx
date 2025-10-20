@@ -15,7 +15,7 @@ const SubServices = () => {
                 <div className="flex flex-wrap justify-center gap-10 mb-10">
                     {services.map((benefit) => (
                         <div
-                            className="block z-1 relative p-0.5 bg-no-repeat bg-cover bg-center md:max-w-[24rem] max-h-[20rem]"
+                            className="block z-1 border-r border-b rounded-2xl border-n-4/40  relative p-0.5 bg-no-repeat bg-cover bg-center md:max-w-[24rem] max-h-[20rem]"
                             key={benefit.id}
                         >
                                     <img src={benefit.iconUrl} alt={benefit.title} loading="lazy" className={"absolute top-2 left-4 w-12 h-12"} />
@@ -24,7 +24,7 @@ const SubServices = () => {
                                 <p className="body-2 text-n-3">{benefit.text}</p>
                             </div>
                             <div
-                                className="absolute inset-0.5 bg-[#0A1628]"
+                                className="absolute inset-0.5 bg-n-7/90 blur-3xl backdrop-blur-2xl"
                                 style={{
                                     clipPath: "url(#subCard)",
                                 }}

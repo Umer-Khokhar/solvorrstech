@@ -1,5 +1,6 @@
 import React from 'react';
 import {Target } from 'lucide-react'
+import {Gradient} from "@/app/components/design/Hero";
 
 const Overview = () => {
     return (
@@ -13,8 +14,11 @@ const Overview = () => {
                     <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-4 rounded-full text-base font-medium transition-all duration-200 shadow-lg hover:shadow-xl">Talk to Our Experts
                     </button>
                 </div>
-                <div className={"flex-1"}>
-                    <img src="/overview.jpg" alt="overview image" className={"md:h-[520px] object-cover rounded-3xl"}/>
+                <div className={"w-full md:w-[40%]  "}>
+                    <div className={"lg:h-[450px] h-auto shadow-2xl w-full border-t border-l border-n-5/70 rounded-3xl bg-slate-900 relative overflow-hidden"}>
+                    <div className={"absolute top-50% z-10 inset-0 left-0 bg-gradient-to-b from-color-3 to-color-1 w-20 blur-3xl opacity-30"}>hi</div>
+                    <img src="/overview.png" alt="overview image" className={"md:h-full z-50 w-full object-cover rounded-3xl"}/>
+                    </div>
                 </div>
                 </div>
             </div>
