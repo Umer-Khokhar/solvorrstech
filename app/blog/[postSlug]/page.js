@@ -124,10 +124,10 @@ function Navigation() {
             <div className="max-w-6xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     <Link href={"/blog"}>
-                    <button className="flex cursor-pointer items-center gap-2 text-slate-300 hover:text-slate-50 transition-colors">
-                        <ArrowLeft size={18} />
-                        <span className="text-sm">Back to Blog</span>
-                    </button>
+                        <button className="flex cursor-pointer items-center gap-2 text-slate-300 hover:text-slate-50 transition-colors">
+                            <ArrowLeft size={18} />
+                            <span className="text-sm">Back to Blog</span>
+                        </button>
                     </Link>
                     <div className="flex gap-3">
                         <ActionButton icon={<Share2 size={18} />} />
@@ -379,7 +379,7 @@ function ArticleContent({ content }) {
 // Main Blog Post Page Component
 export default function BlogPostPage({ params }) {
     console.log(blogs)
-     const { postSlug } = params
+    const { postSlug } = params
     const blog = blogs.find((b) => slugify(b.title) === postSlug);
     console.log(blog, "data")
     return (

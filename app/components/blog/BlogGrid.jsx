@@ -1,15 +1,30 @@
+"use client"
 import React from 'react';
 import blogData from "@/lib/data.json"
 import Link from "next/link";
+import useSearchStore from "@/store/useSearchStore";
+import useCategoryFilter from "@/store/useCategoryFilter";
 const BlogGrid = () => {
+    const {searchTerm} = useSearchStore();
+    const { selectedCategory } = useCategoryFilter();
+    const filteredData = blogData.filter(blog => {
+      let searchFilter =  blog.title.toLowerCase().includes(searchTerm.toLowerCase())
+      let categoriesFilter = blog.category.toLowerCase().includes(selectedCategory.toLowerCase())
+      return searchFilter && categoriesFilter
+    })
     const slugify = (title) => title.toLowerCase().replace(/\s+/g, "-");
+
+    if (!filteredData) {
+        return <p className={"h6"}>No Blog with the search</p>
+
+    }
 
     return (
         <section className={"py-12"}>
             <div className={"container overflow-hidden"}>
-                <h2 className="h2">Latest Articles</h2>
-                <article className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"}>
-                    {blogData.map((data) => (
+                <h2 className="h2 mb-10">Latest Articles</h2>
+                <article className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 place-items-center"}>
+                    {filteredData.map((data) => (
                         <Link key={data.id} href={`/blog/${slugify(data.title)}`}>
                         <div
                             className="group break-inside-avoid max-w-sm relative transition-all duration-300 rounded-2xl shadow hover:shadow-lg overflow-hidden"
@@ -39,15 +54,11 @@ const BlogGrid = () => {
                             <div className="-mt-5 border border-n-4/10 bg-n-7/10 backdrop-blur-xl min-h-[220px] rounded-2xl p-5 relative z-10">
                                 {/* Author info */}
                                 <div className="flex items-center gap-2 mb-3">
-                                    <img
-                                        src="https://randomuser.me/api/portraits/women/68.jpg"
-                                        alt="Author"
-                                        className="w-8 h-8 rounded-full object-cover"
-                                    />
+                                    <p className={"text-base h-8 w-8 flex items-center justify-center bg-gradient-to-r from-color-1 to-color-3 rounded-full"}>{data.author.avatar}</p>
                                     <div className="text-sm text-n-3">
-                                        <span className="font-medium">Jacquline Palmer</span>{" "}
+                                        <span className="font-medium">{data.author.name}</span>{" "}
                                         <span className="mx-1 text-color-3">|</span>
-                                        <span>UI/UX Design</span>
+                                        <span>{data.author.role}</span>
                                     </div>
                                 </div>
 
