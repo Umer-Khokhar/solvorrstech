@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://solvorrtech.vercel.app/</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/about</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/service</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/portfolio</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/the-complete-guide-to-react-performance-optimization</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/advanced-seo-strategies-for-2024</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/building-scalable-e-commerce-architecture</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/content-marketing-strategy-for-b2b-saas</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/mastering-typescript-in-large-scale-applications</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/data-driven-digital-marketing-analytics</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/social-media-marketing-for-tech-brands</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/cloud-native-application-development</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/conversion-rate-optimization-for-e-commerce</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/building-developer-first-products</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://solvorrtech.vercel.app/blog/artificial-intelligence-in-digital-marketing</loc>
+  <lastmod>2025-11-26T06:02:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
