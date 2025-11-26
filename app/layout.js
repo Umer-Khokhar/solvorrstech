@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Sora } from "next/font/google";
 
 import "@/app/globals.css";
 import { Footer, Header } from "@/app/components";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const soraFont = Sora({
   variable: "--font-sora",
@@ -28,13 +29,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

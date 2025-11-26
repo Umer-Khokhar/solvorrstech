@@ -60,7 +60,7 @@ export default function Faqs() {
                     <h1 className="h2 mb-3">
                         Frequently Asked Questions
                     </h1>
-                    <p className="text-xl text-blue-100/70 max-w-2xl mx-auto">
+                    <p className="text-xl text-n-4 max-w-2xl mx-auto">
                         Everything you need to know about Solvorr Tech's services, processes, and how we can transform your business.
                     </p>
                 </div>
@@ -78,7 +78,7 @@ export default function Faqs() {
                                 >
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-4 flex-1">
-                                            <h3 className="text-lg font-bold text-n-2 group-hover/item:text-blue-200 transition-colors">
+                                            <h3 className="text-lg font-bold text-n-2 group-hover/item:text-color-5 transition-colors">
                                                 {faq.question}
                                             </h3>
                                         </div>
@@ -97,7 +97,7 @@ export default function Faqs() {
                                             isActive ? 'max-h-96 mt-4' : 'max-h-0'
                                         }`}
                                     >
-                                        <div className="pr-2 text-blue-100/80 leading-relaxed">
+                                        <div className="pr-2 text-n-4 leading-relaxed">
                                             {faq.answer}
                                         </div>
                                     </div>

@@ -2,24 +2,24 @@ import { CheckCircle, Zap, Eye, Trophy } from "lucide-react";
 
 export default function OurStorySection() {
     return (
-        <section className="relative bg-[#0F1424] py-8 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative bg-n-7 py-8 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
             <div className="relative container mx-auto">
                 {/* Gradient Headline */}
-                <h2 className="h2 font-semibold text-center mb-16 lg:mb-24 text-white">
+                <h2 className="h2 font-semibold text-center mb-16 lg:mb-24">
                     Our Story
                 </h2>
 
                 {/* Main Card */}
-                <div className="bg-gray-900/70 backdrop-blur-sm rounded-2xl border border-gray-800 shadow-2xl transition duration-500 hover:border-cyan-500/50 hover:shadow-cyan-500/20 flex flex-col-reverse lg:flex-row items-stretch md:overflow-hidden">
+                <div className="bg-n-8/70 backdrop-blur-sm rounded-2xl border border-gray-800 shadow-2xl transition duration-500 hover:border-cyan-500/50 hover:shadow-cyan-500/20 flex flex-col-reverse lg:flex-row items-stretch md:overflow-hidden">
 
                     {/* Left Content */}
                     <div className="w-full lg:w-[60%] p-6 sm:p-8 lg:p-10">
-                        <h3 className="h3 font-bold leading-snug mb-4 text-white">
+                        <h3 className="h3 font-bold leading-snug mb-4">
                             <Trophy className="inline w-8 h-8 mr-2 text-purple-600" />
                             Built on Innovation, Fueled by the
                             <span className="text-gradient"> Drive to Solve</span>
                         </h3>
-                        <p className="text-base sm:text-lg leading-relaxed text-gray-300">
+                        <p className="text-base sm:text-lg leading-relaxed text-n-3">
                             Founded with the vision of solving complex business challenges,
                             Solvorr Tech is built on innovation, creativity, and trust. Our
                             journey started with noticing how many businesses struggled with
@@ -34,11 +34,11 @@ export default function OurStorySection() {
                         {/* Mission & Vision Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 mt-6 gap-4">
                             {/* Mission Card */}
-                            <div className="p-6 bg-gray-900 rounded-xl border border-gray-800 transition duration-300 hover:shadow-indigo-500/20 hover:bg-gray-800">
+                            <div className="p-6 bg-transparent rounded-xl border border-gray-800 transition duration-300 hover:shadow-indigo-500/20 hover:bg-gray-800">
                                 <h4 className="flex items-center text-xl font-semibold text-color-3 mb-3">
                                     <Zap className="w-5 h-5 mr-2" /> Our Mission
                                 </h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">
+                                <p className="text-n-1 dark:text-n-4 text-sm leading-relaxed">
                                     Solvorr Tech aims to simplify complexity by crafting smart,
                                     scalable digital products that solve real business problems
                                     efficiently.
@@ -46,11 +46,11 @@ export default function OurStorySection() {
                             </div>
 
                             {/* Vision Card */}
-                            <div className="p-6 bg-gray-900 rounded-xl border border-gray-800 transition duration-300 hover:shadow-cyan-500/20 hover:bg-gray-800">
+                            <div className="p-6 bg-transparent rounded-xl border border-gray-800 transition duration-300 hover:shadow-cyan-500/20 hover:bg-gray-800">
                                 <h4 className="flex items-center text-xl font-semibold text-color-1 mb-3">
                                     <Eye className="w-5 h-5 mr-2" /> Our Vision
                                 </h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">
+                                <p className="text-n-4 text-sm leading-relaxed">
                                     We envision a world where every business leverages technology
                                     seamlessly — bridging creativity and functionality for
                                     measurable impact.

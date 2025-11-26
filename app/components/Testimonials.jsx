@@ -69,7 +69,7 @@ const testimonials = [
 
 export default function MasonryTestimonials() {
   return (
-    <section className="py-20 px-4 bg-[#0F1424]">
+    <section className="py-20 px-4 bg-n-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="h2  font-bold mb-4">

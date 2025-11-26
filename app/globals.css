@@ -3,16 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Light Theme (Default) */
 :root {
+    color-scheme: light;
+    
     --font-sora: "Sora", sans-serif;
     --font-code: "Source Code Pro", monospace;
     --font-grotesk: "Space Grotesk", sans-serif;
-    color-scheme: dark;
-}
-body {
-    background-color: #030718;
-}
-@theme {
+    
     /* Colors */
     --color-color-1: #AC6AFF;
     --color-color-2: #FFC876;
@@ -22,21 +20,22 @@ body {
     --color-color-6: #FF98E2;
     --color-color-7: rgb(232, 187, 185);
 
-    --color-stroke-1: #26242C;
+    --color-stroke-1: #E5E3EC;
 
-    --color-n-1: #FFFFFF;
-    --color-n-2: #CAC6DD;
-    --color-n-3: #ADA8C3;
-    --color-n-4: #757185;
-    --color-n-5: #3F3A52;
-    --color-n-6: #252134;
-    --color-n-7: #0F1424;
-    --color-n-8: #0E0C15;
-    --color-n-9: #474060;
-    --color-n-10: #43435C;
-    --color-n-11: #1B1B2E;
-    --color-n-12: #2E2A41;
-    --color-n-13: #6C7275;
+    /* Light theme neutrals */
+    --color-n-1: #0E0C15;
+    --color-n-2: #1F1D2B;
+    --color-n-3: #4A4458;
+    --color-n-4: #6B6579;
+    --color-n-5: #8B859E;
+    --color-n-6: #E8E6F0;
+    --color-n-7: #f7f7f7;
+    --color-n-8: #FFFFFF;
+    --color-n-9: #D4D2E0;
+    --color-n-10: #E0DEE8;
+    --color-n-11: #F0EEF5;
+    --color-n-12: #EFEDF7;
+    --color-n-13: #5A5568;
     --color-n-orange: #ff776f;
 
     /* Fonts */
@@ -70,6 +69,99 @@ body {
     --border-width: 0.0625rem;
 
     /* Backgrounds */
+    --bg-conic-gradient: conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876);
+}
+
+body {
+    background-color: rgb(var(--color-n-8));
+}
+
+/* Dark Theme */
+.dark {
+    color-scheme: dark;
+    
+    /* Colors remain the same */
+    --color-color-1: #AC6AFF;
+    --color-color-2: #FFC876;
+    --color-color-3: #FF776F;
+    --color-color-4: #7ADB78;
+    --color-color-5: #858DFF;
+    --color-color-6: #FF98E2;
+    --color-color-7: rgb(232, 187, 185);
+
+    --color-stroke-1: #26242C;
+
+    /* Dark theme neutrals */
+    --color-n-1: #FFFFFF;
+    --color-n-2: #CAC6DD;
+    --color-n-3: #ADA8C3;
+    --color-n-4: #757185;
+    --color-n-5: #3F3A52;
+    --color-n-6: #252134;
+    --color-n-7: #0F1424;
+    --color-n-8: #0E0C15;
+    --color-n-9: #474060;
+    --color-n-10: #43435C;
+    --color-n-11: #1B1B2E;
+    --color-n-12: #2E2A41;
+    --color-n-13: #6C7275;
+    --color-n-orange: #ff776f;
+}
+
+.dark body {
+    background-color: #030718;
+}
+
+/* Tailwind Theme - Exposes CSS variables as utilities */
+@theme {
+    --color-color-1: #AC6AFF;
+    --color-color-2: #FFC876;
+    --color-color-3: #FF776F;
+    --color-color-4: #7ADB78;
+    --color-color-5: #858DFF;
+    --color-color-6: #FF98E2;
+    --color-color-7: rgb(232, 187, 185);
+
+    --color-stroke-1: #26242C;
+
+    --color-n-1: #FFFFFF;
+    --color-n-2: #CAC6DD;
+    --color-n-3: #ADA8C3;
+    --color-n-4: #757185;
+    --color-n-5: #3F3A52;
+    --color-n-6: #252134;
+    --color-n-7: #0F1424;
+    --color-n-8: #0E0C15;
+    --color-n-9: #474060;
+    --color-n-10: #43435C;
+    --color-n-11: #1B1B2E;
+    --color-n-12: #2E2A41;
+    --color-n-13: #6C7275;
+    --color-n-orange: #ff776f;
+
+    --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+    --font-code: var(--font-code);
+    --font-grotesk: var(--font-grotesk);
+
+    --tracking-tagline: 0.15em;
+
+    --spacing-0\.25: 0.0625rem;
+    --spacing-7\.5: 1.875rem;
+    --spacing-15: 3.75rem;
+
+    --opacity-15: 0.15;
+
+    --duration-default: 200ms;
+    --easing-default: linear;
+
+    --z-1: 1;
+    --z-2: 2;
+    --z-3: 3;
+    --z-4: 4;
+    --z-5: 5;
+
+    --border-width: 0.0625rem;
+
     --bg-conic-gradient: conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876);
 }
 

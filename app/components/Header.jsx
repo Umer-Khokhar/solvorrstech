@@ -1,12 +1,19 @@
 "use client"
 import Link from "next/link"
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X, Rocket, Sun, Moon } from 'lucide-react';
 import MagicButton from "./design/MagicButton";
+import { useTheme } from "next-themes";
 
 export default function FloatingGlassHeader() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,6 +31,10 @@ export default function FloatingGlassHeader() {
         { name: 'Blogs', href: '/blog' },
         { name: 'Pricing', href: '/pricing' }
     ];
+
+    if (!mounted) {
+        return null;
+    }
 
     return (
         <div>
@@ -64,15 +75,29 @@ export default function FloatingGlassHeader() {
                             <MagicButton
                                 children="Get Started"
                             />
+                            <button
+                                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                                className="text-white/80 hover:text-white transition-colors duration-200"
+                            >
+                                {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+                            </button>
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <button
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="md:hidden text-white/80 hover:text-white transition-colors duration-200"
-                        >
-                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
+                        <div className="flex items-center md:hidden">
+                            <button
+                                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                                className="text-white/80 hover:text-white transition-colors duration-200 mr-4"
+                            >
+                                {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+                            </button>
+                            <button
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                className="text-white/80 hover:text-white transition-colors duration-200"
+                            >
+                                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                            </button>
+                        </div>
                     </div>
 
                     {/* Mobile Menu */}

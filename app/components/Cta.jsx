@@ -2,8 +2,8 @@ import React from 'react';
 
 const Cta = () => {
     return (
-        <section className="pb-10">
-            <div className="w-full relative mx-auto py-16 bg-n-7 overflow-hidden">
+        <section className="">
+            <div className="w-full relative mx-auto py-16 bg-n-8 overflow-hidden">
                     {/* Dashed Top Left Fade Grid */}
                     <div
                         className="absolute inset-0 z-0 opacity-15"
@@ -71,7 +71,7 @@ const Cta = () => {
                         <h3 className="h3 font-bold text-n-1 mb-4">
                             Take your <span className={"text-gradient"}>Business</span> to the next level
                         </h3>
-                        <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                        <p className="text-lg text-n-3 mb-8 max-w-2xl mx-auto">
                             Crafting mobile first, high performance websites because we know your customers browse on their phone first.
                         </p>
                         <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">

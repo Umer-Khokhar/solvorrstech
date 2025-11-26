@@ -4,7 +4,7 @@ import {Gradient} from "@/app/components/design/Hero";
 
 const Overview = () => {
     return (
-        <section className={"py-12 lg:py-28 bg-[#0F1424]"}>
+        <section className={"py-12 lg:py-28 bg-n-7"}>
             <div className="container">
                 <div  className={'flex flex-col-reverse md:flex-row-reverse gap-10 items-start justify-center'}>
                 <div className={"md:w-[50%]"}>

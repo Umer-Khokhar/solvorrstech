@@ -266,17 +266,17 @@ const ServiceProcess = () => {
     ];
 
     return (
-        <div className="bg-[#030718] min-h-screen">
+        <div className="bg-n-8 min-h-screen">
             <section className="w-full py-20">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-16">
                         <div className="inline-block px-4 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm mb-6">
                             HOW WE WORK
                         </div>
-                        <h2 className="text-4xl font-bold text-white mb-4">
+                        <h2 className="text-4xl font-bold mb-4">
                             Our Process
                         </h2>
-                        <p className="text-slate-400 max-w-2xl mx-auto">
+                        <p className="text-n-4 max-w-2xl mx-auto">
                             A transparent, step-by-step approach that ensures quality, precision, and collaboration at every stage.
                         </p>
                     </div>
