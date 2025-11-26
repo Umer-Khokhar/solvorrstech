@@ -7,11 +7,9 @@ const Footer = () => {
   return (
     <>
       {/* Separator with gradient */}
-      <div className="relative w-full h-px bg-gradient-to-r from-transparent via-n-6 to-transparent" />
+      <div className="relative overflow-hidden w-full h-px bg-gradient-to-r from-transparent via-n-6 to-transparent" />
       
       <Section className="relative bg-n-7 dark:bg-n-8 text-foreground pb-8">
-        {/* Decorative top gradient blur */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-gradient-to-b from-color-1/10 via-color-5/5 to-transparent blur-3xl pointer-events-none" />
         
         <div className="container mx-auto relative z-10">
           {/* Main Footer Content */}

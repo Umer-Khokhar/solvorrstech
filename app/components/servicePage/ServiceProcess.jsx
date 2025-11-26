@@ -19,18 +19,18 @@ const DiscoveryIllustration = () => (
             </div>
 
             <div className="space-y-4">
-                <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur rounded-xl p-4 border border-slate-700/50">
+                <div className="flex items-center gap-3 bg-n-7/50 backdrop-blur rounded-xl p-4 border border-slate-700/50">
                     <Target className="w-8 h-8 text-blue-400" />
                     <div>
-                        <div className="text-white font-semibold">Define Goals</div>
-                        <div className="text-slate-400 text-sm">Business objectives</div>
+                        <div className="text-n-2 font-semibold">Define Goals</div>
+                        <div className="text-n-4 text-sm">Business objectives</div>
                     </div>
                 </div>
-                <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur rounded-xl p-4 border border-slate-700/50">
+                <div className="flex items-center gap-3 bg-n-7/50 backdrop-blur rounded-xl p-4 border border-slate-700/50">
                     <Users className="w-8 h-8 text-purple-400" />
                     <div>
-                        <div className="text-white font-semibold">Know Audience</div>
-                        <div className="text-slate-400 text-sm">User research</div>
+                        <div className="text-n-2 font-semibold">Know Audience</div>
+                        <div className="text-n-4 text-sm">User research</div>
                     </div>
                 </div>
             </div>
@@ -276,7 +276,7 @@ const ServiceProcess = () => {
                         <h2 className="text-4xl font-bold mb-4">
                             Our Process
                         </h2>
-                        <p className="text-n-4 max-w-2xl mx-auto">
+                        <p className="text-n-3 max-w-2xl mx-auto">
                             A transparent, step-by-step approach that ensures quality, precision, and collaboration at every stage.
                         </p>
                     </div>
@@ -290,11 +290,11 @@ const ServiceProcess = () => {
                                 onClick={() => setActiveStep(index)}
                                 className={`cursor-pointer p-4 border-2 transition-all rounded-2xl hover:border-blue-500 ${
                                     activeStep === index
-                                        ? "border-blue-500 bg-blue-500/10"
-                                        : "border-slate-800 bg-slate-800/30"
+                                        ? "border-blue-500 bg-n-1/5"
+                                        : "border-slate-800 bg-n-7"
                                 }`}
                             >
-                                <h3 className="font-semibold text-sm text-white mb-1">
+                                <h3 className="font-semibold text-sm mb-1">
                   <span className="text-blue-400 font-medium mr-2">
                     {String(index + 1).padStart(2, "0")}
                   </span>
@@ -306,10 +306,10 @@ const ServiceProcess = () => {
 
                     {/* Content */}
                     <div className={`text-center mx-auto mb-6`}>
-                    <h4 className="text-3xl font-bold text-white mb-4">
+                    <h4 className="text-3xl font-bold mb-4">
                         {processSteps[activeStep].title}
                     </h4>
-                    <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+                    <p className="text-n-4 max-w-2xl mx-auto text-lg">
                         {processSteps[activeStep].description}
                     </p>
                     </div>

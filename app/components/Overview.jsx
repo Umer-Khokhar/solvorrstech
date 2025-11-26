@@ -15,7 +15,7 @@ const Overview = () => {
                     </button>
                 </div>
                 <div className={"w-full md:w-[40%]  "}>
-                    <div className={"lg:h-[450px] h-auto shadow-2xl w-full border-t border-l border-n-5/70 rounded-3xl bg-slate-900 relative overflow-hidden"}>
+                    <div className={"lg:h-[450px] h-auto shadow-2xl w-full dark:border-t dark:border-l border-n-5/70 rounded-3xl dark:bg-slate-900 bg-n-7 relative overflow-hidden"}>
                     <div className={"absolute top-50% z-10 inset-0 left-0 bg-gradient-to-b from-color-3 to-color-1 w-20 blur-3xl opacity-30"}>hi</div>
                     <img src="/overview.png" alt="overview image" className={"md:h-full z-50 w-full object-cover rounded-3xl"}/>
                     </div>

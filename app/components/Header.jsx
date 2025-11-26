@@ -40,13 +40,13 @@ export default function FloatingGlassHeader() {
         <div>
             {/* Header */}
             <header className="fixed top-4 left-0 right-0 z-50 px-4 py-4">
-                <nav className={`
+                <nav className={` w-full
           max-w-7xl mx-auto transition-all duration-300 ease-in-out
           ${isScrolled
-                        ? 'bg-black/30 backdrop-blur-md border border-white/30 shadow-lg shadow-black/5'
-                        : 'bg-black/20 backdrop-blur-sm border border-white/20'
+                        ? 'bg-n-8/30 backdrop-blur-md border border-n-1/30 shadow-lg shadow-black/5'
+                        : 'bg-n-8/20 backdrop-blur-sm border border-n-1/20'
                     }
-           ${isMobileMenuOpen ? "rounded-lg" : "rounded-full"} px-6 py-3
+           ${isMobileMenuOpen ? "rounded-lg" : "rounded-lg lg:rounded-full"} px-6 py-3
         `}>
                     <div className="flex items-center justify-between">
                         {/* Logo */}
@@ -62,7 +62,7 @@ export default function FloatingGlassHeader() {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium relative group"
+                                    className=" hover:text-color-5 transition-colors duration-200 text-sm font-medium relative group"
                                 >
                                     {item.name}
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-200 group-hover:w-full"></span>
@@ -77,7 +77,7 @@ export default function FloatingGlassHeader() {
                             />
                             <button
                                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                className="text-white/80 hover:text-white transition-colors duration-200"
+                                className="hover:text-color-3 cursor-pointer transition-colors duration-200"
                             >
                                 {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
                             </button>
@@ -87,13 +87,13 @@ export default function FloatingGlassHeader() {
                         <div className="flex items-center md:hidden">
                             <button
                                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                className="text-white/80 hover:text-white transition-colors duration-200 mr-4"
+                                className="text-n-2/80 hover:text-color-1 transition-colors duration-200 mr-4"
                             >
                                 {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
                             </button>
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="text-white/80 hover:text-white transition-colors duration-200"
+                                className="text-n-2/80 hover:text-white transition-colors duration-200"
                             >
                                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                             </button>
@@ -108,7 +108,7 @@ export default function FloatingGlassHeader() {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className="block text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium"
+                                        className="block text-n-1/80 hover:text-white transition-colors duration-200 text-sm font-medium"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {item.name}

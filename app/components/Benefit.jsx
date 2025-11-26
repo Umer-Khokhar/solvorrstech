@@ -4,7 +4,7 @@ import { Code, Zap, TrendingUp, Shield, Target, Sparkles } from 'lucide-react';
 const ServiceCard = ({ icon: Icon, title, description, tags, illustration, className, id }) => {
     const isTall = id === 0
     return (
-        <div className={`group relative bg-gradient-to-br ${className} from-slate-800/40 to-slate-900/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1`}>
+        <div className={`group relative bg-gradient-to-br ${className} from-n-6/40 to-n-7-900/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1`}>
             {/* Illustration Area */}
             <div className={`mb-6  ${isTall ? "h-52 md:h-[700px]" : "h-48"} bg-slate-900/50 rounded-xl flex items-center justify-center relative overflow-hidden`}>
                 {illustration}
@@ -27,8 +27,8 @@ const ServiceCard = ({ icon: Icon, title, description, tags, illustration, class
 
             {/* Content */}
             <div className="relative z-10">
-                <h3 className="h5 font-bold text-white mb-3">{title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
+                <h3 className="h5 font-bold text-n-2 mb-3">{title}</h3>
+                <p className="text-n-3 dark:text-n-4 text-sm leading-relaxed">{description}</p>
             </div>
 
             {/* Hover Glow Effect */}
@@ -286,14 +286,14 @@ export default function Benefit() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-b bg-[#0F1424] py-20 px-4">
+        <div className="min-h-screen bg-gradient-to-b bg-n-7 py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
                         Our Services
                     </h2>
-                    <p className="text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-n-3 max-w-3xl mx-auto leading-relaxed">
                         We love challenging projects that require a comprehensive content strategy,
                         thoughtful design, sophisticated development, and ongoing marketing.
                     </p>
