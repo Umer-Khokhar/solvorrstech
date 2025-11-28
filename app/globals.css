@@ -6,36 +6,36 @@
 /* Light Theme (Default) */
 :root {
     color-scheme: light;
-    
+
     --font-sora: "Sora", sans-serif;
     --font-code: "Source Code Pro", monospace;
     --font-grotesk: "Space Grotesk", sans-serif;
-    
+
     /* Colors */
-    --color-color-1: #AC6AFF;
-    --color-color-2: #FFC876;
-    --color-color-3: #FF776F;
-    --color-color-4: #7ADB78;
-    --color-color-5: #858DFF;
-    --color-color-6: #FF98E2;
+    --color-color-1: #ac6aff;
+    --color-color-2: #ffc876;
+    --color-color-3: #ff776f;
+    --color-color-4: #7adb78;
+    --color-color-5: #858dff;
+    --color-color-6: #ff98e2;
     --color-color-7: rgb(232, 187, 185);
 
-    --color-stroke-1: #E5E3EC;
+    --color-stroke-1: #e5e3ec;
 
     /* Light theme neutrals */
-    --color-n-1: #0E0C15;
-    --color-n-2: #1F1D2B;
-    --color-n-3: #4A4458;
-    --color-n-4: #6B6579;
-    --color-n-5: #8B859E;
-    --color-n-6: #E8E6F0;
+    --color-n-1: #0e0c15;
+    --color-n-2: #1f1d2b;
+    --color-n-3: #4a4458;
+    --color-n-4: #6b6579;
+    --color-n-5: #8b859e;
+    --color-n-6: #e8e6f0;
     --color-n-7: #f7f7f7;
-    --color-n-8: #FFFFFF;
-    --color-n-9: #D4D2E0;
-    --color-n-10: #E0DEE8;
-    --color-n-11: #F0EEF5;
-    --color-n-12: #EFEDF7;
-    --color-n-13: #5A5568;
+    --color-n-8: #ffffff;
+    --color-n-9: #d4d2e0;
+    --color-n-10: #e0dee8;
+    --color-n-11: #f0eef5;
+    --color-n-12: #efedf7;
+    --color-n-13: #5a5568;
     --color-n-orange: #ff776f;
 
     /* Fonts */
@@ -69,7 +69,14 @@
     --border-width: 0.0625rem;
 
     /* Backgrounds */
-    --bg-conic-gradient: conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876);
+    --bg-conic-gradient: conic-gradient(
+        from 225deg,
+        #ffc876,
+        #79fff7,
+        #9f53ff,
+        #ff98e2,
+        #ffc876
+    );
 }
 
 body {
@@ -79,32 +86,32 @@ body {
 /* Dark Theme */
 .dark {
     color-scheme: dark;
-    
+
     /* Colors remain the same */
-    --color-color-1: #AC6AFF;
-    --color-color-2: #FFC876;
-    --color-color-3: #FF776F;
-    --color-color-4: #7ADB78;
-    --color-color-5: #858DFF;
-    --color-color-6: #FF98E2;
+    --color-color-1: #ac6aff;
+    --color-color-2: #ffc876;
+    --color-color-3: #ff776f;
+    --color-color-4: #7adb78;
+    --color-color-5: #858dff;
+    --color-color-6: #ff98e2;
     --color-color-7: rgb(232, 187, 185);
 
-    --color-stroke-1: #26242C;
+    --color-stroke-1: #26242c;
 
     /* Dark theme neutrals */
-    --color-n-1: #FFFFFF;
-    --color-n-2: #CAC6DD;
-    --color-n-3: #ADA8C3;
+    --color-n-1: #ffffff;
+    --color-n-2: #cac6dd;
+    --color-n-3: #ada8c3;
     --color-n-4: #757185;
-    --color-n-5: #3F3A52;
+    --color-n-5: #3f3a52;
     --color-n-6: #252134;
-    --color-n-7: #0F1424;
-    --color-n-8: #0E0C15;
+    --color-n-7: #0f1424;
+    --color-n-8: #0e0c15;
     --color-n-9: #474060;
-    --color-n-10: #43435C;
-    --color-n-11: #1B1B2E;
-    --color-n-12: #2E2A41;
-    --color-n-13: #6C7275;
+    --color-n-10: #43435c;
+    --color-n-11: #1b1b2e;
+    --color-n-12: #2e2a41;
+    --color-n-13: #6c7275;
     --color-n-orange: #ff776f;
 }
 
@@ -114,29 +121,29 @@ body {
 
 /* Tailwind Theme - Exposes CSS variables as utilities */
 @theme {
-    --color-color-1: #AC6AFF;
-    --color-color-2: #FFC876;
-    --color-color-3: #FF776F;
-    --color-color-4: #7ADB78;
-    --color-color-5: #858DFF;
-    --color-color-6: #FF98E2;
+    --color-color-1: #ac6aff;
+    --color-color-2: #ffc876;
+    --color-color-3: #ff776f;
+    --color-color-4: #7adb78;
+    --color-color-5: #858dff;
+    --color-color-6: #ff98e2;
     --color-color-7: rgb(232, 187, 185);
 
-    --color-stroke-1: #26242C;
+    --color-stroke-1: #26242c;
 
-    --color-n-1: #FFFFFF;
-    --color-n-2: #CAC6DD;
-    --color-n-3: #ADA8C3;
+    --color-n-1: #ffffff;
+    --color-n-2: #cac6dd;
+    --color-n-3: #ada8c3;
     --color-n-4: #757185;
-    --color-n-5: #3F3A52;
+    --color-n-5: #3f3a52;
     --color-n-6: #252134;
-    --color-n-7: #0F1424;
-    --color-n-8: #0E0C15;
+    --color-n-7: #0f1424;
+    --color-n-8: #0e0c15;
     --color-n-9: #474060;
-    --color-n-10: #43435C;
-    --color-n-11: #1B1B2E;
-    --color-n-12: #2E2A41;
-    --color-n-13: #6C7275;
+    --color-n-10: #43435c;
+    --color-n-11: #1b1b2e;
+    --color-n-12: #2e2a41;
+    --color-n-13: #6c7275;
     --color-n-orange: #ff776f;
 
     --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
@@ -162,7 +169,14 @@ body {
 
     --border-width: 0.0625rem;
 
-    --bg-conic-gradient: conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876);
+    --bg-conic-gradient: conic-gradient(
+        from 225deg,
+        #ffc876,
+        #79fff7,
+        #9f53ff,
+        #ff98e2,
+        #ffc876
+    );
 }
 
 /* Custom Components */
@@ -223,73 +237,81 @@ body {
 /* Custom Utilities */
 @layer utilities {
     .text-gradient {
-        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#ae6afe] via-pink-500 to-[#ff776f]
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#ae6afe] via-pink-500 to-[#ff776f];
     }
     .tap-highlight-color {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+    .noise-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: url("/noise.svg");
+        opacity: 0.4;
+        mix-blend-mode: overlay;
+    }
 }
 
 .rotate-45 {
-    @apply rotate-[45deg]
+    @apply rotate-[45deg];
 }
 
 .rotate-90 {
-    @apply rotate-[90deg]
+    @apply rotate-[90deg];
 }
 
 .rotate-135 {
-    @apply rotate-[135deg]
+    @apply rotate-[135deg];
 }
 
 .rotate-180 {
-    @apply rotate-[180deg]
+    @apply rotate-[180deg];
 }
 
 .rotate-225 {
-    @apply rotate-[225deg]
+    @apply rotate-[225deg];
 }
 
 .rotate-270 {
-    @apply rotate-[270deg]
+    @apply rotate-[270deg];
 }
 
 .rotate-315 {
-    @apply rotate-[315deg]
+    @apply rotate-[315deg];
 }
 
 .rotate-360 {
-    @apply rotate-[360deg]
+    @apply rotate-[360deg];
 }
 
 .-rotate-45 {
-    @apply rotate-[-45deg]
+    @apply rotate-[-45deg];
 }
 
 .-rotate-90 {
-    @apply rotate-[-90deg]
+    @apply rotate-[-90deg];
 }
 
 .-rotate-135 {
-    @apply rotate-[-135deg]
+    @apply rotate-[-135deg];
 }
 
 .-rotate-180 {
-    @apply rotate-[-180deg]
+    @apply rotate-[-180deg];
 }
 
 .-rotate-225 {
-    @apply rotate-[-225deg]
+    @apply rotate-[-225deg];
 }
 
 .-rotate-270 {
-    @apply rotate-[-270deg]
+    @apply rotate-[-270deg];
 }
 
 .-rotate-315 {
-    @apply rotate-[-315deg]
+    @apply rotate-[-315deg];
 }
 
 .-rotate-360 {
-    @apply rotate-[-360deg]
+    @apply rotate-[-360deg];
 }
