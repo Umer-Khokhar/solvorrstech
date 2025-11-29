@@ -10,8 +10,8 @@ const Working = () => {
         <Heading title={`Some Of Our Recent Work`}/>
         <div className='relative grid md:grid-cols-2 gap-6 md:gap-4 md:pb-[7rem]'>
           {roadmap.map((item) => (
-            <div className={`md:flex even:md:translate-y-[5rem] p-0.25 border-2 border-n-1/30 rounded-[2.5rem]`} key={item.id}>
-              <div className='relative p-8 bg-n-8 rounded-[2.4375rem]'>
+            <div className={`md:flex overflow-hidden even:md:translate-y-[5rem] p-0.25 border-2 border-n-1/30 rounded-[2.5rem]`} key={item.id}>
+              <div className='relative p-8 bg-n-9 rounded-[2.4375rem]'>
                 <div className="absolute top-0 left-0 max-w-full">
                   <img 
                   className='w-full'

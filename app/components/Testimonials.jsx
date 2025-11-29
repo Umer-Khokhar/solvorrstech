@@ -84,7 +84,7 @@ export default function MasonryTestimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="break-inside-avoid bg-white/[0.02] border border-white/[0.06] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="break-inside-avoid bg-n-9/[0.22] border border-white/[0.06] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (

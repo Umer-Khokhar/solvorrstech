@@ -36,14 +36,14 @@ const Benefits = () => {
               </div>
               {benefit.light && <GradientLight />}
               <div
-                className="absolute inset-0 bg-n-7/90 backdrop-blur-xl blur-3xl"
+                className="absolute inset-0 bg-n-5/70 dark:bg-n-6/70 backdrop-blur-xl blur-3xl"
                 style={{
                   clipPath: "url(#benefits)",
                 }}
               >
-                <div className="absolute inset-0 opacity-0 hover:opacity-40">
+                <div className="absolute inset-0 opacity-60">
                   {benefit.imageUrl && (
-                    <img src={benefit.imageUrl} loading="lazy" alt="benefit url" />
+                    <img src={"./feature-bg-dark.svg"} loading="lazy" alt="benefit url" />
                   )}
                 </div>
               </div>

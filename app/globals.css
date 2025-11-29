@@ -27,11 +27,11 @@
     --color-n-2: #1f1d2b;
     --color-n-3: #4a4458;
     --color-n-4: #6b6579;
-    --color-n-5: #8b859e;
+    --color-n-5: #e0e0e0;
     --color-n-6: #e8e6f0;
     --color-n-7: #f7f7f7;
-    --color-n-8: #ffffff;
-    --color-n-9: #d4d2e0;
+    --color-n-8: #FEFEFE;
+    --color-n-9: #ffffff;
     --color-n-10: #e0dee8;
     --color-n-11: #f0eef5;
     --color-n-12: #efedf7;
@@ -80,7 +80,7 @@
 }
 
 body {
-    background-color: rgb(var(--color-n-8));
+    background-color: var(--color-n-8);
 }
 
 /* Dark Theme */
@@ -107,7 +107,7 @@ body {
     --color-n-6: #252134;
     --color-n-7: #0f1424;
     --color-n-8: #0e0c15;
-    --color-n-9: #474060;
+    --color-n-9: #0e0c15;
     --color-n-10: #43435c;
     --color-n-11: #1b1b2e;
     --color-n-12: #2e2a41;
@@ -115,9 +115,6 @@ body {
     --color-n-orange: #ff776f;
 }
 
-.dark body {
-    background-color: #030718;
-}
 
 /* Tailwind Theme - Exposes CSS variables as utilities */
 @theme {

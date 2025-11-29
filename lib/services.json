@@ -1,0 +1,237 @@
+[
+    {
+      "id": "0",
+      "slug": "custom-web-development",
+      "title": "Custom Website Development",
+      "text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
+      "backgroundUrlt": "assets/benefits/card-1.svg",
+      "iconUrl": "development",
+      "imageUrl": "",
+      "detailPage": {
+        "heroTitle": "",
+        "heroSubTitle": "",
+        "heroImage": "",
+        "overview": {
+            "title": "",
+            "subTitle": "",
+            "description": "",
+            "image": ""
+        },
+        "subServices": [
+            {
+        "icon": "Globe",
+        "title": "Corporate Website Development",
+        "description": "Professional business websites that establish your brand presence online with modern design, intuitive navigation, and compelling content that converts visitors into customers."
+      },
+      {
+        "icon": "ShoppingBag",
+        "title": "E-Commerce Development",
+        "description": "Full-featured online stores with secure payment gateways, inventory management, shopping carts, and seamless checkout experiences that maximize sales and customer satisfaction."
+      },
+      {
+        "icon": "Layers",
+        "title": "Progressive Web Apps (PWA)",
+        "description": "App-like experiences that work offline, load instantly, and can be installed on any device. Combining the best of web and mobile apps for superior user engagement."
+      },
+      {
+        "icon": "Users",
+        "title": "Web Portal Development",
+        "description": "Custom portals for employees, customers, or partners with secure login systems, personalized dashboards, and role-based access control for efficient information management."
+      },
+      {
+        "icon": "Zap",
+        "title": "Single Page Applications (SPA)",
+        "description": "Lightning-fast web applications using React, Vue, or Angular that provide smooth, desktop-like experiences with dynamic content loading and minimal page refreshes."
+      },
+      {
+        "icon": "Smartphone",
+        "title": "Responsive Web Design",
+        "description": "Mobile-first websites that automatically adapt to any screen size, ensuring pixel-perfect experiences across smartphones, tablets, and desktops with optimal performance."
+      }
+        ],
+        "serviceBenefits": [
+            {
+                "title": "Built Exactly for You, No Templates, No Limits",
+                "description": "Your business is unique your website should be too. We craft tailored web solutions that perfectly match your goals, brand, and audience.",
+                "image": ""
+            },
+            {
+                "title": "Lightning Fast Performance That Converts",
+                "description": "Speed isn’t optional it’s essential. Our optimized builds load in seconds, boost engagement, and keep visitors coming back.",
+                "image": ""
+            },
+            {
+                "title": "Scalable for the Future",
+                "description": "As your business grows, your website grows with it. Add new features, products, or pages anytime — no rebuilds, no downtime.",
+                "image": ""
+            },
+            {
+                "title": "Secure, Stable, and Reliable",
+                "description": "We use modern frameworks and enterprise grade security to ensure your website runs smoothly, safely, and without interruptions.",
+                "image": ""
+            },
+            {
+                "title": "Designed to Drive Results",
+                "description": "Every design choice and interaction is purpose-driven — to engage users, build trust, and turn visitors into loyal customers.",
+                "image": ""
+            }
+        ],
+        "serviceProccess": [
+            {
+                "title": "Discovery & Strategy",
+                "description": "We begin by understanding your goals, audience, and technical requirements. This helps us craft a clear roadmap that aligns design and development with your business objectives.",
+                "image": ""
+            },
+            {
+                "title": "Design & UX Planning",
+                "description": "We design intuitive, visually engaging user experiences that align perfectly with your brand identity and user needs.",
+                "image": ""
+            },
+            {
+                "title": "Development",
+                "description": "Our developers bring designs to life with clean, scalable, and high performance code using Next.js and modern technologies.",
+                "image": ""
+            },
+            {
+                "title": "Testing & Quality Assurance",
+                "description": "We thoroughly test your website across devices and browsers to ensure top performance, security, and reliability.",
+                "image": ""
+            },
+            {
+                "title": "Launch & Support",
+                "description": "After launch, we continue to monitor, maintain, and optimize your site for ongoing growth and success.",
+                "image": ""
+            }
+        ],
+        "technologies": [
+    {
+      "name": "React",
+      "slug": "react",
+      "category": "frontend"
+    },
+    {
+      "name": "Next.js",
+      "slug": "nextjs",
+      "category": "frontend"
+    },
+    {
+      "name": "Vue.js",
+      "slug": "vuejs",
+      "category": "frontend"
+    },
+    {
+      "name": "Node.js",
+      "slug": "nodejs",
+      "category": "backend"
+    },
+    {
+      "name": "TypeScript",
+      "slug": "typescript",
+      "category": "language"
+    },
+    {
+      "name": "Tailwind CSS",
+      "slug": "tailwindcss",
+      "category": "styling"
+    },
+    {
+      "name": "MongoDB",
+      "slug": "mongodb",
+      "category": "database"
+    },
+    {
+      "name": "PostgreSQL",
+      "slug": "postgresql",
+      "category": "database"
+    },
+    {
+      "name": "AWS",
+      "slug": "aws",
+      "category": "cloud"
+    },
+    {
+      "name": "Vercel",
+      "slug": "vercel",
+      "category": "deployment"
+    },
+    {
+      "name": "Vscode",
+      "slug": "vscode",
+      "category": "deployment"
+    },
+    {
+      "name": "Vite",
+      "slug": "vite",
+      "category": "deployment"
+    },
+    {
+      "name": "Postman",
+      "slug": "postman",
+      "category": "testing"
+    },
+    {
+      "name": "Nest JS",
+      "slug": "nestjs",
+      "category": "testing"
+    },
+    {
+      "name": "Slack",
+      "slug": "slack",
+      "category": "testing"
+    },
+    {
+      "name": "Git & Github",
+      "slug": "git-and-githu",
+      "category": "testing"
+    }
+  ]
+      }
+    },
+    {
+      "id": "1",
+      "slug": "custom-dashboard-development",
+      "title": "Custom Dashboard Development",
+      "text": "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+      "backgroundUrlt": "assets/benefits/card-3.svg",
+      "iconUrl": "dashboard",
+      "imageUrl": ""
+    },
+    {
+      "id": "2",
+      "slug": "seo-service",
+      "title": "Search Engine Optimization (SEO)",
+      "text": "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+      "backgroundUrlt": "assets/benefits/card-2.svg",
+      "iconUrl": "seo",
+      "imageUrl": "",
+      "light": true
+    },
+    {
+      "id": "3",
+      "slug": "api-development",
+      "title": "API Development & Integration",
+      "text": "The app uses natural language processing to understand user queries and providee accurate and relevant responses.",
+      "backgroundUrlt": "assets/benefits/card-6.svg",
+      "iconUrl": "api",
+      "imageUrl": ""
+    },
+    {
+      "id": "4",
+      "slug": "cms-ecommerce",
+      "title": "CMS & E-Commerce Solutions",
+      "text": "Lets users quickly find answers to their questions without having to search through multiple sources",
+      "backgroundUrlt": "assets/benefits/card-4.svg",
+      "iconUrl": "ecommerce",
+      "imageUrl": "",
+      "light": true
+    },
+    {
+      "id": "5",
+      "slug": "digital-marketing",
+      "title": "Digital Media Marketing",
+      "text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
+      "backgroundUrlt": "assets/benefits/card-5.svg",
+      "iconUrl": "digital-marketing",
+      "imageUrl": ""
+    }
+]

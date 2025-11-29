@@ -24,7 +24,7 @@ const SubServices = () => {
                                 <p className="body-2 text-n-3">{benefit.text}</p>
                             </div>
                             <div
-                                className="absolute inset-0.5 bg-n-7/90 blur-3xl backdrop-blur-2xl"
+                                className="absolute inset-0.5 bg-n-5 dark:bg-n-6 blur-3xl backdrop-blur-2xl"
                                 style={{
                                     clipPath: "url(#subCard)",
                                 }}

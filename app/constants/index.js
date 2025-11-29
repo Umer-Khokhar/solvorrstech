@@ -64,9 +64,7 @@ import {
   ];
   
   export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
-  
-  export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
-  
+    
   export const brainwaveServices = [
     "Photo generating",
     "Photo enhance",

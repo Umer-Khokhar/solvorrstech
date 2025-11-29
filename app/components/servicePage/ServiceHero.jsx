@@ -8,11 +8,7 @@ const ServiceHero = () => {
         <div className="bg-n-8 min-h-screen">
 
             {/* OPTION 1: With Animated Orbs + 2-Column Layout + Stats */}
-            <section className="relative py-20 md:py-32 overflow-hidden">
-                {/* Animated gradient orbs */}
-
-                {/* Grid pattern overlay */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-20">
                     <div className="absolute inset-0" style={{
                         backgroundImage: `
               linear-gradient(to right, rgb(148, 163, 184, 0.5) 1px, transparent 1px),
@@ -21,6 +17,10 @@ const ServiceHero = () => {
                         backgroundSize: '4rem 4rem'
                     }}></div>
                 </div>
+            <section className="relative py-20 md:py-32 overflow-hidden">
+                {/* Animated gradient orbs */}
+
+                {/* Grid pattern overlay */}
 
                 <div className="container mx-auto px-4 max-w-7xl relative z-10">
                     <div className="grid grid-cols-1 gap-12 items-center">

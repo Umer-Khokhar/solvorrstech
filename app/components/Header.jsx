@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Rocket, Sun, Moon } from 'lucide-react';
 import MagicButton from "./design/MagicButton";
 import { useTheme } from "next-themes";
+import ServicesDropdown from "./ServiceDropDown";
 
 export default function FloatingGlassHeader() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -25,11 +26,12 @@ export default function FloatingGlassHeader() {
     }, []);
 
     const navItems = [
-        { name: 'About', href: '/about' },
-        { name: 'Services', href: '/service' },
-        { name: 'Portfolio', href: '/portfolio' },
-        { name: 'Blogs', href: '/blog' },
-        { name: 'Pricing', href: '/pricing' }
+        { name: 'Home', href: '/', nav: false },
+        { name: 'About', href: '/about', nav: false },
+        { name: <ServicesDropdown />, href: '#', nav: true },
+        { name: 'Portfolio', href: '/portfolio', nav: false },
+        { name: 'Blogs', href: '/blog' , nav: false},
+        { name: 'Pricing', href: '/pricing' , nav: false}
     ];
 
     if (!mounted) {
@@ -40,24 +42,24 @@ export default function FloatingGlassHeader() {
         <div>
             {/* Header */}
             <header className="fixed top-4 left-0 right-0 z-50 px-4 py-4">
-                <nav className={` w-full
-          max-w-7xl mx-auto transition-all duration-300 ease-in-out
+                <nav className={` w-full bg-n-9
+          container transition-all duration-300 ease-in-out
           ${isScrolled
-                        ? 'bg-n-8/30 backdrop-blur-md border border-n-1/30 shadow-lg shadow-black/5'
-                        : 'bg-n-8/20 backdrop-blur-sm border border-n-1/20'
+                        ? 'bg-n-9/90 backdrop-blur-md border border-n-1/30 shadow-lg shadow-black/5'
+                        : 'bg-n-9/90 backdrop-blur-sm border border-n-1/20'
                     }
-           ${isMobileMenuOpen ? "rounded-lg" : "rounded-lg lg:rounded-full"} px-6 py-3
+           ${isMobileMenuOpen ? "rounded-lg" : "rounded-lg"} px-6 py-3
         `}>
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
                             <Link href={"/"}>
-                                <img src="/solvorr-logo.svg" alt="website logo" className={'h-8 md:h-10'} />
+                                <img src={theme === "dark" ? "/solvorr-logo.svg" : "./logo-light.svg"} alt="website logo" className={'h-8 md:h-10'} />
                             </Link>
                         </div>
 
                         {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center space-x-8">
+                        <div className="hidden text-sm md:flex items-center space-x-8">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.name}
@@ -109,7 +111,7 @@ export default function FloatingGlassHeader() {
                                         key={item.name}
                                         href={item.href}
                                         className="block text-n-1/80 hover:text-white transition-colors duration-200 text-sm font-medium"
-                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        onClick={() => setIsMobileMenuOpen(item.nav)}
                                     >
                                         {item.name}
                                     </a>

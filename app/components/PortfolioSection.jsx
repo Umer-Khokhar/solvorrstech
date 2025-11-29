@@ -5,7 +5,7 @@ import {brainwaveServices, brainwaveServicesIcons, choseUsServices} from "../con
 
 const PortfolioSection = () => {
   return (
-    <div className={`bg-n-7 py-[4rem]`}>
+    <div className={`py-[4rem]`}>
       <div className="container">
         <Heading
           title={`Who We Are`}
