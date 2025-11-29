@@ -59,7 +59,7 @@ export default function FloatingGlassHeader() {
                         </div>
 
                         {/* Desktop Navigation */}
-                        <div className="hidden text-sm md:flex items-center space-x-8">
+                        <div className="hidden font-base md:flex items-center space-x-8">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.name}

@@ -7,7 +7,8 @@
 :root {
     color-scheme: light;
 
-    --font-sora: "Sora", sans-serif;
+    --font-sora: "Kumbh Sans", sans-serif;
+    --font-clash-grotesk: var(--font-clash-grotesk);
     --font-code: "Source Code Pro", monospace;
     --font-grotesk: "Space Grotesk", sans-serif;
 
@@ -39,7 +40,7 @@
     --color-n-orange: #ff776f;
 
     /* Fonts */
-    --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+    /* --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif; */
     --font-code: var(--font-code);
     --font-grotesk: var(--font-grotesk);
 
@@ -184,18 +185,22 @@ body {
 
     .h1 {
         @apply font-semibold text-[2.4rem] leading-[3rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[3.7625rem] xl:text-[3.45rem] xl:leading-[4.5rem];
+        font-family: var(--font-clash-grotesk);
     }
 
     .h2 {
-        @apply text-[1.8rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+        @apply text-[1.8rem] font-semibold leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+        font-family: var(--font-clash-grotesk);
     }
 
     .h3 {
-        @apply text-[1.2rem] leading-normal md:text-[2.5rem];
+        @apply text-[1.2rem] font-medium leading-normal md:text-[2.5rem];
+        font-family: var(--font-clash-grotesk);
     }
 
     .h4 {
         @apply text-[2rem] leading-normal;
+        font-family: var(--font-clash-grotesk);
     }
 
     .h5 {

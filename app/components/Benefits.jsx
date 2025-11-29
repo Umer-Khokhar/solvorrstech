@@ -23,7 +23,7 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h3 className="h5 mb-5">{benefit.title}</h3>
-                <p className="body-2 text-n-3">{benefit.text}</p>
+                <p className="text-base text-n-3">{benefit.text}</p>
                 <div className="flex items-center mt-auto">
                   <img src={benefit.iconUrl} alt={benefit.title} loading="lazy" />
                   <Link href={"#"}
