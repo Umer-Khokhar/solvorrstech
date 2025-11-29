@@ -5,13 +5,15 @@ import { curve, heroBackground, robot } from "../assets";
 import { Button, Notification } from "./";
 import { BackgroundCircles, Gradient, BottomLine } from "./design/Hero";
 import { heroIcons } from "../constants";
+import ThemeBackground from "./ThemeBackground";
 
 const Hero = () => {
     return (
         <div
-            className={`pt-[12rem] -mt-[5.75rem]`}
+            className={`pt-[12rem] -mt-[5.75rem] relative`}
             id={"hero"}
         >
+               <ThemeBackground lightSrc={"./feature-bg.svg"} darkSrc={"./feature-bg-dark.svg"}/>
             <div className="container relative">
                 <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
                     <h1 className="h1 mb-6">

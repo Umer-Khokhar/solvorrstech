@@ -3,11 +3,13 @@ import {Button, Section} from "./";
 import {LeftCurve, RightCurve} from "./design/Collaboration"
 import {collabApps, collabContent, collabText} from "../constants";
 import {brainwaveSymbol, check} from "../assets";
+import ThemeBackground from "./ThemeBackground";
 
 const Collaboration = () => {
     return (
-        <div className={`bg-n-7 py-[4rem] my-[2rem]`}>
-            <div className="container lg:flex">
+        <div className={`py-[4rem] dark:bg-n-7 my-[2rem] z-20 relative`}>
+             <ThemeBackground lightSrc={"./grain-main.jpg"} darkSrc={null} />
+            <div className="container lg:flex z-10">
                 <div className="max-w-[35rem]">
                     <h2 className="h2 mb-4 md:mb-8">
                         Our Process – From Idea to Reality
