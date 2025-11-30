@@ -234,36 +234,8 @@ const LaunchIllustration = () => (
     </div>
 );
 
-const ServiceProcess = () => {
+const ServiceProcess = ({serviceProccess}) => {
     const [activeStep, setActiveStep] = useState(0);
-
-    const processSteps = [
-        {
-            title: "Discovery & Strategy",
-            description: "We begin by understanding your goals, audience, and technical requirements. This helps us craft a clear roadmap that aligns design and development with your business objectives.",
-            illustration: <DiscoveryIllustration />,
-        },
-        {
-            title: "Design & UX Planning",
-            description: "We design intuitive, visually engaging user experiences that align perfectly with your brand identity and user needs.",
-            illustration: <DesignIllustration />,
-        },
-        {
-            title: "Development",
-            description: "Our developers bring designs to life with clean, scalable, and high-performance code using Next.js and modern technologies.",
-            illustration: <DevelopmentIllustration />,
-        },
-        {
-            title: "Testing & Quality Assurance",
-            description: "We thoroughly test your website across devices and browsers to ensure top performance, security, and reliability.",
-            illustration: <TestingIllustration />,
-        },
-        {
-            title: "Launch & Support",
-            description: "After launch, we continue to monitor, maintain, and optimize your site for ongoing growth and success.",
-            illustration: <LaunchIllustration />,
-        },
-    ];
 
     return (
         <div className="bg-n-8 min-h-screen">
@@ -284,7 +256,7 @@ const ServiceProcess = () => {
                     {/* Tabs */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
 
-                        {processSteps.map((step, index) => (
+                        {serviceProccess.map((step, index) => (
                             <div
                                 key={index}
                                 onClick={() => setActiveStep(index)}
@@ -307,10 +279,10 @@ const ServiceProcess = () => {
                     {/* Content */}
                     <div className={`text-center mx-auto mb-6`}>
                     <h4 className="text-3xl font-bold mb-4">
-                        {processSteps[activeStep].title}
+                        {serviceProccess[activeStep].title}
                     </h4>
                     <p className="text-n-4 max-w-2xl mx-auto text-lg">
-                        {processSteps[activeStep].description}
+                        {serviceProccess[activeStep].description}
                     </p>
                     </div>
                     {/* Active Step Illustration + Content */}
@@ -318,7 +290,7 @@ const ServiceProcess = () => {
                         <div className="flex flex-col items-center">
                             {/* Large Illustration */}
                             <div className="w-full h-96 rounded-2xl overflow-hidden mb-8">
-                                {processSteps[activeStep].illustration}
+                                {serviceProccess[activeStep]?.illustration}
                             </div>
                         </div>
                     </div>

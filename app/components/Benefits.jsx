@@ -26,7 +26,7 @@ const Benefits = () => {
                 <p className="text-base text-n-3">{benefit.text}</p>
                 <div className="flex items-center mt-auto">
                   <img src={benefit.iconUrl} alt={benefit.title} loading="lazy" />
-                  <Link href={"#"}
+                  <Link href={`/${benefit.slug}`}
                     className="font-code ml-auto pointer-events-auto cursor-pointer text-xs uppercase font-bold"
                   >
                     Explore more

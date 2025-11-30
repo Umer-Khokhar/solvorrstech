@@ -28,10 +28,10 @@ export default function FloatingGlassHeader() {
     const navItems = [
         { name: 'Home', href: '/', nav: false },
         { name: 'About', href: '/about', nav: false },
-        { name: <ServicesDropdown />, href: '#', nav: true },
+        { name: "service", href: '#', nav: true },
         { name: 'Portfolio', href: '/portfolio', nav: false },
-        { name: 'Blogs', href: '/blog' , nav: false},
-        { name: 'Pricing', href: '/pricing' , nav: false}
+        { name: 'Blogs', href: '/blog', nav: false },
+        { name: 'Pricing', href: '/pricing', nav: false }
     ];
 
     if (!mounted) {
@@ -61,14 +61,20 @@ export default function FloatingGlassHeader() {
                         {/* Desktop Navigation */}
                         <div className="hidden font-base md:flex items-center space-x-8">
                             {navItems.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className=" hover:text-color-5 transition-colors duration-200 text-sm font-medium relative group"
-                                >
-                                    {item.name}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-200 group-hover:w-full"></span>
-                                </Link>
+                                <React.Fragment key={item.name} >
+                                    {item.nav ? (
+                                        <ServicesDropdown />
+                                    ) : (
+                                        <Link
+
+                                            href={item.href}
+                                            className=" hover:text-color-5 h-full transition-colors duration-200 text-sm font-medium relative group"
+                                        >
+                                            {item.name}
+                                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-200 group-hover:w-full"></span>
+                                        </Link>
+                                    )}
+                                </React.Fragment>
                             ))}
                         </div>
 
@@ -107,14 +113,21 @@ export default function FloatingGlassHeader() {
                         <div className="md:hidden mt-4 pt-4 border-t border-white/10">
                             <div className="space-y-3">
                                 {navItems.map((item) => (
-                                    <a
+                                    <React.Fragment
                                         key={item.name}
-                                        href={item.href}
-                                        className="block text-n-1/80 hover:text-white transition-colors duration-200 text-sm font-medium"
-                                        onClick={() => setIsMobileMenuOpen(item.nav)}
                                     >
-                                        {item.name}
-                                    </a>
+                                        {item.nav ? (
+                                            <ServicesDropdown />
+                                        ) : (
+                                            <Link
+                                                href={item.href}
+                                                className="block text-n-1/80 hover:text-white transition-colors duration-200 text-sm font-medium"
+                                                onClick={() => setIsMobileMenuOpen(item.nav)}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        )}
+                                    </React.Fragment>
                                 ))}
                                 <div className="pt-3 space-y-2">
                                     <button className="block w-full text-left text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium">

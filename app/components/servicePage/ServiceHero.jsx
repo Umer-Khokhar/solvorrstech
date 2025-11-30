@@ -3,7 +3,7 @@ import React from 'react';
 import { Code, Zap, Shield, Target, CheckCircle, TrendingUp } from 'lucide-react';
 import MagicButton from '../design/MagicButton';
 
-const ServiceHero = () => {
+const ServiceHero = ({content}) => {
     return (
         <div className="bg-n-8 min-h-screen">
 
@@ -28,14 +28,11 @@ const ServiceHero = () => {
                         {/* Left: Text Content */}
                         <div className="text-center">
                             <h1 className="h1 font-bold mb-6 leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-                  Web Development
-                </span>{' '}
-                                Solutions That Power Your Digital Growth
+                {content.title}
                             </h1>
 
                             <p className="text-n-3 body-1 mb-8 leading-relaxed">
-                                At Solvorr Tech, we don't just build websites — we create intelligent digital systems designed to convert, scale, and perform. Whether you're a startup or a growing enterprise, our tailored web solutions bring your brand vision to life.
+                                {content.subTitle}
                             </p>
 
                             <MagicButton children='Get a Free Consultation' className='rounded-full'/>

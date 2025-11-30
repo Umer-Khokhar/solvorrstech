@@ -251,40 +251,8 @@ const ResultsIllustration = () => (
 );
 
 
-export default function Benefit() {
-    const services = [
-        {
-            id: 0,
-            title: 'Built Exactly for You — No Templates, No Limits',
-            description: 'Your business is unique — your website should be too. We craft tailored web solutions that perfectly match your goals, brand, and audience.',
-            illustration: <CustomBuiltIllustration />,
-        },
-        {
-            id: 1,
-            title: 'Lightning-Fast Performance That Converts',
-            description: 'Speed isn’t optional — it’s essential. Our optimized builds load in seconds, boost engagement, and keep visitors coming back.',
-            illustration: <PerformanceIllustration />,
-        },
-        {
-            id: 2,
-            title: 'Scalable for the Future',
-            description: 'As your business grows, your website grows with it. Add new features, products, or pages anytime — no rebuilds, no downtime.',
-            illustration: <ScalableIllustration />,
-        },
-        {
-            id: 3,
-            title: 'Secure, Stable, and Reliable',
-            description: 'We use modern frameworks and enterprise-grade security to ensure your website runs smoothly, safely, and without interruptions.',
-            illustration: <SecurityIllustration />,
-        },
-        {
-            id: 4,
-            title: 'Designed to Drive Results',
-            description: 'Every design choice and interaction is purpose-driven — to engage users, build trust, and turn visitors into loyal customers.',
-            illustration: <ResultsIllustration />,
-        },
-    ];
-
+export default function Benefit({serviceBenefits}) {
+    
     return (
         <div className="min-h-screen bg-gradient-to-b py-20 px-4">
             <div className="container mx-auto">
@@ -301,17 +269,17 @@ export default function Benefit() {
 
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {services.slice(0, 3).map((service, index) => (
+                    {serviceBenefits.slice(0, 3).map((service, index) => (
 
-                            <ServiceCard {...service} id={service.id} key={service.id}  className={`
+                            <ServiceCard {...service} id={index} key={index}  className={`
         ${index === 0 ? "md:row-span-2 md:col-span-2" : ""} col-span-1 row-span-1
       `}/>
 
                     ))}
                     <div className="col-span-1 sm:col-span-2 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {services.slice(3, 5).map((service, index) => (
+                        {serviceBenefits.slice(3, 5).map((service, index) => (
 
-                                <ServiceCard {...service} key={service.id} id={service.id}/>
+                                <ServiceCard {...service} key={index} id={service.id}/>
                         ))}
                     </div>
 

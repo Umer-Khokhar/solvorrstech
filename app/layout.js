@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Sora, Kumbh_Sans } from "next/font/google";
+import { Kumbh_Sans } from "next/font/google";
 import localFont from "next/font/local"
 import "@/app/globals.css";
 import { Footer, Header } from "@/app/components";
@@ -29,28 +29,17 @@ const clashGrotesk = localFont({
   ],
   variable: '--font-clash-grotesk',
   display: 'swap',
+  preload: true
 })
 
 
 
 const kumbh = Kumbh_Sans({
   variable: "--font-kumbh",
-  subsets: ["latin"]
+  subsets: ["latin"],
+  display: 'swap', // Add this to prevent blocking
+  preload: true, // Explicitly enable preload
 })
-const soraFont = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Solvorr Tech – Modern Web Applications, Automation & Digital Solutions",
