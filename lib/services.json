@@ -1,237 +1,602 @@
 [
-    {
-      "id": "0",
-      "slug": "custom-web-development",
-      "title": "Custom Website Development",
-      "text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
-      "backgroundUrlt": "assets/benefits/card-1.svg",
-      "iconUrl": "development",
-      "imageUrl": "",
-      "detailPage": {
-        "heroTitle": "",
-        "heroSubTitle": "",
-        "heroImage": "",
-        "overview": {
-            "title": "",
-            "subTitle": "",
-            "description": "",
-            "image": ""
+  {
+    "id": "0",
+    "slug": "custom-web-development",
+    "title": "Custom Website Development",
+    "text": "High-performance, conversion-focused websites built with Next.js for modern businesses.",
+    "backgroundUrl": "assets/benefits/card-1.svg",
+    "iconUrl": "development",
+    "imageUrl": "",
+    "detailPage": {
+      "heroTitle": "Web Development Solutions That Power Your Digital Growth",
+      "heroSubTitle": "At Solvorr Tech, we build high-performance, scalable, and conversion-optimized websites tailored to your business goals. From landing pages to complete corporate sites, every build is crafted for speed, performance, and long-term scalability.",
+      "heroImage": "",
+      "overview": {
+        "title": "Building Digital Solutions That Drive Real Business Impact",
+        "subTitle": "We merge design, performance, and user experience to create websites that not only look great but also convert.",
+        "description": [
+          "Your website is your digital foundation — and we ensure it works as hard as you do.",
+          "Every website we build is designed for fast loading, high engagement, SEO visibility, and long-term growth. Whether you're a small business or a scaling brand, our websites are built to empower your success."
+        ],
+        "image": ""
+      },
+      "subServices": [
+        {
+          "icon": "Globe",
+          "title": "Corporate Website Development",
+          "description": "Professional corporate sites built for credibility, trust, and conversions — tailored for growing businesses and startups."
         },
-        "subServices": [
-            {
-        "icon": "Globe",
-        "title": "Corporate Website Development",
-        "description": "Professional business websites that establish your brand presence online with modern design, intuitive navigation, and compelling content that converts visitors into customers."
-      },
-      {
-        "icon": "ShoppingBag",
-        "title": "E-Commerce Development",
-        "description": "Full-featured online stores with secure payment gateways, inventory management, shopping carts, and seamless checkout experiences that maximize sales and customer satisfaction."
-      },
-      {
-        "icon": "Layers",
-        "title": "Progressive Web Apps (PWA)",
-        "description": "App-like experiences that work offline, load instantly, and can be installed on any device. Combining the best of web and mobile apps for superior user engagement."
-      },
-      {
-        "icon": "Users",
-        "title": "Web Portal Development",
-        "description": "Custom portals for employees, customers, or partners with secure login systems, personalized dashboards, and role-based access control for efficient information management."
-      },
-      {
-        "icon": "Zap",
-        "title": "Single Page Applications (SPA)",
-        "description": "Lightning-fast web applications using React, Vue, or Angular that provide smooth, desktop-like experiences with dynamic content loading and minimal page refreshes."
-      },
-      {
-        "icon": "Smartphone",
-        "title": "Responsive Web Design",
-        "description": "Mobile-first websites that automatically adapt to any screen size, ensuring pixel-perfect experiences across smartphones, tablets, and desktops with optimal performance."
-      }
-        ],
-        "serviceBenefits": [
-            {
-                "title": "Built Exactly for You, No Templates, No Limits",
-                "description": "Your business is unique your website should be too. We craft tailored web solutions that perfectly match your goals, brand, and audience.",
-                "image": ""
-            },
-            {
-                "title": "Lightning Fast Performance That Converts",
-                "description": "Speed isn’t optional it’s essential. Our optimized builds load in seconds, boost engagement, and keep visitors coming back.",
-                "image": ""
-            },
-            {
-                "title": "Scalable for the Future",
-                "description": "As your business grows, your website grows with it. Add new features, products, or pages anytime — no rebuilds, no downtime.",
-                "image": ""
-            },
-            {
-                "title": "Secure, Stable, and Reliable",
-                "description": "We use modern frameworks and enterprise grade security to ensure your website runs smoothly, safely, and without interruptions.",
-                "image": ""
-            },
-            {
-                "title": "Designed to Drive Results",
-                "description": "Every design choice and interaction is purpose-driven — to engage users, build trust, and turn visitors into loyal customers.",
-                "image": ""
-            }
-        ],
-        "serviceProccess": [
-            {
-                "title": "Discovery & Strategy",
-                "description": "We begin by understanding your goals, audience, and technical requirements. This helps us craft a clear roadmap that aligns design and development with your business objectives.",
-                "image": ""
-            },
-            {
-                "title": "Design & UX Planning",
-                "description": "We design intuitive, visually engaging user experiences that align perfectly with your brand identity and user needs.",
-                "image": ""
-            },
-            {
-                "title": "Development",
-                "description": "Our developers bring designs to life with clean, scalable, and high performance code using Next.js and modern technologies.",
-                "image": ""
-            },
-            {
-                "title": "Testing & Quality Assurance",
-                "description": "We thoroughly test your website across devices and browsers to ensure top performance, security, and reliability.",
-                "image": ""
-            },
-            {
-                "title": "Launch & Support",
-                "description": "After launch, we continue to monitor, maintain, and optimize your site for ongoing growth and success.",
-                "image": ""
-            }
-        ],
-        "technologies": [
-    {
-      "name": "React",
-      "slug": "react",
-      "category": "frontend"
-    },
-    {
-      "name": "Next.js",
-      "slug": "nextjs",
-      "category": "frontend"
-    },
-    {
-      "name": "Vue.js",
-      "slug": "vuejs",
-      "category": "frontend"
-    },
-    {
-      "name": "Node.js",
-      "slug": "nodejs",
-      "category": "backend"
-    },
-    {
-      "name": "TypeScript",
-      "slug": "typescript",
-      "category": "language"
-    },
-    {
-      "name": "Tailwind CSS",
-      "slug": "tailwindcss",
-      "category": "styling"
-    },
-    {
-      "name": "MongoDB",
-      "slug": "mongodb",
-      "category": "database"
-    },
-    {
-      "name": "PostgreSQL",
-      "slug": "postgresql",
-      "category": "database"
-    },
-    {
-      "name": "AWS",
-      "slug": "aws",
-      "category": "cloud"
-    },
-    {
-      "name": "Vercel",
-      "slug": "vercel",
-      "category": "deployment"
-    },
-    {
-      "name": "Vscode",
-      "slug": "vscode",
-      "category": "deployment"
-    },
-    {
-      "name": "Vite",
-      "slug": "vite",
-      "category": "deployment"
-    },
-    {
-      "name": "Postman",
-      "slug": "postman",
-      "category": "testing"
-    },
-    {
-      "name": "Nest JS",
-      "slug": "nestjs",
-      "category": "testing"
-    },
-    {
-      "name": "Slack",
-      "slug": "slack",
-      "category": "testing"
-    },
-    {
-      "name": "Git & Github",
-      "slug": "git-and-githu",
-      "category": "testing"
+        {
+          "icon": "Layers",
+          "title": "Landing Page Design & Development",
+          "description": "High-converting landing pages designed for product launches, lead generation, and marketing campaigns."
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Responsive Web Design",
+          "description": "Pixel-perfect responsive websites that perform flawlessly across all devices and screens."
+        },
+        {
+          "icon": "Zap",
+          "title": "Single Page Applications (SPA)",
+          "description": "Ultra-fast single-page applications with smooth transitions, instant loading, and seamless UX."
+        },
+        {
+          "icon": "Users",
+          "title": "Web Portal Development",
+          "description": "Custom role-based portals for employees, partners, or customers with secure authentication."
+        },
+        {
+          "icon": "ShoppingBag",
+          "title": "E-Commerce Websites",
+          "description": "Modern e-commerce solutions with secure payments, product management, and optimized checkout flows."
+        }
+      ],
+      "serviceBenefits": [
+        {
+          "title": "Custom-Built, No Templates",
+          "description": "Every website is tailored specifically to your brand, needs, and goals — crafted from scratch.",
+          "image": ""
+        },
+        {
+          "title": "Lightning-Fast Performance",
+          "description": "Optimized code, image compression, caching, and Next.js rendering ensure blazing load times.",
+          "image": ""
+        },
+        {
+          "title": "SEO-Friendly Architecture",
+          "description": "Technical SEO foundations baked into every page for better visibility and organic ranking.",
+          "image": ""
+        },
+        {
+          "title": "Scalable & Future-Ready",
+          "description": "Easily extend your website in the future without needing a full rebuild.",
+          "image": ""
+        },
+        {
+          "title": "Conversion-Optimized UX",
+          "description": "Clean layouts, strong CTAs, and intuitive user journeys built to maximize conversions.",
+          "image": ""
+        }
+      ],
+      "serviceProccess": [
+        {
+          "title": "Discovery & Strategy",
+          "description": "We begin with understanding your goals, customers, and vision to create a clear project roadmap.",
+          "image": ""
+        },
+        {
+          "title": "Design & UX Planning",
+          "description": "We craft clean, modern, and user-focused designs aligned with your brand identity.",
+          "image": ""
+        },
+        {
+          "title": "Development",
+          "description": "Using Next.js and modern tools, we build scalable, fast, and secure websites.",
+          "image": ""
+        },
+        {
+          "title": "Testing & Quality Assurance",
+          "description": "Your website is tested for performance, security, responsiveness, accessibility, and stability.",
+          "image": ""
+        },
+        {
+          "title": "Launch & Ongoing Support",
+          "description": "We monitor, optimize, and maintain your website for continuous growth.",
+          "image": ""
+        }
+      ],
+      "technologies": [
+        { "name": "React", "slug": "react", "category": "frontend" },
+        { "name": "Next.js", "slug": "nextjs", "category": "frontend" },
+        { "name": "Vue.js", "slug": "vuejs", "category": "frontend" },
+        { "name": "Node.js", "slug": "nodejs", "category": "backend" },
+        { "name": "TypeScript", "slug": "typescript", "category": "language" },
+        { "name": "Tailwind CSS", "slug": "tailwindcss", "category": "styling" },
+        { "name": "MongoDB", "slug": "mongodb", "category": "database" },
+        { "name": "PostgreSQL", "slug": "postgresql", "category": "database" },
+        { "name": "AWS", "slug": "aws", "category": "cloud" },
+        { "name": "Vercel", "slug": "vercel", "category": "deployment" },
+        { "name": "Vscode", "slug": "vscode", "category": "deployment" },
+        { "name": "Vite", "slug": "vite", "category": "deployment" },
+        { "name": "Postman", "slug": "postman", "category": "testing" },
+        { "name": "Nest JS", "slug": "nestjs", "category": "testing" },
+        { "name": "Slack", "slug": "slack", "category": "testing" },
+        { "name": "Git & Github", "slug": "git-and-githu", "category": "testing" }
+      ]
     }
-  ]
-      }
-    },
-    {
-      "id": "1",
-      "slug": "custom-dashboard-development",
-      "title": "Custom Dashboard Development",
-      "text": "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
-      "backgroundUrlt": "assets/benefits/card-3.svg",
-      "iconUrl": "dashboard",
-      "imageUrl": ""
-    },
-    {
-      "id": "2",
-      "slug": "seo-service",
-      "title": "Search Engine Optimization (SEO)",
-      "text": "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-      "backgroundUrlt": "assets/benefits/card-2.svg",
-      "iconUrl": "seo",
-      "imageUrl": "",
-      "light": true
-    },
-    {
-      "id": "3",
-      "slug": "api-development",
-      "title": "API Development & Integration",
-      "text": "The app uses natural language processing to understand user queries and providee accurate and relevant responses.",
-      "backgroundUrlt": "assets/benefits/card-6.svg",
-      "iconUrl": "api",
-      "imageUrl": ""
-    },
-    {
-      "id": "4",
-      "slug": "cms-ecommerce",
-      "title": "CMS & E-Commerce Solutions",
-      "text": "Lets users quickly find answers to their questions without having to search through multiple sources",
-      "backgroundUrlt": "assets/benefits/card-4.svg",
-      "iconUrl": "ecommerce",
-      "imageUrl": "",
-      "light": true
-    },
-    {
-      "id": "5",
-      "slug": "digital-marketing",
-      "title": "Digital Media Marketing",
-      "text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
-      "backgroundUrlt": "assets/benefits/card-5.svg",
-      "iconUrl": "digital-marketing",
-      "imageUrl": ""
+  },
+
+  {
+    "id": "1",
+    "slug": "dashboard-and-web-app-development",
+    "title": "Dashboard & Web App Development",
+    "text": "We build powerful dashboards, internal tools, and scalable web applications designed to streamline operations.",
+    "backgroundUrl": "assets/benefits/card-3.svg",
+    "iconUrl": "dashboard",
+    "imageUrl": "",
+    "detailPage": {
+      "heroTitle": "Powerful Dashboards & Web Applications for Modern Businesses",
+      "heroSubTitle": "We design and develop custom dashboards and web apps that automate workflows, visualize data, and streamline daily operations.",
+      "heroImage": "",
+      "overview": {
+        "title": "Custom Dashboards Built Around Your Business",
+        "subTitle": "From analytics dashboards to internal CRMs — we build tools that save time, boost productivity, and unlock business insights.",
+        "description": [
+          "Your business needs systems that adapt to your workflow — not the other way around.",
+          "We build dashboards and full-featured web apps with custom logic, user roles, powerful data handling, and clean design."
+        ],
+        "image": ""
+      },
+      "subServices": [
+        {
+          "icon": "BarChart",
+          "title": "Analytics Dashboards",
+          "description": "Custom dashboards with charts, KPIs, and performance metrics to help you understand your business in real-time."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Admin Panels",
+          "description": "Feature-rich admin systems with secure authentication, role-based access control, and complete data management."
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Internal Tools & CRMs",
+          "description": "Custom-built CRMs, project management tools, and workflow systems tailored to your internal processes."
+        },
+        {
+          "icon": "Layers",
+          "title": "SaaS Web Apps",
+          "description": "Build and launch your SaaS idea with user auth, subscriptions, and scalable architecture."
+        },
+        {
+          "icon": "Database",
+          "title": "Data Management Interfaces",
+          "description": "Easy-to-use interfaces that allow your team to manage and update data without technical knowledge."
+        }
+      ],
+      "serviceBenefits": [
+        {
+          "title": "Automation That Saves Hours",
+          "description": "Reduce manual work with digital tools that automate repetitive business processes.",
+          "image": ""
+        },
+        {
+          "title": "Real-Time Visibility",
+          "description": "Powerful dashboards help you see insights instantly and make better decisions faster.",
+          "image": ""
+        },
+        {
+          "title": "Smart Access Control",
+          "description": "Admin, staff, and client roles with secure login and permission systems.",
+          "image": ""
+        },
+        {
+          "title": "Built for Scale",
+          "description": "Your dashboards grow with your business — add more modules anytime.",
+          "image": ""
+        }
+      ],
+      "serviceProccess": [
+        {
+          "title": "Requirement Analysis",
+          "description": "We identify your workflows, data needs, and automation opportunities.",
+          "image": ""
+        },
+        {
+          "title": "UI/UX Wireframing",
+          "description": "We design structured dashboards with clear navigation and intuitive layouts.",
+          "image": ""
+        },
+        {
+          "title": "Development",
+          "description": "We build using Next.js, Node.js, and modern databases for speed and reliability.",
+          "image": ""
+        },
+        {
+          "title": "Testing",
+          "description": "Every feature is tested for accuracy, security, and device compatibility.",
+          "image": ""
+        },
+        {
+          "title": "Deployment & Support",
+          "description": "Your dashboard is deployed to a cloud environment and monitored for performance.",
+          "image": ""
+        }
+      ],
+      "technologies": [
+        { "name": "React", "slug": "react", "category": "frontend" },
+        { "name": "Next.js", "slug": "nextjs", "category": "frontend" },
+        { "name": "Vue.js", "slug": "vuejs", "category": "frontend" },
+        { "name": "Node.js", "slug": "nodejs", "category": "backend" },
+        { "name": "TypeScript", "slug": "typescript", "category": "language" },
+        { "name": "Tailwind CSS", "slug": "tailwindcss", "category": "styling" },
+        { "name": "MongoDB", "slug": "mongodb", "category": "database" },
+        { "name": "PostgreSQL", "slug": "postgresql", "category": "database" },
+        { "name": "AWS", "slug": "aws", "category": "cloud" },
+        { "name": "Vercel", "slug": "vercel", "category": "deployment" },
+        { "name": "Vscode", "slug": "vscode", "category": "deployment" },
+        { "name": "Vite", "slug": "vite", "category": "deployment" },
+        { "name": "Postman", "slug": "postman", "category": "testing" },
+        { "name": "Nest JS", "slug": "nestjs", "category": "testing" },
+        { "name": "Slack", "slug": "slack", "category": "testing" },
+        { "name": "Git & Github", "slug": "git-and-githu", "category": "testing" }
+      ]
     }
+  },
+
+  {
+    "id": "2",
+    "slug": "business-automation-systems",
+    "title": "Business Automation Systems",
+    "text": "Automate repetitive tasks, streamline operations, and save time with custom business automation.",
+    "backgroundUrl": "assets/benefits/card-4.svg",
+    "iconUrl": "automation",
+    "imageUrl": "",
+    "detailPage": {
+      "heroTitle": "Automate Workflows & Accelerate Business Productivity",
+      "heroSubTitle": "We build custom automation solutions that reduce manual work, increase efficiency, and streamline your processes.",
+      "heroImage": "",
+      "overview": {
+        "title": "Automation Tailored to Your Business Needs",
+        "subTitle": "From lead automation to internal workflow systems — we help businesses save hours every week.",
+        "description": [
+          "Manual repetitive tasks slow down your business.",
+          "We build smart automation systems that connect your tools, streamline your workflows, and reduce operational inefficiencies."
+        ],
+        "image": ""
+      },
+      "subServices": [
+        {
+          "icon": "Zap",
+          "title": "Lead Automation",
+          "description": "Automatically route leads to WhatsApp, email, CRM, or dashboards."
+        },
+        {
+          "icon": "Calendar",
+          "title": "Booking & Appointment Automation",
+          "description": "Automate bookings and sync appointments with Google Calendar."
+        },
+        {
+          "icon": "Mail",
+          "title": "Email & Notification Automation",
+          "description": "Send automatic alerts, confirmations, or updates to customers."
+        },
+        {
+          "icon": "Database",
+          "title": "Data Synchronization",
+          "description": "Auto-sync data between website forms, Google Sheets, dashboards, or APIs."
+        },
+        {
+          "icon": "Bot",
+          "title": "AI-Assisted Automations",
+          "description": "Use AI to handle responses, generate summaries, or categorize data."
+        }
+      ],
+      "serviceBenefits": [
+        {
+          "title": "Save Hours of Manual Effort",
+          "description": "Reduce the workload on your team by automating repeat tasks.",
+          "image": ""
+        },
+        {
+          "title": "Zero Human Error",
+          "description": "Automations ensure data accuracy and eliminate mistakes.",
+          "image": ""
+        },
+        {
+          "title": "Real-Time Execution",
+          "description": "Your workflows run instantly — no delays.",
+          "image": ""
+        },
+        {
+          "title": "Works With Your Existing Tools",
+          "description": "Integrates with WhatsApp, Gmail, Google Sheets, CRMs, APIs, and more.",
+          "image": ""
+        }
+      ],
+      "serviceProccess": [
+        {
+          "title": "Workflow Mapping",
+          "description": "We identify tasks and processes that can be automated.",
+          "image": ""
+        },
+        {
+          "title": "System Planning",
+          "description": "We design an efficient automation architecture around your goals.",
+          "image": ""
+        },
+        {
+          "title": "Automation Development",
+          "description": "We implement backend logic, APIs, and integrations.",
+          "image": ""
+        },
+        {
+          "title": "Testing",
+          "description": "We ensure the automation runs reliably in all conditions.",
+          "image": ""
+        },
+        {
+          "title": "Deployment & Monitoring",
+          "description": "We deploy to the cloud and monitor performance for continuous operation.",
+          "image": ""
+        }
+      ],
+      "technologies": [
+        { "name": "React", "slug": "react", "category": "frontend" },
+        { "name": "Next.js", "slug": "nextjs", "category": "frontend" },
+        { "name": "Vue.js", "slug": "vuejs", "category": "frontend" },
+        { "name": "Node.js", "slug": "nodejs", "category": "backend" },
+        { "name": "TypeScript", "slug": "typescript", "category": "language" },
+        { "name": "Tailwind CSS", "slug": "tailwindcss", "category": "styling" },
+        { "name": "MongoDB", "slug": "mongodb", "category": "database" },
+        { "name": "PostgreSQL", "slug": "postgresql", "category": "database" },
+        { "name": "AWS", "slug": "aws", "category": "cloud" },
+        { "name": "Vercel", "slug": "vercel", "category": "deployment" },
+        { "name": "Vscode", "slug": "vscode", "category": "deployment" },
+        { "name": "Vite", "slug": "vite", "category": "deployment" },
+        { "name": "Postman", "slug": "postman", "category": "testing" },
+        { "name": "Nest JS", "slug": "nestjs", "category": "testing" },
+        { "name": "Slack", "slug": "slack", "category": "testing" },
+        { "name": "Git & Github", "slug": "git-and-githu", "category": "testing" }
+      ]
+    }
+  },
+
+  {
+    "id": "3",
+    "slug": "api-development",
+    "title": "API Development & Integration",
+    "text": "Secure, reliable, and scalable APIs that connect your systems and enable seamless data communication.",
+    "backgroundUrl": "assets/benefits/card-6.svg",
+    "iconUrl": "api",
+    "imageUrl": "",
+    "detailPage": {
+      "heroTitle": "Powerful API Development & Integrations",
+      "heroSubTitle": "We build secure, scalable APIs and integrate third-party systems to enable smooth data communication across your business.",
+      "heroImage": "",
+      "overview": {
+        "title": "Build Strong Connections With Powerful APIs",
+        "subTitle": "APIs are the bridge that connects your business tools — and we make sure that bridge is powerful, secure, and future-ready.",
+        "description": [
+          "Whether you need REST APIs, custom integrations, or system communication — we build backend solutions that are clean, scalable, and reliable.",
+          "Our APIs ensure your website, dashboard, and automations work seamlessly together with zero downtime."
+        ],
+        "image": ""
+      },
+      "subServices": [
+        {
+          "icon": "GitBranch",
+          "title": "Custom REST API Development",
+          "description": "High-performance APIs designed specifically for your business logic and data flow."
+        },
+        {
+          "icon": "Plug",
+          "title": "Third-Party Integrations",
+          "description": "Integrate Stripe, PayPal, WhatsApp API, Google services, CRMs, and more."
+        },
+        {
+          "icon": "Database",
+          "title": "Database API Layers",
+          "description": "Secure endpoints that manage database operations and data communication."
+        },
+        {
+          "icon": "Shield",
+          "title": "Authentication & Security",
+          "description": "JWT auth, OAuth, session-based access, rate limiting, and encrypted communication."
+        },
+        {
+          "icon": "Globe",
+          "title": "External API Consumption",
+          "description": "Consume third-party APIs and connect them to your dashboard or website."
+        }
+      ],
+      "serviceBenefits": [
+        {
+          "title": "Clean & Scalable Architecture",
+          "description": "Our APIs are designed to grow with your business without performance issues.",
+          "image": ""
+        },
+        {
+          "title": "Secure Data Protection",
+          "description": "Enterprise-grade security ensures your business data stays safe.",
+          "image": ""
+        },
+        {
+          "title": "Seamless Integrations",
+          "description": "Smooth communication between systems for a unified workflow.",
+          "image": ""
+        },
+        {
+          "title": "Future-Ready",
+          "description": "Easy to extend, modify, or scale as your product evolves.",
+          "image": ""
+        }
+      ],
+      "serviceProccess": [
+        {
+          "title": "Planning & API Architecture",
+          "description": "We map your data models, endpoints, and communication flow.",
+          "image": ""
+        },
+        {
+          "title": "Development",
+          "description": "We build APIs using Node.js, Express, and Next.js server functions.",
+          "image": ""
+        },
+        {
+          "title": "Security Implementation",
+          "description": "We implement authentication, encryption, and rate limiting.",
+          "image": ""
+        },
+        {
+          "title": "Testing",
+          "description": "We test endpoints for performance, load, and error handling.",
+          "image": ""
+        },
+        {
+          "title": "Deployment & Documentation",
+          "description": "Your API is deployed with full documentation for easy usage.",
+          "image": ""
+        }
+      ],
+      "technologies": [
+        { "name": "React", "slug": "react", "category": "frontend" },
+        { "name": "Next.js", "slug": "nextjs", "category": "frontend" },
+        { "name": "Vue.js", "slug": "vuejs", "category": "frontend" },
+        { "name": "Node.js", "slug": "nodejs", "category": "backend" },
+        { "name": "TypeScript", "slug": "typescript", "category": "language" },
+        { "name": "Tailwind CSS", "slug": "tailwindcss", "category": "styling" },
+        { "name": "MongoDB", "slug": "mongodb", "category": "database" },
+        { "name": "PostgreSQL", "slug": "postgresql", "category": "database" },
+        { "name": "AWS", "slug": "aws", "category": "cloud" },
+        { "name": "Vercel", "slug": "vercel", "category": "deployment" },
+        { "name": "Vscode", "slug": "vscode", "category": "deployment" },
+        { "name": "Vite", "slug": "vite", "category": "deployment" },
+        { "name": "Postman", "slug": "postman", "category": "testing" },
+        { "name": "Nest JS", "slug": "nestjs", "category": "testing" },
+        { "name": "Slack", "slug": "slack", "category": "testing" },
+        { "name": "Git & Github", "slug": "git-and-githu", "category": "testing" }
+      ]
+    }
+  },
+
+  {
+    "id": "4",
+    "slug": "seo-service",
+    "title": "Search Engine Optimization (SEO)",
+    "text": "Improve visibility, increase website traffic, and attract high-intent customers with effective SEO strategies.",
+    "backgroundUrl": "assets/benefits/card-2.svg",
+    "iconUrl": "seo",
+    "imageUrl": "",
+    "light": true,
+    "detailPage": {
+      "heroTitle": "SEO Services That Drive Organic Growth",
+      "heroSubTitle": "We help businesses increase visibility, attract targeted customers, and rank higher on search engines through data-driven SEO strategies.",
+      "heroImage": "",
+      "overview": {
+        "title": "Boost Your Search Visibility and Attract More Customers",
+        "subTitle": "Our SEO approach focuses on your business goals — not random keywords. We optimize your website to generate real measurable growth.",
+        "description": [
+          "SEO isn't about ranking for everything — it's about ranking for what matters to your ideal customers.",
+          "With strong technical optimization, content structuring, and performance improvements, we ensure your website becomes a growth engine."
+        ],
+        "image": ""
+      },
+      "subServices": [
+        {
+          "icon": "Search",
+          "title": "Technical SEO",
+          "description": "Improve performance, crawlability, indexing, and website structure for maximum visibility."
+        },
+        {
+          "icon": "FileText",
+          "title": "On-Page SEO",
+          "description": "Optimize titles, descriptions, content, images, and internal linking for better rankings."
+        },
+        {
+          "icon": "Map",
+          "title": "Local SEO",
+          "description": "Boost your ranking on Google Maps and local search results with targeted strategies."
+        },
+        {
+          "icon": "BarChart",
+          "title": "Analytics & Reporting",
+          "description": "Track keyword performance, traffic sources, and conversions with monthly reports."
+        },
+        {
+          "icon": "Settings",
+          "title": "Website Performance Optimization",
+          "description": "Improve speed, Core Web Vitals, responsiveness, and user experience."
+        }
+      ],
+      "serviceBenefits": [
+        {
+          "title": "Rank Higher on Google",
+          "description": "We optimize your website to increase visibility and search engine trust.",
+          "image": ""
+        },
+        {
+          "title": "Increase Organic Traffic",
+          "description": "Get more high-quality visitors who are actively searching for your services.",
+          "image": ""
+        },
+        {
+          "title": "Improve Website Authority",
+          "description": "Structured content, internal linking, and on-page optimization build trust.",
+          "image": ""
+        },
+        {
+          "title": "Long-Term Growth",
+          "description": "SEO delivers results that compound over time.",
+          "image": ""
+        }
+      ],
+      "serviceProccess": [
+        {
+          "title": "SEO Audit",
+          "description": "A full technical and content audit to identify ranking opportunities.",
+          "image": ""
+        },
+        {
+          "title": "Keyword Strategy",
+          "description": "We target keywords that bring high-intent customers — not vanity metrics.",
+          "image": ""
+        },
+        {
+          "title": "On-Page Optimization",
+          "description": "We update tags, content, site structure, and media for better rankings.",
+          "image": ""
+        },
+        {
+          "title": "Technical Improvements",
+          "description": "Fix crawl issues, improve speed, and optimize Core Web Vitals.",
+          "image": ""
+        },
+        {
+          "title": "Monitoring & Reporting",
+          "description": "We track progress and refine the strategy monthly.",
+          "image": ""
+        }
+      ],
+      "technologies": [
+        { "name": "React", "slug": "react", "category": "frontend" },
+        { "name": "Next.js", "slug": "nextjs", "category": "frontend" },
+        { "name": "Vue.js", "slug": "vuejs", "category": "frontend" },
+        { "name": "Node.js", "slug": "nodejs", "category": "backend" },
+        { "name": "TypeScript", "slug": "typescript", "category": "language" },
+        { "name": "Tailwind CSS", "slug": "tailwindcss", "category": "styling" },
+        { "name": "MongoDB", "slug": "mongodb", "category": "database" },
+        { "name": "PostgreSQL", "slug": "postgresql", "category": "database" },
+        { "name": "AWS", "slug": "aws", "category": "cloud" },
+        { "name": "Vercel", "slug": "vercel", "category": "deployment" },
+        { "name": "Vscode", "slug": "vscode", "category": "deployment" },
+        { "name": "Vite", "slug": "vite", "category": "deployment" },
+        { "name": "Postman", "slug": "postman", "category": "testing" },
+        { "name": "Nest JS", "slug": "nestjs", "category": "testing" },
+        { "name": "Slack", "slug": "slack", "category": "testing" },
+        { "name": "Git & Github", "slug": "git-and-githu", "category": "testing" }
+      ]
+    }
+  }
 ]

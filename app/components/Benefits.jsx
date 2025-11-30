@@ -1,4 +1,4 @@
-import { services } from "../constants";
+import services from "@/lib/services.json"
 import Link from 'next/link'
 import { Heading } from "./";
 import Arrow from "../assets/svg/Arrow";
@@ -15,7 +15,7 @@ const Benefits = () => {
           title="Expert Web Solutions: From Code to Completion"
         />
 
-        <div className="flex flex-wrap justify-center gap-10 mb-10">
+        <div className="flex flex-wrap justify-center md:justify-start items-center mx-auto gap-10 mb-10">
           {services.map((benefit) => (
             <div
               className="block border-b border-l border-n-4/80 md:border-n-4/40 rounded-3xl  z-1 relative p-0.5 bg-no-repeat bg-cover bg-center md:max-w-[24rem]"
