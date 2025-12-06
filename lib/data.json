@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "slug": "The-Complete-Guide-to-React-Performance-Optimization",
     "title": "The Complete Guide to React Performance Optimization",
     "subtitle": "Advanced techniques to make your React applications lightning fast",
     "author": {
@@ -49,6 +50,7 @@
   },
   {
     "id": 2,
+    "slug": "Advanced-SEO-Strategies-for-2024",
     "title": "Advanced SEO Strategies for 2024",
     "subtitle": "Beyond the basics: Technical SEO and content optimization techniques that drive real results",
     "author": {
@@ -97,6 +99,7 @@
   },
   {
     "id": 3,
+    "slug": "Building-Scalable-ecommerce-Architecture",
     "title": "Building Scalable E-commerce Architecture",
     "subtitle": "Design patterns and technologies for high-conversion online stores that can handle massive traffic",
     "author": {
@@ -145,6 +148,7 @@
   },
   {
     "id": 4,
+    "slug": "Content-Marketing-Strategy-for-B2B-SaaS",
     "title": "Content Marketing Strategy for B2B SaaS",
     "subtitle": "Creating content that drives qualified leads and establishes thought leadership",
     "author": {
@@ -193,6 +197,7 @@
   },
   {
     "id": 5,
+    "slug": "Mastering-TypeScript-in Large-Scale-Applications",
     "title": "Mastering TypeScript in Large-Scale Applications",
     "subtitle": "Best practices and patterns for maintaining type safety in complex codebases",
     "author": {
@@ -241,6 +246,7 @@
   },
   {
     "id": 6,
+    "slug": "Data-Driven-Digital-Marketing-Analytics",
     "title": "Data-Driven Digital Marketing Analytics",
     "subtitle": "Moving beyond vanity metrics to actionable insights that drive growth",
     "author": {
@@ -289,6 +295,7 @@
   },
   {
     "id": 7,
+    "slug": "Progressive-Web-Apps-The-Future-of-Mobile-Web",
     "title": "Progressive Web Apps: The Future of Mobile Web",
     "subtitle": "Building app-like experiences that work everywhere, for every user",
     "author": {
@@ -337,6 +344,7 @@
   },
   {
     "id": 8,
+    "slug": "Social-Media-Marketing-for-Tech-Brands",
     "title": "Social Media Marketing for Tech Brands",
     "subtitle": "Building authentic communities and driving measurable business results",
     "author": {
@@ -385,6 +393,7 @@
   },
   {
     "id": 9,
+    "slug": "Cloud-Native-Application-Development",
     "title": "Cloud-Native Application Development",
     "subtitle": "Building for scalability, resilience, and continuous delivery from day one",
     "author": {
@@ -433,6 +442,7 @@
   },
   {
     "id": 10,
+    "slug": "Conversion-Rate-Optimization-for-ecommerce",
     "title": "Conversion Rate Optimization for E-commerce",
     "subtitle": "Data-driven techniques to turn visitors into customers and increase average order value",
     "author": {
@@ -481,6 +491,7 @@
   },
   {
     "id": 11,
+    "slug": "Building-Developer-First-Products",
     "title": "Building Developer-First Products",
     "subtitle": "Creating tools and platforms that developers love to use",
     "author": {
@@ -529,6 +540,7 @@
   },
   {
     "id": 12,
+    "slug": "Artificial-Intelligence-in-Digital-Marketing",
     "title": "Artificial Intelligence in Digital Marketing",
     "subtitle": "Leveraging AI and machine learning to personalize experiences and optimize campaigns",
     "author": {

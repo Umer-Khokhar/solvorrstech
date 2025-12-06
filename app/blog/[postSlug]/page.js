@@ -3,120 +3,12 @@ import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Eye, Check } from '
 import Link from "next/link";
 import blogs from "@/lib/data.json"
 
-const slugify = (title) => title.toLowerCase().replace(/\s+/g, "-");
 
-// Blog data
-const blogPost = {
-    id: 1,
-    title: "Building Scalable Web Applications with Modern JavaScript",
-    subtitle: "A comprehensive guide to architecting robust web applications",
-    author: {
-        name: "Sarah Chen",
-        avatar: "SC",
-        role: "Senior Software Engineer",
-        bio: "Passionate about building scalable systems and sharing knowledge"
-    },
-    publishDate: "March 15, 2024",
-    readTime: "12 min read",
-    views: "2.4k",
-    category: "Web Development",
-    tags: ["JavaScript", "React", "Architecture", "Best Practices"],
-    featuredImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop",
-    content: [
-        {
-            type: "paragraph",
-            text: "In today's fast-paced digital landscape, building scalable web applications has become more critical than ever. As user bases grow and feature requirements expand, the architecture decisions we make early on can significantly impact our ability to maintain and scale our applications."
-        },
-        {
-            type: "heading",
-            text: "Understanding Scalability"
-        },
-        {
-            type: "paragraph",
-            text: "Scalability isn't just about handling more users—it's about creating a system that can grow gracefully. This means considering performance, maintainability, and extensibility from the ground up."
-        },
-        {
-            type: "list",
-            title: "Core Scalability Principles:",
-            items: [
-                "Design for horizontal scaling from day one",
-                "Implement efficient caching strategies at multiple levels",
-                "Use asynchronous operations to prevent blocking",
-                "Monitor and optimize database queries continuously"
-            ]
-        },
-        {
-            type: "heading",
-            text: "Modern Architecture Patterns"
-        },
-        {
-            type: "paragraph",
-            text: "Component-based architecture has revolutionized how we build web applications. By breaking down our UI into reusable, isolated components, we create systems that are easier to test, maintain, and scale."
-        },
-        {
-            type: "quote",
-            text: "The best architecture is the one that allows your team to move fast while keeping technical debt manageable."
-        },
-        {
-            type: "numbered-list",
-            title: "Steps to Implement Component Architecture:",
-            items: [
-                "Identify reusable UI patterns in your design",
-                "Create a component library with consistent naming",
-                "Establish clear props interfaces and documentation",
-                "Write unit tests for each component",
-                "Implement Storybook or similar for component showcase"
-            ]
-        },
-        {
-            type: "heading",
-            text: "State Management Best Practices"
-        },
-        {
-            type: "paragraph",
-            text: "State management is crucial for building predictable applications. Whether you choose Redux, MobX, Zustand, or React's built-in context, consistency is key."
-        },
-        {
-            type: "list",
-            title: "Key State Management Rules:",
-            items: [
-                "Keep state as close to where it's used as possible",
-                "Avoid prop drilling beyond 2-3 levels",
-                "Use context for global theme and auth state",
-                "Consider atomic state management for complex UIs",
-                "Always normalize nested data structures"
-            ]
-        }
-    ]
-};
-
-const relatedPosts = [
-    {
-        id: 2,
-        title: "Optimizing React Performance",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop",
-        category: "Performance",
-        readTime: "8 min",
-        color: "#AC6AFF"
-    },
-    {
-        id: 3,
-        title: "TypeScript Best Practices",
-        image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=250&fit=crop",
-        category: "TypeScript",
-        readTime: "10 min",
-        color: "#FFC876"
-    },
-    {
-        id: 4,
-        title: "Modern CSS Techniques",
-        image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=400&h=250&fit=crop",
-        category: "CSS",
-        readTime: "6 min",
-        color: "#FF776F"
-    }
-];
-
+export async function generateStaticParams() {
+  return blogs.map((blog) => ({
+    postSlug: blog.slug.toLowerCase()
+  }))
+}
 // Navigation Component
 function Navigation() {
     return (
@@ -308,50 +200,6 @@ function AuthorCard({ author }) {
     );
 }
 
-// Related Post Card Component
-function RelatedPostCard({ post }) {
-    return (
-        <div className="bg-[#0A0F1E] rounded-xl overflow-hidden border border-[#1E293B] hover:border-[#334155] hover:-translate-y-1 transition-all cursor-pointer group">
-            <div className="relative h-48 overflow-hidden">
-                <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div
-                    className="absolute top-4 left-4 px-3 py-1.5 rounded-full text-xs font-semibold text-[#030718]"
-                    style={{ backgroundColor: post.color }}
-                >
-                    {post.category}
-                </div>
-            </div>
-            <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-slate-50 group-hover:text-purple-400 transition-colors">
-                    {post.title}
-                </h3>
-                <div className="flex items-center gap-2 text-slate-500 text-sm">
-                    <Clock size={14} />
-                    {post.readTime}
-                </div>
-            </div>
-        </div>
-    );
-}
-
-// Related Posts Section Component
-function RelatedPosts({ posts }) {
-    return (
-        <section className="max-w-6xl mx-auto px-6 py-16 border-t border-[#1E293B]">
-            <h2 className="text-3xl font-bold mb-8 text-slate-50">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {posts.map((post) => (
-                    <RelatedPostCard key={post.id} post={post} />
-                ))}
-            </div>
-        </section>
-    );
-}
-
 // Article Content Component
 function ArticleContent({ content }) {
     return (
@@ -377,11 +225,9 @@ function ArticleContent({ content }) {
 }
 
 // Main Blog Post Page Component
-export default function BlogPostPage({ params }) {
-    console.log(blogs)
-    const { postSlug } = params
-    const blog = blogs.find((b) => slugify(b.title) === postSlug);
-    console.log(blog, "data")
+export default async function BlogPostPage({ params }) {
+    const { postSlug } = await params
+    const blog = blogs.find((b) => b.slug.toLowerCase() === postSlug);
     return (
         <div className="bg-[#030718] mt-28 lg:mt-32 text-slate-50">
             <Navigation />
@@ -410,8 +256,6 @@ export default function BlogPostPage({ params }) {
 
                 <AuthorCard author={blog.author} />
             </main>
-
-            <RelatedPosts posts={relatedPosts} />
         </div>
     );
 }
