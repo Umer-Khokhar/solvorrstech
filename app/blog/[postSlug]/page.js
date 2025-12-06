@@ -228,6 +228,7 @@ function ArticleContent({ content }) {
 export default async function BlogPostPage({ params }) {
     const { postSlug } = await params
     const blog = blogs.find((b) => b.slug.toLowerCase() === postSlug);
+    console.log(blog.category)
     return (
         <div className="bg-[#030718] mt-28 lg:mt-32 text-slate-50">
             <Navigation />

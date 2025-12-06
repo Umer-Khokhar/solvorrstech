@@ -12,8 +12,6 @@ const BlogGrid = () => {
       let categoriesFilter = blog.category.toLowerCase().includes(selectedCategory.toLowerCase())
       return searchFilter && categoriesFilter
     })
-    const slugify = (title) => title.toLowerCase().replace(/\s+/g, "-");
-
     if (!filteredData) {
         return <p className={"h6"}>No Blog with the search</p>
 
@@ -25,7 +23,7 @@ const BlogGrid = () => {
                 <h2 className="h2 mb-10">Latest Articles</h2>
                 <article className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 place-items-center"}>
                     {filteredData.map((data) => (
-                        <Link key={data.id} href={`/blog/${slugify(data.title)}`}>
+                        <Link key={data.id} href={`/blog/${data.slug.toLowerCase()}`}>
                         <div
                             className="group break-inside-avoid max-w-sm relative transition-all duration-300 rounded-2xl shadow hover:shadow-lg overflow-hidden"
                         >
