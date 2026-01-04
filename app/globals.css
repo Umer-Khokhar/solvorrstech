@@ -12,35 +12,36 @@
     --font-code: "Source Code Pro", monospace;
     --font-grotesk: "Space Grotesk", sans-serif;
 
-    /* Colors */
-    --color-color-1: #ac6aff;
-    --color-color-2: #ffc876;
-    --color-color-3: #ff776f;
-    --color-color-4: #7adb78;
-    --color-color-5: #858dff;
-    --color-color-6: #ff98e2;
-    --color-color-7: rgb(232, 187, 185);
+    /* Colors - Trust-Building Palette */
+    --color-color-1: #3B82F6; /* Primary Blue - Trust & Reliability */
+    --color-color-2: #8B5CF6; /* Professional Purple - Innovation */
+    --color-color-3: #10B981; /* Success Green - Action/Growth */
+    --color-color-4: #06B6D4; /* Accent Cyan - Modern Tech */
+    --color-color-5: #3B82F6; /* Same as color-1 for consistency */
+    --color-color-6: #8B5CF6; /* Same as color-2 for consistency */
+    --color-color-7: #E0E7FF; /* Soft blue tint for backgrounds */
 
-    --color-stroke-1: #e5e3ec;
+    --color-stroke-1: #E2E8F0;
 
-    /* Light theme neutrals */
-    --color-n-1: #0e0c15;
-    --color-n-2: #1f1d2b;
-    --color-n-3: #4a4458;
-    --color-n-4: #6b6579;
-    --color-n-5: #e0e0e0;
-    --color-n-6: #e8e6f0;
-    --color-n-7: #f7f7f7;
-    --color-n-8: #FEFEFE;
-    --color-n-9: #ffffff;
-    --color-n-10: #e0dee8;
-    --color-n-11: #f0eef5;
-    --color-n-12: #efedf7;
-    --color-n-13: #5a5568;
-    --color-n-orange: #ff776f;
+    /* Light theme neutrals - More sophisticated */
+    --color-bg-muted: #F8FAFC;
+    --color-n-1: #0F172A; /* Richer black */
+    --color-n-2: #1E293B;
+    --color-n-3: #475569;
+    --color-n-4: #64748B;
+    --color-n-5: #CBD5E1;
+    --color-n-6: #E2E8F0;
+    --color-n-7: #F1F5F9;
+    --color-n-8: #F8FAFC;
+    --color-n-9: #FFFFFF;
+    --color-n-10: #E2E8F0;
+    --color-n-11: #F1F5F9;
+    --color-n-12: #EEF2FF;
+    --color-n-13: #64748B;
+    --color-n-orange: #F97316; /* Softer orange for alerts */
+    --color-success: #10B981; /* Stronger green for CTAs */
 
     /* Fonts */
-    /* --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif; */
     --font-code: var(--font-code);
     --font-grotesk: var(--font-grotesk);
 
@@ -69,14 +70,14 @@
     /* Border */
     --border-width: 0.0625rem;
 
-    /* Backgrounds */
+    /* Backgrounds - Professional gradient */
     --bg-conic-gradient: conic-gradient(
         from 225deg,
-        #ffc876,
-        #79fff7,
-        #9f53ff,
-        #ff98e2,
-        #ffc876
+        #3B82F6,
+        #06B6D4,
+        #8B5CF6,
+        #3B82F6,
+        #06B6D4
     );
 }
 
@@ -88,61 +89,62 @@ body {
 .dark {
     color-scheme: dark;
 
-    /* Colors remain the same */
-    --color-color-1: #ac6aff;
-    --color-color-2: #ffc876;
-    --color-color-3: #ff776f;
-    --color-color-4: #7adb78;
-    --color-color-5: #858dff;
-    --color-color-6: #ff98e2;
-    --color-color-7: rgb(232, 187, 185);
+    /* Colors - Adjusted for dark mode */
+    --color-bg-muted: #0F172A;
+    --color-color-1: #60A5FA; /* Lighter blue for dark bg */
+    --color-color-2: #A78BFA; /* Lighter purple for dark bg */
+    --color-color-3: #34D399; /* Brighter green for visibility */
+    --color-color-4: #22D3EE; /* Brighter cyan */
+    --color-color-5: #60A5FA;
+    --color-color-6: #A78BFA;
+    --color-color-7: #1E3A8A; /* Deep blue tint */
 
-    --color-stroke-1: #26242c;
+    --color-stroke-1: #1E293B;
 
-    /* Dark theme neutrals */
-    --color-n-1: #ffffff;
-    --color-n-2: #cac6dd;
-    --color-n-3: #ada8c3;
-    --color-n-4: #757185;
-    --color-n-5: #3f3a52;
-    --color-n-6: #252134;
-    --color-n-7: #0f1424;
-    --color-n-8: #0e0c15;
-    --color-n-9: #0e0c15;
-    --color-n-10: #43435c;
-    --color-n-11: #1b1b2e;
-    --color-n-12: #2e2a41;
-    --color-n-13: #6c7275;
-    --color-n-orange: #ff776f;
+    /* Dark theme neutrals - Better contrast */
+    --color-n-1: #F8FAFC;
+    --color-n-2: #E2E8F0;
+    --color-n-3: #CBD5E1;
+    --color-n-4: #94A3B8;
+    --color-n-5: #475569;
+    --color-n-6: #334155;
+    --color-n-7: #1E293B;
+    --color-n-8: #0F172A;
+    --color-n-9: #020617;
+    --color-n-10: #334155;
+    --color-n-11: #1E293B;
+    --color-n-12: #1E293B;
+    --color-n-13: #94A3B8;
+    --color-n-orange: #FB923C;
+    --color-success: #34D399;
 }
-
 
 /* Tailwind Theme - Exposes CSS variables as utilities */
 @theme {
-    --color-color-1: #ac6aff;
-    --color-color-2: #ffc876;
-    --color-color-3: #ff776f;
-    --color-color-4: #7adb78;
-    --color-color-5: #858dff;
-    --color-color-6: #ff98e2;
-    --color-color-7: rgb(232, 187, 185);
+    --color-color-1: #60A5FA;
+    --color-color-2: #A78BFA;
+    --color-color-3: #34D399;
+    --color-color-4: #22D3EE;
+    --color-color-5: #60A5FA;
+    --color-color-6: #A78BFA;
+    --color-color-7: #1E3A8A;
 
-    --color-stroke-1: #26242c;
+    --color-stroke-1: #1E293B;
 
-    --color-n-1: #ffffff;
-    --color-n-2: #cac6dd;
-    --color-n-3: #ada8c3;
-    --color-n-4: #757185;
-    --color-n-5: #3f3a52;
-    --color-n-6: #252134;
-    --color-n-7: #0f1424;
-    --color-n-8: #0e0c15;
-    --color-n-9: #474060;
-    --color-n-10: #43435c;
-    --color-n-11: #1b1b2e;
-    --color-n-12: #2e2a41;
-    --color-n-13: #6c7275;
-    --color-n-orange: #ff776f;
+    --color-n-1: #F8FAFC;
+    --color-n-2: #E2E8F0;
+    --color-n-3: #CBD5E1;
+    --color-n-4: #94A3B8;
+    --color-n-5: #475569;
+    --color-n-6: #334155;
+    --color-n-7: #1E293B;
+    --color-n-8: #0F172A;
+    --color-n-9: #64748B;
+    --color-n-10: #334155;
+    --color-n-11: #1E293B;
+    --color-n-12: #1E293B;
+    --color-n-13: #94A3B8;
+    --color-n-orange: #FB923C;
 
     --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
     --font-code: var(--font-code);
@@ -169,11 +171,11 @@ body {
 
     --bg-conic-gradient: conic-gradient(
         from 225deg,
-        #ffc876,
-        #79fff7,
-        #9f53ff,
-        #ff98e2,
-        #ffc876
+        #3B82F6,
+        #06B6D4,
+        #8B5CF6,
+        #3B82F6,
+        #06B6D4
     );
 }
 
@@ -239,7 +241,7 @@ body {
 /* Custom Utilities */
 @layer utilities {
     .text-gradient {
-        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#ae6afe] via-pink-500 to-[#ff776f];
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#06B6D4];
     }
     .tap-highlight-color {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -316,4 +318,9 @@ body {
 
 .-rotate-360 {
     @apply rotate-[-360deg];
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

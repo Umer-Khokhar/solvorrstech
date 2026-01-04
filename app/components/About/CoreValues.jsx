@@ -43,17 +43,10 @@ const CoreValuesSection = () => {
     ];
 
     return (
-        <section className="relative py-16 md:py-32 px-5 bg-[#0a0a0f] overflow-hidden">
-            {/* Floating Orbs Background */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute w-[300px] h-[300px] rounded-full bg-gradient-to-br from-purple-600 to-purple-900 opacity-30 blur-3xl top-[10%] left-[5%] animate-float"></div>
-                <div className="absolute w-[250px] h-[250px] rounded-full bg-gradient-to-br from-pink-500 to-red-500 opacity-30 blur-3xl top-[50%] right-[10%] animate-float-delayed"></div>
-                <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 opacity-30 blur-3xl bottom-[20%] left-[15%] animate-float-slow"></div>
-            </div>
-
+        <section className="relative py-16 md:py-32 px-5 bg-n-8 overflow-hidden">
             {/* Radial Gradients */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(88,28,135,0.15)_0%,transparent_60%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(59,130,246,0.1)_0%,transparent_60%)]"></div>
+            <div className="absolute hidden inset-0 bg-[radial-gradient(ellipse_at_top,rgba(88,28,135,0.15)_0%,transparent_60%)]"></div>
+            <div className="absolute hidden inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(59,130,246,0.1)_0%,transparent_60%)]"></div>
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Header */}
@@ -64,7 +57,7 @@ const CoreValuesSection = () => {
                     <h2 className="h2 font-bold">
                         The DNA of Innovation
                     </h2>
-                    <p className="body-1 text-white/60 max-w-2xl mx-auto leading-relaxed">
+                    <p className="body-1 text-n-4 max-w-2xl mx-auto leading-relaxed">
                         These principles drive everything we do, from the way we code to how we collaborate with our clients.
                     </p>
                 </div>
@@ -74,13 +67,13 @@ const CoreValuesSection = () => {
                     {values.map((value, index) => (
                         <div
                             key={index}
-                            className="group relative p-6 md:p-12 bg-white/[0.02] border border-white/[0.08] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:bg-gradient-to-br group cursor-pointer"
+                            className="group z-50 relative p-6 md:p-8 bg-n-2/[0.02] border border-n-3/[0.08] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:bg-gradient-to-br group cursor-pointer"
                         >
                             {/* Hover Background Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             {/* Icon Container */}
-                            <div className="relative w-10 h-10 md:w-20 md:h-20 mb-4 sm:mb-8 flex items-center justify-center">
+                            <div className="relative w-10 h-10 md:w-18 md:h-18 mb-4 sm:mb-8 flex items-center justify-center">
                                 <div className="absolute inset-0 bg-gradient-to-br from-color-3/20 to-color-1/20 rounded-2xl"></div>
                                 <div className="relative z-10">
                                     <img src={value.icon} alt={'value icon'}/>
@@ -88,10 +81,10 @@ const CoreValuesSection = () => {
                             </div>
 
                             {/* Content */}
-                            <h3 className="relative h3 font-bold mb-4 bg-gradient-to-r from-white to-purple-500 bg-clip-text text-transparent">
+                            <h3 className="relative text-xl md:h4 font-semibold mb-4 bg-gradient-to-r from-n-2 to-purple-500 bg-clip-text text-transparent">
                                 {value.title}
                             </h3>
-                            <p className="relative body-1 leading-relaxed text-white/60">
+                            <p className="relative body-1 leading-relaxed text-n-3/60">
                                 {value.description}
                             </p>
                         </div>

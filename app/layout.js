@@ -3,6 +3,7 @@ import localFont from "next/font/local"
 import "@/app/globals.css";
 import { Footer, Header } from "@/app/components";
 import { ThemeProvider } from "./components/ThemeProvider";
+// import { ThemeToggler } from "./components/ThemeToggler";
 
 const clashGrotesk = localFont({
   src: [

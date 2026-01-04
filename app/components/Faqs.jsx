@@ -78,7 +78,7 @@ export default function Faqs() {
                                 >
                                     <div className="flex items-center justify-between gap-4">
                                         <div className="flex items-center gap-4 flex-1">
-                                            <h3 className="text-lg font-bold text-n-2 group-hover/item:text-color-5 transition-colors">
+                                            <h3 className="text-base md:text-lg font-bold text-n-2 group-hover/item:text-color-5 transition-colors">
                                                 {faq.question}
                                             </h3>
                                         </div>

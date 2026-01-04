@@ -1,53 +1,82 @@
+// components/ProjectCarousel.tsx
+"use client";
+import { ArrowRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { roadmap } from "../constants";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Projects } from ".";
+import { CardShapeTwo } from "./design/ClipPaths";
 
-import {Button, Heading} from './'
-import { roadmap } from '../constants'
-import { grid } from '../assets'
+// Mock data – replace with your actual projects
+const getLoopableSlides = (items) => {
+  if (items.length < 5) {
+    // Duplicate until we have at least 6 items
+    let result = [...items];
+    while (result.length < 6) {
+      result = [...result, ...items];
+    }
+    return result;
+  }
+  return items;
+};
 
-const Working = () => {
+const loopableRoadmap = getLoopableSlides(roadmap);
+
+
+export default function Working() {
   return (
-    <div className={`!px !py-10`}>
-      <div className='container md:pb-10'>
-        <Heading title={`Some Of Our Recent Work`}/>
-        <div className='relative grid md:grid-cols-2 gap-6 md:gap-4 md:pb-[7rem]'>
-          {roadmap.map((item) => (
-            <div className={`md:flex overflow-hidden even:md:translate-y-[5rem] p-0.25 border-2 border-n-1/30 rounded-[2.5rem]`} key={item.id}>
-              <div className='relative p-8 bg-n-9 rounded-[2.4375rem]'>
-                <div className="absolute top-0 left-0 max-w-full">
-                  <img 
-                  className='w-full'
-                  src={grid} 
-                  // width={550}
-                  // height={550}
-                  alt="grid image"
-                  loading='lazy'
-                  />
-                </div>
-                <div className="relative z-1 overflow-hidden">
-                  <div className='mb-10 -my-10 -mx-15'>
-                    <img 
-                    src={item.imageUrl}
-                    alt="gird upper image"
-                    className={""}
-                    />
-
-                  </div>
-                  <h4 className="h4 mb-4">{item.title}</h4>
-                  <p className="body-2 text-n-4">{item.text}</p>
-                </div>
+    <div className="md-py-32 py-12">
+      <div className="text-center max-w-xl mx-auto">
+      <h2 className="h2 font-semibold">Real Projects. Real Clients. Real Results.</h2>
+      </div>
+    <div className="w-full flex gap-5 mx-auto px-4 py-8">
+      <CardShapeTwo />
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        spaceBetween={20}
+        slidesPerView={2.7}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 2800,
+          pauseOnMouseEnter: false,
+          disableOnInteraction: true,
+        }}
+        pagination={{
+          clickable: true,
+          // dynamicBullets: true,
+        }}
+        className="mySwiper"
+      >
+        {loopableRoadmap.map((project, index) => (
+          <SwiperSlide>
+            <div className="w-auto h-full relative p-4 rounded-2xl bg-n-7 border-color-1/20 dark:hover:border-color-1/50  transition-all duration-150 border group shadow dark:shadow-n-4/20">
+              <div
+                className="w-full h-[525px] relative"
+                style={{ clipPath: "url(#card-shape-2)" }}
+              >
+                <img
+                  src="https://ainex-react.vercel.app/_next/image?url=%2Fimages%2Fproject%2Fproject-4.webp&w=640&q=75"
+                  alt="image"
+                  className="w-full h-full object-cover group-hover:scale-105 duration-500 transition-all"
+                />
+              </div>
+              <div className="flex items-center justify-between pt-4">
+                <h3 className="text-3xl font-bold">
+                  {project.title}
+                </h3>
+                <button className="bg-n-8 p-4 transition-all duration-200 cursor-pointer rounded-full group group-hover:bg-color-1">
+                  <ArrowRight className=" -rotate-40 w-8 h-8 hover:-rotate-0 transition-all duration-150" />
+                </button>
               </div>
             </div>
-          ))}
-        </div>
-        <div className='w-full flex justify-center items-center mx-auto mt-7'>
-          {/*<Link to={"/portfolio"}>*/}
-           <Button href={"/portfolio"} className={'flex justify-center items-center'} white>
-          Show more
-        </Button>
-          {/*</Link>*/}
-        </div>
-      </div>
+            
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  )
+    </div>
+  );
 }
-
-export default Working

@@ -6,7 +6,7 @@
     "text": "High-performance, conversion-focused websites built with Next.js for modern businesses.",
     "backgroundUrl": "assets/benefits/card-1.svg",
     "iconUrl": "development",
-    "imageUrl": "",
+    "imageUrl": "./services/website.avif",
     "detailPage": {
       "heroTitle": "Web Development Solutions That Power Your Digital Growth",
       "heroSubTitle": "At Solvorr Tech, we build high-performance, scalable, and conversion-optimized websites tailored to your business goals. From landing pages to complete corporate sites, every build is crafted for speed, performance, and long-term scalability.",
@@ -130,11 +130,11 @@
   {
     "id": "1",
     "slug": "dashboard-and-web-app-development",
-    "title": "Dashboard & Web App Development",
+    "title": "Web App Development",
     "text": "We build powerful dashboards, internal tools, and scalable web applications designed to streamline operations.",
     "backgroundUrl": "assets/benefits/card-3.svg",
     "iconUrl": "dashboard",
-    "imageUrl": "",
+    "imageUrl": "./services/webapp.webp",
     "detailPage": {
       "heroTitle": "Powerful Dashboards & Web Applications for Modern Businesses",
       "heroSubTitle": "We design and develop custom dashboards and web apps that automate workflows, visualize data, and streamline daily operations.",
@@ -252,7 +252,7 @@
     "text": "Automate repetitive tasks, streamline operations, and save time with custom business automation.",
     "backgroundUrl": "assets/benefits/card-4.svg",
     "iconUrl": "automation",
-    "imageUrl": "",
+    "imageUrl": "./services/business.avif",
     "detailPage": {
       "heroTitle": "Automate Workflows & Accelerate Business Productivity",
       "heroSubTitle": "We build custom automation solutions that reduce manual work, increase efficiency, and streamline your processes.",
@@ -370,7 +370,7 @@
     "text": "Secure, reliable, and scalable APIs that connect your systems and enable seamless data communication.",
     "backgroundUrl": "assets/benefits/card-6.svg",
     "iconUrl": "api",
-    "imageUrl": "",
+    "imageUrl": "./services/api.avif",
     "detailPage": {
       "heroTitle": "Powerful API Development & Integrations",
       "heroSubTitle": "We build secure, scalable APIs and integrate third-party systems to enable smooth data communication across your business.",
@@ -484,11 +484,11 @@
   {
     "id": "4",
     "slug": "seo-service",
-    "title": "Search Engine Optimization (SEO)",
+    "title": "Search Engine Optimization",
     "text": "Improve visibility, increase website traffic, and attract high-intent customers with effective SEO strategies.",
     "backgroundUrl": "assets/benefits/card-2.svg",
     "iconUrl": "seo",
-    "imageUrl": "",
+    "imageUrl": "./services/seo.jpg",
     "light": true,
     "detailPage": {
       "heroTitle": "SEO Services That Drive Organic Growth",

@@ -1,296 +1,155 @@
-import React from 'react';
-import { Code, Zap, TrendingUp, Shield, Target, Sparkles } from 'lucide-react';
+"use client"
+import { useState } from 'react';
 
-const ServiceCard = ({ icon: Icon, title, description, tags, illustration, className, id }) => {
-    const isTall = id === 0
-    return (
-        <div className={`group relative  ${className} bg-n-9 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1`}>
-            {/* Illustration Area */}
-            <div className={`mb-6  ${isTall ? "h-52 md:h-[700px]" : "h-48"} bg-slate-900/50 rounded-xl flex items-center justify-center relative overflow-hidden`}>
-                {illustration}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-slate-900/5"></div>
+export default function Benefit() {
+  const [activeCard, setActiveCard] = useState(null);
+
+  const services = [
+    {
+      title: "Niche research",
+      description: "Niche research identifies a market segment to help tailor growth strategies.",
+      icon: (
+        <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+          <rect x="8" y="8" width="24" height="28" rx="2" strokeWidth="2"/>
+          <line x1="12" y1="14" x2="28" y2="14" strokeWidth="2"/>
+          <line x1="12" y1="20" x2="24" y2="20" strokeWidth="2"/>
+          <line x1="12" y1="26" x2="26" y2="26" strokeWidth="2"/>
+        </svg>
+      )
+    },
+    {
+      title: "Enterprise SEO",
+      description: "Embarking on a journey of higher education in a foreign country opens doors to opportunities and experiences.",
+      icon: (
+        <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+          <circle cx="20" cy="16" r="6" strokeWidth="2"/>
+          <path d="M14 28C14 24.686 16.686 22 20 22C23.314 22 26 24.686 26 28" strokeWidth="2"/>
+          <circle cx="28" cy="12" r="4" strokeWidth="2" fill="currentColor"/>
+        </svg>
+      ),
+      highlight: true
+    },
+    {
+      title: "Link building",
+      description: "Link building hyperlinks from other sites to boost and improve search rankings.",
+      icon: (
+        <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+          <path d="M16 24L12 20L16 16M24 16L28 20L24 24M12 20H28" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="12" cy="20" r="3" strokeWidth="2"/>
+          <circle cx="28" cy="20" r="3" strokeWidth="2"/>
+        </svg>
+      )
+    },
+    {
+      title: "SEO audit",
+      description: "An SEO audit evaluates a website identify improvements for better search rankings.",
+      icon: (
+        <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+          <circle cx="18" cy="18" r="8" strokeWidth="2"/>
+          <path d="M24 24L30 30" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M18 14V18L21 21" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      ),
+      tall: true
+    },
+    {
+      title: "International SEO",
+      description: "Enterprise SEO optimizes large websites to improve visibility and drive traffic.",
+      icon: (
+        <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+          <circle cx="20" cy="20" r="12" strokeWidth="2"/>
+          <path d="M8 20H32M20 8C22 12 22 28 20 32M20 8C18 12 18 28 20 32" strokeWidth="2"/>
+        </svg>
+      )
+    },
+    {
+      title: "Penalty recovery",
+      description: "Penalty recovery fixes issues that caused search engine penalty to restore rankings.",
+      icon: (
+        <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+          <rect x="10" y="24" width="20" height="10" rx="1" strokeWidth="2"/>
+          <path d="M15 24V16C15 13 16.5 8 20 8C23.5 8 25 13 25 16V24" strokeWidth="2"/>
+          <path d="M18 16L20 18L24 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    }
+  ];
+
+  return (
+    <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center gap-20">
+          {/* Left Content - Sticky */}
+          <div className="lg:sticky lg:top-32 lg:self-start">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <span className="text-blue-600 font-medium text-sm">Feature-services</span>
             </div>
+            
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              Growth with<br />SEO services
+            </h2>
+            
+            <p className="text-gray-600 text-lg mb-8 max-w-md">
+              SEO services boost visibility and organic traffic, driving leads and growth.
+            </p>
+            
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+              View more services
+            </button>
+          </div>
 
-            {/* Tags */}
-            {tags && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {tags.map((tag, idx) => (
-                        <span
-                            key={idx}
-                            className="px-3 py-1 text-xs font-medium bg-slate-800/80 border border-slate-700 rounded-full text-slate-300"
-                        >
-              {tag}
-            </span>
-                    ))}
-                </div>
-            )}
-
-            {/* Content */}
-            <div className="relative z-10">
-                <h3 className="h5 font-bold text-n-2 mb-3">{title}</h3>
-                <p className="text-n-3 dark:text-n-4 text-sm leading-relaxed">{description}</p>
-            </div>
-
-            {/* Hover Glow Effect */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
-            </div>
-        </div>
-    );
-};
-
-const CustomBuiltIllustration = () => (
-    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 flex flex-col items-center justify-center relative overflow-hidden">
-        {/* Background grid pattern */}
-        <div className="absolute inset-0 opacity-10">
-            <div className="grid grid-cols-8 grid-rows-8 h-full w-full gap-4">
-                {[...Array(64)].map((_, i) => (
-                    <div key={i} className="border border-slate-600 rounded"></div>
-                ))}
-            </div>
-        </div>
-
-        {/* Main content */}
-        <div className="relative z-10 space-y-6 w-full max-w-sm">
-            {/* Code blocks floating */}
-            <div className="bg-slate-700/50 backdrop-blur rounded-xl p-4 transform -rotate-3 shadow-xl border border-slate-600/50">
-                <div className="flex items-center gap-2 mb-3">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="space-y-2">
-                    <div className="h-2 bg-blue-400 rounded w-3/4"></div>
-                    <div className="h-2 bg-purple-400 rounded w-1/2"></div>
-                    <div className="h-2 bg-pink-400 rounded w-2/3"></div>
-                </div>
-            </div>
-
-            <div className="bg-slate-700/50 backdrop-blur rounded-xl p-4 transform rotate-2 shadow-xl border border-slate-600/50">
-                <div className="flex items-center gap-2 mb-3">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="space-y-2">
-                    <div className="h-2 bg-cyan-400 rounded w-2/3"></div>
-                    <div className="h-2 bg-teal-400 rounded w-3/4"></div>
-                    <div className="h-2 bg-emerald-400 rounded w-1/2"></div>
-                </div>
-            </div>
-
-            {/* Center piece - Custom tag */}
-            <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl p-6 shadow-2xl transform scale-110">
-                <div className="text-center">
-                    <div className="text-white text-4xl font-bold mb-2">{'</>'}</div>
-                    <div className="text-white/90 text-sm font-medium">Custom Built</div>
-                </div>
-            </div>
-
-            {/* Bottom elements */}
-            <div className="flex gap-3 justify-center">
-                <div className="bg-slate-700/50 backdrop-blur rounded-lg px-4 py-2 border border-slate-600/50">
-                    <div className="text-xs text-slate-300">Tailored</div>
-                </div>
-                <div className="bg-slate-700/50 backdrop-blur rounded-lg px-4 py-2 border border-slate-600/50">
-                    <div className="text-xs text-slate-300">Unique</div>
-                </div>
-                <div className="bg-slate-700/50 backdrop-blur rounded-lg px-4 py-2 border border-slate-600/50">
-                    <div className="text-xs text-slate-300">Flexible</div>
-                </div>
-            </div>
-        </div>
-
-        {/* Decorative elements */}
-        <div className="absolute top-4 right-4 w-12 h-12 bg-blue-500/20 rounded-full blur-xl"></div>
-        <div className="absolute bottom-4 left-4 w-16 h-16 bg-purple-500/20 rounded-full blur-xl"></div>
-    </div>
-);
-
-// Benefit 2: Lightning Fast Performance
-const PerformanceIllustration = () => (
-    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 via-orange-500/5 to-red-500/5"></div>
-
-        <div className="relative z-10">
-            {/* Lightning bolt */}
-            <div className="relative">
-                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                    <path d="M60 10L40 60H60L50 110L80 50H60L70 10H60Z" fill="url(#lightning-gradient)" className="drop-shadow-2xl"/>
-                    <defs>
-                        <linearGradient id="lightning-gradient" x1="40" y1="10" x2="80" y2="110" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stopColor="#FCD34D"/>
-                            <stop offset="50%" stopColor="#F97316"/>
-                            <stop offset="100%" stopColor="#EF4444"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-
-                {/* Speed lines */}
-                <div className="absolute top-1/4 -left-16 space-y-2">
-                    <div className="h-1 w-12 bg-gradient-to-r from-transparent to-orange-400 rounded-full"></div>
-                    <div className="h-1 w-10 bg-gradient-to-r from-transparent to-yellow-400 rounded-full"></div>
-                    <div className="h-1 w-8 bg-gradient-to-r from-transparent to-red-400 rounded-full"></div>
-                </div>
-            </div>
-
-            {/* Performance badge */}
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-700 rounded-full px-4 py-2 border-2 border-orange-500 shadow-lg">
-                <div className="text-orange-400 font-bold text-sm">99ms</div>
-            </div>
-        </div>
-    </div>
-);
-
-// Benefit 3: Scalable
-const ScalableIllustration = () => (
-    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5"></div>
-
-        <div className="relative z-10 flex items-end gap-2">
-            {/* Growing bars */}
-            <div className="w-8 h-16 bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-lg shadow-lg"></div>
-            <div className="w-8 h-24 bg-gradient-to-t from-teal-600 to-teal-400 rounded-t-lg shadow-lg"></div>
-            <div className="w-8 h-32 bg-gradient-to-t from-green-600 to-green-400 rounded-t-lg shadow-lg relative">
-                {/* Arrow up */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 4L12 20M12 4L6 10M12 4L18 10" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                </div>
-            </div>
-            <div className="w-8 h-40 border-4 border-dashed border-emerald-400/40 rounded-t-lg"></div>
-        </div>
-
-        {/* Growth percentage */}
-        <div className="absolute top-4 right-4 bg-emerald-500 rounded-lg px-3 py-1 shadow-lg">
-            <div className="text-white font-bold text-xs">+150%</div>
-        </div>
-    </div>
-);
-
-// Benefit 4: Secure & Reliable
-const SecurityIllustration = () => (
-    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-indigo-500/5 to-purple-500/5"></div>
-
-        <div className="relative z-10">
-            {/* Shield */}
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-                <path d="M50 10L10 30V60C10 85 30 105 50 110C70 105 90 85 90 60V30L50 10Z"
-                      fill="url(#shield-gradient)"
-                      stroke="url(#shield-stroke)"
-                      strokeWidth="2"
-                      className="drop-shadow-2xl"/>
-
-                {/* Checkmark */}
-                <path d="M35 60L45 70L65 45"
-                      stroke="white"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="drop-shadow-lg"/>
-
-                <defs>
-                    <linearGradient id="shield-gradient" x1="50" y1="10" x2="50" y2="110" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stopColor="#3B82F6"/>
-                        <stop offset="50%" stopColor="#6366F1"/>
-                        <stop offset="100%" stopColor="#8B5CF6"/>
-                    </linearGradient>
-                    <linearGradient id="shield-stroke" x1="50" y1="10" x2="50" y2="110" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stopColor="#60A5FA"/>
-                        <stop offset="100%" stopColor="#A78BFA"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-
-            {/* Security badges */}
-            <div className="absolute -bottom-2 -left-2 bg-green-500 rounded-lg px-3 py-1 shadow-lg border-2 border-slate-900">
-                <div className="text-white font-bold text-xs">SSL</div>
-            </div>
-            <div className="absolute -bottom-2 -right-2 bg-cyan-500 rounded-full w-8 h-8 flex items-center justify-center shadow-lg border-2 border-slate-900">
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
-        </div>
-    </div>
-);
-
-// Benefit 5: Results Driven
-const ResultsIllustration = () => (
-    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-rose-500/5 via-pink-500/5 to-purple-500/5"></div>
-
-        <div className="relative z-10">
-            {/* Target circles */}
-            <div className="relative w-28 h-28">
-                <div className="absolute inset-0 rounded-full border-4 border-rose-500/30"></div>
-                <div className="absolute inset-4 rounded-full border-4 border-rose-500/50"></div>
-                <div className="absolute inset-8 rounded-full bg-gradient-to-br from-rose-500 to-pink-600 shadow-2xl flex items-center justify-center">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <circle cx="16" cy="16" r="4" fill="white"/>
-                    </svg>
-                </div>
-            </div>
-
-            {/* Success checkmark */}
-            <div className="absolute -top-2 -right-2 bg-green-500 rounded-full w-10 h-10 flex items-center justify-center shadow-lg border-3 border-slate-900">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M4 10L8 14L16 6" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-            </div>
-
-            {/* Metric tags */}
-            <div className="absolute -bottom-3 -left-3 bg-pink-500 rounded-lg px-3 py-1 shadow-lg border-2 border-slate-900">
-                <div className="text-white font-bold text-xs">+47%</div>
-            </div>
-            <div className="absolute top-1/2 -right-6 bg-purple-500 rounded-lg px-2 py-1 shadow-lg border-2 border-slate-900">
-                <div className="text-white font-bold text-xs">↑</div>
-            </div>
-        </div>
-    </div>
-);
-
-
-export default function Benefit({serviceBenefits}) {
-    
-    return (
-        <div className="min-h-screen bg-gradient-to-b py-20 px-4">
-            <div className="container mx-auto">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                        Benefits Choosing Us
-                    </h2>
-                    <p className="text-n-3 max-w-3xl mx-auto leading-relaxed">
-                        We love challenging projects that require a comprehensive content strategy,
-                        thoughtful design, sophisticated development, and ongoing marketing.
+          {/* Right Content - Service Cards with Custom Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:max-w-[60%] auto-rows-auto">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`rounded-2xl p-6 border-[10px] border-n-6 transition-all duration-300 hover:shadow-lg group cursor-pointer ${
+                  service.highlight ? 'ring-2 ring-blue-100' : ''
+                } ${
+                  service.tall ? 'row-span-1.2' : ''
+                }`}
+                onMouseEnter={() => setActiveCard(index)}
+                onMouseLeave={() => setActiveCard(null)}
+              >
+                <div className="flex flex-col h-full">
+                  <div className="flex-1">
+                    <h3 className="h4 font-semibold text-n-1 mb-3">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-n-3 text-body-1 leading-relaxed mb-6">
+                      {service.description}
                     </p>
-                </div>
+                  </div>
 
-                {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {serviceBenefits.slice(0, 3).map((service, index) => (
-
-                            <ServiceCard {...service} id={index} key={index}  className={`
-        ${index === 0 ? "md:row-span-2 md:col-span-2" : ""} col-span-1 row-span-1
-      `}/>
-
-                    ))}
-                    <div className="col-span-1 sm:col-span-2 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {serviceBenefits.slice(3, 5).map((service, index) => (
-
-                                <ServiceCard {...service} key={index} id={service.id}/>
-                        ))}
+                  <div className="flex items-end justify-between mt-auto md:mt-12 pt-6">
+                    <div className="text-gray-900 transform transition-transform duration-300 scale-150">
+                      {service.icon}
                     </div>
-
+                    
+                    <div className="w-10 h-10 rounded-full bg-gray-100 group-hover:bg-gray-900 flex items-center justify-center transition-colors duration-300">
+                      <svg 
+                        className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors duration-300" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M7 17L17 7M17 7H7M17 7V17" 
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
-            {/* Background Decorations */}
-            <div className="fixed inset-0 pointer-events-none overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
-    );
+      </div>
+    </section>
+  );
 }

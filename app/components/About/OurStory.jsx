@@ -2,10 +2,10 @@ import { CheckCircle, Zap, Eye, Trophy } from "lucide-react";
 
 export default function OurStorySection() {
     return (
-        <section className="relative bg-n-7 py-8 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="relative container mx-auto">
+        <section className="relative py-4 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div className="relative md:container mx-auto">
                 {/* Gradient Headline */}
-                <h2 className="h2 font-semibold text-center mb-16 lg:mb-24">
+                <h2 className="h2 font-semibold text-center mb-12">
                     Our Story
                 </h2>
 
