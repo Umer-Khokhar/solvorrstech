@@ -8,102 +8,91 @@ export default function WhyChooseUs() {
       icon: Wrench,
       title: "Advanced Tools",
       description:
-        "We use cutting-edge software solutions! to help you with your business",
-      color: "#FF9800",
+        "We use cutting-edge software solutions to help you with your business",
+      color: "text-blue-400",
+      bg: "bg-blue-500/10",
     },
     {
       icon: Cpu,
       title: "Innovation",
       description:
-        "Stay Updated On The Latest Trends And Technologies, Ensuring We Provide Innovative And Impactful Solutions.",
-      color: "#FF9800",
+        "Stay updated on the latest trends and technologies, ensuring we provide innovative and impactful solutions.",
+      color: "text-purple-400",
+      bg: "bg-purple-500/10",
     },
     {
       icon: Lightbulb,
       title: "Creative Ideas",
       description:
-        "Every project we undertake is more than a task; and it's a canvas where advancement excels and where ideas converge to create digital masterpieces.",
-      color: "#FF9800",
+        "Every project we undertake is more than a task; it's a canvas where advancement excels and where ideas converge.",
+      color: "text-amber-400",
+      bg: "bg-amber-500/10",
     },
     {
       icon: Eye,
       title: "Our Mission & Vision",
       description:
         "Our mission at MDP is crystal clear: to be the catalyst that transforms businesses into digital powerhouses.",
-      color: "#FF9800",
+      color: "text-emerald-400",
+      bg: "bg-emerald-500/10",
     },
   ];
 
   return (
-    <div className="relative py-16 px-4 overflow-hidden">
-      {/* Curved lines background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern
-              id="curves"
-              x="0"
-              y="0"
-              width="100"
-              height="100"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M0,50 Q25,20 50,50 T100,50"
-                stroke="white"
-                strokeWidth="0.5"
-                fill="none"
-              />
-              <path
-                d="M0,70 Q25,40 50,70 T100,70"
-                stroke="white"
-                strokeWidth="0.5"
-                fill="none"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#curves)" />
-        </svg>
-      </div>
+    <div className="relative py-24 lg:py-32 px-4 overflow-hidden bg-n-8">
+      {/* Background Gradients */}
+      <div className="absolute top-0 left-1/4 w-[50rem] h-[50rem] bg-indigo-500/20 rounded-full blur-[10rem] pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-0 right-1/4 w-[40rem] h-[40rem] bg-purple-500/20 rounded-full blur-[8rem] pointer-events-none mix-blend-screen" />
 
-      {/* Circular pattern top right */}
-      <div className="absolute top-12 right-12 w-32 h-32 opacity-20">
-        <div className="relative w-full h-full">
-          {[...Array(24)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute top-1/2 left-1/2 w-16 h-0.5 bg-n-1 origin-left"
-              style={{
-                transform: `rotate(${i * 15}deg)`,
-              }}
-            />
-          ))}
-          <div className="absolute top-1/2 left-1/2 w-12 h-12 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2" />
-        </div>
-      </div>
-
-      <div className="relative container mx-auto">
+      <div className="relative container mx-auto z-10">
         {/* Header */}
-        <h2 className="h2 font-bold text-center mb-16">Why Choose Us!</h2>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="inline-block py-1 px-3 rounded-full bg-n-7 border border-n-6 text-xs font-code uppercase tracking-wider text-n-3 mb-4">
+            Why Choose Us
+          </span>
+          <h2 className="h2 mb-6">
+            We Build Digital <br className="hidden md:block" />
+            <span className="text-gradient">Experiences That Matter</span>
+          </h2>
+          <p className="body-1 text-n-4">
+             Partner with us to transform your vision into reality with cutting-edge technology and creative excellence.
+          </p>
+        </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left side - Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left side - 3D Illustration */}
+          <div className="relative order-2 lg:order-1 flex justify-center">
+            <div className="relative z-10 w-full max-w-[500px] aspect-square">
+               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-3xl opacity-40 animate-pulse" />
+              <Image
+                src={"/choose.webp"}
+                alt="Why Choose Us Illustration"
+                fill
+                className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
+              />
+            </div>
+          </div>
+
+          {/* Right side - Features */}
+          <div className="order-1 lg:order-2 grid gap-6">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div key={idx} className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div
-                      className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                    >
-                      <Icon className="w-12 h-12 text-color-1" strokeWidth={2.5} />
+                <div 
+                  key={idx} 
+                  className="group relative p-6 rounded-2xl bg-n-8/50 border border-n-6 hover:border-color-1/50 transition-colors duration-300 overflow-hidden backdrop-blur-sm"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-color-1/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  
+                  <div className="relative flex items-start gap-6">
+                    <div className={`w-14 h-14 rounded-xl ${feature.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className={`w-7 h-7 ${feature.color}`} strokeWidth={2} />
                     </div>
                     <div>
-                      <h3 className="text-n-2 h4  mb-2">
+                      <h3 className="h5 text-n-1 group-hover:text-color-1 transition-colors duration-300 mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-n-4 text-base leading-relaxed">
+                      <p className="body-2 text-n-4 leading-relaxed group-hover:text-n-3 transition-colors duration-300">
                         {feature.description}
                       </p>
                     </div>
@@ -111,16 +100,6 @@ export default function WhyChooseUs() {
                 </div>
               );
             })}
-          </div>
-
-          {/* Right side - 3D Illustration */}
-          <div className="relative flex items-center justify-center lg:justify-end">
-            <Image
-              src={"/choose.webp"}
-              alt="whychooseus"
-              width={500}
-              height={500}
-            />
           </div>
         </div>
       </div>
