@@ -1,71 +1,104 @@
-import { CheckCircle, Zap, Eye, Trophy } from "lucide-react";
+import { Eye, Target, Zap, ArrowRight, Sparkles } from "lucide-react";
 
 export default function OurStorySection() {
     return (
-        <section className="relative py-4 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="relative md:container mx-auto">
-                {/* Gradient Headline */}
-                <h2 className="h2 font-semibold text-center mb-12">
-                    Our Story
-                </h2>
+        <section className="relative py-24 overflow-hidden bg-n-8">
+            {/* Background Decorations */}
+             <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-color-1/10 rounded-full blur-[120px] -z-10" />
+             <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] bg-color-2/10 rounded-full blur-[100px] -z-10" />
 
-                {/* Main Card */}
-                <div className="bg-n-8/70 backdrop-blur-sm rounded-2xl border border-gray-800 shadow-2xl transition duration-500 hover:border-cyan-500/50 hover:shadow-cyan-500/20 flex flex-col-reverse lg:flex-row items-stretch md:overflow-hidden">
-
-                    {/* Left Content */}
-                    <div className="w-full lg:w-[60%] p-6 sm:p-8 lg:p-10">
-                        {/* <h3 className="h3 font-bold leading-snug mb-4">
-                            <Trophy className="inline w-8 h-8 mr-2 text-purple-600" />
-                            Built on Innovation, Fueled by the
-                            <span className="text-gradient"> Drive to Solve</span>
-                        </h3> */}
-                        <p className="text-base sm:text-2xl leading-relaxed text-n-3">
-                            Founded with the vision of solving complex business challenges,
-                            Solvorr Tech is built on innovation, creativity, and trust. Our
-                            journey started with noticing how many businesses struggled with
-                            outdated websites, poor online presence, and limited automation.
-                            We set out to change that. Step by step, we’ve helped businesses
-                            move beyond barriers — building modern websites, scalable
-                            applications, and effective digital marketing strategies that
-                            drive growth. Our story is about solving problems, creating
-                            impact, and empowering businesses to thrive in the digital age.
-                        </p>
-
-                        {/* Mission & Vision Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 mt-6 gap-4">
-                            {/* Mission Card */}
-                            <div className="p-6 bg-transparent rounded-xl border border-gray-800 transition duration-300 hover:shadow-indigo-500/20 hover:bg-gray-800">
-                                <h4 className="flex items-center text-xl font-semibold text-color-3 mb-3">
-                                    <Zap className="w-5 h-5 mr-2" /> Our Mission
-                                </h4>
-                                <p className="text-n-3 dark:text-n-4 text-lg leading-relaxed">
-                                    Solvorr Tech aims to simplify complexity by crafting smart,
-                                    scalable digital products that solve real business problems
-                                    efficiently.
-                                </p>
+            <div className="container mx-auto px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    
+                    {/* Left: Content Information */}
+                    <div className="relative z-10 space-y-8">
+                        <div>
+                            <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm mb-6">
+                                <Sparkles className="w-4 h-4 text-color-2" />
+                                <span className="text-sm font-code text-n-3 uppercase tracking-wider font-bold">Our Philosophy</span>
                             </div>
-
-                            {/* Vision Card */}
-                            <div className="p-6 bg-transparent rounded-xl border border-gray-800 transition duration-300 hover:shadow-cyan-500/20 hover:bg-gray-800">
-                                <h4 className="flex items-center text-xl font-semibold text-color-1 mb-3">
-                                    <Eye className="w-5 h-5 mr-2" /> Our Vision
-                                </h4>
-                                <p className="text-n-3 text-lg leading-relaxed">
-                                    We envision a world where every business leverages technology
-                                    seamlessly — bridging creativity and functionality for
-                                    measurable impact.
-                                </p>
-                            </div>
+                            <h2 className="h2 font-bold text-white leading-tight">
+                                From a Spark to a <br />
+                                <span className="text-gradient">Digital Supernova.</span>
+                            </h2>
                         </div>
+
+                        <div className="space-y-6 text-lg text-n-3 leading-relaxed">
+                            <p>
+                                Founded with the vision of solving complex business challenges,
+                                <span className="text-white font-semibold"> Solvorr Tech</span> isn't just an agency; we are your growth partners.
+                                We noticed too many businesses struggling with outdated tools and invisible online presence.
+                            </p>
+                            <p>
+                                We set out to change that. By fusing cutting-edge design with powerful automation, we help ambitious brands move beyond barriers—building scalable ecosystems that drive real, measurable revenue.
+                            </p>
+                        </div>
+
+                        {/* Interactive Stats/Action */}
+                         <div className="pt-8 flex flex-wrap gap-8">
+                             <div className="group flex items-center gap-4 cursor-pointer">
+                                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-color-1/20 group-hover:border-color-1/50 transition-all duration-300">
+                                     <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" />
+                                 </div>
+                                 <div>
+                                     <p className="font-bold text-white text-lg">Meet the Team</p>
+                                     <p className="text-sm text-n-4">The minds behind the magic</p>
+                                 </div>
+                             </div>
+                         </div>
                     </div>
 
-                    {/* Right Image */}
-                    <div className="w-full lg:w-[40%] h-auto sm:h-80 lg:h-auto">
-                        <img
-                            src="/story.png"
-                            alt="Solvorr Story"
-                            className="w-full h-full object-cover rounded-b-2xl lg:rounded-b-none lg:rounded-r-2xl"
-                        />
+                    {/* Right: Visual Glass Cards */}
+                    <div className="relative">
+                        {/* Decorative background for visuals */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-color-1/20 to-color-2/20 rounded-3xl blur-2xl transform rotate-3 scale-95 opacity-60" />
+
+                        {/* Main Grid of Glass Tiles */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+                            {/* Mission Card */}
+                            <div className="group p-8 bg-n-8/40 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-white/5 hover:border-color-3/50 transition-all duration-500 hover:-translate-y-2">
+                                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-3/20 to-color-3/5 flex items-center justify-center mb-6 border border-color-3/20 group-hover:scale-110 transition-transform duration-500">
+                                    <Target className="w-7 h-7 text-color-3" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-3">Our Mission</h3>
+                                <p className="text-n-3 text-sm leading-relaxed">
+                                    To simplify complexity. We craft smart, scalable digital products that solve real problems efficiently.
+                                </p>
+                            </div>
+
+                             {/* Vision Card */}
+                             <div className="group p-8 bg-n-8/40 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-white/5 hover:border-color-1/50 transition-all duration-500 hover:-translate-y-2 sm:translate-y-12">
+                                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-1/20 to-color-1/5 flex items-center justify-center mb-6 border border-color-1/20 group-hover:scale-110 transition-transform duration-500">
+                                    <Eye className="w-7 h-7 text-color-1" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-3">Our Vision</h3>
+                                <p className="text-n-3 text-sm leading-relaxed">
+                                    A world where every business leverages technology seamlessly bridging creativity and functionality.
+                                </p>
+                            </div>
+
+                             {/* Speed/Impact Card */}
+                             <div className="group p-8 bg-n-8/40 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-white/5 hover:border-color-2/50 transition-all duration-500 hover:-translate-y-2">
+                                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-2/20 to-color-2/5 flex items-center justify-center mb-6 border border-color-2/20 group-hover:scale-110 transition-transform duration-500">
+                                    <Zap className="w-7 h-7 text-color-2" />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-3">High Impact</h3>
+                                <p className="text-n-3 text-sm leading-relaxed">
+                                    We don't just build; we accelerate. Fast delivery without compromising on premium quality.
+                                </p>
+                            </div>
+
+                            {/* Floating Image Mini-Card */}
+                             <div className="relative h-full min-h-[200px] rounded-2xl overflow-hidden border border-white/10 sm:translate-y-12 group">
+                                 <img src="/story.png" alt="Office Culture" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                 <div className="absolute inset-0 bg-gradient-to-t from-n-8 via-transparent to-transparent opacity-80" />
+                                 <div className="absolute bottom-6 left-6 right-6">
+                                     <p className="font-bold text-white text-lg">Solvorr HQ</p>
+                                     <p className="text-xs text-white/70">Where innovation happens.</p>
+                                 </div>
+                             </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
