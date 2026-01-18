@@ -38,7 +38,9 @@ const Page = async ({ params }) => {
   const overviewContent = { 
     title: detailPage.overview.title, 
     subTitle: detailPage.overview.subTitle, 
-    description: detailPage.overview.description 
+    description: detailPage.overview.description,
+    // Use overview specific image, or fallback to main service image, or default to general overview
+    image: detailPage.overview.image || service.imageUrl || "/overview.png"
   }
 
   return (
@@ -46,7 +48,7 @@ const Page = async ({ params }) => {
       <ServiceHero content={heroContent}/>
       <Overview content={overviewContent}/>
       <SubServices subServices={detailPage.subServices}/>
-      <Benefit serviceBenefits={detailPage.serviceBenefits}/>
+      <Benefit serviceBenefits={detailPage.serviceBenefits} serviceTitle={service.title} />
       <ServiceProcess serviceProccess={detailPage.serviceProccess} />
       <TechStack />
       <MasonryTestimonials />
