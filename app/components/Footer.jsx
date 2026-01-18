@@ -4,235 +4,238 @@ import {
   Linkedin,
   Twitter,
   Mail,
-  Phone,
-  MapPin,
   Send,
+  ArrowRight,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./";
-import { Section } from "./";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "#", label: "GitHub" },
+  ];
+
+  const quickLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/service", label: "Services" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  const servicesLinks = [
+    "Web Design",
+    "Development",
+    "UI/UX Design",
+    "Branding",
+    "Consulting",
+  ];
+
+  const resourcesLinks = [
+    "Blog",
+    "Case Studies",
+    "Support",
+    "Documentation",
+  ];
+
   return (
-    <>
-      <Section className="relative bg-n-7 dark:bg-n-8 text-foreground pb-8">
-        <div
-          className="absolute w-full h-full inset-0 z-10
-                    bg-[url('/grain-main.png')]
-                    dark:bg-[url('/grain.png')]
-                    bg-cover bg-center opacity-80 md:opacity-80"
+    <footer className="relative bg-n-8 overflow-hidden pt-20 pb-10">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 z-0 opacity-[0.15]">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, var(--color-n-6) 1px, transparent 1px),
+              linear-gradient(to bottom, var(--color-n-6) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+          }}
         />
-        <div className="container mx-auto relative z-10">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-            {/* Logo and About - Takes more space */}
-            <div className="lg:col-span-4">
-              <div className="mb-6">
-                <h2 className="text-4xl font-bold mb-3">
-                  <span className="text-gradient">Solvorr</span>
-                </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-color-1 to-color-5 rounded-full" />
-              </div>
-              <p className="text-n-3 leading-relaxed mb-6 pr-4">
-                A forward-thinking digital agency focused on creating stunning
-                and effective web solutions that drive results and exceed
-                expectations.
-              </p>
+      </div>
 
-              {/* Social Links - More prominent */}
-              <div className="flex gap-3">
+      {/* Top Border */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-color-1/30 to-transparent" />
+
+      {/* Subtle Background Glow - Single, minimal */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-color-1/5 to-transparent blur-[100px]" />
+      </div>
+
+      <div className="container mx-auto relative z-10 px-4">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+          
+          {/* Brand Section */}
+          <div className="lg:col-span-4">
+            <Link href="/" className="block mb-6 group w-fit">
+              <h2 className="text-4xl font-bold tracking-tighter text-n-1 transition-colors duration-300">
+                Solvorr<span className="text-gradient">.</span>
+              </h2>
+            </Link>
+            
+            <p className="text-n-3 leading-relaxed mb-8 text-base max-w-sm">
+              Crafting digital experiences that merge innovation with elegance.
+              We build the future of tech, one pixel at a time.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3 mb-8">
+              {socialLinks.map((social, index) => (
                 <a
-                  href="#"
-                  className="group w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center hover:bg-color-1 transition-all duration-300"
+                  key={index}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-11 h-11 rounded-lg bg-n-7 border border-n-6 flex items-center justify-center text-n-4 hover:text-n-1 hover:border-color-1/50 transition-all duration-300 group"
                 >
-                  <Facebook
-                    size={18}
-                    className="text-n-3 group-hover:text-white transition-colors"
-                  />
+                  <social.icon size={18} className="transition-transform group-hover:scale-110" />
                 </a>
-                <a
-                  href="#"
-                  className="group w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center hover:bg-color-1 transition-all duration-300"
-                >
-                  <Twitter
-                    size={18}
-                    className="text-n-3 group-hover:text-white transition-colors"
-                  />
-                </a>
-                <a
-                  href="#"
-                  className="group w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center hover:bg-color-1 transition-all duration-300"
-                >
-                  <Linkedin
-                    size={18}
-                    className="text-n-3 group-hover:text-white transition-colors"
-                  />
-                </a>
-                <a
-                  href="#"
-                  className="group w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center hover:bg-color-1 transition-all duration-300"
-                >
-                  <Github
-                    size={18}
-                    className="text-n-3 group-hover:text-white transition-colors"
-                  />
-                </a>
-              </div>
+              ))}
             </div>
 
-            {/* Quick Links */}
-            <div className="lg:col-span-2">
-              <h3 className="text-lg font-semibold mb-6 text-n-1">
-                Quick Links
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  { href: "/", label: "Home" },
-                  { href: "/about", label: "About" },
-                  { href: "/service", label: "Services" },
-                  { href: "/portfolio", label: "Portfolio" },
-                  { href: "/blog", label: "Blog" },
-                ].map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-n-3 hover:text-color-1 hover:translate-x-1 inline-block transition-all duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Contact */}
+            <a 
+              href="mailto:hello@solvorr.com" 
+              className="flex items-center gap-3 text-n-3 hover:text-color-1 transition-colors group w-fit"
+            >
+              <span className="w-9 h-9 rounded-lg bg-n-7 border border-n-6 flex items-center justify-center group-hover:border-color-1/50 transition-all">
+                <Mail size={16} />
+              </span>
+              <span className="text-sm">hello@solvorr.com</span>
+            </a>
+          </div>
 
-            {/* Services Links */}
-            <div className="lg:col-span-2">
-              <h3 className="text-lg font-semibold mb-6 text-n-1">Services</h3>
-              <ul className="space-y-3">
-                {[
-                  "Web Design",
-                  "Development",
-                  "UI/UX Design",
-                  "Branding",
-                  "Consulting",
-                ].map((service) => (
-                  <li key={service}>
-                    <Link
-                      href="/service"
-                      className="text-n-3 hover:text-color-1 hover:translate-x-1 inline-block transition-all duration-200"
-                    >
-                      {service}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h3 className="text-n-1 font-semibold text-base mb-6">
+              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-n-3 text-sm hover:text-n-1 transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-0 h-[1px] bg-color-1 group-hover:w-4 transition-all duration-300" />
+                    <span>{link.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            {/* Contact Info */}
-            <div className="lg:col-span-4">
-              <h3 className="text-lg font-semibold mb-6 text-n-1">
-                Get in Touch
-              </h3>
+          {/* Services */}
+          <div className="lg:col-span-2">
+            <h3 className="text-n-1 font-semibold text-base mb-6">
+              Services
+            </h3>
+            <ul className="space-y-3">
+              {servicesLinks.map((service) => (
+                <li key={service}>
+                  <Link
+                    href="/service"
+                    className="text-n-3 text-sm hover:text-n-1 transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-0 h-[1px] bg-color-2 group-hover:w-4 transition-all duration-300" />
+                    <span>{service}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <div className="space-y-4 mb-8">
-                <a
-                  href="mailto:contact@solvorr.com"
-                  className="flex items-center gap-3 text-n-3 hover:text-color-1 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center group-hover:bg-color-1/10 transition-colors">
-                    <Mail
-                      size={18}
-                      className="group-hover:text-color-1 transition-colors"
-                    />
-                  </div>
-                  <span>contact@solvorr.com</span>
-                </a>
+          {/* Resources */}
+          <div className="lg:col-span-2">
+            <h3 className="text-n-1 font-semibold text-base mb-6">
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              {resourcesLinks.map((resource) => (
+                <li key={resource}>
+                  <Link
+                    href="#"
+                    className="text-n-3 text-sm hover:text-n-1 transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-0 h-[1px] bg-color-3 group-hover:w-4 transition-all duration-300" />
+                    <span>{resource}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                <a
-                  href="tel:+1234567890"
-                  className="flex items-center gap-3 text-n-3 hover:text-color-1 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center group-hover:bg-color-1/10 transition-colors">
-                    <Phone
-                      size={18}
-                      className="group-hover:text-color-1 transition-colors"
-                    />
-                  </div>
-                  <span>+123 456 7890</span>
-                </a>
-
-                <div className="flex items-center gap-3 text-n-3">
-                  <div className="w-10 h-10 rounded-lg bg-n-6 dark:bg-n-7 flex items-center justify-center">
-                    <MapPin size={18} />
-                  </div>
-                  <span>San Francisco, CA</span>
+          {/* Newsletter Section */}
+          <div className="lg:col-span-2">
+            <div className="relative bg-gradient-to-br from-n-7/50 to-n-8 border border-n-6 rounded-xl p-6 overflow-hidden">
+              {/* Subtle glow */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-color-1/10 rounded-full blur-3xl" />
+              
+              <div className="relative">
+                <div className="flex items-center gap-2 mb-3">
+                  <Sparkles className="w-4 h-4 text-color-1" />
+                  <h3 className="text-n-1 font-semibold text-base">Newsletter</h3>
                 </div>
-              </div>
-
-              {/* Newsletter with better design */}
-              <div className="bg-n-6 dark:bg-n-7 rounded-2xl p-6 border border-n-6 dark:border-n-6/20">
-                <h4 className="text-base font-semibold mb-2 text-n-1">
-                  Join Newsletter
-                </h4>
-                <p className="text-n-4 text-sm mb-4">
-                  Get updates on latest trends and offers.
+                
+                <p className="text-xs text-n-3 mb-4 leading-relaxed">
+                  Get updates on our latest work and insights.
                 </p>
-                <form className="relative">
+                
+                <form className="space-y-3">
                   <input
                     type="email"
-                    placeholder="Enter your email"
-                    className="w-full bg-n-8 dark:bg-n-8 border border-n-6/50 dark:border-n-6/20 rounded-xl px-4 py-3 pr-12 text-sm focus:outline-none focus:border-color-1 transition-all placeholder:text-n-4"
+                    placeholder="Your email"
+                    className="w-full bg-n-7 border border-n-6 rounded-lg py-2.5 px-3 text-sm text-n-1 placeholder:text-n-4 focus:outline-none focus:border-color-1 transition-colors"
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-color-1 hover:bg-color-1/90 rounded-lg flex items-center justify-center transition-all hover:scale-105"
+                    className="w-full bg-n-1 text-n-8 rounded-lg py-2.5 px-3 text-sm font-medium hover:bg-color-1 hover:text-white transition-all flex items-center justify-center gap-2"
                   >
-                    <Send size={16} className="text-white" />
+                    Subscribe
+                    <Send size={12} />
                   </button>
                 </form>
               </div>
             </div>
           </div>
-
-          {/* Bottom Bar with better separation */}
-          <div className="pt-8 border-t border-n-5/40 dark:border-n-6/80">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-n-4 text-sm">
-                &copy; {new Date().getFullYear()}{" "}
-                <span className="text-n-2 font-medium">Solvorr</span>. All
-                rights reserved.
-              </p>
-
-              <div className="flex items-center gap-6 text-sm">
-                <Link
-                  href="/privacy"
-                  className="text-n-4 hover:text-color-1 transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-                <span className="text-n-6">•</span>
-                <Link
-                  href="/terms"
-                  className="text-n-4 hover:text-color-1 transition-colors"
-                >
-                  Terms of Service
-                </Link>
-                <span className="text-n-6">•</span>
-                <Link
-                  href="/cookies"
-                  className="text-n-4 hover:text-color-1 transition-colors"
-                >
-                  Cookies
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Decorative bottom gradient blur */}
-        <div className="absolute bottom-0 right-0 w-[600px] h-[200px] bg-gradient-to-t from-color-5/10 via-color-2/5 to-transparent blur-3xl pointer-events-none" />
-      </Section>
-    </>
+        {/* Divider */}
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-n-6/30 to-transparent mb-8" />
+
+        {/* Footer Bottom */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-n-4 text-sm">
+            © {currentYear} <span className="text-n-2">Solvorr Tech</span>. All rights reserved.
+          </p>
+          
+          <div className="flex items-center gap-6">
+            {["Privacy", "Terms", "Cookies"].map((item) => (
+              <Link
+                key={item}
+                href="#"
+                className="text-sm text-n-4 hover:text-n-1 transition-colors"
+              >
+                {item}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* Big Watermark Text */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 z-0 opacity-[0.06] dark:opacity-[0.04] pointer-events-none select-none">
+        <span className="text-[20vw] font-bold tracking-tighter whitespace-nowrap text-n-1">
+          SOLVORR
+        </span>
+      </div>
+    </footer>
   );
 };
 
