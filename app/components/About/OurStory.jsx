@@ -14,12 +14,12 @@ export default function OurStorySection() {
 
                     {/* Left Content */}
                     <div className="w-full lg:w-[60%] p-6 sm:p-8 lg:p-10">
-                        <h3 className="h3 font-bold leading-snug mb-4">
+                        {/* <h3 className="h3 font-bold leading-snug mb-4">
                             <Trophy className="inline w-8 h-8 mr-2 text-purple-600" />
                             Built on Innovation, Fueled by the
                             <span className="text-gradient"> Drive to Solve</span>
-                        </h3>
-                        <p className="text-base sm:text-lg leading-relaxed text-n-3">
+                        </h3> */}
+                        <p className="text-base sm:text-2xl leading-relaxed text-n-3">
                             Founded with the vision of solving complex business challenges,
                             Solvorr Tech is built on innovation, creativity, and trust. Our
                             journey started with noticing how many businesses struggled with
@@ -38,7 +38,7 @@ export default function OurStorySection() {
                                 <h4 className="flex items-center text-xl font-semibold text-color-3 mb-3">
                                     <Zap className="w-5 h-5 mr-2" /> Our Mission
                                 </h4>
-                                <p className="text-n-1 dark:text-n-4 text-sm leading-relaxed">
+                                <p className="text-n-3 dark:text-n-4 text-lg leading-relaxed">
                                     Solvorr Tech aims to simplify complexity by crafting smart,
                                     scalable digital products that solve real business problems
                                     efficiently.
@@ -50,7 +50,7 @@ export default function OurStorySection() {
                                 <h4 className="flex items-center text-xl font-semibold text-color-1 mb-3">
                                     <Eye className="w-5 h-5 mr-2" /> Our Vision
                                 </h4>
-                                <p className="text-n-4 text-sm leading-relaxed">
+                                <p className="text-n-3 text-lg leading-relaxed">
                                     We envision a world where every business leverages technology
                                     seamlessly — bridging creativity and functionality for
                                     measurable impact.

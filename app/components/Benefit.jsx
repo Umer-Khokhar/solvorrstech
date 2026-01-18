@@ -76,7 +76,7 @@ export default function Benefit() {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section className=" py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-center gap-20">
           {/* Left Content - Sticky */}
@@ -86,7 +86,7 @@ export default function Benefit() {
               <span className="text-blue-600 font-medium text-sm">Feature-services</span>
             </div>
             
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-n-2 mb-4">
               Growth with<br />SEO services
             </h2>
             

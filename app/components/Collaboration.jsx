@@ -7,8 +7,7 @@ import ThemeBackground from "./ThemeBackground";
 
 const Collaboration = () => {
     return (
-        <div className={`py-[4rem] dark:bg-n-7 my-[2rem] z-20 relative`}>
-             <ThemeBackground lightSrc={"./grain-main.jpg"} darkSrc={null} />
+        <div className={`py-[4rem] bg-white dark:bg-n-7 my-[2rem] z-20 relative`}>
             <div className="container lg:flex z-10">
                 <div className="max-w-[35rem]">
                     <h2 className="h2 mb-4 md:mb-8">

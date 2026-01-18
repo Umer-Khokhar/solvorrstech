@@ -1,86 +1,129 @@
+import React from "react";
+import { Wrench, Cpu, Lightbulb, Eye } from "lucide-react";
+import Image from "next/image";
+
 export default function WhyChooseUs() {
-  const stats = [
+  const features = [
     {
-      number: "30+",
-      label: "Happy Clients",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop"
+      icon: Wrench,
+      title: "Advanced Tools",
+      description:
+        "We use cutting-edge software solutions! to help you with your business",
+      color: "#FF9800",
     },
     {
-      number: "15+",
-      label: "Your Growth Partner",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+      icon: Cpu,
+      title: "Innovation",
+      description:
+        "Stay Updated On The Latest Trends And Technologies, Ensuring We Provide Innovative And Impactful Solutions.",
+      color: "#FF9800",
     },
     {
-      number: "35+",
-      label: "Happy Clients",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=300&fit=crop"
+      icon: Lightbulb,
+      title: "Creative Ideas",
+      description:
+        "Every project we undertake is more than a task; and it's a canvas where advancement excels and where ideas converge to create digital masterpieces.",
+      color: "#FF9800",
     },
     {
-      number: "18+",
-      label: "Your Growth Partner",
-      image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop"
-    }
+      icon: Eye,
+      title: "Our Mission & Vision",
+      description:
+        "Our mission at MDP is crystal clear: to be the catalyst that transforms businesses into digital powerhouses.",
+      color: "#FF9800",
+    },
   ];
 
   return (
-    <section className="bg-n-8 text-n-1 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Why Choose Us
-          </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto text-base sm:text-lg">
-            Our mission is to drive progress and enhance the lives of our customers by delivering superior products and services that exceed.
-          </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="relative group overflow-hidden rounded-3xl aspect-[3/4] cursor-pointer"
+    <div className="relative py-16 px-4 overflow-hidden">
+      {/* Curved lines background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="curves"
+              x="0"
+              y="0"
+              width="100"
+              height="100"
+              patternUnits="userSpaceOnUse"
             >
-              {/* Background Image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                style={{ backgroundImage: `url(${stat.image})` }}
-              >
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-              </div>
+              <path
+                d="M0,50 Q25,20 50,50 T100,50"
+                stroke="white"
+                strokeWidth="0.5"
+                fill="none"
+              />
+              <path
+                d="M0,70 Q25,40 50,70 T100,70"
+                stroke="white"
+                strokeWidth="0.5"
+                fill="none"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#curves)" />
+        </svg>
+      </div>
 
-              {/* Content */}
-              <div className="relative h-full flex flex-col justify-end p-6">
-              <div className="dark:bg-n-1/10 bg-n-8/10 p-3 backdrop-blur-2xl rounded-2xl">
-                <div className="text-3xl sm:text-4xl font-bold mb-2 text-white/80">
-                  {stat.number}
-                </div>
-                <div className="text-sm sm:text-base text-white/50">
-                  {stat.label}
-                </div>
-              </div>
-              </div>
-
-              {/* Heart Icon */}
-              <div className="absolute bottom-8 right-8 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <svg 
-                  className="w-5 h-5 text-red-500" 
-                  fill="currentColor" 
-                  viewBox="0 0 20 20"
-                >
-                  <path 
-                    fillRule="evenodd" 
-                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" 
-                    clipRule="evenodd" 
-                  />
-                </svg>
-              </div>
-            </div>
+      {/* Circular pattern top right */}
+      <div className="absolute top-12 right-12 w-32 h-32 opacity-20">
+        <div className="relative w-full h-full">
+          {[...Array(24)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute top-1/2 left-1/2 w-16 h-0.5 bg-n-1 origin-left"
+              style={{
+                transform: `rotate(${i * 15}deg)`,
+              }}
+            />
           ))}
+          <div className="absolute top-1/2 left-1/2 w-12 h-12 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
-    </section>
+
+      <div className="relative container mx-auto">
+        {/* Header */}
+        <h2 className="h2 font-bold text-center mb-16">Why Choose Us!</h2>
+
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Left side - Features */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, idx) => {
+              const Icon = feature.icon;
+              return (
+                <div key={idx} className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                    >
+                      <Icon className="w-12 h-12 text-color-1" strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-n-2 h4  mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-n-4 text-base leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right side - 3D Illustration */}
+          <div className="relative flex items-center justify-center lg:justify-end">
+            <Image
+              src={"/choose.webp"}
+              alt="whychooseus"
+              width={500}
+              height={500}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

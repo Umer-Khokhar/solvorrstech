@@ -48,8 +48,7 @@ export default function Header() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton variant="primary" className={"bg-color-1 text-white rounded-4xl py-3"}>Book a call</NavbarButton>
               <ThemeToggler />
           </div>
         </NavBody>
