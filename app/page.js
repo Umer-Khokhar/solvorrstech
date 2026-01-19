@@ -1,4 +1,4 @@
-import { Benefits, Collaboration, Hero, OurStory, Working } from "@/app/components";
+import { Services, Collaboration, Hero, OurStory, Working } from "@/app/components";
 import { ButtonGradient } from "./assets/svg";
 import PortfolioSection from "@/app/components/PortfolioSection";
 import { robot } from "./assets";
@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Hero/>
-        <Benefits />
+        <Services />
         <OurStory />
         <Collaboration />
         <Working />
