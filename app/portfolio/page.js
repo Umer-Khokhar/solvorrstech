@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import {PortfolioHero, Projects, Project} from "@/app/components";
 

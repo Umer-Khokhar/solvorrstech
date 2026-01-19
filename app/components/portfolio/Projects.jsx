@@ -1,14 +1,21 @@
 import React from 'react'
 import {Section, Project, Heading} from '../'
 import { projectsDetails } from '../../constants'
+import { motion } from 'framer-motion'
 
 const Projects = () => {
   return (
-    <div className={`!px-0 md:mt-12 lg:!py-10`}>
+    <div className={`!px-0 md:mt-12 lg:!py-10 overflow-hidden`}>
         <div className="container">
-            <div className='lg:-mt-4 mt-20 lg:mb-[2rem]'>
-            <Heading title={"Our Recent Projects"}/>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }}
+              className='lg:-mt-4 mt-20 lg:mb-[4rem]'
+            >
+              <Heading title={"Our Recent Projects"}/>
+            </motion.div>
             <div className="relative">
                 {projectsDetails.map((project, index) => (
                     <div key={index}>
