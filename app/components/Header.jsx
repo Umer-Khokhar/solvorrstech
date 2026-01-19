@@ -34,7 +34,11 @@ export default function Header() {
     },
     {
       name: "Case Studies",
-      link: "#contact",
+      link: "/case-studies",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
     },
   ];
  
