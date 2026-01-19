@@ -1,11 +1,11 @@
 export default function NoiseBg({
   children,
   className = "",
-  lightGradient = "from-[#f8faf7] to-[#e5efe8]",
-  darkGradient = "from-[#1a1a1a] to-[#0e0e0e]",
+  lightGradient = "from-n-8 to-n-7",
+  darkGradient = "from-n-8 to-n-9",
 }) {
   return (
-    <section className={`relative ${className}`}>
+    <section className={`relative transition-colors duration-500 ${className}`}>
       {/* Light mode gradient */}
       <div
         className={`absolute inset-0 bg-gradient-to-b ${lightGradient} dark:hidden`}
@@ -17,7 +17,7 @@ export default function NoiseBg({
       />
 
       {/* Noise on top */}
-      <div className="noise-overlay"></div>
+      <div className="noise-overlay z-1"></div>
 
       {/* Content */}
       <div className="relative z-10">{children}</div>
