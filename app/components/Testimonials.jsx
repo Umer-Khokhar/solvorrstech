@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+import { FadeIn, StaggerContainer, StaggerItem } from './animations';
 
 const testimonials = [
   {
@@ -69,51 +70,54 @@ const testimonials = [
 
 export default function MasonryTestimonials() {
   return (
-    <section className="py-20 px-4 bg-n-8">
+    <section className="py-20 px-4 bg-n-8 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="h2  font-bold mb-4">
-            Loved by Thousands
-          </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            See what our customers have to say about their experience
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-16">
+            <h2 className="h2  font-bold mb-4">
+              Loved by Thousands
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              See what our customers have to say about their experience
+            </p>
+          </div>
+        </FadeIn>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <StaggerContainer className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6" delayChildren={0.2}>
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="break-inside-avoid bg-n-9/[0.22] border border-white/[0.06] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              
-              <p className="text-n-2 mb-6 text-sm md:leading-relaxed">
-                "{testimonial.content}"
-              </p>
-              
-              <div className="flex items-center gap-3">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div className='text-xs'>
-                  <h4 className="font-semibold text-slate-500">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-xs text-slate-500">
-                    {testimonial.role}
-                  </p>
+            <StaggerItem key={index} className="break-inside-avoid">
+              <div
+                className="bg-n-9/[0.22] border border-white/[0.06] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                
+                <p className="text-n-2 mb-6 text-sm md:leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+                
+                <div className="flex items-center gap-3">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div className='text-xs'>
+                    <h4 className="font-semibold text-slate-500">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-xs text-slate-500">
+                      {testimonial.role}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

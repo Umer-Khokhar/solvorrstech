@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrench, Cpu, Lightbulb, Eye } from "lucide-react";
 import Image from "next/image";
+import { FadeIn, StaggerContainer, StaggerItem, BlurIn } from "./animations";
 
 export default function WhyChooseUs() {
   const features = [
@@ -39,29 +40,31 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <div className="relative py-24 lg:py-32 px-4 overflow-hidden bg-n-8">
+    <div className="relative py-24 lg:py-32 px-4 overflow-hidden bg-n-8 transition-colors duration-300">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/4 w-[50rem] h-[50rem] bg-indigo-500/20 rounded-full blur-[10rem] pointer-events-none mix-blend-screen" />
       <div className="absolute bottom-0 right-1/4 w-[40rem] h-[40rem] bg-purple-500/20 rounded-full blur-[8rem] pointer-events-none mix-blend-screen" />
 
       <div className="relative container mx-auto z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-block py-1 px-3 rounded-full bg-n-7 border border-n-6 text-xs font-code uppercase tracking-wider text-n-3 mb-4">
-            Why Choose Us
-          </span>
-          <h2 className="h2 mb-6">
-            We Build Digital <br className="hidden md:block" />
-            <span className="text-gradient">Experiences That Matter</span>
-          </h2>
-          <p className="body-1 text-n-4">
-             Partner with us to transform your vision into reality with cutting-edge technology and creative excellence.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <span className="inline-block py-1 px-3 rounded-full bg-n-7 border border-n-6 text-xs font-code uppercase tracking-wider text-n-3 mb-4">
+              Why Choose Us
+            </span>
+            <h2 className="h2 mb-6">
+              We Build Digital <br className="hidden md:block" />
+              <span className="text-gradient">Experiences That Matter</span>
+            </h2>
+            <p className="body-1 text-n-4">
+               Partner with us to transform your vision into reality with cutting-edge technology and creative excellence.
+            </p>
+          </div>
+        </FadeIn>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left side - 3D Illustration */}
-          <div className="relative order-2 lg:order-1 flex justify-center">
+          <BlurIn delay={0.3} className="relative order-2 lg:order-1 flex justify-center">
             <div className="relative z-10 w-full max-w-[500px] aspect-square">
                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-3xl opacity-40 animate-pulse" />
               <Image
@@ -71,38 +74,40 @@ export default function WhyChooseUs() {
                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
-          </div>
+          </BlurIn>
 
           {/* Right side - Features */}
-          <div className="order-1 lg:order-2 grid gap-6">
+          <StaggerContainer className="order-1 lg:order-2 grid gap-6" delayChildren={0.5}>
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div 
-                  key={idx} 
-                  className="group relative p-6 rounded-2xl bg-n-8/50 border border-n-6 hover:border-color-1/50 transition-colors duration-300 overflow-hidden backdrop-blur-sm"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-color-1/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                  
-                  <div className="relative flex items-start gap-6">
-                    <div className={`w-14 h-14 rounded-xl ${feature.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`w-7 h-7 ${feature.color}`} strokeWidth={2} />
-                    </div>
-                    <div>
-                      <h3 className="h5 text-n-1 group-hover:text-color-1 transition-colors duration-300 mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="body-2 text-n-4 leading-relaxed group-hover:text-n-3 transition-colors duration-300">
-                        {feature.description}
-                      </p>
+                <StaggerItem key={idx}>
+                  <div 
+                    className="group relative p-6 rounded-2xl bg-n-8/50 border border-n-6 hover:border-color-1/50 transition-colors duration-300 overflow-hidden backdrop-blur-sm"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-color-1/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    
+                    <div className="relative flex items-start gap-6">
+                      <div className={`w-14 h-14 rounded-xl ${feature.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className={`w-7 h-7 ${feature.color}`} strokeWidth={2} />
+                      </div>
+                      <div>
+                        <h3 className="h5 text-n-1 group-hover:text-color-1 transition-colors duration-300 mb-2">
+                          {feature.title}
+                        </h3>
+                        <p className="body-2 text-n-4 leading-relaxed group-hover:text-n-3 transition-colors duration-300">
+                          {feature.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </div>
   );
 }
+
