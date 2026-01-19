@@ -65,7 +65,7 @@ const TiltCard = ({ service, index }) => {
         {/* Seamless Image Integration */}
         <div className="absolute top-0 left-0 w-full h-[65%] overflow-hidden">
              {/* Gradient Mask for Smooth Fade */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white dark:via-n-8/20 dark:to-n-8 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/60 to-slate-800 dark:via-n-8/20 dark:to-n-8 z-10" />
             
             <img 
                 src={service.imageUrl} 
