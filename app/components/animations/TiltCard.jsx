@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight, Code, LayoutDashboard, Bot, Search, Network } from "lucide-react";
+import React, { useState, useRef } from "react";
 
 const iconMap = {
   development: Code,
@@ -13,18 +14,20 @@ const iconMap = {
 
 const TiltCard = ({ service }) => {
   const Icon = iconMap[service.iconUrl] || Code;
+  const cardRef = useRef(null);
   
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const mouseXSpring = useSpring(x);
-  const mouseYSpring = useSpring(y);
+  const mouseXSpring = useSpring(x, { stiffness: 150, damping: 20 });
+  const mouseYSpring = useSpring(y, { stiffness: 150, damping: 20 });
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["12deg", "-12deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["6deg", "-6deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-6deg", "6deg"]);
 
   const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
     
@@ -45,6 +48,7 @@ const TiltCard = ({ service }) => {
 
   return (
     <motion.div
+      ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -52,56 +56,81 @@ const TiltCard = ({ service }) => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-[500px] w-full rounded-[2rem] bg-white dark:bg-n-8 border border-n-1/10 dark:border-white/10 group perspective-1000 shadow-xl dark:shadow-none transition-all duration-300 hover:shadow-2xl hover:border-color-1/30"
+      className="relative h-[480px] w-full group perspective-1000"
     >
-      <div 
-        style={{ transform: "translateZ(-40px)" }}
-        className="absolute inset-4 rounded-[2rem] bg-color-1/10 blur-2xl transition-opacity duration-500 opacity-0 group-hover:opacity-100" 
-      />
-
-      <div className="absolute inset-0 rounded-[2rem] overflow-hidden bg-white dark:bg-n-8 transition-colors duration-300">
-        <div className="absolute top-0 left-0 w-full h-[65%] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/60 to-slate-800 dark:via-n-8/20 dark:to-n-8 z-10" />
-            
-            <img 
-                src={service.imageUrl} 
-                alt={service.title} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 dark:opacity-60 group-hover:opacity-100 dark:group-hover:opacity-80"
+      {/* Main Container - Minimalist Premium Glass Tile */}
+      <motion.div 
+        className="relative h-full w-full rounded-[2rem] bg-white/70 dark:bg-n-8/40 backdrop-blur-3xl border border-n-1/10 dark:border-white/10 overflow-hidden transition-all duration-500 group-hover:bg-white/90 dark:group-hover:bg-white/5 shadow-2xl shadow-n-1/5 dark:shadow-none group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] group-hover:-translate-y-2"
+      >
+        {/* Subtle Shine Effect */}
+        <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+            <motion.div 
+                animate={{
+                    x: ["-100%", "200%"],
+                    y: ["-100%", "200%"]
+                }}
+                transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatDelay: 4,
+                    ease: "easeInOut"
+                }}
+                className="absolute w-full h-[200%] bg-gradient-to-br from-transparent via-white/30 dark:via-white/5 to-transparent rotate-45"
             />
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
-            <div 
-                style={{ transform: "translateZ(30px)" }}
-                className="w-16 h-16 mb-6 rounded-2xl bg-white/80 dark:bg-n-8/80 backdrop-blur-xl border border-n-1/10 dark:border-white/10 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-color-1 group-hover:dark:bg-color-1 group-hover:border-transparent transition-all duration-500"
-            >
-                <Icon className="w-7 h-7 text-n-1 group-hover:text-white transition-colors duration-300" />
+        {/* Content Section */}
+        <div className="relative h-full w-full flex flex-col p-10 z-20">
+            {/* Top Image Section */}
+            <div className="relative w-full h-[40%] mb-10 rounded-2xl overflow-hidden border border-n-1/5 dark:border-white/5 group-hover:border-color-1/20 transition-colors">
+                <img 
+                    src={service.imageUrl} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent dark:from-n-8/40" />
             </div>
 
-            <div style={{ transform: "translateZ(20px)" }}>
-                <h3 className="text-2xl font-bold text-n-1 mb-3 group-hover:text-color-1 transition-colors duration-300">
+            {/* Icon & Title */}
+            <div className="mb-4 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-n-1/5 dark:bg-white/5 flex items-center justify-center transition-all duration-500 group-hover:bg-color-1/10 group-hover:scale-110">
+                    <Icon className="w-6 h-6 text-n-1 dark:text-white group-hover:text-color-1 transition-colors" />
+                </div>
+                <h3 
+                    className="text-2xl font-bold text-n-1 dark:text-white tracking-tight"
+                    style={{ fontFamily: 'var(--font-clash-grotesk)' }}
+                >
                     {service.title}
                 </h3>
-                <p className="text-n-3 text-sm leading-relaxed mb-6 line-clamp-2 group-hover:line-clamp-none transition-all duration-300 font-medium">
-                    {service.text}
-                </p>
+            </div>
 
-                <div className="flex items-center gap-3 text-xs font-bold font-code uppercase tracking-wider text-n-1/60 group-hover:text-color-1 transition-colors duration-300">
-                    <span className="relative">
-                        Explore Service
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-color-1 transition-all duration-300 group-hover:w-full" />
+            {/* Description */}
+            <p className="text-n-3 dark:text-n-4 text-sm leading-relaxed mb-10 line-clamp-3">
+                {service.text}
+            </p>
+
+            {/* Action Area */}
+            <div className="mt-auto flex items-center justify-between pt-6 border-t border-n-1/5 dark:border-white/5">
+                <div className="flex items-center gap-3 group/btn cursor-pointer">
+                    <span className="text-xs font-bold font-code uppercase tracking-wider text-n-1/60 dark:text-white/60 group-hover:text-color-1 transition-colors">
+                        Learn More
                     </span>
-                    <div className="w-6 h-6 rounded-full border border-current flex items-center justify-center group-hover:bg-color-1 group-hover:border-color-1 group-hover:text-white transition-all duration-300">
-                        <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-px group-hover:translate-x-px transition-transform" />
+                    <div className="w-8 h-8 rounded-full border border-n-1/10 dark:border-white/10 flex items-center justify-center group-hover:bg-color-1 group-hover:border-transparent group-hover:text-white transition-all duration-300">
+                        <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
                     </div>
                 </div>
+                
+                <span className="text-3xl font-bold text-n-1/[0.03] dark:text-white/[0.03] select-none font-mono">
+                    0{service.id + 1}
+                </span>
             </div>
         </div>
-
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent dark:from-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
 
 export default TiltCard;
+
+
+
