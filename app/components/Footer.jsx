@@ -9,6 +9,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
+import Button from "./Button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -193,13 +194,15 @@ const Footer = () => {
                     placeholder="Your email"
                     className="w-full bg-n-7 border border-n-6 rounded-lg py-2.5 px-3 text-sm text-n-1 placeholder:text-n-4 focus:outline-none focus:border-color-1 transition-colors"
                   />
-                  <button
+                  <Button
                     type="submit"
-                    className="w-full bg-n-1 text-n-8 rounded-lg py-2.5 px-3 text-sm font-medium hover:bg-color-1 hover:text-white transition-all flex items-center justify-center gap-2"
+                    variant="primary"
+                    size="sm"
+                    className="w-full"
+                    rightIcon={<Send size={12} />}
                   >
                     Subscribe
-                    <Send size={12} />
-                  </button>
+                  </Button>
                 </form>
               </div>
             </div>

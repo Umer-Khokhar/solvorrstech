@@ -1,5 +1,6 @@
 import React from 'react';
 import { TrendingUp, RefreshCw, Target, ClipboardList } from 'lucide-react';
+import { TechBackground } from "../";
 
 const process = [
   {
@@ -30,7 +31,8 @@ const process = [
 
 const ServiceProcess = () => {
   return (
-    <div className='w-full py-12 md:py-32 px-4 bg-white dark:bg-n-8'>
+    <div className='w-full relative py-12 md:py-32 px-4 bg-white dark:bg-n-8'>
+      <TechBackground />
       <div className="content text-center mb-12 md:mb-20">
         <h2 className="text-3xl md:text-4xl mb-4 lg:text-5xl font-bold text-gray-900">The Way We Deliver</h2>
         <p className='text-n-4 body-1 max-w-2xl mx-auto'>We combine planning, execution, and continuous improvement to ensure every project succeeds.</p>

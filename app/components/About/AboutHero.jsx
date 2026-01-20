@@ -2,6 +2,7 @@
 import NoiseBg from "../NoiseBg";
 import { ArrowUpRight, Code2, Palette, TrendingUp, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import Button from "../Button";
 
 const AboutHero = () => {
     const fadeIn = {
@@ -65,11 +66,14 @@ const AboutHero = () => {
                                 variants={fadeIn}
                                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 pt-4"
                             >
-                                <button className="group relative px-8 py-4 bg-color-1 text-white dark:text-n-8 rounded-xl font-bold text-sm tracking-wider uppercase overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-color-1/25">
-                                    <span className="relative z-10 flex items-center gap-2">
-                                        Join Our Journey <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                    </span>
-                                </button>
+                                <Button 
+                                    variant="primary" 
+                                    size="lg" 
+                                    href="/our-journey"
+                                    rightIcon={<ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                                >
+                                    Join Our Journey
+                                </Button>
                                 
                                 <div className="flex items-center gap-4 text-n-3">
                                     <div className="flex -space-x-3">

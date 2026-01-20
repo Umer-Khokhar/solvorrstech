@@ -19,7 +19,7 @@ const Services = () => {
         {/* Balanced Header Section */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-24 lg:mb-32">
             <FadeIn>
-                <div className="inline-flex items-center space-x-2 bg-n-1/5 dark:bg-white/5 border border-n-1/10 dark:border-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm mb-8">
+                <div className="inline-flex items-center space-x-2 bg-n-1/10 dark:bg-white/5 border border-n-1/10 dark:border-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm mb-8">
                     <Sparkles className="w-4 h-4 text-color-1" />
                     <span className="text-sm font-code text-n-1 dark:text-n-3 uppercase tracking-wider font-bold">Solutions for Growth</span>
                 </div>

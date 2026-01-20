@@ -125,35 +125,23 @@ export default function Benefit({ serviceBenefits = [], serviceTitle = "Services
     <section className="relative py-32 px-6 lg:px-12 bg-n-8 overflow-hidden">
       
       {/* Background Orbs - More vibrant and colorful */}
-      <div className="absolute top-[-5%] left-[-5%] w-[50%] h-[50%] bg-color-1/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse" />
-      <div className="absolute bottom-[-5%] right-[-5%] w-[50%] h-[50%] bg-color-2/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse opacity-70" />
+      <div className="absolute opacity-30 top-[-5%] left-[-5%] w-[50%] h-[50%] bg-color-1/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse" />
+      <div className="absolute opacity-30 bottom-[-5%] right-[-5%] w-[50%] h-[50%] bg-color-2/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse opacity-70" />
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-24">
           <div className="max-w-3xl">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 mb-8"
-            >
-              <div className="h-[2px] w-12 bg-gradient-to-r from-color-1 to-color-2" />
-              <span className="text-sm font-mono text-color-1 dark:text-color-1 uppercase tracking-[0.3em] font-bold">
-                The Edge You Need
-              </span>
-            </motion.div>
-
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-6xl md:text-8xl font-bold text-n-1 tracking-tighter leading-[0.9] mb-8"
+              className="h1 font-semibold text-n-1 tracking-tighter leading-[0.9] mb-8"
               style={{ fontFamily: 'var(--font-clash-grotesk)' }}
             >
               Why Partner With Us For <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-color-1 via-color-1 to-color-2 inline-block pb-4">
+              <span className="text-color-1 inline-block pb-4">
                 {serviceTitle}
               </span>
             </motion.h2>
@@ -219,8 +207,8 @@ export default function Benefit({ serviceBenefits = [], serviceTitle = "Services
                 {/* Content */}
                 <div className="mt-auto">
                     <h3 
-                        className="text-3xl font-bold text-n-1 mb-4 tracking-tight group-hover:text-color-1 transition-colors duration-500" 
-                        style={{ fontFamily: 'var(--font-clash-grotesk)' }}
+                        className="text-3xl font-semibold text-n-1 mb-4 tracking-tight group-hover:text-color-1 transition-colors duration-500" 
+                        // style={{ fontFamily: 'var(--font-clash-grotesk)' }}
                     >
                         {benefit.title}
                     </h3>

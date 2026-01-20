@@ -32,7 +32,7 @@ const Collaboration = () => {
                     </StaggerContainer>
 
                     <FadeIn direction="up" delay={0.8}>
-                        <Button className={"flex items-center"}>Try it now</Button>
+                        <Button variant="primary">Try it now</Button>
                     </FadeIn>
                 </div>
 

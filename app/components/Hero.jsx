@@ -7,6 +7,7 @@ import {
   Globe,
 } from "lucide-react";
 import { BlurIn, FadeIn, StaggerContainer, StaggerItem } from "./animations";
+import Button from "./Button";
 
 const Hero = () => {
   return (
@@ -90,16 +91,21 @@ const Hero = () => {
           {/* CTA Buttons */}
           <FadeIn delay={0.6}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button className="group relative px-8 py-4 bg-n-1 dark:bg-white text-white dark:text-n-1 rounded-2xl font-bold text-lg shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity bg-[length:200%_200%] animate-gradient"></div>
-                <span className="relative flex items-center gap-2">
-                  Book a 15-min Call
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-              <button className="group px-8 py-4 bg-transparent border border-n-3/20 dark:border-white/20 text-n-1 dark:text-white rounded-2xl font-semibold text-lg hover:bg-n-3/5 dark:hover:bg-white/5 transition-all">
+              <Button 
+                variant="primary" 
+                size="xl" 
+                href="/contact"
+                rightIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+              >
+                Book a 15-min Call
+              </Button>
+              <Button 
+                variant="outline" 
+                size="xl" 
+                href="/portfolio"
+              >
                 View Our Work
-              </button>
+              </Button>
             </div>
           </FadeIn>
 

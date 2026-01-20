@@ -6,11 +6,11 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import Button from "./Button";
 import { useState } from "react";
 import { ThemeToggler } from "./ThemeToggler";
  
@@ -52,7 +52,7 @@ export default function Header() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary" className={"bg-color-1 text-white rounded-4xl py-3"}>Book a call</NavbarButton>
+            <Button variant="primary" size="sm" href="/contact">Book a call</Button>
               <ThemeToggler />
           </div>
         </NavBody>
@@ -85,20 +85,22 @@ export default function Header() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
+              <Button
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
+                variant="outline"
                 className="w-full"
+                href="/login"
               >
                 Login
-              </NavbarButton>
-              <NavbarButton
+              </Button>
+              <Button
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="/contact"
               >
                 Book a call
-              </NavbarButton>
+              </Button>
             </div>
           </MobileNavMenu>
         </MobileNav>

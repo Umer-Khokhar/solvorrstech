@@ -1,6 +1,7 @@
 import React from "react";
 import { Phone, ArrowRight } from "lucide-react";
 import { FadeIn, BlurIn } from "./animations";
+import Button from "./Button";
 
 export default function Cta() {
   return (
@@ -41,10 +42,14 @@ export default function Cta() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.4}>
-              <button className="group inline-flex items-center gap-3 text-green-400 font-semibold text-lg hover:gap-5 transition-all duration-300 border-b-2 border-green-400 pb-2">
+              <Button 
+                variant="glass" 
+                size="lg" 
+                href="/contact"
+                rightIcon={<ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />}
+              >
                 Contact Us
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-              </button>
+              </Button>
             </FadeIn>
           </div>
 

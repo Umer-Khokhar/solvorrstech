@@ -26,9 +26,9 @@ const Button = React.forwardRef(
       primary:
         "bg-color-1 text-white shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] dark:shadow-[0_0_20px_rgba(96,165,250,0.2)]",
       secondary:
-        "bg-n-7 text-n-1 dark:bg-white dark:text-n-8 shadow-sm hover:bg-n-6 dark:hover:bg-n-2 border border-n-6 dark:border-transparent",
+        "bg-n-7 text-n-1 dark:bg-white dark:text-n-8 shadow-sm hover:bg-n-6 dark:hover:bg-n-2",
       outline:
-        "border border-n-6 bg-transparent text-n-1 hover:bg-n-7 dark:border-n-5 dark:text-n-1 dark:hover:bg-n-2/50",
+        "border border-n-6 bg-transparent text-n-1 hover:bg-n-7 dark:border-n-5 dark:text-n-1 dark:hover:bg-n-7",
       ghost:
         "bg-transparent text-n-1 hover:bg-n-7 dark:text-n-1 dark:hover:bg-n-7",
       glass:
@@ -122,5 +122,4 @@ const Button = React.forwardRef(
 
 Button.displayName = "Button";
 
-export default Button;
-
+export { Button };

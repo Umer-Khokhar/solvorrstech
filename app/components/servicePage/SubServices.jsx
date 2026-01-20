@@ -7,6 +7,7 @@ import {
   Calendar, Mail, Bot, GitBranch, Plug, Shield, Search, 
   FileText, Map, Settings, Sparkles 
 } from 'lucide-react';
+import { TechBackground } from "..";
 
 const icons = {
   Globe, Layers, Smartphone, Zap, Users, ShoppingBag, BarChart, 
@@ -28,8 +29,8 @@ const SubServices = ({ subServices }) => {
 
   return (
     <section id="sub-services" className="relative pt-[5rem] py-12 xl:py-24 px-4 sm:px-6 lg:px-8 bg-n-8 dark:bg-n-8 overflow-hidden">
-      
-      <SubtleBackground />
+      <TechBackground />
+      {/* <SubtleBackground /> */}
 
       <div className="max-w-7xl mx-auto relative z-10">
         
@@ -111,9 +112,9 @@ const SubServices = ({ subServices }) => {
 
           {/* Right Side - Sophisticated Minimal Card */}
           <div className="lg:col-span-8">
-            <div className="h-full relative">
+            <div className="h-full relative ">
               {/* Ultra-thin Minimalist Border */}
-              <div className="absolute inset-0 border border-n-6/30 dark:border-white/5 rounded-[40px] pointer-events-none" />
+              <div className="absolute inset-0 border border-n-5/30 dark:border-white/5 rounded-[40px] pointer-events-none" />
               
               <AnimatePresence mode="wait">
                 <motion.div
@@ -122,7 +123,7 @@ const SubServices = ({ subServices }) => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                  className="bg-white/40 dark:bg-n-9/40 backdrop-blur-sm rounded-[40px] p-8 lg:p-16 h-full flex flex-col"
+                  className="bg-white dark:bg-n-9/40 backdrop-blur-sm border border-n-4/30 dark:border-white/5 rounded-[40px] p-8 lg:p-16 h-full flex flex-col"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12">
                     <div className="max-w-2xl">

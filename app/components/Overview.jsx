@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, CheckCircle2, Zap, Layers, BarChart3 } from "lucide-react";
+import Button from "./Button";
 
 // --- Universal "Core" Visual ---
 const OverviewVisual = () => {
@@ -178,14 +179,23 @@ const Overview = ({ content }) => {
 
                 {/* CTA */}
                 <div className="flex flex-wrap gap-4">
-                    <button className="group relative px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-code text-sm font-bold uppercase tracking-wider overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                         <span className="relative z-10 flex items-center gap-2">
-                            Start Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                         </span>
-                    </button>
-                    <button className="px-8 py-4 bg-transparent border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white rounded-full font-code text-sm font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+                    <Button 
+                      variant="primary" 
+                      size="lg" 
+                      href="/contact"
+                      rightIcon={<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                      className="rounded-full"
+                    >
+                        Start Project
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="lg" 
+                      href="/about"
+                      className="rounded-full"
+                    >
                         Learn More
-                    </button>
+                    </Button>
                 </div>
              </motion.div>
           </div>

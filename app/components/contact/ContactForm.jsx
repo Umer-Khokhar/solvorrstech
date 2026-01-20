@@ -195,15 +195,14 @@ const ContactForm = () => {
         <div className="relative pt-6">
           <div className="absolute inset-0 bg-color-1/20 blur-3xl rounded-full opacity-20" />
           <Button 
-            className="w-full h-16 text-sm tracking-[0.3em] font-bold overflow-hidden bg-n-1 dark:bg-white group" 
-            white
+            variant="primary"
+            size="xl"
+            className="w-full tracking-[0.3em] font-bold overflow-hidden" 
             type="submit"
+            leftIcon={<Zap className="w-5 h-5 fill-current" />}
+            rightIcon={<ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />}
           >
-            <span className="relative z-10 flex items-center justify-center gap-4">
-              <Zap className="w-5 h-5 fill-current" />
-              INITIATE SYSTEM LINK
-              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </span>
+            INITIATE SYSTEM LINK
           </Button>
           
           <div className="mt-8 flex items-center justify-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">

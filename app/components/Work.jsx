@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { FadeIn, BlurIn } from "./animations";
 import { TechBackground } from ".";
+import Button from "./Button";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -18,10 +19,10 @@ const ProjectCard = ({ project }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group relative h-[520px] w-full overflow-hidden rounded-[2.5rem] bg-white/70 dark:bg-n-8/40 backdrop-blur-3xl border border-n-1/10 dark:border-white/10 transition-all duration-500 hover:bg-white/90 dark:hover:bg-white/5 hover:shadow-2xl hover:shadow-color-1/10 hover:-translate-y-2"
+      className="group relative h-[520px] w-full overflow-hidden rounded-[2.5rem] bg-white/90 dark:bg-n-8/40 backdrop-blur-3xl border border-n-1/5 dark:border-white/10 transition-all duration-500 hover:bg-white dark:hover:bg-white/5 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-2xl dark:hover:shadow-color-1/10 hover:-translate-y-2 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)]"
     >
       {/* Background Glow */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-color-1/10 blur-[100px] rounded-full group-hover:bg-color-1/20 transition-colors duration-500" />
+      <div className="absolute -top-24 -right-24 w-64 h-64 bg-color-1/5 blur-[100px] rounded-full group-hover:bg-color-1/10 transition-colors duration-500" />
       
       {/* Image Container */}
       <div className="relative h-[280px] w-full overflow-hidden">
@@ -30,11 +31,11 @@ const ProjectCard = ({ project }) => {
           alt={project.title}
           className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-n-8/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/95 dark:from-n-8/80 via-transparent to-transparent" />
         
         {/* Status Tag */}
         {project.status && (
-          <div className="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-white/90 dark:bg-n-8/90 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm">
+          <div className="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-white/90 dark:bg-n-8/90 backdrop-blur-md border border-n-1/5 dark:border-white/10 shadow-sm">
             <span className="text-[10px] font-bold uppercase tracking-widest text-color-1">
               {project.status === "done" ? "Live Project" : "In Progress"}
             </span>
@@ -54,20 +55,26 @@ const ProjectCard = ({ project }) => {
           {project.title}
         </h3>
         
-        <p className="body-2 text-n-1/60 dark:text-white/60 line-clamp-3 mb-6">
+        <p className="body-2 text-n-3 dark:text-white/60 line-clamp-3 mb-6">
           {project.text}
         </p>
 
         {/* Footer */}
         <div className="mt-auto flex items-center justify-between pt-6 border-t border-n-1/5 dark:border-white/5">
-          <button className="flex items-center gap-2 group/btn cursor-pointer">
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="group/btn px-0 hover:bg-transparent"
+            rightIcon={
+              <div className="w-8 h-8 rounded-full border border-n-1/10 dark:border-white/10 flex items-center justify-center group-hover/btn:bg-color-1 group-hover/btn:border-transparent group-hover/btn:text-white transition-all duration-300">
+                <ArrowUpRight className="w-4 h-4 group-hover/btn:rotate-45 transition-transform" />
+              </div>
+            }
+          >
             <span className="text-xs font-bold uppercase tracking-wider text-n-1 dark:text-white group-hover/btn:text-color-1 transition-colors">
               View Case Study
             </span>
-            <div className="w-8 h-8 rounded-full border border-n-1/10 dark:border-white/10 flex items-center justify-center group-hover/btn:bg-color-1 group-hover/btn:border-transparent group-hover/btn:text-white transition-all duration-300">
-              <ArrowUpRight className="w-4 h-4 group-hover/btn:rotate-45 transition-transform" />
-            </div>
-          </button>
+          </Button>
         </div>
       </div>
     </motion.div>
