@@ -7,7 +7,7 @@ export { default as Services } from './Services'
 export { default as Heading } from "./Heading"
 export { default as Collaboration } from "./Collaboration"
 export { default as Footer } from "./Footer"
-export { default as Working } from "./Working"
+export { default as Work } from "./Work"
 export { default as PortfolioHero } from "./portfolio/PortfolioHero"
 export { default as Projects } from "./portfolio/Projects.jsx"
 export { default as Project } from "./portfolio/Project.jsx"

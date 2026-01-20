@@ -26,7 +26,7 @@ const getLoopableSlides = (items) => {
 const loopableRoadmap = getLoopableSlides(roadmap);
 
 
-export default function Working() {
+export default function Work() {
   return (
     <div className="md-py-32 py-12 transition-colors duration-300">
       <FadeIn>

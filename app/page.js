@@ -1,4 +1,4 @@
-import { Services, Collaboration, Hero, OurStory, Working } from "@/app/components";
+import { Services, Collaboration, Hero, OurStory, Work } from "@/app/components";
 import { ButtonGradient } from "./assets/svg";
 import PortfolioSection from "@/app/components/PortfolioSection";
 import { robot } from "./assets";
@@ -16,7 +16,7 @@ const Home = () => {
         <TechBackground />
         <OurStory />
         <Collaboration />
-        <Working />
+        <Work />
         <WhyChooseUs />
           <MasonryTestimonials />
           <Faqs />
