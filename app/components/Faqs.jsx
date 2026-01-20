@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, MessageCircle, HelpCircle } from 'lucide-react';
 import { FadeIn, StaggerContainer, StaggerItem } from './animations';
+import { TechBackground } from '.';
 
 export default function Faqs() {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -46,7 +47,7 @@ export default function Faqs() {
 
     return (
         <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
-             
+             <TechBackground />
             {/* Premium Background Pattern */}
             <div className="absolute inset-0 z-0 opacity-40 mix-blend-overlay pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>

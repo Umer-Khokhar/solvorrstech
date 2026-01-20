@@ -2,6 +2,8 @@ import React from "react";
 import { Wrench, Cpu, Lightbulb, Eye } from "lucide-react";
 import Image from "next/image";
 import { FadeIn, StaggerContainer, StaggerItem, BlurIn } from "./animations";
+import { TechBackground } from ".";
+import VisualIllustration from "./VisualIllustration";
 
 export default function WhyChooseUs() {
   const features = [
@@ -42,6 +44,9 @@ export default function WhyChooseUs() {
   return (
     <div className="relative py-24 lg:py-32 px-4 overflow-hidden bg-n-8 transition-colors duration-300">
       {/* Background Gradients */}
+      <div className="dark:opacity-70">
+       <TechBackground />
+      </div>
       <div className="absolute top-0 left-1/4 w-[50rem] h-[50rem] bg-indigo-500/20 rounded-full blur-[10rem] pointer-events-none mix-blend-screen" />
       <div className="absolute bottom-0 right-1/4 w-[40rem] h-[40rem] bg-purple-500/20 rounded-full blur-[8rem] pointer-events-none mix-blend-screen" />
 
@@ -65,15 +70,7 @@ export default function WhyChooseUs() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left side - 3D Illustration */}
           <BlurIn delay={0.3} className="relative order-2 lg:order-1 flex justify-center">
-            <div className="relative z-10 w-full max-w-[500px] aspect-square">
-               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-3xl opacity-40 animate-pulse" />
-              <Image
-                src={"/choose.webp"}
-                alt="Why Choose Us Illustration"
-                fill
-                className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
-              />
-            </div>
+            <VisualIllustration />
           </BlurIn>
 
           {/* Right side - Features */}

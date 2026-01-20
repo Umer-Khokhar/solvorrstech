@@ -1,89 +1,169 @@
-// components/ProjectCarousel.tsx
+// components/Work.jsx
 "use client";
-import { ArrowRight } from "lucide-react";
+
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { roadmap } from "../constants";
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Projects } from ".";
-import { CardShapeTwo } from "./design/ClipPaths";
+import { motion } from "framer-motion";
 import { FadeIn, BlurIn } from "./animations";
+import { TechBackground } from ".";
 
-// Mock data – replace with your actual projects
-const getLoopableSlides = (items) => {
-  if (items.length < 5) {
-    // Duplicate until we have at least 6 items
-    let result = [...items];
-    while (result.length < 6) {
-      result = [...result, ...items];
-    }
-    return result;
-  }
-  return items;
+const ProjectCard = ({ project }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="group relative h-[520px] w-full overflow-hidden rounded-[2.5rem] bg-white/70 dark:bg-n-8/40 backdrop-blur-3xl border border-n-1/10 dark:border-white/10 transition-all duration-500 hover:bg-white/90 dark:hover:bg-white/5 hover:shadow-2xl hover:shadow-color-1/10 hover:-translate-y-2"
+    >
+      {/* Background Glow */}
+      <div className="absolute -top-24 -right-24 w-64 h-64 bg-color-1/10 blur-[100px] rounded-full group-hover:bg-color-1/20 transition-colors duration-500" />
+      
+      {/* Image Container */}
+      <div className="relative h-[280px] w-full overflow-hidden">
+        <img
+          src={project.imageUrl.src || project.imageUrl}
+          alt={project.title}
+          className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-n-8/80 via-transparent to-transparent" />
+        
+        {/* Status Tag */}
+        {project.status && (
+          <div className="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-white/90 dark:bg-n-8/90 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-color-1">
+              {project.status === "done" ? "Live Project" : "In Progress"}
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="relative p-8 flex flex-col h-[240px]">
+        <div className="mb-2">
+            <span className="text-[10px] font-bold font-code uppercase tracking-[0.2em] text-n-1/40 dark:text-white/40">
+                {project.date}
+            </span>
+        </div>
+        
+        <h3 className="h5 font-bold text-n-1 dark:text-white mb-3 group-hover:text-color-1 transition-colors duration-300">
+          {project.title}
+        </h3>
+        
+        <p className="body-2 text-n-1/60 dark:text-white/60 line-clamp-3 mb-6">
+          {project.text}
+        </p>
+
+        {/* Footer */}
+        <div className="mt-auto flex items-center justify-between pt-6 border-t border-n-1/5 dark:border-white/5">
+          <button className="flex items-center gap-2 group/btn cursor-pointer">
+            <span className="text-xs font-bold uppercase tracking-wider text-n-1 dark:text-white group-hover/btn:text-color-1 transition-colors">
+              View Case Study
+            </span>
+            <div className="w-8 h-8 rounded-full border border-n-1/10 dark:border-white/10 flex items-center justify-center group-hover/btn:bg-color-1 group-hover/btn:border-transparent group-hover/btn:text-white transition-all duration-300">
+              <ArrowUpRight className="w-4 h-4 group-hover/btn:rotate-45 transition-transform" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
 };
-
-const loopableRoadmap = getLoopableSlides(roadmap);
-
 
 export default function Work() {
   return (
-    <div className="md-py-32 py-12 transition-colors duration-300">
-      <FadeIn>
-        <div className="text-center max-w-xl mx-auto">
-          <h2 className="h2 font-semibold">Real Projects. Real Clients. Real Results.</h2>
+    <section className="section relative py-24 lg:py-32 overflow-hidden bg-n-8/5 dark:bg-transparent">
+      <div className="container relative z-2">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
+          <div className="max-w-[600px]">
+            <FadeIn>
+              <h2 className="h2 font-bold mb-6">
+                Real Projects. <span className="text-color-1">Real Results.</span>
+              </h2>
+            </FadeIn>
+            <BlurIn delay={0.2}>
+              <p className="body-1 text-n-1/60 dark:text-white/60">
+                A showcase of digital experiences we've crafted for forward-thinking brands. 
+                From minimalist portfolios to complex web ecosystems.
+              </p>
+            </BlurIn>
+          </div>
+
+          <FadeIn delay={0.4}>
+            <div className="flex gap-4">
+              <button className="swiper-prev w-12 h-12 rounded-full border border-n-1/10 dark:border-white/10 flex items-center justify-center hover:bg-color-1 hover:border-transparent hover:text-white transition-all duration-300 cursor-pointer">
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button className="swiper-next w-12 h-12 rounded-full border border-n-1/10 dark:border-white/10 flex items-center justify-center hover:bg-color-1 hover:border-transparent hover:text-white transition-all duration-300 cursor-pointer">
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+          </FadeIn>
         </div>
-      </FadeIn>
-      
-      <BlurIn delay={0.3}>
-        <div className="w-full flex gap-5 mx-auto px-4 py-8">
-          <CardShapeTwo />
+
+        <div className="relative">
           <Swiper
-            modules={[Autoplay, Pagination]}
-            spaceBetween={20}
-            slidesPerView={2.7}
-            centeredSlides={true}
+            modules={[Autoplay, Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1.2}
+            centeredSlides={false}
             loop={true}
             autoplay={{
-              delay: 2800,
-              pauseOnMouseEnter: false,
-              disableOnInteraction: true,
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            navigation={{
+              prevEl: ".swiper-prev",
+              nextEl: ".swiper-next",
             }}
             pagination={{
               clickable: true,
-              // dynamicBullets: true,
+              dynamicBullets: true,
             }}
-            className="mySwiper"
+            breakpoints={{
+              640: {
+                slidesPerView: 2.2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="!pb-16"
           >
-            {loopableRoadmap.map((project, index) => (
-              <SwiperSlide key={index}>
-                <div className="w-auto h-full relative p-4 rounded-2xl bg-n-7 border-color-1/20 dark:hover:border-color-1/50  transition-all duration-150 border group shadow dark:shadow-n-4/20">
-                  <div
-                    className="w-full h-[525px] relative"
-                    style={{ clipPath: "url(#card-shape-2)" }}
-                  >
-                    <img
-                      src="https://ainex-react.vercel.app/_next/image?url=%2Fimages%2Fproject%2Fproject-4.webp&w=640&q=75"
-                      alt="image"
-                      className="w-full h-full object-cover group-hover:scale-105 duration-500 transition-all"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between pt-4">
-                    <h3 className="text-3xl font-bold">
-                      {project.title}
-                    </h3>
-                    <button className="bg-n-8 p-4 transition-all duration-200 cursor-pointer rounded-full group group-hover:bg-color-1">
-                      <ArrowRight className=" -rotate-40 w-8 h-8 hover:-rotate-0 transition-all duration-150" />
-                    </button>
-                  </div>
-                </div>
-                
+            {roadmap.map((project, index) => (
+              <SwiperSlide key={project.id}>
+                <ProjectCard project={project} />
               </SwiperSlide>
             ))}
           </Swiper>
+          
+          {/* Custom Pagination Style Overrides */}
+          <style jsx global>{`
+            .swiper-pagination-bullet {
+              background: var(--color-n-1) !important;
+              opacity: 0.2 !important;
+              width: 10px !important;
+              height: 10px !important;
+            }
+            .dark .swiper-pagination-bullet {
+              background: white !important;
+            }
+            .swiper-pagination-bullet-active {
+              background: var(--color-color-1) !important;
+              opacity: 1 !important;
+              width: 24px !important;
+              border-radius: 5px !important;
+              transition: all 0.3s ease !important;
+            }
+          `}</style>
         </div>
-      </BlurIn>
-    </div>
+      </div>
+    </section>
   );
 }
 

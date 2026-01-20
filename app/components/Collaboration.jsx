@@ -8,7 +8,7 @@ import { FadeIn, StaggerContainer, StaggerItem, BlurIn } from "./animations";
 
 const Collaboration = () => {
     return (
-        <div className={`py-[4rem] bg-white dark:bg-n-7 my-[2rem] z-20 relative transition-colors duration-300`}>
+        <div className={`py-[4rem] z-20 relative transition-colors duration-300`}>
             <div className="container lg:flex z-10">
                 <div className="max-w-[35rem]">
                     <FadeIn direction="left">
