@@ -1,9 +1,11 @@
 import { Eye, Target, Zap, ArrowRight, Sparkles } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "../animations";
+import { TechBackground } from "..";
 
 export default function OurStorySection() {
     return (
         <section className="relative py-24 overflow-hidden bg-n-8">
+            <TechBackground />
             {/* Background Decorations */}
              <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-color-1/10 dark:bg-color-1/10 rounded-full blur-[120px] -z-10" />
              <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] bg-color-2/10 dark:bg-color-2/10 rounded-full blur-[100px] -z-10" />

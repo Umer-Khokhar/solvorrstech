@@ -10,36 +10,12 @@ import {
   Sparkles
 } from "lucide-react";
 import MagicButton from "../design/MagicButton";
+import { TechBackground } from "../index.js";
 
 const ServiceHero = ({ content }) => {
   return (
-    <div className="bg-n-8 min-h-screen">
-      {/* Subtle centered gradient for depth */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute w-[1000px] h-[1000px] rounded-full opacity-[0.04] blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, rgba(96,165,250,0.6) 0%, rgba(139,92,246,0.5) 40%, transparent 70%)',
-            top: '20%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-          }}
-        />
-      </div>
-
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 opacity-[0.015]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgb(148, 163, 184) 1px, transparent 1px),
-              linear-gradient(to bottom, rgb(148, 163, 184) 1px, transparent 1px)
-            `,
-            backgroundSize: "4rem 4rem",
-          }}
-        />
-      </div>
+    <div className="bg-n-8 min-h-screen relative overflow-hidden">
+      <TechBackground />
 
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">

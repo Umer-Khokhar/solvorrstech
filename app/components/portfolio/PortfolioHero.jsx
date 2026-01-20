@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../Section";
 import { grid, HeroPortfolio } from "../../assets";
 import { motion } from "framer-motion";
+import { TechBackground } from "../index.js";
 
 const PortfolioHero = () => {
   const containerVariants = {
@@ -31,8 +32,9 @@ const PortfolioHero = () => {
   const title = "Work We're Proud Of";
 
   return (
-    <div className={"!px-0 py-32 md:py-4 mb-8 bg-n-7 overflow-hidden relative"}>
-      <div className={"!px-0 !py-4"}>
+    <div className={"!px-0 py-32 md:py-4 mb-8 bg-n-8 overflow-hidden relative min-h-screen flex items-center"}>
+      <TechBackground />
+      <div className={"!px-0 !py-4 w-full"}>
         <div className="container relative z-10">
           <div className="relative lg:h-screen flex flex-col md:flex-row items-center lg:justify-between xl:mx-auto">
             {/* content section  */}
@@ -104,29 +106,6 @@ const PortfolioHero = () => {
           </div>
         </div>
 
-        {/* Background Grid - Properly contained to prevent overflow */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.3 }}
-            transition={{ duration: 2 }}
-            className="absolute md:-right-20 -bottom-20 md:bottom-auto lg:top-0"
-          >
-            <motion.img
-              animate={{
-                rotate: 360,
-                scale: [1, 1.1, 1],
-              }}
-              transition={{
-                rotate: { duration: 60, repeat: Infinity, ease: "linear" },
-                scale: { duration: 10, repeat: Infinity, ease: "easeInOut" }
-              }}
-              src={grid}
-              className="max-w-[800px] w-full"
-              alt="grid image"
-            />
-          </motion.div>
-        </div>
       </div>
     </div>
   );
