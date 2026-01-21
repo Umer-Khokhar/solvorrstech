@@ -14,7 +14,7 @@ import { TechBackground } from "../index.js";
 
 const ServiceHero = ({ content }) => {
   return (
-    <div className="bg-n-8 min-h-screen relative overflow-hidden">
+    <div className="bg-n-8 pt-16 md:pt-28 min-h-screen relative overflow-hidden">
       <TechBackground />
 
       <section className="relative py-20 md:py-32 overflow-hidden">

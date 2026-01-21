@@ -9,6 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import Link from "next/link";
 
 
 export const Navbar = ({
@@ -86,21 +87,102 @@ export const NavItems = ({
         className
       )}>
       {items.map((item, idx) => (
-        <a
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+        <NavItem 
           key={`link-${idx}`}
-          href={item.link}>
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800" />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </a>
+          item={item} 
+          isHovered={hovered === idx}
+          onMouseEnter={() => setHovered(idx)}
+          onItemClick={onItemClick}
+        />
       ))}
     </motion.div>
+  );
+};
+
+const NavItem = ({ item, isHovered, onMouseEnter, onItemClick }) => {
+  return (
+    <div 
+      className="relative px-4 py-2"
+      onMouseEnter={onMouseEnter}
+    >
+      <Link
+        className={cn(
+          "relative text-neutral-600 dark:text-neutral-400 transition-all duration-300 flex items-center gap-1.5 group font-medium",
+          isHovered && "text-color-1 dark:text-color-1"
+        )}
+        href={item.link}
+        onClick={(e) => {
+          if (onItemClick) onItemClick();
+        }}
+      >
+        <span className="relative z-20 flex items-center gap-1.5 py-1">
+          {item.name}
+          {item.children && (
+             <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="10" 
+              height="10" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="3" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className={cn("transition-transform duration-300", isHovered && "rotate-180")}
+            >
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          )}
+
+          {/* Minimal hairline underline */}
+          <motion.div 
+            className="absolute -bottom-0.5 left-0 right-0 h-[1px] bg-color-1"
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ 
+              scaleX: isHovered ? 1 : 0,
+              opacity: isHovered ? 0.8 : 0
+            }}
+            transition={{ type: "spring", stiffness: 500, damping: 35 }}
+          />
+        </span>
+      </Link>
+
+      {item.children && (
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute left-1/2 top-full mt-2 w-72 -translate-x-1/2 rounded-2xl border border-neutral-200 bg-white/80 p-4 shadow-xl backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-900/80"
+            >
+              <div className="flex flex-col gap-1">
+                {item.children.map((child, cIdx) => (
+                  <Link
+                    key={cIdx}
+                    href={child.link}
+                    onClick={() => {
+                      if (onItemClick) onItemClick();
+                    }}
+                    className="group flex flex-col gap-0.5 rounded-xl p-3 transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  >
+                    <span className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      {child.name}
+                    </span>
+                    {child.description && (
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                        {child.description}
+                      </span>
+                    )}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
+    </div>
   );
 };
 
@@ -186,8 +268,8 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
+    <Link
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
         src="https://assets.aceternity.com/logo-dark.png"
@@ -195,13 +277,13 @@ export const NavbarLogo = () => {
         width={30}
         height={30} />
       <span className="font-medium text-black dark:text-white">Startup</span>
-    </a>
+    </Link>
   );
 };
 
 export const NavbarButton = ({
   href,
-  as: Tag = "a",
+  as: Tag = Link,
   children,
   className,
   variant = "primary",

@@ -10,9 +10,12 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import Button from "./Button";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { ThemeToggler } from "./ThemeToggler";
+import Button from "./Button";
+import { motion, AnimatePresence } from "motion/react";
+import Link from "next/link";
  
 export default function Header() {
   const navItems = [
@@ -27,6 +30,38 @@ export default function Header() {
     {
       name: "Services",
       link: "/custom-web-development",
+      children: [
+        {
+          name: "Web Development",
+          link: "/custom-web-development",
+          description: "High-performance Next.js websites",
+          icon: "web",
+        },
+        {
+          name: "Web App Development",
+          link: "/dashboard-and-web-app-development",
+          description: "Internal tools & SaaS solutions",
+          icon: "app",
+        },
+        {
+          name: "Business Automation",
+          link: "/business-automation-systems",
+          description: "Streamline your workflows",
+          icon: "automation",
+        },
+        {
+          name: "API Development",
+          link: "/api-development",
+          description: "Secure & scalable backend APIs",
+          icon: "api",
+        },
+        {
+          name: "SEO Services",
+          link: "/seo-service",
+          description: "Drive organic search growth",
+          icon: "seo",
+        },
+      ],
     },
     {
       name: "Portfolio",
@@ -43,6 +78,11 @@ export default function Header() {
   ];
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openMobileSubMenu, setOpenMobileSubMenu] = useState(null);
+
+  const toggleSubMenu = (name) => {
+    setOpenMobileSubMenu(openMobileSubMenu === name ? null : name);
+  };
  
   return (
     <div className="relative w-full">
@@ -74,16 +114,77 @@ export default function Header() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
+            <div className="flex w-full flex-col gap-6">
+              {navItems.map((item, idx) => (
+                <div key={`mobile-item-${idx}`} className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.link}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-xl font-semibold text-neutral-900 dark:text-neutral-100"
+                    >
+                      {item.name}
+                    </Link>
+                    {item.children && (
+                      <button
+                        onClick={() => toggleSubMenu(item.name)}
+                        className="p-2 text-neutral-500 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className={cn(
+                            "transition-transform duration-300",
+                            openMobileSubMenu === item.name && "rotate-180"
+                          )}
+                        >
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  
+                  {item.children && (
+                    <AnimatePresence>
+                      {openMobileSubMenu === item.name && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <div className="flex flex-col gap-4 pl-4 pt-2 border-l border-neutral-200 dark:border-neutral-800">
+                            {item.children.map((child, cIdx) => (
+                              <Link
+                                key={`mobile-child-${cIdx}`}
+                                href={child.link}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="group flex flex-col gap-1"
+                              >
+                                <span className="text-base font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                  {child.name}
+                                </span>
+                                <span className="text-xs text-neutral-500 dark:text-neutral-500">
+                                  {child.description}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
+                </div>
+              ))}
+            </div>
             <div className="flex w-full flex-col gap-4">
               <Button
                 onClick={() => setIsMobileMenuOpen(false)}

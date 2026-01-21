@@ -44,7 +44,7 @@ const Page = async ({ params }) => {
   }
 
   return (
-    <div className={"pt-16 md:pt-28"}>
+    <>
       <ServiceHero content={heroContent}/>
       <Overview content={overviewContent}/>
       <SubServices subServices={detailPage.subServices}/>
@@ -54,7 +54,7 @@ const Page = async ({ params }) => {
       <MasonryTestimonials />
       <Faqs />
       <Cta />
-    </div>
+    </>
   );
 };
 
