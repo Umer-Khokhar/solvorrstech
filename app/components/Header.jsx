@@ -37,8 +37,8 @@ export default function Header() {
       link: "/case-studies",
     },
     {
-      name: "Contact",
-      link: "/contact",
+      name: "Blogs",
+      link: "/blog",
     },
   ];
  
@@ -85,14 +85,6 @@ export default function Header() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <Button
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="outline"
-                className="w-full"
-                href="/login"
-              >
-                Login
-              </Button>
               <Button
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
