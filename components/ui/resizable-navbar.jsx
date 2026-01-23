@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { useTheme } from "next-themes";
 import {
   motion,
   AnimatePresence,
@@ -267,16 +268,16 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+  const {setTheme, resolvedTheme} = useTheme()
+  const isDark = resolvedTheme === "dark"
   return (
     <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
+        src={isDark ? "./solvorr-dark.svg" : "./solvorr-light.svg"}
         alt="logo"
-        width={30}
-        height={30} />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+        width={150} />
     </Link>
   );
 };
