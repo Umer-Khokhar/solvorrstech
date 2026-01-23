@@ -126,7 +126,7 @@ export default function Benefit({ serviceBenefits = [], serviceTitle = "Services
       
       {/* Background Orbs - More vibrant and colorful */}
       <div className="absolute opacity-30 top-[-5%] left-[-5%] w-[50%] h-[50%] bg-color-1/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse" />
-      <div className="absolute opacity-30 bottom-[-5%] right-[-5%] w-[50%] h-[50%] bg-color-2/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse opacity-70" />
+      <div className="absolute opacity-30 bottom-[-5%] right-[-5%] w-[50%] h-[50%] bg-color-2/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen animate-pulse" />
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         
@@ -163,9 +163,9 @@ export default function Benefit({ serviceBenefits = [], serviceTitle = "Services
             viewport={{ once: true }}
             className="hidden lg:flex flex-col items-center gap-4"
           >
-            <div className="w-24 h-24 rounded-full border border-n-6 bg-white/50 dark:bg-transparent flex items-center justify-center relative group cursor-pointer overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-500">
+            <div className="w-24 h-24 rounded-full border border-n-6 bg-color-1 hover:bg-color-1/80 dark:bg-transparent flex items-center justify-center relative group cursor-pointer overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200">
                 <div className="absolute inset-0 bg-gradient-to-br from-color-1/10 to-color-2/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                <ArrowUpRight className="w-8 h-8 text-n-1 relative z-10 group-hover:rotate-45 transition-transform duration-500" />
+                <ArrowUpRight className="w-8 h-8 text-white relative z-10 group-hover:rotate-45 transition-transform duration-500" />
             </div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-n-3 dark:text-n-4 text-center">Scroll to <br /> explore</span>
           </motion.div>
@@ -190,15 +190,15 @@ export default function Benefit({ serviceBenefits = [], serviceTitle = "Services
                 delay={index * 0.1}
               >
                 {/* Index Number */}
-                <div className="absolute top-10 right-10 text-xs font-mono text-color-1/20 dark:text-n-1/10 select-none font-bold">
+                <div className="absolute top-10 right-10 text-xl md:text-2xl font-mono text-color-1/40 dark:text-n-1/40 select-none font-bold">
                     0{index + 1}
                 </div>
 
                 {/* Icon Section */}
                 <div className="mb-12">
-                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-color-1/10 to-transparent border border-n-6 flex items-center justify-center group-hover:scale-110 group-hover:border-color-1/50 transition-all duration-500 relative overflow-hidden">
+                   <div className="w-16 h-16 rounded-2xl bg-color-1 border border-n-6 flex items-center justify-center group-hover:scale-110 group-hover:border-color-1/50 transition-all duration-500 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-color-1/20 to-color-2/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="text-color-1 dark:text-n-1 group-hover:text-color-1 transition-colors duration-500 relative z-10">
+                        <div className="text-white dark:text-n-1 group-hover:text-color-1 transition-colors duration-500 relative z-10">
                             {icon}
                         </div>
                    </div>

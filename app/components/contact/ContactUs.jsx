@@ -17,7 +17,7 @@ const BentoCard = ({ children, className, delay = 0 }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-    className={`relative group bg-n-8/40 dark:bg-n-9/40 backdrop-blur-md border border-n-6/30 dark:border-white/5 rounded-3xl p-8 overflow-hidden ${className}`}
+    className={`relative group bg-n-8/40 dark:bg-n-9/40 backdrop-blur-md border border-n-4/40 dark:border-white/5 rounded-3xl p-8 overflow-hidden ${className}`}
   >
     {/* Hover Glow */}
     <div className="absolute inset-0 bg-gradient-to-br from-color-1/10 via-transparent to-color-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -32,7 +32,7 @@ const BentoCard = ({ children, className, delay = 0 }) => (
 
 const ContactUs = () => {
   return (
-    <Section className="pt-[12rem] -mt-[5.25rem] pb-24 relative overflow-hidden" crosses customPadding id="contact">
+    <Section className="pt-[12rem] bg-n-7 dark:bg-n-8 -mt-[5.25rem] pb-24 relative overflow-hidden" crosses customPadding id="contact">
       <TechBackground />
       
       <div className="container relative z-2">
