@@ -45,12 +45,9 @@ const kumbh = Kumbh_Sans({
 export const metadata = {
   title: "Solvorr Tech – Modern Web Applications, Automation & Digital Solutions",
   description: "A problem-solving tech company delivering custom software, automated systems, SEO-optimized websites, and end-to-end digital solutions for business growth",
-  metadataBase: new URL("https://solvorrtech.vercel.app"),
-  alternates: {
-    canonical: "/",
-  },
-  verification: {
-    google: "gKFTJzIMJWqRiuUhTPI8NWNyLCW-VTycN-7gAJRr3Do",
+  robots: {
+    index: false,
+    follow: false,
   },
 };
 
