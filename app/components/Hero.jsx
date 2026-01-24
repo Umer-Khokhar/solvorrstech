@@ -8,10 +8,12 @@ import {
 } from "lucide-react";
 import { BlurIn, FadeIn, StaggerContainer, StaggerItem } from "./animations";
 import Button from "./Button";
+import { TechBackground } from ".";
 
 const Hero = () => {
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <TechBackground />
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] animate-pulse" />
