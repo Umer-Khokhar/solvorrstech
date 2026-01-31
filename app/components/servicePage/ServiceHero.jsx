@@ -7,7 +7,7 @@ import {
   CheckCircle2,
   Users,
   Star,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 import MagicButton from "../design/MagicButton";
 import { TechBackground } from "../index.js";
@@ -34,15 +34,21 @@ const ServiceHero = ({ content }) => {
               <div className="flex flex-wrap gap-3 justify-center items-center mb-8">
                 <div className="flex items-center gap-2 bg-n-7/50 backdrop-blur-sm border border-n-6/50 rounded-full px-4 py-2">
                   <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span className="text-n-3 text-sm font-medium">99% Success Rate</span>
+                  <span className="text-n-3 text-sm font-medium">
+                    99% Success Rate
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 bg-n-7/50 backdrop-blur-sm border border-n-6/50 rounded-full px-4 py-2">
                   <Users className="w-4 h-4 text-blue-400" />
-                  <span className="text-n-3 text-sm font-medium">500+ Clients</span>
+                  <span className="text-n-3 text-sm font-medium">
+                    500+ Clients
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 bg-n-7/50 backdrop-blur-sm border border-n-6/50 rounded-full px-4 py-2">
                   <Star className="w-4 h-4 text-yellow-400" />
-                  <span className="text-n-3 text-sm font-medium">5.0 Rating</span>
+                  <span className="text-n-3 text-sm font-medium">
+                    5.0 Rating
+                  </span>
                 </div>
               </div>
 
@@ -58,13 +64,13 @@ const ServiceHero = ({ content }) => {
               <div className="relative group">
                 {/* Glow effect on hover */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
-                
+
                 {/* Image Frame */}
                 <div className="relative bg-gradient-to-br from-n-7/70 to-n-8/70 rounded-3xl p-3 backdrop-blur-sm border border-n-6/30 shadow-2xl">
                   <div className="relative overflow-hidden rounded-2xl">
-                    <img 
-                      src="./services/website.png" 
-                      className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]" 
+                    <img
+                      src={content.imageUrl}
+                      className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </div>
                 </div>

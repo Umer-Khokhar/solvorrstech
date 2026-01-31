@@ -1,4 +1,5 @@
 "use client";
+import services from "@/lib/services.json";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   Navbar,
@@ -29,39 +30,13 @@ export default function Header() {
     },
     {
       name: "Services",
-      link: "/custom-web-development",
-      children: [
-        {
-          name: "Web Development",
-          link: "/custom-web-development",
-          description: "High-performance Next.js websites",
-          icon: "web",
-        },
-        {
-          name: "Web App Development",
-          link: "/dashboard-and-web-app-development",
-          description: "Internal tools & SaaS solutions",
-          icon: "app",
-        },
-        {
-          name: "Business Automation",
-          link: "/business-automation-systems",
-          description: "Streamline your workflows",
-          icon: "automation",
-        },
-        {
-          name: "API Development",
-          link: "/api-development",
-          description: "Secure & scalable backend APIs",
-          icon: "api",
-        },
-        {
-          name: "SEO Services",
-          link: "/seo-service",
-          description: "Drive organic search growth",
-          icon: "seo",
-        },
-      ],
+      link: "#", // Changed to # as it's a dropdown container
+      children: services.map((service) => ({
+        name: service.title,
+        link: `/${service.slug}`,
+        description: service.text.slice(0, 40) + "...",
+        icon: service.iconUrl,
+      })),
     },
     {
       name: "Portfolio",
@@ -125,30 +100,30 @@ export default function Header() {
                     >
                       {item.name}
                     </Link>
-                    {item.children && (
-                      <button
-                        onClick={() => toggleSubMenu(item.name)}
-                        className="p-2 text-neutral-500 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className={cn(
-                            "transition-transform duration-300",
-                            openMobileSubMenu === item.name && "rotate-180"
-                          )}
+                      {item.children && (
+                        <button
+                          onClick={() => toggleSubMenu(item.name)}
+                          className="p-2 text-neutral-500 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
                         >
-                          <path d="m6 9 6 6 6-6" />
-                        </svg>
-                      </button>
-                    )}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className={cn(
+                              "transition-transform duration-300",
+                              openMobileSubMenu === item.name && "rotate-180"
+                            )}
+                          >
+                            <path d="m6 9 6 6 6-6" />
+                          </svg>
+                        </button>
+                      )}
                   </div>
                   
                   {item.children && (
