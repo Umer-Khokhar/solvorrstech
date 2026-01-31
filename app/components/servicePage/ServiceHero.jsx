@@ -74,7 +74,11 @@ const ServiceHero = ({ content }) => {
                 <div className="relative bg-gradient-to-br from-n-7/70 to-n-8/70 rounded-3xl p-3 backdrop-blur-sm border border-n-6/30 shadow-2xl">
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
+<<<<<<< HEAD
                       src="./services/website.png"
+=======
+                      src={content.imageUrl}
+>>>>>>> servic-link
                       className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </div>

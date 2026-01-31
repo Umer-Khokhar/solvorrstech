@@ -6,7 +6,7 @@
     "text": "Custom internal systems to manage clients, teams, tasks, projects, payments, and business operations in one place.",
     "backgroundUrl": "assets/benefits/card-1.svg",
     "iconUrl": "dashboard",
-    "imageUrl": "./services/webapp.webp",
+    "imageUrl": "./services/service1.png",
     "detailPage": {
       "heroTitle": "Custom Dashboards That Help You Run Your Business Efficiently",
       "heroSubTitle": "We build powerful business control systems that centralize your operations — from clients and projects to invoices and team management.",
@@ -86,7 +86,7 @@
     "text": "We automate your business processes to save time, reduce manual work, and improve operational efficiency.",
     "backgroundUrl": "assets/benefits/card-4.svg",
     "iconUrl": "automation",
-    "imageUrl": "./services/business.avif",
+    "imageUrl": "./services/service2.jpeg",
     "detailPage": {
       "heroTitle": "Smart Automations That Work While You Sleep",
       "heroSubTitle": "We connect your systems and tools to eliminate repetitive tasks and create smooth automated workflows.",
