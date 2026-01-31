@@ -102,7 +102,6 @@ export default function Header() {
                     >
                       {item.name}
                     </Link>
-<<<<<<< HEAD
                     {item.children && (
                       <button
                         onClick={() => toggleSubMenu(item.name)}
@@ -122,32 +121,11 @@ export default function Header() {
                             "transition-transform duration-300",
                             openMobileSubMenu === item.name && "rotate-180",
                           )}
-=======
-                      {item.children && (
-                        <button
-                          onClick={() => toggleSubMenu(item.name)}
-                          className="p-2 text-neutral-500 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-400"
->>>>>>> servic-link
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className={cn(
-                              "transition-transform duration-300",
-                              openMobileSubMenu === item.name && "rotate-180"
-                            )}
-                          >
-                            <path d="m6 9 6 6 6-6" />
-                          </svg>
-                        </button>
-                      )}
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      </button>
+                    )}
                   </div>
 
                   {item.children && (
