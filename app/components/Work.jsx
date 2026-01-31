@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { FadeIn, BlurIn } from "./animations";
 import { TechBackground } from ".";
-import Button from "./Button";
+import { GhostButton } from "./Button";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -61,8 +61,7 @@ const ProjectCard = ({ project }) => {
 
         {/* Footer */}
         <div className="mt-auto flex items-center justify-between pt-6 border-t border-n-1/5 dark:border-white/5">
-          <Button
-            variant="ghost"
+          <GhostButton
             size="sm"
             className="group/btn px-0 hover:bg-transparent"
             rightIcon={
@@ -74,7 +73,7 @@ const ProjectCard = ({ project }) => {
             <span className="text-xs font-bold uppercase tracking-wider text-n-1 dark:text-white group-hover/btn:text-color-1 transition-colors">
               View Case Study
             </span>
-          </Button>
+          </GhostButton>
         </div>
       </div>
     </motion.div>

@@ -1,5 +1,6 @@
 import { Eye, Target, Zap, ArrowRight, Sparkles } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "../animations";
+import { PremiumButton } from "../Button";
 import { TechBackground } from "..";
 
 export default function OurStorySection() {
@@ -56,19 +57,12 @@ export default function OurStorySection() {
             {/* Interactive Stats/Action */}
             <FadeIn direction="up" delay={0.6}>
               <div className="pt-8 flex flex-wrap gap-8">
-                <div className="group flex items-center gap-4 cursor-pointer">
-                  <div className="w-12 h-12 rounded-full bg-n-1/5 dark:bg-white/5 border border-n-1/10 dark:border-white/10 flex items-center justify-center group-hover:bg-color-1/20 group-hover:border-color-1/50 transition-all duration-300 shadow-sm">
-                    <ArrowRight className="text-n-1 dark:text-white group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-n-1 dark:text-white text-lg">
-                      Meet the Team
-                    </p>
-                    <p className="text-sm text-n-4">
-                      The minds behind the magic
-                    </p>
-                  </div>
-                </div>
+                <PremiumButton
+                  href="/team"
+                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                >
+                  Meet the Team
+                </PremiumButton>
               </div>
             </FadeIn>
           </div>

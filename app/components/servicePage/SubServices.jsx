@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "..";
+import { PremiumButton } from "..";
 import {
   ArrowUpRight,
   CheckCircle,
@@ -242,10 +242,10 @@ const SubServices = ({ subServices }) => {
 
                   {/* Minimalist CTA */}
                   <div className="mt-auto">
-                    <Button className="group flex items-center gap-4 py-4 px-8 rounded-full font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+                    <PremiumButton className="group flex items-center gap-4 py-4 px-8 rounded-full font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                       <span>Initiate Collaboration</span>
                       <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    </Button>
+                    </PremiumButton>
                   </div>
                 </motion.div>
               </AnimatePresence>

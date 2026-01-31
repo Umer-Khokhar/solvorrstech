@@ -7,7 +7,7 @@ import {
   Globe,
 } from "lucide-react";
 import { BlurIn, FadeIn, StaggerContainer, StaggerItem } from "./animations";
-import Button from "./Button";
+import { PremiumButton, OutlineButton } from "./Button";
 import { TechBackground } from ".";
 
 const Hero = () => {
@@ -93,21 +93,18 @@ const Hero = () => {
           {/* CTA Buttons */}
           <FadeIn delay={0.6}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button 
-                variant="primary" 
-                size="xl" 
+              <PremiumButton
+                size="xl"
                 href="/contact"
-                rightIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                rightIcon={
+                  <Zap className="w-5 h-5 fill-current animate-pulse" />
+                }
               >
                 Book a 15-min Call
-              </Button>
-              <Button 
-                variant="outline" 
-                size="xl" 
-                href="/portfolio"
-              >
+              </PremiumButton>
+              <OutlineButton size="xl" href="/portfolio">
                 View Our Work
-              </Button>
+              </OutlineButton>
             </div>
           </FadeIn>
 

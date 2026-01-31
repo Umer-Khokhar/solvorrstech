@@ -2,7 +2,8 @@ import React from "react";
 import Section from "../Section";
 import { grid, HeroPortfolio } from "../../assets";
 import { motion } from "framer-motion";
-import { TechBackground } from "../index.js";
+import { TechBackground, PremiumButton } from "../index.js";
+import { Zap } from "lucide-react";
 
 const PortfolioHero = () => {
   const containerVariants = {
@@ -32,7 +33,11 @@ const PortfolioHero = () => {
   const title = "Work We're Proud Of";
 
   return (
-    <div className={"!px-0 py-32 md:py-4 mb-8 bg-n-8 overflow-hidden relative min-h-screen flex items-center"}>
+    <div
+      className={
+        "!px-0 py-32 md:py-4 mb-8 bg-n-8 overflow-hidden relative min-h-screen flex items-center"
+      }
+    >
       <TechBackground />
       <div className={"!px-0 !py-4 w-full"}>
         <div className="container relative z-10">
@@ -66,20 +71,39 @@ const PortfolioHero = () => {
                 stunning UI/UX designs to robust full-stack applications, we
                 bring visions to life with precision and creativity.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.2, duration: 0.5 }}
+                className="mt-8"
               >
-                {/* Optional CTA or sub-text could go here if needed, keeping it clean for now */}
+                <PremiumButton
+                  href="/contact"
+                  size="lg"
+                  rightIcon={
+                    <Zap className="w-5 h-5 fill-current animate-pulse" />
+                  }
+                >
+                  Start Your Project
+                </PremiumButton>
               </motion.div>
             </div>
 
             <div className="relative mt-12 md:mt-0">
               <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: -5, filter: "blur(10px)" }}
-                animate={{ opacity: 1, scale: 1, rotate: 0, filter: "blur(0px)" }}
+                initial={{
+                  opacity: 0,
+                  scale: 0.8,
+                  rotate: -5,
+                  filter: "blur(10px)",
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  rotate: 0,
+                  filter: "blur(0px)",
+                }}
                 transition={{
                   duration: 1.5,
                   ease: [0.2, 0.65, 0.3, 0.9],
@@ -105,7 +129,6 @@ const PortfolioHero = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

@@ -13,10 +13,10 @@ import {
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { ThemeToggler } from "./ThemeToggler";
-import Button from "./Button";
+import { PrimaryButton } from "./Button";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
- 
+
 export default function Header() {
   const navItems = [
     {
@@ -76,14 +76,14 @@ export default function Header() {
       link: "/blog",
     },
   ];
- 
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileSubMenu, setOpenMobileSubMenu] = useState(null);
 
   const toggleSubMenu = (name) => {
     setOpenMobileSubMenu(openMobileSubMenu === name ? null : name);
   };
- 
+
   return (
     <div className="relative w-full">
       <Navbar>
@@ -92,24 +92,26 @@ export default function Header() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <Button variant="primary" size="sm" href="/contact">Book a call</Button>
-              <ThemeToggler />
+            <PrimaryButton size="sm" href="/contact">
+              Book a call
+            </PrimaryButton>
+            <ThemeToggler />
           </div>
         </NavBody>
- 
+
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
             <div className="flex items-center">
-                <ThemeToggler />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+              <ThemeToggler />
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
             </div>
           </MobileNavHeader>
- 
+
           <MobileNavMenu
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
@@ -142,7 +144,7 @@ export default function Header() {
                           strokeLinejoin="round"
                           className={cn(
                             "transition-transform duration-300",
-                            openMobileSubMenu === item.name && "rotate-180"
+                            openMobileSubMenu === item.name && "rotate-180",
                           )}
                         >
                           <path d="m6 9 6 6 6-6" />
@@ -150,7 +152,7 @@ export default function Header() {
                       </button>
                     )}
                   </div>
-                  
+
                   {item.children && (
                     <AnimatePresence>
                       {openMobileSubMenu === item.name && (
@@ -186,19 +188,18 @@ export default function Header() {
               ))}
             </div>
             <div className="flex w-full flex-col gap-4">
-              <Button
+              <PrimaryButton
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
                 className="w-full"
                 href="/contact"
               >
                 Book a call
-              </Button>
+              </PrimaryButton>
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
- 
+
       {/* Navbar */}
     </div>
   );

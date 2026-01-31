@@ -19,7 +19,7 @@ import {
   Shield,
   Rocket,
 } from "lucide-react";
-import Button from "../Button";
+import { PrimaryButton } from "../Button";
 
 const projectTypes = [
   { id: "web", label: "Web Ecosystem", icon: <Globe className="w-4 h-4" /> },
@@ -248,8 +248,7 @@ const ContactForm = () => {
 
         <div className="relative pt-6">
           <div className="absolute inset-0 bg-color-1/20 blur-3xl rounded-full opacity-20" />
-          <Button
-            variant="primary"
+          <PrimaryButton
             size="xl"
             className="w-full tracking-[0.3em] font-bold overflow-hidden"
             type="submit"
@@ -259,7 +258,7 @@ const ContactForm = () => {
             }
           >
             INITIATE SYSTEM LINK
-          </Button>
+          </PrimaryButton>
 
           <div className="mt-8 flex items-center justify-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
             <div className="flex items-center gap-2">
