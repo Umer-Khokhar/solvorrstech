@@ -28,6 +28,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import { TechBackground } from "..";
+import FadeIn from "../animations/FadeIn";
+import BlurIn from "../animations/BlurIn";
+import { StaggerContainer, StaggerItem } from "../animations/Stagger";
 
 const icons = {
   Globe,
@@ -81,37 +84,30 @@ const SubServices = ({ subServices }) => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header - Minimalist */}
         <div className="mb-16 lg:mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3 mb-6"
-          >
+          <FadeIn className="flex items-center gap-3 mb-6">
             <div className="w-12 h-[1px] bg-color-1" />
             <span className="text-xs font-bold text-color-1 uppercase tracking-[0.3em] font-mono">
               Expertise
             </span>
-          </motion.div>
+          </FadeIn>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="h2 text-n-1 dark:text-white tracking-tight lg:text-6xl max-w-3xl"
-            style={{ fontFamily: "var(--font-clash-grotesk)" }}
-          >
-            Specialized solutions for <br /> modern digital ecosystems
-          </motion.h2>
+          <BlurIn delay={0.2} className="max-w-3xl">
+            <h2
+              className="h2 text-n-1 dark:text-white tracking-tight lg:text-6xl"
+              style={{ fontFamily: "var(--font-clash-grotesk)" }}
+            >
+              Specialized solutions for <br /> modern digital ecosystems
+            </h2>
+          </BlurIn>
         </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
           {/* Left Side - Clean Navigation */}
           <div className="lg:col-span-4 flex flex-col justify-between py-2">
-            <div className="space-y-1">
+            <StaggerContainer className="space-y-1">
               {subServices.map((service, index) => (
-                <div key={index} className="relative">
+                <StaggerItem key={index} className="relative">
                   <button
                     onClick={() => setActiveService(index)}
                     className={`
@@ -153,17 +149,17 @@ const SubServices = ({ subServices }) => {
                       }}
                     />
                   )}
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
 
             {/* Minimalist Footnote */}
-            <div className="hidden lg:block pt-12">
+            <FadeIn delay={0.4} className="hidden lg:block pt-12">
               <p className="text-xs text-n-4 leading-relaxed max-w-[200px] uppercase tracking-wider font-light">
                 Select a service to explore our specialized approach and key
                 deliverables.
               </p>
-            </div>
+            </FadeIn>
           </div>
 
           {/* Right Side - Sophisticated Minimal Card */}
@@ -175,9 +171,9 @@ const SubServices = ({ subServices }) => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeService}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                   transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                   className="bg-white dark:bg-n-9/40 backdrop-blur-sm border border-n-4/30 dark:border-white/5 rounded-[40px] p-8 lg:p-16 h-full flex flex-col"
                 >

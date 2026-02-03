@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@/app/globals.css";
 import { Footer, Header } from "@/app/components";
 import { ThemeProvider } from "./components/ThemeProvider";
+import PageTransition from "./components/PageTransition";
 
 const clashGrotesk = localFont({
   src: [
@@ -63,7 +64,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <PageTransition>{children}</PageTransition>
           <Footer />
         </ThemeProvider>
       </body>
