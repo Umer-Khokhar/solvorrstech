@@ -76,7 +76,18 @@
         { "title": "Testing", "description": "Every feature is tested for accuracy, security, and performance.", "image": "" },
         { "title": "Deployment & Support", "description": "We launch and continuously support your system.", "image": "" }
       ],
-      "technologies": []
+      "technologies": [
+        "/tech-icons/Next.js.svg",
+        "/tech-icons/React.svg",
+        "/tech-icons/Node.js.svg",
+        "/tech-icons/MongoDB.svg",
+        "/tech-icons/PostgresSQL.svg",
+        "/tech-icons/D3.js.svg",
+        "/tech-icons/Tailwind-CSS.svg",
+        "/tech-icons/Docker.svg",
+        "/tech-icons/TypeScript.svg",
+        "/tech-icons/OpenAPI.svg"
+      ]
     }
   },
   {
@@ -120,7 +131,18 @@
         { "title": "Testing", "description": "Ensuring reliability in real scenarios.", "image": "" },
         { "title": "Monitoring", "description": "We track and optimize your automations.", "image": "" }
       ],
-      "technologies": []
+      "technologies": [
+        "/tech-icons/Python.svg",
+        "/tech-icons/Node.js.svg",
+        "/tech-icons/AWS.svg",
+        "/tech-icons/Google-Cloud.svg",
+        "/tech-icons/Slack.svg",
+        "/tech-icons/Discord.js.svg",
+        "/tech-icons/Postman.svg",
+        "/tech-icons/WooCommerce.svg",
+        "/tech-icons/Docker.svg",
+        "/tech-icons/Kubernetes.svg"
+      ]
     }
   },
   {
@@ -164,7 +186,17 @@
         { "title": "SEO Setup", "description": "Technical and on-page optimization.", "image": "" },
         { "title": "Launch & Growth Support", "description": "Continuous optimization for better results.", "image": "" }
       ],
-      "technologies": []
+      "technologies": [
+        "/tech-icons/Next.js.svg",
+        "/tech-icons/React.svg",
+        "/tech-icons/Tailwind-CSS.svg",
+        "/tech-icons/Figma.svg",
+        "/tech-icons/Vercel.svg",
+        "/tech-icons/Google.svg",
+        "/tech-icons/Sass.svg",
+        "/tech-icons/TypeScript.svg",
+        "/tech-icons/PostCSS.svg"
+      ]
     }
   }
 ]

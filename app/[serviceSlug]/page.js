@@ -52,7 +52,7 @@ const Page = async ({ params }) => {
         serviceTitle={service.title}
       />
       <ServiceProcess serviceProccess={detailPage.serviceProccess} />
-      <TechStack />
+      <TechStack technologies={detailPage.technologies} />
       <MasonryTestimonials />
       <Faqs />
       <Cta />
