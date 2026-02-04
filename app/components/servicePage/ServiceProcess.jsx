@@ -4,34 +4,27 @@ import { TechBackground } from "../";
 import { StaggerContainer, StaggerItem } from "../animations/Stagger";
 import FadeIn from "../animations/FadeIn";
 
-const process = [
-  {
-    title: "Initial website audit",
-    text: "Assess your website's SEO performance and backlink.",
-    icon: "./icons/icon1.svg",
-    number: "01",
-  },
-  {
-    title: "Competitor analysis",
-    text: "Analyze link strategies to find valuable opportunities.",
-    icon: "./icons/icon2.svg",
-    number: "02",
-  },
-  {
-    title: "Targeted campaign",
-    text: "Connect with relevant sites to secure quality backlinks.",
-    icon: "./icons/icon3.svg",
-    number: "03",
-  },
-  {
-    title: "Reporting",
-    text: "Track performance and provide regular progress updates.",
-    icon: "./icons/icon4.svg",
-    number: "04",
-  },
-];
+const ServiceProcess = ({ serviceProccess }) => {
+  // Fallback static icons to ensure we always have an icon
+  const staticIcons = [
+    "./icons/icon1.svg",
+    "./icons/icon2.svg",
+    "./icons/icon3.svg",
+    "./icons/icon4.svg",
+  ];
 
-const ServiceProcess = () => {
+  // Use dynamic data if available, otherwise fallback to empty array (shouldn't happen if parent checks)
+  // Limit to 4 items as requested
+  const processItems = (serviceProccess || [])
+    .slice(0, 4)
+    .map((item, index) => ({
+      title: item.title,
+      text: item.description, // Map description to text
+      // Use dynamic image if available, otherwise fallback to static icon based on index
+      icon: item.image || staticIcons[index % staticIcons.length],
+      number: `0${index + 1}`,
+    }));
+
   return (
     <div className="w-full relative py-12 md:py-32 px-4 bg-white dark:bg-n-8">
       <TechBackground />
@@ -59,18 +52,23 @@ const ServiceProcess = () => {
 
         {/* Process cards overlaid on top */}
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-start gap-6 lg:gap-8 relative z-10 py-8">
-          {process.map((item, index) => (
+          {processItems.map((item, index) => (
             <StaggerItem
               key={index}
               className="flex flex-col justify-start items-start bg-transparent rounded-lg p-6 xl:p-4"
             >
-              {/* Icon */}
-              <div className={`w-16 h-16 mb-4`}>
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="xl:w-full w-12 h-auto"
-                />
+              {/* Icon and Number */}
+              <div className="w-full flex justify-between items-start mb-4">
+                <div className="w-16 h-16">
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="xl:w-full w-12 h-auto"
+                  />
+                </div>
+                <div className="text-3xl font-bold text-n-1 opacity-25 dark:text-white">
+                  {item.number}
+                </div>
               </div>
 
               {/* Content */}
