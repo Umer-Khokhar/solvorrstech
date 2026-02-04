@@ -77,8 +77,8 @@ export default function OurStorySection() {
               {/* Mission Card */}
               <StaggerItem>
                 <div className="group p-8 bg-white/70 dark:bg-n-8/40 backdrop-blur-xl border border-n-1/10 dark:border-white/10 rounded-2xl hover:bg-white/80 dark:hover:bg-white/5 hover:border-color-3/50 transition-all duration-500 hover:-translate-y-2 shadow-xl shadow-n-1/5 dark:shadow-none h-full">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-3/20 to-color-3/5 flex items-center justify-center mb-6 border border-color-3/20 group-hover:scale-110 transition-transform duration-500">
-                    <Target className="w-7 h-7 text-color-3" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-3 to-color-3/50 flex items-center justify-center mb-6 border border-color-3/20 group-hover:scale-110 transition-transform duration-500">
+                    <Target className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-n-1 dark:text-white mb-3">
                     Our Mission
@@ -93,8 +93,8 @@ export default function OurStorySection() {
               {/* Vision Card */}
               <StaggerItem className="sm:translate-y-12">
                 <div className="group p-8 bg-white/70 dark:bg-n-8/40 backdrop-blur-xl border border-n-1/10 dark:border-white/10 rounded-2xl hover:bg-white/80 dark:hover:bg-white/5 hover:border-color-1/50 transition-all duration-500 hover:-translate-y-2 shadow-xl shadow-n-1/5 dark:shadow-none h-full">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-1/20 to-color-1/5 flex items-center justify-center mb-6 border border-color-1/20 group-hover:scale-110 transition-transform duration-500">
-                    <Eye className="w-7 h-7 text-color-1" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-1 to-color-1/50 flex items-center justify-center mb-6 border border-color-1/20 group-hover:scale-110 transition-transform duration-500">
+                    <Eye className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-n-1 dark:text-white mb-3">
                     Our Vision
@@ -109,8 +109,8 @@ export default function OurStorySection() {
               {/* Speed/Impact Card */}
               <StaggerItem>
                 <div className="group p-8 bg-white/70 dark:bg-n-8/40 backdrop-blur-xl border border-n-1/10 dark:border-white/10 rounded-2xl hover:bg-white/80 dark:hover:bg-white/5 hover:border-color-2/50 transition-all duration-500 hover:-translate-y-2 shadow-xl shadow-n-1/5 dark:shadow-none h-full">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-2/20 to-color-2/5 flex items-center justify-center mb-6 border border-color-2/20 group-hover:scale-110 transition-transform duration-500">
-                    <Zap className="w-7 h-7 text-color-2" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-color-2 to-color-2/50 flex items-center justify-center mb-6 border border-color-2/20 group-hover:scale-110 transition-transform duration-500">
+                    <Zap className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-n-1 dark:text-white mb-3">
                     High Impact

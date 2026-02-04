@@ -37,7 +37,7 @@ const ServiceProcess = () => {
       <TechBackground />
       <div className="content text-center mb-12 md:mb-20">
         <FadeIn>
-          <h2 className="text-3xl md:text-4xl mb-4 lg:text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl mb-4 lg:text-5xl font-bold text-n-1">
             The Way We Deliver
           </h2>
           <p className="text-n-4 body-1 max-w-2xl mx-auto">
