@@ -1,31 +1,9 @@
-import React from 'react';
-import {
-    CustomBuiltIllustration,
-    CustomerExperienceIllustration, CustomizableSolutionsIllustration,
-    SEOAuthorityIllustration, SEOConnectivityIllustration, SEOCustomIllustration, SEODataDrivenIllustration,
-    SEODecisionsIllustration,
-    SEOLeadsIllustration, SEOPerformanceIllustration, SEOReportingIllustration, SEOSecureIllustration,
-    SEOTrafficIllustration
-} from "@/app/components/design/Illustrations";
+import React from 'react'
 
-const Page = () => {
-    return (
-        <div className={"mt-32"}>
-            <SEOAuthorityIllustration />
-            <SEOTrafficIllustration />
-            <SEOLeadsIllustration />
-            <SEODataDrivenIllustration />
-            <SEOCustomIllustration />
-            <SEOConnectivityIllustration />
-            <SEODecisionsIllustration />
-            <SEOPerformanceIllustration />
-            <SEOReportingIllustration />
-            <SEOSecureIllustration />
-            <CustomerExperienceIllustration />
-            <CustomBuiltIllustration />
-            <CustomizableSolutionsIllustration />
-        </div>
-    );
-};
+const page = () => {
+  return (
+    <div>page</div>
+  )
+}
 
-export default Page;
+export default page
