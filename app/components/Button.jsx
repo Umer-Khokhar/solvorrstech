@@ -55,9 +55,10 @@ const BaseButton = React.forwardRef(
       // Outline: Elegant border with gradient hover effect
       outline: `
         relative overflow-hidden
+        ${className}
         bg-transparent
         text-n-2 dark:text-n-2 font-medium
-        border-2 border-n-5/40 dark:border-n-5/60
+        border border-n-3/30 dark:border-n-5/60
         hover:border-color-1/60 dark:hover:border-color-1/50
         hover:bg-color-1/5 dark:hover:bg-color-1/10
         shadow-[0_1px_3px_rgba(0,0,0,0.05)]
@@ -269,8 +270,8 @@ export const SecondaryButton = React.forwardRef((props, ref) => (
 ));
 SecondaryButton.displayName = "SecondaryButton";
 
-export const OutlineButton = React.forwardRef((props, ref) => (
-  <BaseButton ref={ref} variant="outline" {...props} />
+export const OutlineButton = React.forwardRef((props, className,  ref) => (
+  <BaseButton ref={ref} variant="outline" {...props} className={className} />
 ));
 OutlineButton.displayName = "OutlineButton";
 

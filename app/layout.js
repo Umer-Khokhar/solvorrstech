@@ -44,10 +44,6 @@ export const metadata = {
     "Solvorr Tech – Modern Web Applications, Automation & Digital Solutions",
   description:
     "A problem-solving tech company delivering custom software, automated systems, SEO-optimized websites, and end-to-end digital solutions for business growth",
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function RootLayout({ children }) {

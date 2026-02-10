@@ -1,9 +1,7 @@
 import React from "react";
-import { PrimaryButton, Section } from "./";
-import { LeftCurve, RightCurve } from "./design/Collaboration";
+import { PrimaryButton } from "./";
 import { collabApps, collabContent, collabText } from "../constants";
 import { brainwaveSymbol, check } from "../assets";
-import ThemeBackground from "./ThemeBackground";
 import { FadeIn, StaggerContainer, StaggerItem, BlurIn } from "./animations";
 
 const Collaboration = () => {
@@ -84,8 +82,6 @@ const Collaboration = () => {
                   </li>
                 ))}
               </ul>
-              <LeftCurve />
-              <RightCurve />
             </div>
           </BlurIn>
         </div>

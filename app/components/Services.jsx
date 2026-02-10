@@ -30,7 +30,7 @@ const Services = () => {
 
           <FadeIn delay={0.1}>
             <h2
-              className="text-5xl md:text-7xl font-bold text-n-1 dark:text-white leading-[1.1] tracking-tight mb-8"
+              className="h2 font-bold text-n-1 dark:text-white leading-[1.1] tracking-tight mb-8"
               style={{ fontFamily: "var(--font-clash-grotesk)" }}
             >
               Engineering Excellence <br />

@@ -1,5 +1,4 @@
 "use client";
-import NoiseBg from "../NoiseBg";
 import { ArrowUpRight, Code2, Palette, TrendingUp, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { PrimaryButton } from "../Button";
@@ -20,7 +19,6 @@ const AboutHero = () => {
   };
 
   return (
-    <NoiseBg>
       <section className="relative overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-color-2/10 rounded-full blur-[100px] -z-10 animate-pulse" />
@@ -248,7 +246,6 @@ const AboutHero = () => {
           </motion.div>
         </div>
       </section>
-    </NoiseBg>
   );
 };
 

@@ -1,7 +1,5 @@
 import {
   Star,
-  ArrowRight,
-  MousePointer2,
   Zap,
   Shield,
   Globe,
@@ -62,7 +60,7 @@ const Hero = () => {
           {/* Main Headline */}
           <div className="space-y-6 max-w-4xl">
             <BlurIn>
-              <h1 className="h1 font-semibold tracking-tight">
+              <h1 className="h1 font-bold tracking-tight">
                 Build <span className="text-gradient">High-Converting</span> Web
                 Apps That{" "}
                 <span className="italic relative inline-block">
@@ -94,7 +92,7 @@ const Hero = () => {
           <FadeIn delay={0.6}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <PremiumButton
-                size="xl"
+                size="lg"
                 href="/contact"
                 rightIcon={
                   <Zap className="w-5 h-5 fill-current animate-pulse" />
@@ -102,7 +100,7 @@ const Hero = () => {
               >
                 Book a 15-min Call
               </PremiumButton>
-              <OutlineButton size="xl" href="/portfolio">
+              <OutlineButton size="lg" className="w-full md:w-auto flex-1" href="/portfolio">
                 View Our Work
               </OutlineButton>
             </div>
