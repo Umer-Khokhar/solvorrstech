@@ -185,14 +185,14 @@ const BentoCard = ({ feature }) => {
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-24 lg:py-32 bg-n-8 dark:bg-n-8">
+    <section className="relative overflow-x-hidden py-24 lg:py-32 bg-n-8 dark:bg-n-8">
       <TechBackground />
 
       {/* Decorative Blur Backgrounds */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-color-1/10 dark:bg-color-1/10 blur-[140px] rounded-full -z-10 animate-pulse" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-color-2/10 dark:bg-color-2/10 blur-[140px] rounded-full -z-10" />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10 px-2 md:px-6">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
             <div className="inline-flex items-center space-x-2 bg-n-1/5 dark:bg-white/5 border border-n-1/10 dark:border-white/10 rounded-full px-4 py-2 backdrop-blur-md mb-8 hover:bg-n-1/10 dark:hover:bg-white/10 transition-colors cursor-default group">
@@ -204,7 +204,7 @@ export default function WhyChooseUs() {
             <h2 className="h2 font-bold text-n-1 dark:text-white mb-6">
               Why Leaders <span className="text-gradient">Choose Us</span>
             </h2>
-            <p className="body-1 text-n-3 dark:text-n-4 max-w-2xl mx-auto">
+            <p className="body-1 text-n-3 dark:text-n-4 px-4 md:px-0 max-w-2xl mx-auto">
               We specialize in engineering high-performance digital ecosystems
               that blend cutting-edge technology with strategic creative vision.
             </p>
@@ -213,7 +213,7 @@ export default function WhyChooseUs() {
 
         {/* Bento Grid */}
         <StaggerContainer>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 container">
+          <div className="grid w-full grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 container">
             {features.map((feature, idx) => (
               <StaggerItem key={idx} className={feature.colSpan}>
                 <BentoCard feature={feature} />
