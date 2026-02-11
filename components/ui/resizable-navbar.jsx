@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
+import { solvorrLogoDark, solvorrLogoLight } from "@/app/assets";
 import {
   motion,
   AnimatePresence,
@@ -275,7 +276,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
-        src={isDark ? "./solvorr-dark.svg" : "./solvorr-light.svg"}
+        src={isDark ? solvorrLogoDark : solvorrLogoLight}
         alt="logo"
         width={150} />
     </Link>

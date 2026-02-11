@@ -20,7 +20,8 @@ const chromecast = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-image
 const sliders04 = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/sliders-04.svg";
 const loading = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/loading.png";
 const background = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/background.jpg";
-const solvorrLogo = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/solvorr_dark.png"
+const solvorrLogoDark = "https://ik.imagekit.io/solvorrtech/Solvorr_Tech_Media/images/solvorr-dark.webp?updatedAt=1770817367465"
+const solvorrLogoLight = "https://ik.imagekit.io/solvorrtech/Solvorr_Tech_Media/images/solvorr-light.webp?updatedAt=1770817367474"
 
 const curve = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/hero/curve.webp";
 const robot = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/hero/robot.webp";
@@ -145,7 +146,8 @@ export {
   Cube,
   Triangle,
   brainwave,
-  solvorrLogo,
+  solvorrLogoDark,
+  solvorrLogoLight,
   Solvorr,
   check,
   check2,
