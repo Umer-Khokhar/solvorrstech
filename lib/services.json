@@ -3,90 +3,88 @@
     "id": "0",
     "slug": "business-operations-dashboards",
     "title": "Business Operations Dashboards",
-    "text": "Custom internal systems to manage clients, teams, tasks, projects, payments, and business operations in one place.",
+    "text": "Custom-built business management dashboards that centralize client management, financial tracking, team performance, inventory control, and reporting into one structured system.",
     "backgroundUrl": "assets/benefits/card-1.svg",
     "iconUrl": "dashboard",
     "imageUrl": "./services/service1.png",
     "detailPage": {
-      "heroTitle": "Custom Dashboards That Help You Run Your Business Efficiently",
-      "heroSubTitle": "We build powerful business control systems that centralize your operations — from clients and projects to invoices and team management.",
+      "heroTitle": "Custom Business Dashboards That Bring Structure to Growing Companies",
+      "heroSubTitle": "We design and build centralized business control systems that eliminate operational chaos and give founders real visibility over clients, revenue, teams, and performance.",
       "heroImage": "",
       "overview": {
-        "title": "Your Business, Managed in One System",
-        "subTitle": "We replace messy spreadsheets and scattered tools with structured, secure dashboards tailored to your workflow.",
+        "title": "Stop Running Your Business on Spreadsheets and Scattered Tools",
+        "subTitle": "We transform disconnected operations into one intelligent, scalable system.",
         "description": [
-          "Growing businesses struggle with disconnected tools, manual tracking, and lack of visibility.",
-          "Our custom dashboards bring clients, tasks, payments, reports, and operations into a single platform that gives you full control."
+          "Many growing businesses manage clients in WhatsApp, track payments in spreadsheets, monitor inventory manually, and assign tasks through informal communication. This fragmented structure leads to lost data, delayed decisions, financial blind spots, and operational inefficiencies.",
+          "Solvorr Tech builds custom business dashboards that act as a centralized operational backbone. From client lifecycle management to revenue tracking, from inventory monitoring to internal task allocation — everything lives inside one secure and structured system.",
+          "These are not template dashboards. We architect systems around how your business actually operates, ensuring long-term scalability, data clarity, and leadership control."
         ],
         "image": ""
       },
       "subServices": [
         {
           "icon": "Users",
-          "title": "Client Management Systems",
-          "description": "Track leads, clients, communication, and project history in one organized system."
+          "title": "Client & CRM Management Systems",
+          "description": "Structured CRM dashboards to manage leads, active clients, communication logs, project history, contract records, and revenue tracking in one controlled environment."
         },
         {
           "icon": "CheckSquare",
-          "title": "Task & Team Management",
-          "description": "Assign tasks, track progress, and manage team performance with role-based access."
+          "title": "Team & Task Management Systems",
+          "description": "Role-based internal dashboards to assign responsibilities, track deadlines, measure productivity, and create accountability across departments."
         },
         {
           "icon": "Folder",
-          "title": "Project Tracking",
-          "description": "Monitor project stages, deadlines, and deliverables in real-time."
+          "title": "Project & Operations Tracking",
+          "description": "End-to-end visibility of project stages, deliverables, workflow progress, and operational bottlenecks."
         },
         {
           "icon": "FileText",
-          "title": "Invoices & Payments",
-          "description": "Generate invoices, track payments, and manage billing records securely."
+          "title": "Financial & Revenue Management",
+          "description": "Integrated invoicing systems, payment tracking, cash flow monitoring, and revenue analytics for financial clarity."
         },
         {
           "icon": "BarChart",
-          "title": "Reports & Analytics",
-          "description": "Visual dashboards showing KPIs, performance metrics, and business insights."
+          "title": "Inventory & Performance Analytics",
+          "description": "Live dashboards tracking stock levels, operational KPIs, and business intelligence insights."
         }
       ],
       "serviceBenefits": [
         {
-          "title": "Full Business Visibility",
-          "description": "See your operations, performance, and team progress at a glance.",
+          "title": "Full Operational Visibility",
+          "description": "Founders gain real-time clarity over revenue, clients, inventory, and internal workflows without relying on manual updates.",
           "image": ""
         },
         {
-          "title": "Less Manual Work",
-          "description": "Centralized systems reduce repetitive tasks and errors.",
+          "title": "Reduced Operational Errors",
+          "description": "Structured systems eliminate duplicate data entry and reduce dependency on human memory.",
           "image": ""
         },
         {
-          "title": "Secure Role-Based Access",
-          "description": "Admins, managers, staff, and clients each get controlled access.",
+          "title": "Centralized Data Control",
+          "description": "All core business information is secured and accessible through role-based permissions.",
           "image": ""
         },
         {
-          "title": "Scalable Systems",
-          "description": "Easily expand features as your business grows.",
+          "title": "Built for Growth",
+          "description": "Your dashboard evolves as your team size, client base, and operational complexity increase.",
           "image": ""
         }
       ],
       "serviceProccess": [
-        { "title": "Workflow Discovery", "description": "We understand how your business operates and identify system needs.", "image": "" },
-        { "title": "System Architecture", "description": "We design a structured dashboard layout and feature plan.", "image": "" },
-        { "title": "Development", "description": "We build secure, scalable dashboards with custom logic.", "image": "" },
-        { "title": "Testing", "description": "Every feature is tested for accuracy, security, and performance.", "image": "" },
-        { "title": "Deployment & Support", "description": "We launch and continuously support your system.", "image": "" }
+        { "title": "Operational Assessment", "description": "We study your current workflow, reporting structure, and inefficiencies.", "image": "" },
+        { "title": "System Architecture Planning", "description": "We design database structures, feature maps, and dashboard layouts.", "image": "" },
+        { "title": "Custom Development", "description": "Secure backend and scalable frontend dashboard development.", "image": "" },
+        { "title": "Testing & Validation", "description": "Ensuring accuracy, performance, and system stability.", "image": "" },
+        { "title": "Deployment & Support", "description": "System launch, onboarding guidance, and continuous improvement.", "image": "" }
       ],
       "technologies": [
         "/tech-icons/Next.js.svg",
         "/tech-icons/React.svg",
         "/tech-icons/Node.js.svg",
-        "/tech-icons/MongoDB.svg",
         "/tech-icons/PostgresSQL.svg",
-        "/tech-icons/D3.js.svg",
-        "/tech-icons/Tailwind-CSS.svg",
-        "/tech-icons/Docker.svg",
+        "/tech-icons/MongoDB.svg",
         "/tech-icons/TypeScript.svg",
-        "/tech-icons/OpenAPI.svg"
+        "/tech-icons/Docker.svg"
       ]
     }
   },
@@ -94,108 +92,101 @@
     "id": "1",
     "slug": "workflow-business-automation",
     "title": "Workflow & Business Automation",
-    "text": "We automate your business processes to save time, reduce manual work, and improve operational efficiency.",
+    "text": "Strategic workflow automation systems that integrate your tools, eliminate repetitive tasks, and create seamless operational efficiency.",
     "backgroundUrl": "assets/benefits/card-4.svg",
     "iconUrl": "automation",
     "imageUrl": "./services/service2.jpeg",
     "detailPage": {
-      "heroTitle": "Smart Automations That Work While You Sleep",
-      "heroSubTitle": "We connect your systems and tools to eliminate repetitive tasks and create smooth automated workflows.",
+      "heroTitle": "Automate Repetitive Work and Reclaim Operational Efficiency",
+      "heroSubTitle": "We connect your dashboards, CRM, payment systems, website, and communication tools into intelligent automated workflows.",
       "heroImage": "",
       "overview": {
-        "title": "Eliminate Manual Work with Automation",
-        "subTitle": "From leads to payments — we automate the steps that slow your business down.",
+        "title": "Manual Processes Are Slowing Your Business Down",
+        "subTitle": "Automation creates speed, consistency, and scalable operations.",
         "description": [
-          "Manual processes waste time and create mistakes.",
-          "Our automation systems connect your website, dashboards, Shopify, WhatsApp, email, and APIs to keep everything running automatically."
+          "Businesses waste countless hours manually transferring data, sending reminders, updating spreadsheets, confirming orders, and following up with clients.",
+          "Solvorr Tech builds workflow automation systems that connect your entire tech stack — dashboards, e-commerce platforms, booking systems, WhatsApp, payment gateways, and APIs — into structured automation flows.",
+          "Our goal is simple: reduce human workload, eliminate process delays, and create reliable systems that operate 24/7 without supervision."
         ],
         "image": ""
       },
       "subServices": [
-        { "icon": "ShoppingCart", "title": "E-commerce Automations", "description": "Shopify to WhatsApp, order alerts, customer updates, and notifications." },
-        { "icon": "Zap", "title": "Lead & CRM Automation", "description": "Auto-route leads to dashboards, email, or WhatsApp." },
-        { "icon": "Calendar", "title": "Booking & Reminder Systems", "description": "Automated scheduling and appointment reminders." },
-        { "icon": "Database", "title": "Data Sync Workflows", "description": "Sync data between forms, dashboards, sheets, and tools." },
-        { "icon": "Bell", "title": "Notifications & Alerts", "description": "Automatic alerts for your team and clients." }
+        { "icon": "ShoppingCart", "title": "E-Commerce Automation", "description": "Order processing, status updates, CRM syncing, and automated customer communication." },
+        { "icon": "Zap", "title": "Lead & Sales Automation", "description": "Automatic lead capture, routing, tagging, and follow-up sequences." },
+        { "icon": "Calendar", "title": "Booking & Reminder Systems", "description": "Appointment confirmations, reminder notifications, and scheduling workflows." },
+        { "icon": "Database", "title": "Data Sync & API Integrations", "description": "Secure data synchronization between internal systems and third-party tools." },
+        { "icon": "Bell", "title": "Operational Alerts & Notifications", "description": "Real-time internal alerts to prevent bottlenecks and missed actions." }
       ],
       "serviceBenefits": [
-        { "title": "Save Hours Weekly", "description": "Reduce repetitive workload for your team.", "image": "" },
-        { "title": "Faster Operations", "description": "Processes happen instantly without delays.", "image": "" },
-        { "title": "Reduced Errors", "description": "Automated workflows improve accuracy.", "image": "" },
-        { "title": "Connected Systems", "description": "All your tools work together seamlessly.", "image": "" }
+        { "title": "Save Time & Operational Costs", "description": "Reduce repetitive manual work across departments.", "image": "" },
+        { "title": "Increase Process Speed", "description": "Automated systems execute instantly and consistently.", "image": "" },
+        { "title": "Reduce Human Error", "description": "Minimize mistakes caused by manual data handling.", "image": "" },
+        { "title": "Scalable Workflow Infrastructure", "description": "Designed to handle increasing operational volume.", "image": "" }
       ],
       "serviceProccess": [
-        { "title": "Process Mapping", "description": "We identify repetitive workflows to automate.", "image": "" },
-        { "title": "Automation Planning", "description": "We design logic and integration flows.", "image": "" },
-        { "title": "Implementation", "description": "We build automations using APIs and workflow tools.", "image": "" },
-        { "title": "Testing", "description": "Ensuring reliability in real scenarios.", "image": "" },
-        { "title": "Monitoring", "description": "We track and optimize your automations.", "image": "" }
+        { "title": "Workflow Mapping", "description": "Identify repetitive tasks and inefficiencies.", "image": "" },
+        { "title": "Automation Design", "description": "Define triggers, logic flows, and integration structure.", "image": "" },
+        { "title": "Implementation", "description": "Deploy secure automation systems using APIs and workflow engines.", "image": "" },
+        { "title": "Testing", "description": "Simulate real scenarios to ensure reliability.", "image": "" },
+        { "title": "Optimization & Monitoring", "description": "Continuous refinement of automation performance.", "image": "" }
       ],
       "technologies": [
-        "/tech-icons/Python.svg",
         "/tech-icons/Node.js.svg",
+        "/tech-icons/Python.svg",
         "/tech-icons/AWS.svg",
-        "/tech-icons/Google-Cloud.svg",
-        "/tech-icons/Slack.svg",
-        "/tech-icons/Discord.js.svg",
-        "/tech-icons/Postman.svg",
-        "/tech-icons/WooCommerce.svg",
         "/tech-icons/Docker.svg",
-        "/tech-icons/Kubernetes.svg"
+        "/tech-icons/Postman.svg"
       ]
     }
   },
   {
     "id": "2",
     "slug": "business-websites-growth",
-    "title": "Business Websites & Growth Marketing",
-    "text": "High-converting business websites combined with SEO and digital strategies to attract the right customers.",
+    "title": "Business Websites & System Integration",
+    "text": "Strategic business websites built as front-end systems that integrate directly with dashboards, automation workflows, and lead management.",
     "backgroundUrl": "assets/benefits/card-2.svg",
     "iconUrl": "seo",
     "imageUrl": "./services/website.avif",
     "detailPage": {
-      "heroTitle": "Websites That Generate Leads and Fuel Business Growth",
-      "heroSubTitle": "We build conversion-focused websites and apply SEO strategies to turn visitors into customers.",
+      "heroTitle": "Websites That Connect Directly to Your Business Systems",
+      "heroSubTitle": "We build fast, structured websites that integrate with your dashboards and automation workflows — turning traffic into organized data.",
       "heroImage": "",
       "overview": {
-        "title": "Your Website as a Lead Engine",
-        "subTitle": "Not just design — we create websites that support your operations and growth.",
+        "title": "Your Website Should Feed Your System — Not Create More Chaos",
+        "subTitle": "We build websites that act as structured data entry points into your business ecosystem.",
         "description": [
-          "Your website is the first step in your business system.",
-          "We design websites connected with lead capture, dashboards, and marketing strategies that bring measurable growth."
+          "Most businesses treat websites as isolated marketing assets. But when websites are not connected to internal systems, leads get lost, data becomes fragmented, and operational follow-ups break down.",
+          "At Solvorr Tech, we build structured websites designed to integrate directly with your dashboards and automation systems. Every form submission, booking request, or inquiry automatically enters your CRM, triggers workflows, and updates your operational dashboard.",
+          "This creates a seamless flow from visitor to client — without manual intervention."
         ],
         "image": ""
       },
       "subServices": [
-        { "icon": "Globe", "title": "Business Websites", "description": "Professional websites built for credibility and conversions." },
-        { "icon": "Target", "title": "Landing Pages", "description": "Campaign pages optimized for lead generation." },
-        { "icon": "Search", "title": "SEO Optimization", "description": "Technical and on-page SEO to improve rankings." },
-        { "icon": "MapPin", "title": "Local SEO", "description": "Get found by nearby customers." },
-        { "icon": "TrendingUp", "title": "Performance Optimization", "description": "Improve speed, UX, and Core Web Vitals." }
+        { "icon": "Globe", "title": "Structured Business Websites", "description": "Professional websites built with performance, scalability, and system integration in mind." },
+        { "icon": "Target", "title": "Lead Capture Architecture", "description": "Optimized forms and landing pages connected directly to internal dashboards." },
+        { "icon": "Search", "title": "Technical SEO Foundation", "description": "Structured site architecture, schema implementation, and search optimization." },
+        { "icon": "MapPin", "title": "Local Search Optimization", "description": "Google Business and local visibility enhancement." },
+        { "icon": "TrendingUp", "title": "Performance & Core Web Vitals", "description": "Speed, UX optimization, and technical performance tuning." }
       ],
       "serviceBenefits": [
-        { "title": "More Leads", "description": "Websites designed to convert visitors.", "image": "" },
-        { "title": "Higher Search Visibility", "description": "SEO improves organic traffic.", "image": "" },
-        { "title": "Stronger Online Presence", "description": "Build trust and authority.", "image": "" },
-        { "title": "Growth-Focused Structure", "description": "Website built to support marketing and automation.", "image": "" }
+        { "title": "No More Lost Leads", "description": "Every inquiry enters your system automatically.", "image": "" },
+        { "title": "Connected Business Infrastructure", "description": "Website directly integrated with dashboards and automation.", "image": "" },
+        { "title": "SEO-Optimized Architecture", "description": "Built for long-term organic visibility.", "image": "" },
+        { "title": "Scalable Digital Foundation", "description": "Designed to support business growth without rebuilding.", "image": "" }
       ],
       "serviceProccess": [
-        { "title": "Business Analysis", "description": "Understanding your audience and goals.", "image": "" },
-        { "title": "UX & Structure Planning", "description": "Designing user-focused page layouts.", "image": "" },
-        { "title": "Development", "description": "Building fast, scalable websites.", "image": "" },
-        { "title": "SEO Setup", "description": "Technical and on-page optimization.", "image": "" },
-        { "title": "Launch & Growth Support", "description": "Continuous optimization for better results.", "image": "" }
+        { "title": "Business & System Planning", "description": "Define integration points between website and internal systems.", "image": "" },
+        { "title": "UX & Conversion Strategy", "description": "Design structured pages optimized for clarity and action.", "image": "" },
+        { "title": "Development & Integration", "description": "Build high-performance websites with system connectivity.", "image": "" },
+        { "title": "SEO & Technical Setup", "description": "Optimize structure, speed, and search visibility.", "image": "" },
+        { "title": "Launch & Ongoing Optimization", "description": "Monitor performance and continuously improve.", "image": "" }
       ],
       "technologies": [
         "/tech-icons/Next.js.svg",
         "/tech-icons/React.svg",
         "/tech-icons/Tailwind-CSS.svg",
-        "/tech-icons/Figma.svg",
         "/tech-icons/Vercel.svg",
-        "/tech-icons/Google.svg",
-        "/tech-icons/Sass.svg",
-        "/tech-icons/TypeScript.svg",
-        "/tech-icons/PostCSS.svg"
+        "/tech-icons/TypeScript.svg"
       ]
     }
   }
