@@ -1,5 +1,6 @@
 import { Eye, Target, Zap, ArrowRight, Sparkles } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "../animations";
+import { OurStory } from "@/app/assets";
 import { PremiumButton } from "../Button";
 import { TechBackground } from "..";
 
@@ -126,7 +127,7 @@ export default function OurStorySection() {
               <StaggerItem className="sm:translate-y-12">
                 <div className="relative h-full min-h-[200px] rounded-2xl overflow-hidden border border-n-1/10 dark:border-white/10 group shadow-xl shadow-n-1/5 dark:shadow-none">
                   <img
-                    src="/story.png"
+                    src={OurStory}
                     alt="Office Culture"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />

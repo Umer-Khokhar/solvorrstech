@@ -1,9 +1,4 @@
-import {
-  Star,
-  Zap,
-  Shield,
-  Globe,
-} from "lucide-react";
+import { Star, Zap, Shield, Globe } from "lucide-react";
 import { BlurIn, FadeIn, StaggerContainer, StaggerItem } from "./animations";
 import { PremiumButton, OutlineButton } from "./Button";
 import { TechBackground } from ".";
@@ -100,7 +95,11 @@ const Hero = () => {
               >
                 Book a 15-min Call
               </PremiumButton>
-              <OutlineButton size="lg" className="w-full md:w-auto flex-1" href="/portfolio">
+              <OutlineButton
+                size="lg"
+                className="w-full md:w-auto flex-1"
+                href="/portfolio"
+              >
                 View Our Work
               </OutlineButton>
             </div>

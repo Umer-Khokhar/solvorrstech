@@ -96,6 +96,7 @@ const MongoDb = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@m
 const WebDev = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/services/web_dev.svg";
 const Cube = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/services/cubic_3d.svg";
 const Triangle = "https://cdn.jsdelivr.net/gh/Umer-Khokhar/Solvorrs-tech-images@main/services/triangle.svg";
+const OurStory = "https://ik.imagekit.io/solvorrtech/Solvorr_Tech_Media/images/story.webp"
 
 const slackLogo = "/slack.png"
 const lawnCare = "/lawncare.webp"
@@ -139,6 +140,7 @@ export const techStackWebDev = [htmlIcon, reactIcon, nextIcon, jsIcon, nodeIcon,
 export {
   Tailwind,
   JavaScript,
+  OurStory,
   ReactIcon,
   Node,
   MongoDb,
