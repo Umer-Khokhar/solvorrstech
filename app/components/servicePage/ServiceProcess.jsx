@@ -1,5 +1,6 @@
 import React from "react";
 import { TrendingUp, RefreshCw, Target, ClipboardList } from "lucide-react";
+import Image from "next/image";
 import { TechBackground } from "../";
 import { StaggerContainer, StaggerItem } from "../animations/Stagger";
 import FadeIn from "../animations/FadeIn";
@@ -43,8 +44,10 @@ const ServiceProcess = ({ serviceProccess }) => {
       <div className="container relative">
         {/* Background pattern image */}
         <div className="absolute hidden inset-0 xl:flex items-start justify-start pointer-events-none px-4">
-          <img
-            src="./process-shape.png"
+          <Image
+            src="/process-shape.png"
+            width={800}
+            height={600}
             className="w-full h-auto opacity-100 dark:invert"
             alt="Process shape"
           />
@@ -60,9 +63,11 @@ const ServiceProcess = ({ serviceProccess }) => {
               {/* Icon and Number */}
               <div className="w-full flex justify-between items-start mb-4">
                 <div className="w-16 h-16">
-                  <img
+                  <Image
                     src={item.icon}
                     alt={item.title}
+                    width={64}
+                    height={64}
                     className="xl:w-full w-12 h-auto"
                   />
                 </div>

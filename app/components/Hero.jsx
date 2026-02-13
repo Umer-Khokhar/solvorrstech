@@ -1,4 +1,5 @@
 import { Star, Zap, Shield, Globe } from "lucide-react";
+import Image from "next/image";
 import { BlurIn, FadeIn, StaggerContainer, StaggerItem } from "./animations";
 import { PremiumButton, OutlineButton } from "./Button";
 import { TechBackground } from ".";
@@ -24,11 +25,12 @@ const Hero = () => {
                     key={i}
                     className="w-6 h-6 rounded-full border border-white dark:border-slate-900 bg-gray-200 overflow-hidden"
                   >
-                    <img
+                    <Image
                       src={`https://i.pravatar.cc/100?img=${i + 10}`}
                       alt="user"
+                      width={24}
+                      height={24}
                       fetchPriority="low"
-                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   </div>
