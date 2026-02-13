@@ -11,7 +11,6 @@ const Hero = () => {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] animate-pulse" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] animation-delay-2000 animate-pulse" />
-        <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -28,6 +27,8 @@ const Hero = () => {
                     <img
                       src={`https://i.pravatar.cc/100?img=${i + 10}`}
                       alt="user"
+                      fetchPriority="low"
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -54,7 +55,7 @@ const Hero = () => {
 
           {/* Main Headline */}
           <div className="space-y-6 max-w-4xl">
-            <BlurIn>
+            <BlurIn isLCP>
               <h1 className="h1 font-bold tracking-tight">
                 Build <span className="text-gradient">High-Converting</span> Web
                 Apps That{" "}

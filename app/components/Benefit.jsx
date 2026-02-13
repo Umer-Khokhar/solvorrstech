@@ -245,9 +245,6 @@ const BentoCard = ({ children, className = "", delay = 0 }) => {
           }}
         />
 
-        {/* Subtle Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.2] pointer-events-none mix-blend-soft-light bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
-
         <div
           className="relative h-full p-8 md:p-10 flex flex-col z-10"
           style={{ transform: "translateZ(20px)" }}

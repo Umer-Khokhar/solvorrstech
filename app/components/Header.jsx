@@ -30,11 +30,11 @@ export default function Header() {
     },
     {
       name: "Services",
-      link: "#", // Changed to # as it's a dropdown container
+      link: "#",
       children: services.map((service) => ({
         name: service.title,
         link: `/${service.slug}`,
-        description: service.text.slice(0, 40) + "...",
+        description: service.text.slice(0, 30) + "...",
         icon: service.iconUrl,
       })),
     },
@@ -174,8 +174,6 @@ export default function Header() {
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-
-      {/* Navbar */}
     </div>
   );
 }

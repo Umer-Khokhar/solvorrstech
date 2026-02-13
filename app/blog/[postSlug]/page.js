@@ -73,7 +73,7 @@ function ArticleContent({ content }) {
                         return (
                             <blockquote key={index} className="relative py-8 px-10 my-12 border-l-4 border-color-1 bg-color-1/5 rounded-r-3xl italic">
                                 <p className="text-xl font-medium text-n-2 dark:text-n-3 leading-relaxed">
-                                    "{section.text}"
+                                    {section.text}
                                 </p>
                             </blockquote>
                         );
@@ -141,7 +141,6 @@ export default function BlogPostPage({ params }) {
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px]" />
-                <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.02] mix-blend-overlay"></div>
             </div>
 
             <div className="container relative z-10">

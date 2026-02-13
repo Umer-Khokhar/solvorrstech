@@ -150,7 +150,6 @@ const Overview = ({ content }) => {
   return (
     <section className="relative py-24 lg:py-32 bg-slate-50 dark:bg-n-8 overflow-hidden transition-colors duration-300">
       {/* Background Ambience */}
-      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-30 dark:opacity-20 pointer-events-none mix-blend-overlay" />
       <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-blue-500/10 dark:bg-color-1/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-purple-500/10 dark:bg-color-2/5 blur-[100px] rounded-full pointer-events-none" />
 

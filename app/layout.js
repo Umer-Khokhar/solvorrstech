@@ -35,8 +35,8 @@ const clashGrotesk = localFont({
 const kumbh = Kumbh_Sans({
   variable: "--font-kumbh",
   subsets: ["latin"],
-  display: "swap", // Add this to prevent blocking
-  preload: true, // Explicitly enable preload
+  display: "swap", 
+  preload: true,
 });
 
 export const metadata = {

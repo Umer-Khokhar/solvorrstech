@@ -36,7 +36,6 @@ export const Navbar = ({
   return (
     <motion.div
       ref={ref}
-      // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn("fixed inset-x-0 top-0 z-40 w-full", className)}>
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -52,7 +51,7 @@ export const NavBody = ({
   visible
 }) => {
   return (
-    <div className={`bg-n-7 sm:bg-n-8 md:py-2 md:border-b border-n-5/70`}>
+    <div className={`bg-n-7 sm:bg-n-8 md:py-1 md:border-b border-n-5/70`}>
     <motion.div
       animate={{
       }}
@@ -136,7 +135,6 @@ const NavItem = ({ item, isHovered, onMouseEnter, onItemClick }) => {
             </svg>
           )}
 
-          {/* Minimal hairline underline */}
           <motion.div 
             className="absolute -bottom-0.5 left-0 right-0 h-[1px] bg-color-1"
             initial={{ scaleX: 0, opacity: 0 }}
@@ -157,7 +155,7 @@ const NavItem = ({ item, isHovered, onMouseEnter, onItemClick }) => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute left-1/2 top-full mt-2 w-72 -translate-x-1/2 rounded-2xl border border-neutral-200 bg-white/80 p-4 shadow-xl backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-900/80"
+              className="absolute left-1/2 top-full mt-2 w-72 -translate-x-1/2 rounded-2xl border border-neutral-200 p-4 shadow-xl dark:border-neutral-800 bg-n-8 backdrop-blur-3xl"
             >
               <div className="flex flex-col gap-1">
                 {item.children.map((child, cIdx) => (
@@ -167,7 +165,7 @@ const NavItem = ({ item, isHovered, onMouseEnter, onItemClick }) => {
                     onClick={() => {
                       if (onItemClick) onItemClick();
                     }}
-                    className="group flex flex-col gap-0.5 rounded-xl p-3 transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                    className="group flex flex-col gap-0.5 rounded-xl p-3 transition-colors hover:bg-neutral-100 dark:hover:bg-n-7"
                   >
                     <span className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                       {child.name}
@@ -191,29 +189,16 @@ const NavItem = ({ item, isHovered, onMouseEnter, onItemClick }) => {
 export const MobileNav = ({
   children,
   className,
-  visible
 }) => {
   return (
     <motion.div
-      animate={{
-        backdropFilter: visible ? "blur(10px)" : "none",
-        boxShadow: visible
-          ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
-          : "none",
-        width: visible ? "90%" : "100%",
-        paddingRight: visible ? "12px" : "0px",
-        paddingLeft: visible ? "12px" : "0px",
-        borderRadius: visible ? "4px" : "2rem",
-        y: visible ? 20 : 0,
-      }}
       transition={{
         type: "spring",
         stiffness: 200,
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        "relative z-50 flex w-full flex-col items-center justify-between bg-white/70 backdrop-blur-2xl dark:bg-slate-900/80 border-b border-n-4/20 dark:border-n-6/50 px-4 py-2 lg:hidden shadow-2xl",
         className
       )}>
       {children}

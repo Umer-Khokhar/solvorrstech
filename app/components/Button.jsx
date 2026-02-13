@@ -197,7 +197,6 @@ const BaseButton = React.forwardRef(
           variant === "premium") && (
           <span
             className="absolute inset-0 rounded-2xl opacity-[0.03] pointer-events-none mix-blend-overlay"
-            style={{ backgroundImage: "url('/noise.svg')" }}
           />
         )}
 
