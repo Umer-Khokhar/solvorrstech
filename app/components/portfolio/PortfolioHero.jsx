@@ -30,7 +30,7 @@ const PortfolioHero = () => {
     },
   };
 
-  const title = "Work We're Proud Of";
+  const title = "Systems We’ve Built for Real Business Operations";
 
   return (
     <div
@@ -67,9 +67,7 @@ const PortfolioHero = () => {
                 transition={{ delay: 0.8, duration: 1 }}
                 className="body-1 text-n-3 mb-8 leading-relaxed"
               >
-                Discover our collection of high-impact digital solutions. From
-                stunning UI/UX designs to robust full-stack applications, we
-                bring visions to life with precision and creativity.
+                Explore the structured dashboards, automation workflows, and integrated systems we’ve built to improve operational clarity, streamline processes, and support scalable business growth.
               </motion.p>
 
               <motion.div

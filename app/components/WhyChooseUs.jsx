@@ -16,61 +16,62 @@ import { TechBackground } from ".";
 const features = [
   {
     icon: Wrench,
-    title: "Advanced Tools",
-    subtitle: "Enterprise Grade",
+    title: "Structured System Design",
+    subtitle: "Built for Real Operations",
     description:
-      "We leverage industry-leading software and proprietary tools to engineer robust solutions that scale with your business needs.",
+      "We design custom dashboards and operational systems tailored to how your business actually runs — centralizing client management, financial tracking, inventory, and workflows into one structured platform.",
     gradientFrom: "from-blue-500",
     gradientTo: "to-cyan-500",
-    stat: "100+",
-    statLabel: "Tools Integrated",
-    highlights: ["Automated Pipelines", "Real-time Monitoring"],
+    stat: "Custom",
+    statLabel: "Built Around Your Workflow",
+    highlights: ["Centralized Data", "Role-Based Access"],
     colSpan: "lg:col-span-2",
     size: "large",
   },
   {
     icon: Cpu,
-    title: "Innovation First",
-    subtitle: "AI & Cloud",
+    title: "Reliable Automation",
+    subtitle: "Process Efficiency",
     description:
-      "Always ahead of the curve, we integrate emerging technologies for future-proof growth.",
+      "We automate repetitive tasks and connect your tools through secure integrations, reducing manual work and improving operational consistency.",
     gradientFrom: "from-purple-500",
     gradientTo: "to-pink-500",
     stat: "24/7",
-    statLabel: "System Monitoring",
-    highlights: ["AI Analytics", "Cloud Infra"],
+    statLabel: "Automated Workflows",
+    highlights: ["API Integrations", "Workflow Logic"],
     colSpan: "lg:col-span-1",
     size: "medium",
   },
   {
     icon: Lightbulb,
-    title: "Creative Strategy",
-    subtitle: "UX Centric",
+    title: "Operational Clarity",
+    subtitle: "Data You Can Trust",
     description:
-      "Fusing data-driven strategy with boundary-pushing creativity to craft unique digital experiences.",
+      "Our dashboards provide clear visibility into clients, revenue, and performance — helping you make decisions based on structured, real-time data instead of scattered information.",
     gradientFrom: "from-green-500",
     gradientTo: "to-emerald-500",
-    stat: "30%",
-    statLabel: "Conversion Uplift",
-    highlights: ["Data-Driven", "User-Centric"],
+    stat: "Live",
+    statLabel: "Performance Tracking",
+    highlights: ["Real-Time Insights", "Clear Reporting"],
     colSpan: "lg:col-span-1",
     size: "medium",
   },
   {
     icon: Eye,
-    title: "Vision & Impact",
-    subtitle: "Strategic Results",
+    title: "Scalable Infrastructure",
+    subtitle: "Built to Grow With You",
     description:
-      "Transforming ambitious visions into tangible, high-impact digital realities aligned with your core business objectives.",
+      "We don’t build short-term fixes. Our systems are designed to support growing teams, increasing client volume, and expanding operational complexity without breaking your workflow.",
     gradientFrom: "from-orange-500",
     gradientTo: "to-red-500",
-    stat: "Global",
-    statLabel: "Client Reach",
-    highlights: ["Business Alignment", "Scalable Growth"],
+    stat: "Flexible",
+    statLabel: "Scalable Architecture",
+    highlights: ["Future-Ready Design", "Long-Term Stability"],
     colSpan: "lg:col-span-2",
     size: "large",
   },
 ];
+
 
 const BentoCard = ({ feature }) => {
   const Icon = feature.icon;
@@ -202,11 +203,10 @@ export default function WhyChooseUs() {
               </span>
             </div>
             <h2 className="h2 font-bold text-n-1 dark:text-white mb-6">
-              Why Leaders <span className="text-gradient">Choose Us</span>
+              Why Businesses Trust Our Systems
             </h2>
             <p className="body-1 text-n-3 dark:text-n-4 px-4 md:px-0 max-w-2xl mx-auto">
-              We specialize in engineering high-performance digital ecosystems
-              that blend cutting-edge technology with strategic creative vision.
+              Our expertise lies in replacing spreadsheets, manual processes, and disconnected tools with centralized systems that give founders real control over their operations.
             </p>
           </div>
         </FadeIn>

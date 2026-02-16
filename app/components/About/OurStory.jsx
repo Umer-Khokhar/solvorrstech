@@ -25,8 +25,8 @@ export default function OurStorySection() {
                   </span>
                 </div>
                 <h2 className="h2 font-bold text-n-1 dark:text-white leading-tight">
-                  From a Spark to a <br />
-                  <span className="text-gradient">Digital Supernova.</span>
+                  Why We Build 
+                  <span className="block">Business Systems</span>
                 </h2>
               </div>
             </FadeIn>
@@ -34,23 +34,12 @@ export default function OurStorySection() {
             <div className="space-y-6 text-lg text-n-3 leading-relaxed">
               <FadeIn direction="left" delay={0.2}>
                 <p>
-                  Founded with the vision of solving complex business
-                  challenges,
-                  <span className="text-n-1 dark:text-white font-semibold">
-                    {" "}
-                    Solvorr Tech
-                  </span>{" "}
-                  isn't just an agency; we are your growth partners. We noticed
-                  too many businesses struggling with outdated tools and
-                  invisible online presence.
+                  Solvorr Tech was built for businesses that are tired of running operations on scattered tools and manual processes. We saw growing companies lose time, revenue visibility, and efficiency because their systems were not built to scale.
                 </p>
               </FadeIn>
               <FadeIn direction="left" delay={0.4}>
                 <p>
-                  We set out to change that. By fusing cutting-edge design with
-                  powerful automation, we help ambitious brands move beyond
-                  barriers—building scalable ecosystems that drive real,
-                  measurable revenue.
+                  Our mission is to replace that chaos with structured infrastructure. Through custom dashboards, workflow automation, and seamless integrations, we create centralized business systems that improve control, reduce operational friction, and support sustainable growth.
                 </p>
               </FadeIn>
             </div>

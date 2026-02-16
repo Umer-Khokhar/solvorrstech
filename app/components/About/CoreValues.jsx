@@ -3,44 +3,45 @@ import React from 'react';
 import {benefitIcon1, benefitIcon2, benefitIcon3, benefitIcon4} from "@/app/assets";
 
 const CoreValuesSection = () => {
-    const values = [
-        {
-            number: '01',
-            title: 'Innovation First',
-            description: 'We push boundaries and embrace cutting-edge technologies to deliver solutions that set new industry standards.',
-            icon: benefitIcon1
-        },
-        {
-            number: '02',
-            title: 'Timely Delivery',
-            description: 'Your deadlines are our commitment. We deliver exceptional quality without compromising on speed.',
-            icon: benefitIcon2
-        },
-        {
-            number: '03',
-            title: 'Client-Centric',
-            description: 'Your success is our success. We build lasting partnerships through transparent communication and dedicated support.',
-            icon: benefitIcon3
-        },
-        {
-            number: '04',
-            title: 'Excellence',
-            description: 'We obsess over [postSlug] and maintain the highest standards in every line of code we write.',
-            icon: benefitIcon4
-        },
-        {
-            number: '05',
-            title: 'Scalability',
-            description: 'We architect solutions that grow with your business, ensuring long-term success and adaptability.',
-            icon: benefitIcon1
-        },
-        {
-            number: '06',
-            title: 'Security First',
-            description: 'We build with security at the core, protecting your data and ensuring compliance with industry standards.',
-            icon: benefitIcon2
-        }
-    ];
+   const values = [
+    {
+        number: '01',
+        title: 'Structured Thinking',
+        description: 'We approach every project with system architecture in mind — designing dashboards and automation that bring clarity, order, and operational stability.',
+        icon: benefitIcon1
+    },
+    {
+        number: '02',
+        title: 'Reliable Execution',
+        description: 'We value consistency and disciplined delivery. Every system we build is tested, stable, and ready for real business use.',
+        icon: benefitIcon2
+    },
+    {
+        number: '03',
+        title: 'Operational Clarity',
+        description: 'Our solutions are built to improve visibility — helping businesses understand clients, revenue, workflows, and performance in one structured environment.',
+        icon: benefitIcon3
+    },
+    {
+        number: '04',
+        title: 'Practical Collaboration',
+        description: 'We work closely with clients to understand how their business truly operates, ensuring every system aligns with real-world workflows.',
+        icon: benefitIcon4
+    },
+    {
+        number: '05',
+        title: 'Scalable Foundations',
+        description: 'We build systems that support growth — handling increasing clients, transactions, and operational complexity without breaking structure.',
+        icon: benefitIcon1
+    },
+    {
+        number: '06',
+        title: 'Security & Data Integrity',
+        description: 'We prioritize secure architecture and controlled access, ensuring your business data remains protected and reliable.',
+        icon: benefitIcon2
+    }
+];
+
 
     return (
         <section className="relative py-16 md:py-32 px-5 bg-n-8 overflow-hidden">
@@ -55,10 +56,10 @@ const CoreValuesSection = () => {
                         Our Core Values
                     </div>
                     <h2 className="h2 font-bold">
-                        The DNA of Innovation
+                        The Principles Behind Our Systems
                     </h2>
                     <p className="body-1 text-n-4 max-w-2xl mx-auto leading-relaxed">
-                        These principles drive everything we do, from the way we code to how we collaborate with our clients.
+                       These principles shape how we design systems, build dashboards, and structure automation ensuring every solution is reliable, scalable, and aligned with real business operations.
                     </p>
                 </div>
 

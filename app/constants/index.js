@@ -134,39 +134,31 @@ import {
     },
   ];
 
-  export const projectsDetails = [
-    {
-      id: "0",
-      title: "Convert Design to React + Tailwind Code",
-      description: "Transformed a Figma design into a clean, responsive website using React.js and Tailwind CSS, ensuring a professional look with smooth performance.",
-      imageUrl: Project1,
-      techStack: ["React.js,", "Figma,", "TailwindCSS"],
-      features: ['Effortless Deployment', 'Clean & Modular Code', 'Customised Features'],
-    },
-    {
-      id: "1",
-      title: "API Integration for Contact Form & CRM",
-      description: "Integrated a custom contact form with Google Sheets and a CRM system, helping small businesses manage customer inquiries efficiently. Used Node.js and Express for seamless data handling.",
-      imageUrl: Project1,
-      techStack: ['CRM System,', 'React.js,',  'Axios'],
-      features: ['Effortless Deployment', 'Clean & Modular Code', 'Customised Features'],
-      isRight: true
-    },
-    {
-      id: "2",
-      title: "WordPress eCommerce Website for Local Store",
-      description: "Created an easy-to-manage WooCommerce store for a local retail business. Optimized for fast loading, SEO, and mobile-friendly design.",
-      imageUrl: Project1,
-      techStack: ['WooCommerce,', 'Wordpress,', "Php,", "JavaScript", "html,", "css" ],
-      features: ['Effortless Deployment', 'Clean & Modular Code', 'Customised Features'],
-    },
-    {
-      id: "3",
-      title: "Blog Website with SEO Optimization",
-      description: "Built a MERN-stack blog website for a client who wanted to share industry insights. Implemented SEO-friendly features and a CMS for easy content updates.",
-      imageUrl: Project1,
-      techStack: ['React.js,', "Express.js,", "Node.js,", "MongoDB,", "REST Api"],
-      features: ['Effortless Deployment', 'Clean & Modular Code', 'Customised Features'],
-      isRight: true
-    },
-  ]
+export const projectsDetails = [
+  {
+    id: "0",
+    title: "Client Management & CMS Dashboard (Custom Pack Boxes)",
+    description: "Designed and developed a structured CMS dashboard for a packaging company to centralize client records, manage orders, assign internal tasks, and streamline operational workflows. Replaced scattered communication and manual tracking with a single controlled system.",
+    imageUrl: Project1,
+    techStack: ["React.js", "Node.js", "PostgreSQL", "Role-Based Access"],
+    features: [
+      "Centralized Client & Order Management",
+      "Internal Workflow Coordination",
+      "Secure Admin & User Permissions"
+    ],
+  },
+  {
+    id: "1",
+    title: "Client & Revenue Management System (Structured Demo Build)",
+    description: "Currently building a structured business control system designed to help growing companies manage clients, projects, invoices, payments, user roles, and performance reports inside one scalable dashboard. Built to eliminate spreadsheet dependency and improve operational clarity.",
+    imageUrl: Project1,
+    techStack: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Reporting Module"],
+    features: [
+      "Client & Project Tracking",
+      "Invoice & Revenue Monitoring",
+      "Role-Based Access & Performance Reports"
+    ],
+    isRight: true
+  }
+];
+

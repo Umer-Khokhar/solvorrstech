@@ -48,32 +48,14 @@ const AboutHero = () => {
                 variants={fadeIn}
                 className="h1 font-bold text-n-1 leading-tight"
               >
-                We Build The Future of <br className="hidden lg:block" />
-                <span className="text-gradient relative inline-block">
-                  Digital Experiences
-                  <svg
-                    className="absolute w-full h-3 -bottom-1 left-0 text-color-2 opacity-50"
-                    viewBox="0 0 200 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.00025 6.99997C25.7667 9.00627 75.3619 8.01977 197.974 1.98668"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
+                Built to Bring Structure to Growing Businesses
               </motion.h1>
 
               <motion.p
                 variants={fadeIn}
                 className="text-lg md:text-xl text-n-3 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light"
               >
-                Every obstacle is an invitation to innovate. At Solvorr Tech, we
-                cut through complexity—designing sleek web apps, automating the
-                tedious, and driving digital marketing that actually converts.
+                At Solvorr Tech, we believe growth should be supported by strong internal systems. Our focus is simple design structured dashboards and automation that give businesses clarity, efficiency, and scalable operational foundations.
               </motion.p>
 
               <motion.div

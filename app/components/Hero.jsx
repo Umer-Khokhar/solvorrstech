@@ -59,29 +59,12 @@ const Hero = () => {
           <div className="space-y-6 max-w-4xl">
             <BlurIn isLCP>
               <h1 className="h1 font-bold tracking-tight">
-                Build <span className="text-gradient">High-Converting</span> Web
-                Apps That{" "}
-                <span className="italic relative inline-block">
-                  Close Deals
-                  <svg
-                    className="absolute w-full h-2 bottom-2 left-0 text-blue-400/30 -z-10"
-                    viewBox="0 0 100 10"
-                    preserveAspectRatio="none"
-                  >
-                    <path
-                      d="M0 5 Q 50 10 100 5"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      fill="none"
-                    />
-                  </svg>
-                </span>
+                Custom Dashboards & Automation Systems Built to Scale Your Business
               </h1>
             </BlurIn>
             <FadeIn delay={0.4}>
-              <p className="body-1 text-n-3 dark:text-n-4 max-w-2xl mx-auto">
-                We craft purpose driven digital experiences that turn visitors
-                into paying clients. Fast, scalable, and built for growth.
+              <p className="body-1 text-n-3 dark:text-n-4 max-w-3xl mx-auto">
+                We design structured dashboards and automation systems that centralize your operations, eliminate manual work, and give you full control over your business.
               </p>
             </FadeIn>
           </div>

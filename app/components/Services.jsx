@@ -30,18 +30,16 @@ const Services = () => {
 
           <FadeIn delay={0.1}>
             <h2
-              className="h2 font-bold text-n-1 dark:text-white leading-[1.1] tracking-tight mb-8"
+              className="h2 font-semibold text-n-1 dark:text-white leading-[1.1] tracking-tight mb-8"
               style={{ fontFamily: "var(--font-clash-grotesk)" }}
             >
-              Engineering Excellence <br />
-              <span className="text-gradient">For Your Digital Future</span>
+             Systems That Power Your Business Growth
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="body-1 text-n-3 dark:text-n-4 max-w-2xl">
-              We combine strategic thinking with technical mastery to build
-              scalable software that drives real, measurable impact.
+              Our services are built to solve real operational problems  from client management and financial tracking to inventory control and workflow automation  all inside structured, scalable systems.
             </p>
           </FadeIn>
         </div>
