@@ -35,7 +35,7 @@ const clashGrotesk = localFont({
 const kumbh = Kumbh_Sans({
   variable: "--font-kumbh",
   subsets: ["latin"],
-  display: "swap", 
+  display: "swap",
   preload: true,
 });
 
@@ -44,6 +44,9 @@ export const metadata = {
     "Solvorr Tech – Modern Web Applications, Automation & Digital Solutions",
   description:
     "A problem-solving tech company delivering custom software, automated systems, SEO-optimized websites, and end-to-end digital solutions for business growth",
+  verification: {
+    google: "mM4EivVNrdAxp4KkLLvDL_6thFebjQbLJ3rYG3L0q9Q",
+  },
 };
 
 export default function RootLayout({ children }) {
