@@ -71,11 +71,31 @@
         }
       ],
       "serviceProccess": [
-        { "title": "Operational Assessment", "description": "We study your current workflow, reporting structure, and inefficiencies.", "image": "" },
-        { "title": "System Architecture Planning", "description": "We design database structures, feature maps, and dashboard layouts.", "image": "" },
-        { "title": "Custom Development", "description": "Secure backend and scalable frontend dashboard development.", "image": "" },
-        { "title": "Testing & Validation", "description": "Ensuring accuracy, performance, and system stability.", "image": "" },
-        { "title": "Deployment & Support", "description": "System launch, onboarding guidance, and continuous improvement.", "image": "" }
+        {
+          "title": "Operational Assessment",
+          "description": "We study your current workflow, reporting structure, and inefficiencies.",
+          "image": ""
+        },
+        {
+          "title": "System Architecture Planning",
+          "description": "We design database structures, feature maps, and dashboard layouts.",
+          "image": ""
+        },
+        {
+          "title": "Custom Development",
+          "description": "Secure backend and scalable frontend dashboard development.",
+          "image": ""
+        },
+        {
+          "title": "Testing & Validation",
+          "description": "Ensuring accuracy, performance, and system stability.",
+          "image": ""
+        },
+        {
+          "title": "Deployment & Support",
+          "description": "System launch, onboarding guidance, and continuous improvement.",
+          "image": ""
+        }
       ],
       "technologies": [
         "/tech-icons/Next.js.svg",
@@ -85,7 +105,19 @@
         "/tech-icons/MongoDB.svg",
         "/tech-icons/TypeScript.svg",
         "/tech-icons/Docker.svg"
-      ]
+      ],
+      "starterOffer": {
+        "title": "Small Business Starter Dashboard",
+        "startingFrom": "$300",
+        "description": "Best for small teams managing clients and payments manually.",
+        "includes": [
+          "Client Management (CRUD)",
+          "Basic Invoice & Payment Tracking",
+          "Admin Login & Role Control",
+          "Simple Revenue Overview"
+        ],
+        "cta": "Request Starter Setup"
+      }
     }
   },
   {
@@ -111,24 +143,80 @@
         "image": ""
       },
       "subServices": [
-        { "icon": "ShoppingCart", "title": "E-Commerce Automation", "description": "Order processing, status updates, CRM syncing, and automated customer communication." },
-        { "icon": "Zap", "title": "Lead & Sales Automation", "description": "Automatic lead capture, routing, tagging, and follow-up sequences." },
-        { "icon": "Calendar", "title": "Booking & Reminder Systems", "description": "Appointment confirmations, reminder notifications, and scheduling workflows." },
-        { "icon": "Database", "title": "Data Sync & API Integrations", "description": "Secure data synchronization between internal systems and third-party tools." },
-        { "icon": "Bell", "title": "Operational Alerts & Notifications", "description": "Real-time internal alerts to prevent bottlenecks and missed actions." }
+        {
+          "icon": "ShoppingCart",
+          "title": "E-Commerce Automation",
+          "description": "Order processing, status updates, CRM syncing, and automated customer communication."
+        },
+        {
+          "icon": "Zap",
+          "title": "Lead & Sales Automation",
+          "description": "Automatic lead capture, routing, tagging, and follow-up sequences."
+        },
+        {
+          "icon": "Calendar",
+          "title": "Booking & Reminder Systems",
+          "description": "Appointment confirmations, reminder notifications, and scheduling workflows."
+        },
+        {
+          "icon": "Database",
+          "title": "Data Sync & API Integrations",
+          "description": "Secure data synchronization between internal systems and third-party tools."
+        },
+        {
+          "icon": "Bell",
+          "title": "Operational Alerts & Notifications",
+          "description": "Real-time internal alerts to prevent bottlenecks and missed actions."
+        }
       ],
       "serviceBenefits": [
-        { "title": "Save Time & Operational Costs", "description": "Reduce repetitive manual work across departments.", "image": "" },
-        { "title": "Increase Process Speed", "description": "Automated systems execute instantly and consistently.", "image": "" },
-        { "title": "Reduce Human Error", "description": "Minimize mistakes caused by manual data handling.", "image": "" },
-        { "title": "Scalable Workflow Infrastructure", "description": "Designed to handle increasing operational volume.", "image": "" }
+        {
+          "title": "Save Time & Operational Costs",
+          "description": "Reduce repetitive manual work across departments.",
+          "image": ""
+        },
+        {
+          "title": "Increase Process Speed",
+          "description": "Automated systems execute instantly and consistently.",
+          "image": ""
+        },
+        {
+          "title": "Reduce Human Error",
+          "description": "Minimize mistakes caused by manual data handling.",
+          "image": ""
+        },
+        {
+          "title": "Scalable Workflow Infrastructure",
+          "description": "Designed to handle increasing operational volume.",
+          "image": ""
+        }
       ],
       "serviceProccess": [
-        { "title": "Workflow Mapping", "description": "Identify repetitive tasks and inefficiencies.", "image": "" },
-        { "title": "Automation Design", "description": "Define triggers, logic flows, and integration structure.", "image": "" },
-        { "title": "Implementation", "description": "Deploy secure automation systems using APIs and workflow engines.", "image": "" },
-        { "title": "Testing", "description": "Simulate real scenarios to ensure reliability.", "image": "" },
-        { "title": "Optimization & Monitoring", "description": "Continuous refinement of automation performance.", "image": "" }
+        {
+          "title": "Workflow Mapping",
+          "description": "Identify repetitive tasks and inefficiencies.",
+          "image": ""
+        },
+        {
+          "title": "Automation Design",
+          "description": "Define triggers, logic flows, and integration structure.",
+          "image": ""
+        },
+        {
+          "title": "Implementation",
+          "description": "Deploy secure automation systems using APIs and workflow engines.",
+          "image": ""
+        },
+        {
+          "title": "Testing",
+          "description": "Simulate real scenarios to ensure reliability.",
+          "image": ""
+        },
+        {
+          "title": "Optimization & Monitoring",
+          "description": "Continuous refinement of automation performance.",
+          "image": ""
+        }
       ],
       "technologies": [
         "/tech-icons/Node.js.svg",
@@ -136,7 +224,19 @@
         "/tech-icons/AWS.svg",
         "/tech-icons/Docker.svg",
         "/tech-icons/Postman.svg"
-      ]
+      ],
+      "starterOffer": {
+        "title": "Starter Automation Setup",
+        "startingFrom": "$150",
+        "description": "Best for businesses handling leads and follow-ups manually.",
+        "includes": [
+          "Form → CRM / Sheet Integration",
+          "Email Notification Setup",
+          "Basic Workflow Logic",
+          "Webhook / API Integration"
+        ],
+        "cta": "Request Automation Setup"
+      }
     }
   },
   {
@@ -162,24 +262,80 @@
         "image": ""
       },
       "subServices": [
-        { "icon": "Globe", "title": "Structured Business Websites", "description": "Professional websites built with performance, scalability, and system integration in mind." },
-        { "icon": "Target", "title": "Lead Capture Architecture", "description": "Optimized forms and landing pages connected directly to internal dashboards." },
-        { "icon": "Search", "title": "Technical SEO Foundation", "description": "Structured site architecture, schema implementation, and search optimization." },
-        { "icon": "MapPin", "title": "Local Search Optimization", "description": "Google Business and local visibility enhancement." },
-        { "icon": "TrendingUp", "title": "Performance & Core Web Vitals", "description": "Speed, UX optimization, and technical performance tuning." }
+        {
+          "icon": "Globe",
+          "title": "Structured Business Websites",
+          "description": "Professional websites built with performance, scalability, and system integration in mind."
+        },
+        {
+          "icon": "Target",
+          "title": "Lead Capture Architecture",
+          "description": "Optimized forms and landing pages connected directly to internal dashboards."
+        },
+        {
+          "icon": "Search",
+          "title": "Technical SEO Foundation",
+          "description": "Structured site architecture, schema implementation, and search optimization."
+        },
+        {
+          "icon": "MapPin",
+          "title": "Local Search Optimization",
+          "description": "Google Business and local visibility enhancement."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Performance & Core Web Vitals",
+          "description": "Speed, UX optimization, and technical performance tuning."
+        }
       ],
       "serviceBenefits": [
-        { "title": "No More Lost Leads", "description": "Every inquiry enters your system automatically.", "image": "" },
-        { "title": "Connected Business Infrastructure", "description": "Website directly integrated with dashboards and automation.", "image": "" },
-        { "title": "SEO-Optimized Architecture", "description": "Built for long-term organic visibility.", "image": "" },
-        { "title": "Scalable Digital Foundation", "description": "Designed to support business growth without rebuilding.", "image": "" }
+        {
+          "title": "No More Lost Leads",
+          "description": "Every inquiry enters your system automatically.",
+          "image": ""
+        },
+        {
+          "title": "Connected Business Infrastructure",
+          "description": "Website directly integrated with dashboards and automation.",
+          "image": ""
+        },
+        {
+          "title": "SEO-Optimized Architecture",
+          "description": "Built for long-term organic visibility.",
+          "image": ""
+        },
+        {
+          "title": "Scalable Digital Foundation",
+          "description": "Designed to support business growth without rebuilding.",
+          "image": ""
+        }
       ],
       "serviceProccess": [
-        { "title": "Business & System Planning", "description": "Define integration points between website and internal systems.", "image": "" },
-        { "title": "UX & Conversion Strategy", "description": "Design structured pages optimized for clarity and action.", "image": "" },
-        { "title": "Development & Integration", "description": "Build high-performance websites with system connectivity.", "image": "" },
-        { "title": "SEO & Technical Setup", "description": "Optimize structure, speed, and search visibility.", "image": "" },
-        { "title": "Launch & Ongoing Optimization", "description": "Monitor performance and continuously improve.", "image": "" }
+        {
+          "title": "Business & System Planning",
+          "description": "Define integration points between website and internal systems.",
+          "image": ""
+        },
+        {
+          "title": "UX & Conversion Strategy",
+          "description": "Design structured pages optimized for clarity and action.",
+          "image": ""
+        },
+        {
+          "title": "Development & Integration",
+          "description": "Build high-performance websites with system connectivity.",
+          "image": ""
+        },
+        {
+          "title": "SEO & Technical Setup",
+          "description": "Optimize structure, speed, and search visibility.",
+          "image": ""
+        },
+        {
+          "title": "Launch & Ongoing Optimization",
+          "description": "Monitor performance and continuously improve.",
+          "image": ""
+        }
       ],
       "technologies": [
         "/tech-icons/Next.js.svg",
@@ -187,7 +343,19 @@
         "/tech-icons/Tailwind-CSS.svg",
         "/tech-icons/Vercel.svg",
         "/tech-icons/TypeScript.svg"
-      ]
+      ],
+      "starterOffer": {
+        "title": "Starter Business Website",
+        "startingFrom": "$250",
+        "description": "Best for small businesses needing a clean site with lead capture.",
+        "includes": [
+          "3–5 Page Website",
+          "Lead Capture Form",
+          "Basic SEO Setup",
+          "Integration Ready"
+        ],
+        "cta": "Request Website Setup"
+      }
     }
   }
 ]
