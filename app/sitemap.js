@@ -1,4 +1,5 @@
 import services from "@/lib/services.json";
+import blogs from "@/lib/data.json";
 
 export default function sitemap() {
   const baseUrl = "https://www.solvorrtech.com";
@@ -26,5 +27,12 @@ export default function sitemap() {
     priority: 0.9,
   }));
 
-  return [...routes, ...serviceRoutes];
+  const blogRoutes = blogs.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: new Date(blog.publishDate),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...routes, ...serviceRoutes, ...blogRoutes];
 }
