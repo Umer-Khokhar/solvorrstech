@@ -6,6 +6,7 @@ import SubServices from "@/app/components/servicePage/SubServices";
 import Benefit from "@/app/components/Benefit";
 import ServiceProcess from "@/app/components/servicePage/ServiceProcess";
 import TechStack from "@/app/components/servicePage/TechStack";
+import StarterOffer from "@/app/components/servicePage/StarterOffer";
 import MasonryTestimonials from "@/app/components/Testimonials";
 import Faqs from "@/app/components/Faqs";
 import Cta from "@/app/components/Cta";
@@ -203,6 +204,7 @@ const Page = async ({ params }) => {
       />
       <ServiceProcess serviceProccess={detailPage.serviceProccess} />
       <TechStack technologies={detailPage.technologies} />
+      <StarterOffer offer={detailPage.starterOffer} />
       <MasonryTestimonials />
       <Faqs />
       <Cta />
