@@ -25,7 +25,6 @@ export default function Header() {
     { name: "About", href: "/about" },
     { name: "Services", href: "#", hasDropdown: true },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
   ];
 

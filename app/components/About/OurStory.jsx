@@ -25,7 +25,7 @@ export default function OurStorySection() {
                   </span>
                 </div>
                 <h2 className="h2 font-bold text-n-1 dark:text-white leading-tight">
-                  Why We Build 
+                  Why We Build
                   <span className="block">Business Systems</span>
                 </h2>
               </div>
@@ -34,24 +34,30 @@ export default function OurStorySection() {
             <div className="space-y-6 text-lg text-n-3 leading-relaxed">
               <FadeIn direction="left" delay={0.2}>
                 <p>
-                  Solvorr Tech was built for businesses that are tired of running operations on scattered tools and manual processes. We saw growing companies lose time, revenue visibility, and efficiency because their systems were not built to scale.
+                  Solvorr Tech was built for businesses that are tired of
+                  running operations on scattered tools and manual processes. We
+                  saw growing companies lose time, revenue visibility, and
+                  efficiency because their systems were not built to scale.
                 </p>
               </FadeIn>
               <FadeIn direction="left" delay={0.4}>
                 <p>
-                  Our mission is to replace that chaos with structured infrastructure. Through custom dashboards, workflow automation, and seamless integrations, we create centralized business systems that improve control, reduce operational friction, and support sustainable growth.
+                  Our mission is to replace that chaos with structured
+                  infrastructure. Through custom dashboards, workflow
+                  automation, and seamless integrations, we create centralized
+                  business systems that improve control, reduce operational
+                  friction, and support sustainable growth.
                 </p>
               </FadeIn>
             </div>
-
-            {/* Interactive Stats/Action */}
+            {/* Action Button */}
             <FadeIn direction="up" delay={0.6}>
               <div className="pt-8 flex flex-wrap gap-8">
                 <PremiumButton
-                  href="/team"
+                  href="/about"
                   rightIcon={<ArrowRight className="w-5 h-5" />}
                 >
-                  Meet the Team
+                  Learn More
                 </PremiumButton>
               </div>
             </FadeIn>

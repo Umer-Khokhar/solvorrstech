@@ -41,15 +41,14 @@ const kumbh = Kumbh_Sans({
 
 export const metadata = {
   metadataBase: new URL("https://www.solvorrtech.com"),
-  title:
-    "Solvorr Tech – Modern Web Applications, Automation & Digital Solutions",
+  title: "Solvorr Tech | Custom Dashboards, Automation & Integrations",
   description:
-    "A problem-solving tech company delivering custom software, automated systems, SEO-optimized websites, and end-to-end digital solutions for business growth",
+    "Custom dashboards, workflow automation, and integrated business systems designed to centralize operations, reduce manual work, and support scalable growth.",
   verification: {
     google: "mM4EivVNrdAxp4KkLLvDL_6thFebjQbLJ3rYG3L0q9Q",
   },
   alternates: {
-    canonical: "./",
+    canonical: "https://www.solvorrtech.com",
   },
 };
 
