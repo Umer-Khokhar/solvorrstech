@@ -17,7 +17,38 @@ export async function generateStaticParams() {
   }));
 }
 
-// Optional: Generate metadata for SEO
+// Generate metadata for SEO
+export async function generateMetadata({ params }) {
+  const { serviceSlug } = await params;
+  const service = services.find((ser) => ser.slug === serviceSlug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+    };
+  }
+
+  return {
+    title: `${service.detailPage.heroTitle} | Solvorr Tech`,
+    description: service.detailPage.overview.description[0],
+    alternates: {
+      canonical: `/${service.slug}`,
+    },
+    openGraph: {
+      title: service.detailPage.heroTitle,
+      description: service.detailPage.overview.description[0],
+      url: `/${service.slug}`,
+      images: [
+        {
+          url: service.imageUrl || "/overview.png",
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
+    },
+  };
+}
 
 const Page = async ({ params }) => {
   const { serviceSlug } = await params;
