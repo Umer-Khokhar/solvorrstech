@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Section from "../Section";
 import { grid, HeroPortfolio } from "../../assets";
@@ -67,7 +68,9 @@ const PortfolioHero = () => {
                 transition={{ delay: 0.8, duration: 1 }}
                 className="body-1 text-n-3 mb-8 leading-relaxed"
               >
-                Explore the structured dashboards, automation workflows, and integrated systems we’ve built to improve operational clarity, streamline processes, and support scalable business growth.
+                Explore the structured dashboards, automation workflows, and
+                integrated systems we’ve built to improve operational clarity,
+                streamline processes, and support scalable business growth.
               </motion.p>
 
               <motion.div
