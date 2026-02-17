@@ -40,6 +40,7 @@ const kumbh = Kumbh_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.solvorrtech.com"),
   title:
     "Solvorr Tech – Modern Web Applications, Automation & Digital Solutions",
   description:
