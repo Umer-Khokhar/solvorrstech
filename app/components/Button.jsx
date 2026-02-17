@@ -195,9 +195,7 @@ const BaseButton = React.forwardRef(
         {(variant === "primary" ||
           variant === "gradient" ||
           variant === "premium") && (
-          <span
-            className="absolute inset-0 rounded-2xl opacity-[0.03] pointer-events-none mix-blend-overlay"
-          />
+          <span className="absolute inset-0 rounded-2xl opacity-[0.03] pointer-events-none mix-blend-overlay" />
         )}
 
         {/* Animated glow ring for premium */}
@@ -269,8 +267,8 @@ export const SecondaryButton = React.forwardRef((props, ref) => (
 ));
 SecondaryButton.displayName = "SecondaryButton";
 
-export const OutlineButton = React.forwardRef((props, className,  ref) => (
-  <BaseButton ref={ref} variant="outline" {...props} className={className} />
+export const OutlineButton = React.forwardRef((props, ref) => (
+  <BaseButton ref={ref} variant="outline" {...props} />
 ));
 OutlineButton.displayName = "OutlineButton";
 
