@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import {
   Facebook,
   Github,
@@ -16,8 +16,12 @@ import { useTheme } from "next-themes";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [mounted, setMounted] = useState(false); // add this
   const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+
+  useEffect(() => setMounted(true), []); // add this
+
+  const isDark = mounted && resolvedTheme === "dark"; // fix this
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },

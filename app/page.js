@@ -1,4 +1,10 @@
-import { Services, Collaboration, Hero, OurStory, Work } from "@/app/components";
+import {
+  Services,
+  Collaboration,
+  Hero,
+  OurStory,
+  Work,
+} from "@/app/components";
 import { ButtonGradient } from "./assets/svg";
 import PortfolioSection from "@/app/components/PortfolioSection";
 import { robot } from "./assets";
@@ -10,18 +16,18 @@ import { TechBackground } from "@/app/components/index.js";
 const Home = () => {
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Hero/>
+      <div className="overflow-hidden">
+        <Hero />
         <Services />
         <OurStory />
         <Collaboration />
         <Work />
         <WhyChooseUs />
-          <MasonryTestimonials />
-          <Faqs />
-          <Cta />
+        <MasonryTestimonials />
+        <Faqs />
+        <Cta />
       </div>
-      <ButtonGradient/>
+      <ButtonGradient />
     </>
   );
 };

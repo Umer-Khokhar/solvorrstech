@@ -9,7 +9,6 @@ import TechStack from "@/app/components/servicePage/TechStack";
 import MasonryTestimonials from "@/app/components/Testimonials";
 import Faqs from "@/app/components/Faqs";
 import Cta from "@/app/components/Cta";
-import BreadcrumbNav from "@/app/components/BreadcrumbNav";
 import services from "@/lib/services.json";
 
 export async function generateStaticParams() {
@@ -193,16 +192,6 @@ const Page = async ({ params }) => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationSchema),
         }}
-      />
-
-      {/* Breadcrumb Navigation */}
-      <BreadcrumbNav
-        items={[
-          {
-            label: service.title,
-            href: `/${service.slug}`,
-          },
-        ]}
       />
 
       <ServiceHero content={heroContent} />
