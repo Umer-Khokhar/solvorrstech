@@ -66,19 +66,23 @@ const BlogGrid = () => {
                       </div>
 
                       {/* Date Overlay */}
-                      <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 text-[0.7rem] font-medium">
-                        <Calendar size={12} className="text-color-1" />
-                        {data.publishDate}
-                      </div>
+                      {data.publishDate && (
+                        <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 text-[0.7rem] font-medium">
+                          <Calendar size={12} className="text-color-1" />
+                          {data.publishDate}
+                        </div>
+                      )}
                     </div>
 
                     {/* Content section */}
                     <div className="px-8 pb-8 pt-4 flex flex-col flex-1">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="flex items-center gap-1 text-[0.65rem] font-bold text-n-4 tracking-tight uppercase">
-                          <Clock size={12} className="text-color-1" />
-                          {data.readTime}
-                        </div>
+                        {data.readTime && (
+                          <div className="flex items-center gap-1 text-[0.65rem] font-bold text-n-4 tracking-tight uppercase">
+                            <Clock size={12} className="text-color-1" />
+                            {data.readTime}
+                          </div>
+                        )}
                       </div>
 
                       <h3 className="h5 mb-4 text-n-1 dark:text-n-1 group-hover:text-color-1 transition-colors leading-[1.3] font-semibold">
@@ -95,14 +99,14 @@ const BlogGrid = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-color-1 to-color-2 rounded-full blur-[2px] opacity-50"></div>
                             <div className="relative w-full h-full rounded-full bg-n-8 flex items-center justify-center text-white font-bold text-[0.6rem] border border-white/10 overflow-hidden">
                               <span className="relative z-10">
-                                {data.author.avatar}
+                                {data.author?.avatar || "S"}
                               </span>
                               <div className="absolute inset-0 bg-gradient-to-tr from-color-1/20 to-transparent"></div>
                             </div>
                           </div>
                           <div className="flex flex-col">
                             <span className="text-[0.7rem] font-bold text-n-1 dark:text-n-1 leading-none">
-                              {data.author.name}
+                              {data.author?.name || "Solvorr Team"}
                             </span>
                             <span className="text-[0.6rem] text-n-4 font-medium uppercase tracking-widest mt-1">
                               Author
