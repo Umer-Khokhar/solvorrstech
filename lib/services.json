@@ -6,7 +6,7 @@
     "text": "A structured system to manage leads, clients, and invoicing — designed to bring clarity, consistency, and real operational visibility to growing businesses.",
     "backgroundUrl": "assets/benefits/card-1.svg",
     "iconUrl": "dashboard",
-    "imageUrl": "./services/service1.png",
+    "imageUrl": "./services/service111.png",
     "detailPage": {
       "heroTitle": "Manage Your Leads and Invoicing From One Structured System",
       "heroSubTitle": "We design and deploy business dashboards that centralize your sales pipeline, client records, and billing workflows — giving you reliable visibility over daily operations, cash flow, and team activity.",
@@ -93,7 +93,7 @@
     "text": "No-code and low-code automation systems that connect your lead sources, communication tools, and invoicing into efficient, reliable workflows that reduce delays and manual dependency.",
     "backgroundUrl": "assets/benefits/card-4.svg",
     "iconUrl": "automation",
-    "imageUrl": "./services/service2.jpeg",
+    "imageUrl": "./services/service22.png",
     "detailPage": {
       "heroTitle": "Automate Repetitive Tasks and Keep Your Team Focused",
       "heroSubTitle": "We connect your existing tools into structured workflows that improve response time, eliminate manual bottlenecks, and keep your operations running consistently — without unnecessary custom development.",
@@ -180,12 +180,12 @@
   },
   {
   "id": "2",
-  "slug": "local-search-visibility-optimization",
-  "title": "Local Search & Visibility Optimization",
+  "slug": "local-search-visibility-engine",
+  "title": "Local Search & Visibility Engine",
   "text": "Structured local search optimization focused on improving Google visibility, strengthening digital credibility, and increasing inbound inquiries from high-intent local searches.",
   "backgroundUrl": "assets/benefits/card-2.svg",
   "iconUrl": "seo",
-  "imageUrl": "./services/seo.avif",
+  "imageUrl": "./services/service3.png",
   "detailPage": {
     "heroTitle": "Strengthen Your Local Search Presence and Digital Authority",
     "heroSubTitle": "We improve your visibility across Google Search and Maps through structured optimization strategies that enhance credibility, discoverability, and sustainable inbound growth.",
@@ -195,9 +195,7 @@
       "subTitle": "Strategic optimization focused on discoverability, credibility, and long-term performance.",
       "description": [
         "For local businesses, search visibility is often the primary driver of inbound inquiries. When your presence is weak or poorly optimized, potential customers choose competitors who appear more visible and trustworthy.",
-        "Our Local Search & Visibility Optimization service strengthens your digital footprint by improving how your business appears across Google Search and Maps. We focus on structured enhancements that increase relevance, credibility, and local authority.",
-        "Rather than relying on short-term ranking tactics, we build sustainable visibility signals that improve your long-term positioning within your service area.",
-        "The outcome is stronger discoverability, improved customer trust, and a more reliable channel for inbound inquiries aligned with your operational goals."
+        "Our Local Search & Visibility Optimization service strengthens your digital footprint by improving how your business appears across Google Search and Maps. We focus on structured enhancements that increase relevance, credibility, and local authority."
       ],
       "image": ""
     },

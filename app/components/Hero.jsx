@@ -59,12 +59,12 @@ const Hero = () => {
           <div className="space-y-6 max-w-4xl">
             <BlurIn isLCP>
               <h1 className="h1 font-bold tracking-tight">
-                Custom Dashboards & Automation Systems Built to Scale Your Business
+                Build Structured Growth Systems for Service driven Businesses
               </h1>
             </BlurIn>
             <FadeIn delay={0.4}>
               <p className="body-1 text-n-3 dark:text-n-4 max-w-3xl mx-auto">
-                We design structured dashboards and automation systems that centralize your operations, eliminate manual work, and give you full control over your business.
+                We design Operations Dashboards, Workflow Automation, and Local Search & Visibility strategies that bring clarity to leads, invoicing, workflows, and digital presence without operational chaos.
               </p>
             </FadeIn>
           </div>

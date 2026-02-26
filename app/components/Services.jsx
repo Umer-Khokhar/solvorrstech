@@ -30,16 +30,16 @@ const Services = () => {
 
           <FadeIn delay={0.1}>
             <h2
-              className="h2 font-semibold text-n-1 dark:text-white leading-[1.1] tracking-tight mb-8"
+              className="h2 font-semibold text-n-1 max-w-7xl leading-[1.1] mb-8"
               style={{ fontFamily: "var(--font-clash-grotesk)" }}
             >
-             Systems That Power Your Business Growth
+             Solutions Built to Improve Operations and Visibility
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="body-1 text-n-3 dark:text-n-4 max-w-2xl">
-              Our services are built to solve real operational problems  from client management and financial tracking to inventory control and workflow automation  all inside structured, scalable systems.
+            <p className="body-1 text-n-3 dark:text-n-4 max-w-4xl">
+              Choose the service you need today, dashboards for control, automation for consistency, and local search optimization for discoverability. Each is designed to support growth without operational chaos.
             </p>
           </FadeIn>
         </div>
