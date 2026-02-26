@@ -8,44 +8,44 @@ import { TechBackground } from ".";
 export default function Faqs() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const faqs = [
-    {
-      id: 1,
-      question: "What services does Solvorr Tech provide?",
-      answer:
-        "Solvorr Tech specializes in custom software development, cloud infrastructure solutions, AI/ML implementation, and digital transformation services. We help businesses automate processes, improve scalability, and leverage cutting-edge technologies to stay competitive in rapidly evolving markets.",
-    },
-    {
-      id: 2,
-      question: "How long does a typical project take?",
-      answer:
-        "Project timelines vary based on scope and complexity. Small projects typically take 4-8 weeks, medium projects 2-4 months, and enterprise solutions can take 6+ months. We provide detailed timelines during the discovery phase and maintain transparent communication throughout.",
-    },
-    {
-      id: 3,
-      question: "What technologies do you specialize in?",
-      answer:
-        "We work across the full technology stack including React, Node.js, Python, AWS, Google Cloud, Azure, Docker, Kubernetes, and modern databases. Our team stays current with emerging technologies and recommends solutions tailored to your specific business needs.",
-    },
-    {
-      id: 4,
-      question: "Do you provide ongoing support after project completion?",
-      answer:
-        "Absolutely. We offer comprehensive post-launch support including bug fixes, performance optimization, security updates, and feature enhancements. Our maintenance packages are flexible and scalable based on your requirements.",
-    },
-    {
-      id: 5,
-      question: "How do you ensure project security and data protection?",
-      answer:
-        "Security is embedded in every phase of our development process. We follow industry best practices including OWASP guidelines, conduct regular security audits, implement encryption protocols, and ensure GDPR/CCPA compliance. Your data protection is our top priority.",
-    },
-    {
-      id: 6,
-      question: "Can you work with existing legacy systems?",
-      answer:
-        "Yes, we have extensive experience modernizing and integrating legacy systems with new technologies. We can gradually migrate your infrastructure, improve performance, and reduce technical debt without disrupting your operations.",
-    },
-  ];
+ const faqs = [
+  {
+    id: 1,
+    question: "What does Solvorr Tech specialize in?",
+    answer:
+      "Solvorr Tech builds structured business systems that help growing companies manage operations and improve visibility. We specialize in Business Operations Dashboards, Workflow Automation, and Local Search & Visibility Optimization to bring clarity and efficiency to core processes.",
+  },
+  {
+    id: 2,
+    question: "Who are your services best suited for?",
+    answer:
+      "Our services are designed for growing small and mid-sized businesses that rely on structured operations, lead management, and local visibility. If your business is managing leads, invoicing, or internal processes manually, we help centralize and streamline those systems.",
+  },
+  {
+    id: 3,
+    question: "Do you build fully custom dashboards?",
+    answer:
+      "We design dashboards around your workflow while maintaining a structured framework to ensure reliability and scalability. This approach allows us to deliver tailored systems without introducing unnecessary complexity or instability.",
+  },
+  {
+    id: 4,
+    question: "What kind of automation do you implement?",
+    answer:
+      "We implement practical workflow automation such as lead routing, follow-up reminders, invoice notifications, and tool integrations. Our focus is on reducing repetitive tasks and improving operational consistency without over-engineering your processes.",
+  },
+  {
+    id: 5,
+    question: "What results can we expect from Local Search & Visibility Optimization?",
+    answer:
+      "Our approach focuses on strengthening your local search presence through structured optimization. This improves discoverability, credibility, and long-term visibility on Google Search and Maps, supporting consistent inbound inquiries over time.",
+  },
+  {
+    id: 6,
+    question: "Do you provide ongoing support after implementation?",
+    answer:
+      "Yes. We provide structured post-deployment support to ensure stability, usability, and continuous improvement. As your business evolves, we can refine workflows, expand modules, and optimize visibility strategies accordingly.",
+  },
+];
 
   const toggleFAQ = (id) => {
     setActiveIndex(activeIndex === id ? null : id);

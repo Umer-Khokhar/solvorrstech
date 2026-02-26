@@ -1,100 +1,80 @@
 [
   {
     "id": "0",
-    "slug": "business-operations-dashboards",
-    "title": "Business Operations Dashboards",
-    "text": "Custom-built business management dashboards that centralize client management, financial tracking, team performance, inventory control, and reporting into one structured system.",
+    "slug": "business-operations-dashboard",
+    "title": "Business Operations Dashboard",
+    "text": "A structured system to manage leads, clients, and invoicing — designed to bring clarity, consistency, and real operational visibility to growing businesses.",
     "backgroundUrl": "assets/benefits/card-1.svg",
     "iconUrl": "dashboard",
     "imageUrl": "./services/service1.png",
     "detailPage": {
-      "heroTitle": "Custom Business Dashboards That Bring Structure to Growing Companies",
-      "heroSubTitle": "We design and build centralized business control systems that eliminate operational chaos and give founders real visibility over clients, revenue, teams, and performance.",
+      "heroTitle": "Manage Your Leads and Invoicing From One Structured System",
+      "heroSubTitle": "We design and deploy business dashboards that centralize your sales pipeline, client records, and billing workflows — giving you reliable visibility over daily operations, cash flow, and team activity.",
       "heroImage": "",
       "overview": {
-        "title": "Stop Running Your Business on Spreadsheets and Scattered Tools",
-        "subTitle": "We transform disconnected operations into one intelligent, scalable system.",
+        "title": "From Scattered Tools to Structured Operations",
+        "subTitle": "Gain clarity, control, and confidence across leads, clients, and revenue.",
         "description": [
-          "Many growing businesses manage clients in WhatsApp, track payments in spreadsheets, monitor inventory manually, and assign tasks through informal communication. This fragmented structure leads to lost data, delayed decisions, financial blind spots, and operational inefficiencies.",
-          "Solvorr Tech builds custom business dashboards that act as a centralized operational backbone. From client lifecycle management to revenue tracking, from inventory monitoring to internal task allocation — everything lives inside one secure and structured system.",
-          "These are not template dashboards. We architect systems around how your business actually operates, ensuring long-term scalability, data clarity, and leadership control."
+          "Growing businesses often operate across multiple disconnected tools — leads handled in WhatsApp, client information stored inconsistently, invoices created manually, and payments tracked through messages or spreadsheets. Over time, this fragmentation creates confusion, missed follow-ups, inaccurate numbers, and unnecessary operational stress.",
+          "Our Business Operations Dashboard replaces scattered processes with a unified system where leads, clients, and billing workflows live in one structured environment. Every interaction, status change, and financial record becomes traceable, organized, and easy to manage."
         ],
         "image": ""
       },
       "subServices": [
         {
           "icon": "Users",
-          "title": "Client & CRM Management Systems",
-          "description": "Structured CRM dashboards to manage leads, active clients, communication logs, project history, contract records, and revenue tracking in one controlled environment."
-        },
-        {
-          "icon": "CheckSquare",
-          "title": "Team & Task Management Systems",
-          "description": "Role-based internal dashboards to assign responsibilities, track deadlines, measure productivity, and create accountability across departments."
-        },
-        {
-          "icon": "Folder",
-          "title": "Project & Operations Tracking",
-          "description": "End-to-end visibility of project stages, deliverables, workflow progress, and operational bottlenecks."
+          "title": "Lead & Client Management",
+          "description": "Track leads through clearly defined pipeline stages, convert prospects into clients, maintain complete contact history, and assign ownership across your team. This creates accountability, improves follow-ups, and prevents valuable opportunities from slipping through the cracks."
         },
         {
           "icon": "FileText",
-          "title": "Financial & Revenue Management",
-          "description": "Integrated invoicing systems, payment tracking, cash flow monitoring, and revenue analytics for financial clarity."
+          "title": "Invoicing & Billing",
+          "description": "Generate invoices within a structured workflow, monitor payment status, track receivables, and maintain organized financial records. Eliminate manual tracking confusion while improving billing accuracy and revenue visibility."
         },
         {
           "icon": "BarChart",
-          "title": "Inventory & Performance Analytics",
-          "description": "Live dashboards tracking stock levels, operational KPIs, and business intelligence insights."
+          "title": "Basic Reporting",
+          "description": "Access simple yet meaningful summaries including revenue overviews, lead conversion metrics, and outstanding payment visibility. These insights support faster decisions and provide clarity without overwhelming complexity."
         }
       ],
       "serviceBenefits": [
         {
-          "title": "Full Operational Visibility",
-          "description": "Founders gain real-time clarity over revenue, clients, inventory, and internal workflows without relying on manual updates.",
-          "image": ""
+          "title": "Operational Visibility",
+          "description": "Gain clear insight into your sales pipeline, client activity, and billing status. Know exactly what is happening across your business instead of relying on fragmented updates and manual tracking."
         },
         {
-          "title": "Reduced Operational Errors",
-          "description": "Structured systems eliminate duplicate data entry and reduce dependency on human memory.",
-          "image": ""
+          "title": "Structured Workflow",
+          "description": "Replace informal processes with defined operational flows. Reduce confusion, prevent overlooked tasks, and create consistency across how your team manages leads and financial records."
         },
         {
-          "title": "Centralized Data Control",
-          "description": "All core business information is secured and accessible through role-based permissions.",
-          "image": ""
+          "title": "Financial Clarity",
+          "description": "Understand receivables, payment status, and revenue performance at a glance. Improve decision-making with reliable numbers instead of scattered estimates."
         },
         {
-          "title": "Built for Growth",
-          "description": "Your dashboard evolves as your team size, client base, and operational complexity increase.",
-          "image": ""
+          "title": "Growth-Ready Foundation",
+          "description": "Build a clean operational system that can expand alongside your business. Add modules, workflows, and users without rebuilding from scratch."
         }
       ],
       "serviceProccess": [
         {
-          "title": "Operational Assessment",
-          "description": "We study your current workflow, reporting structure, and inefficiencies.",
-          "image": ""
+          "title": "Workflow Assessment",
+          "description": "We analyze how your leads, clients, and billing processes currently operate. This helps identify inefficiencies, missing visibility, and structural gaps."
         },
         {
-          "title": "System Architecture Planning",
-          "description": "We design database structures, feature maps, and dashboard layouts.",
-          "image": ""
+          "title": "System Design",
+          "description": "We define the data structure, user roles, and dashboard layout based on your workflow. The focus is usability, clarity, and long-term maintainability."
         },
         {
-          "title": "Custom Development",
-          "description": "Secure backend and scalable frontend dashboard development.",
-          "image": ""
+          "title": "Build & Configure",
+          "description": "We develop and configure the dashboard modules, ensuring calculations, logic, and workflows align with your operational requirements."
         },
         {
-          "title": "Testing & Validation",
-          "description": "Ensuring accuracy, performance, and system stability.",
-          "image": ""
+          "title": "Validation",
+          "description": "We test the system for accuracy, usability, and reliability. This stage ensures the dashboard performs consistently in real-world scenarios."
         },
         {
-          "title": "Deployment & Support",
-          "description": "System launch, onboarding guidance, and continuous improvement.",
-          "image": ""
+          "title": "Handover & Support",
+          "description": "We onboard your team, refine workflows based on usage, and provide guidance to ensure smooth adoption and practical day-to-day use."
         }
       ],
       "technologies": [
@@ -102,260 +82,188 @@
         "/tech-icons/React.svg",
         "/tech-icons/Node.js.svg",
         "/tech-icons/PostgresSQL.svg",
-        "/tech-icons/MongoDB.svg",
-        "/tech-icons/TypeScript.svg",
-        "/tech-icons/Docker.svg"
-      ],
-      "starterOffer": {
-        "title": "Small Business Starter Dashboard",
-        "startingFrom": "$300",
-        "description": "Best for small teams managing clients and payments manually.",
-        "includes": [
-          "Client Management (CRUD)",
-          "Basic Invoice & Payment Tracking",
-          "Admin Login & Role Control",
-          "Simple Revenue Overview"
-        ],
-        "cta": "Request Starter Setup"
-      }
+        "/tech-icons/TypeScript.svg"
+      ]
     }
   },
   {
     "id": "1",
-    "slug": "workflow-business-automation",
-    "title": "Workflow & Business Automation",
-    "text": "Strategic workflow automation systems that integrate your tools, eliminate repetitive tasks, and create seamless operational efficiency.",
+    "slug": "workflow-automation",
+    "title": "Workflow & Process Automation",
+    "text": "No-code and low-code automation systems that connect your lead sources, communication tools, and invoicing into efficient, reliable workflows that reduce delays and manual dependency.",
     "backgroundUrl": "assets/benefits/card-4.svg",
     "iconUrl": "automation",
     "imageUrl": "./services/service2.jpeg",
     "detailPage": {
-      "heroTitle": "Automate Repetitive Work and Reclaim Operational Efficiency",
-      "heroSubTitle": "We connect your dashboards, CRM, payment systems, website, and communication tools into intelligent automated workflows.",
+      "heroTitle": "Automate Repetitive Tasks and Keep Your Team Focused",
+      "heroSubTitle": "We connect your existing tools into structured workflows that improve response time, eliminate manual bottlenecks, and keep your operations running consistently — without unnecessary custom development.",
       "heroImage": "",
       "overview": {
-        "title": "Manual Processes Are Slowing Your Business Down",
-        "subTitle": "Automation creates speed, consistency, and scalable operations.",
+        "title": "Remove Manual Bottlenecks From Your Core Processes",
+        "subTitle": "Simple, reliable automation designed for real operational efficiency.",
         "description": [
-          "Businesses waste countless hours manually transferring data, sending reminders, updating spreadsheets, confirming orders, and following up with clients.",
-          "Solvorr Tech builds workflow automation systems that connect your entire tech stack — dashboards, e-commerce platforms, booking systems, WhatsApp, payment gateways, and APIs — into structured automation flows.",
-          "Our goal is simple: reduce human workload, eliminate process delays, and create reliable systems that operate 24/7 without supervision."
+          "Manual processes such as lead routing, follow-up reminders, status updates, and payment notifications often consume significant time while increasing the risk of human error. As businesses grow, these repetitive tasks become operational friction points that slow response times and create inconsistencies.",
+          "Our Workflow & Process Automation service streamlines these tasks by connecting your existing tools into structured workflows. Instead of replacing your systems, we enhance them — ensuring smoother coordination between forms, messaging apps, dashboards, and billing processes.",
+          "Using proven automation platforms, we design logic-driven workflows that trigger actions automatically, ensuring important events are handled instantly and consistently. This improves speed, reliability, and operational discipline.",
+          "The result is a business environment where repetitive work is minimized, critical actions happen on time, and your team can focus on higher-value activities rather than administrative overhead."
         ],
         "image": ""
       },
       "subServices": [
         {
-          "icon": "ShoppingCart",
-          "title": "E-Commerce Automation",
-          "description": "Order processing, status updates, CRM syncing, and automated customer communication."
-        },
-        {
           "icon": "Zap",
-          "title": "Lead & Sales Automation",
-          "description": "Automatic lead capture, routing, tagging, and follow-up sequences."
+          "title": "Lead Routing Automation",
+          "description": "Automatically assign leads to the appropriate team members based on predefined rules. Reduce delays, improve response time, and create accountability within your sales workflow."
         },
         {
-          "icon": "Calendar",
-          "title": "Booking & Reminder Systems",
-          "description": "Appointment confirmations, reminder notifications, and scheduling workflows."
+          "icon": "MessageSquare",
+          "title": "Follow-Up & Reminder Triggers",
+          "description": "Set up automated reminders and notifications via WhatsApp, email, or internal alerts. Maintain process consistency and prevent tasks from being forgotten."
+        },
+        {
+          "icon": "FileText",
+          "title": "Invoice & Payment Notifications",
+          "description": "Trigger structured billing events such as payment reminders, status updates, and confirmations. Improve receivable management while reducing manual tracking."
         },
         {
           "icon": "Database",
-          "title": "Data Sync & API Integrations",
-          "description": "Secure data synchronization between internal systems and third-party tools."
-        },
-        {
-          "icon": "Bell",
-          "title": "Operational Alerts & Notifications",
-          "description": "Real-time internal alerts to prevent bottlenecks and missed actions."
+          "title": "Tool Integration",
+          "description": "Connect forms, spreadsheets, dashboards, and communication tools into unified workflows. Ensure data flows reliably between systems without repetitive manual updates."
         }
       ],
       "serviceBenefits": [
         {
-          "title": "Save Time & Operational Costs",
-          "description": "Reduce repetitive manual work across departments.",
-          "image": ""
+          "title": "Faster Response Time",
+          "description": "Leads, updates, and operational events trigger immediate actions. Reduce delays caused by manual processing."
         },
         {
-          "title": "Increase Process Speed",
-          "description": "Automated systems execute instantly and consistently.",
-          "image": ""
+          "title": "Less Manual Work",
+          "description": "Eliminate repetitive administrative tasks and reduce team workload. Improve efficiency without adding complexity."
         },
         {
-          "title": "Reduce Human Error",
-          "description": "Minimize mistakes caused by manual data handling.",
-          "image": ""
+          "title": "Fewer Errors",
+          "description": "Structured workflows reduce inconsistencies, missed steps, and human mistakes."
         },
         {
-          "title": "Scalable Workflow Infrastructure",
-          "description": "Designed to handle increasing operational volume.",
-          "image": ""
+          "title": "Scales With You",
+          "description": "Automation supports higher operational volume without increasing chaos or administrative burden."
         }
       ],
       "serviceProccess": [
         {
-          "title": "Workflow Mapping",
-          "description": "Identify repetitive tasks and inefficiencies.",
-          "image": ""
+          "title": "Process Mapping",
+          "description": "We analyze your workflows to identify repetitive tasks, inefficiencies, and automation opportunities."
         },
         {
           "title": "Automation Design",
-          "description": "Define triggers, logic flows, and integration structure.",
-          "image": ""
+          "description": "We define triggers, logic, conditions, and tool connections to ensure reliability and operational fit."
         },
         {
-          "title": "Implementation",
-          "description": "Deploy secure automation systems using APIs and workflow engines.",
-          "image": ""
+          "title": "Build & Test",
+          "description": "We configure workflows and simulate real scenarios to validate stability, accuracy, and performance."
         },
         {
-          "title": "Testing",
-          "description": "Simulate real scenarios to ensure reliability.",
-          "image": ""
+          "title": "Go Live",
+          "description": "We deploy automation systems while monitoring initial performance and behavior."
         },
         {
-          "title": "Optimization & Monitoring",
-          "description": "Continuous refinement of automation performance.",
-          "image": ""
+          "title": "Refinement",
+          "description": "We optimize workflows based on real usage, operational feedback, and evolving requirements."
         }
       ],
       "technologies": [
         "/tech-icons/Node.js.svg",
         "/tech-icons/Python.svg",
-        "/tech-icons/AWS.svg",
-        "/tech-icons/Docker.svg",
-        "/tech-icons/Postman.svg"
-      ],
-      "starterOffer": {
-        "title": "Starter Automation Setup",
-        "startingFrom": "$150",
-        "description": "Best for businesses handling leads and follow-ups manually.",
-        "includes": [
-          "Form → CRM / Sheet Integration",
-          "Email Notification Setup",
-          "Basic Workflow Logic",
-          "Webhook / API Integration"
-        ],
-        "cta": "Request Automation Setup"
-      }
+        "/tech-icons/Docker.svg"
+      ]
     }
   },
   {
-    "id": "2",
-    "slug": "business-websites-growth",
-    "title": "Business Websites & System Integration",
-    "text": "Strategic business websites built as front-end systems that integrate directly with dashboards, automation workflows, and lead management.",
-    "backgroundUrl": "assets/benefits/card-2.svg",
-    "iconUrl": "seo",
-    "imageUrl": "./services/website.avif",
-    "detailPage": {
-      "heroTitle": "Websites That Connect Directly to Your Business Systems",
-      "heroSubTitle": "We build fast, structured websites that integrate with your dashboards and automation workflows — turning traffic into organized data.",
-      "heroImage": "",
-      "overview": {
-        "title": "Your Website Should Feed Your System — Not Create More Chaos",
-        "subTitle": "We build websites that act as structured data entry points into your business ecosystem.",
-        "description": [
-          "Most businesses treat websites as isolated marketing assets. But when websites are not connected to internal systems, leads get lost, data becomes fragmented, and operational follow-ups break down.",
-          "At Solvorr Tech, we build structured websites designed to integrate directly with your dashboards and automation systems. Every form submission, booking request, or inquiry automatically enters your CRM, triggers workflows, and updates your operational dashboard.",
-          "This creates a seamless flow from visitor to client — without manual intervention."
-        ],
-        "image": ""
+  "id": "2",
+  "slug": "local-search-visibility-optimization",
+  "title": "Local Search & Visibility Optimization",
+  "text": "Structured local search optimization focused on improving Google visibility, strengthening digital credibility, and increasing inbound inquiries from high-intent local searches.",
+  "backgroundUrl": "assets/benefits/card-2.svg",
+  "iconUrl": "seo",
+  "imageUrl": "./services/seo.avif",
+  "detailPage": {
+    "heroTitle": "Strengthen Your Local Search Presence and Digital Authority",
+    "heroSubTitle": "We improve your visibility across Google Search and Maps through structured optimization strategies that enhance credibility, discoverability, and sustainable inbound growth.",
+    "heroImage": "",
+    "overview": {
+      "title": "Local Visibility That Supports Real Business Growth",
+      "subTitle": "Strategic optimization focused on discoverability, credibility, and long-term performance.",
+      "description": [
+        "For local businesses, search visibility is often the primary driver of inbound inquiries. When your presence is weak or poorly optimized, potential customers choose competitors who appear more visible and trustworthy.",
+        "Our Local Search & Visibility Optimization service strengthens your digital footprint by improving how your business appears across Google Search and Maps. We focus on structured enhancements that increase relevance, credibility, and local authority.",
+        "Rather than relying on short-term ranking tactics, we build sustainable visibility signals that improve your long-term positioning within your service area.",
+        "The outcome is stronger discoverability, improved customer trust, and a more reliable channel for inbound inquiries aligned with your operational goals."
+      ],
+      "image": ""
+    },
+    "subServices": [
+      {
+        "icon": "MapPin",
+        "title": "Google Business Profile Optimization",
+        "description": "Enhance listing accuracy, service structure, and trust signals to improve visibility across Google Maps and local search results."
       },
-      "subServices": [
-        {
-          "icon": "Globe",
-          "title": "Structured Business Websites",
-          "description": "Professional websites built with performance, scalability, and system integration in mind."
-        },
-        {
-          "icon": "Target",
-          "title": "Lead Capture Architecture",
-          "description": "Optimized forms and landing pages connected directly to internal dashboards."
-        },
-        {
-          "icon": "Search",
-          "title": "Technical SEO Foundation",
-          "description": "Structured site architecture, schema implementation, and search optimization."
-        },
-        {
-          "icon": "MapPin",
-          "title": "Local Search Optimization",
-          "description": "Google Business and local visibility enhancement."
-        },
-        {
-          "icon": "TrendingUp",
-          "title": "Performance & Core Web Vitals",
-          "description": "Speed, UX optimization, and technical performance tuning."
-        }
-      ],
-      "serviceBenefits": [
-        {
-          "title": "No More Lost Leads",
-          "description": "Every inquiry enters your system automatically.",
-          "image": ""
-        },
-        {
-          "title": "Connected Business Infrastructure",
-          "description": "Website directly integrated with dashboards and automation.",
-          "image": ""
-        },
-        {
-          "title": "SEO-Optimized Architecture",
-          "description": "Built for long-term organic visibility.",
-          "image": ""
-        },
-        {
-          "title": "Scalable Digital Foundation",
-          "description": "Designed to support business growth without rebuilding.",
-          "image": ""
-        }
-      ],
-      "serviceProccess": [
-        {
-          "title": "Business & System Planning",
-          "description": "Define integration points between website and internal systems.",
-          "image": ""
-        },
-        {
-          "title": "UX & Conversion Strategy",
-          "description": "Design structured pages optimized for clarity and action.",
-          "image": ""
-        },
-        {
-          "title": "Development & Integration",
-          "description": "Build high-performance websites with system connectivity.",
-          "image": ""
-        },
-        {
-          "title": "SEO & Technical Setup",
-          "description": "Optimize structure, speed, and search visibility.",
-          "image": ""
-        },
-        {
-          "title": "Launch & Ongoing Optimization",
-          "description": "Monitor performance and continuously improve.",
-          "image": ""
-        }
-      ],
-      "technologies": [
-        "/tech-icons/Next.js.svg",
-        "/tech-icons/React.svg",
-        "/tech-icons/Tailwind-CSS.svg",
-        "/tech-icons/Vercel.svg",
-        "/tech-icons/TypeScript.svg"
-      ],
-      "starterOffer": {
-        "title": "Starter Business Website",
-        "startingFrom": "$250",
-        "description": "Best for small businesses needing a clean site with lead capture.",
-        "includes": [
-          "3–5 Page Website",
-          "Lead Capture Form",
-          "Basic SEO Setup",
-          "Integration Ready"
-        ],
-        "cta": "Request Website Setup"
+      {
+        "icon": "Search",
+        "title": "Local Search Strategy",
+        "description": "Align your digital presence with real service-area search behavior to strengthen relevance and discovery potential."
+      },
+      {
+        "icon": "FileText",
+        "title": "On-Page Optimization",
+        "description": "Improve content structure, headings, and page signals to support stronger local relevance and clarity."
+      },
+      {
+        "icon": "Shield",
+        "title": "Technical Search Enhancements",
+        "description": "Address indexing, crawl, and structural factors that influence search performance and visibility."
       }
-    }
+    ],
+    "serviceBenefits": [
+      {
+        "title": "Stronger Local Visibility",
+        "description": "Increase how frequently your business appears in relevant local searches."
+      },
+      {
+        "title": "Improved Digital Credibility",
+        "description": "Enhance trust signals that influence customer confidence and decision-making."
+      },
+      {
+        "title": "Higher Inbound Discovery",
+        "description": "Improve discoverability among customers actively searching for your services."
+      },
+      {
+        "title": "Sustainable Search Presence",
+        "description": "Build a long-term organic visibility foundation that supports consistent growth."
+      }
+    ],
+    "serviceProccess": [
+      {
+        "title": "Search Visibility Audit",
+        "description": "Assess current performance, local gaps, and discoverability limitations."
+      },
+      {
+        "title": "Optimization Strategy",
+        "description": "Define structured improvements across listings, content, and technical areas."
+      },
+      {
+        "title": "Implementation",
+        "description": "Apply optimization updates to strengthen visibility and relevance."
+      },
+      {
+        "title": "Performance Monitoring",
+        "description": "Track visibility signals and refine strategy based on measurable trends."
+      }
+    ],
+    "technologies": [
+      "/tech-icons/Google.svg",
+      "/tech-icons/Analytics.svg",
+      "/tech-icons/SearchConsole.svg"
+    ]
   }
+}
 ]

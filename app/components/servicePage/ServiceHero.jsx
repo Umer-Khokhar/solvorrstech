@@ -16,7 +16,7 @@ import FadeIn from "../animations/FadeIn";
 
 const ServiceHero = ({ content }) => {
   return (
-    <div className="bg-n-8 pt-16 md:pt-28 min-h-screen relative overflow-hidden">
+    <div className="bg-n-8 pt-16 md:pt-8 min-h-screen relative overflow-hidden">
       <TechBackground />
 
       <section className="relative py-20 md:py-32 overflow-hidden">
@@ -25,7 +25,7 @@ const ServiceHero = ({ content }) => {
             {/* Text Content */}
             <StaggerContainer className="text-center">
               <StaggerItem>
-                <h1 className="h1 font-bold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                <h1 className="h1 font-bold mb-6 mx-auto max-w-5xl leading-tight">
                   {content.title}
                 </h1>
               </StaggerItem>
