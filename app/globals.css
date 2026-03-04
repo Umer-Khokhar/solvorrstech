@@ -8,10 +8,10 @@
 :root {
   color-scheme: light;
 
-  --font-sora: "Kumbh Sans", sans-serif;
-  --font-clash-grotesk: var(--font-clash-grotesk);
+  --font-sora: var(--font-dm-sans), sans-serif;
+  --font-clash-grotesk: var(--font-dm-sans), sans-serif;
   --font-code: "Source Code Pro", monospace;
-  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-grotesk: var(--font-dm-sans), sans-serif;
 
   /* Colors - Trust-Building Palette */
   --color-color-1: #3b82f6; /* Primary Blue - Trust & Reliability */
@@ -175,9 +175,10 @@ body {
   --color-n-13: #94a3b8;
   --color-n-orange: #fb923c;
 
-  --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
   --font-code: var(--font-code);
-  --font-grotesk: var(--font-grotesk);
+  --font-grotesk: var(--font-dm-sans);
+  --font-clash-grotesk: var(--font-dm-sans);
 
   --tracking-tagline: 0.15em;
 

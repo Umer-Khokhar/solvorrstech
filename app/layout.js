@@ -1,42 +1,14 @@
-import { Kumbh_Sans } from "next/font/google";
-import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "@/app/globals.css";
 import { Footer, Header } from "@/app/components";
 import { ThemeProvider } from "./components/ThemeProvider";
 
-const clashGrotesk = localFont({
-  src: [
-    {
-      path: "../public/fonts/ClashGrotesk-Regular.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/ClashGrotesk-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/ClashGrotesk-Semibold.otf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/ClashGrotesk-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-clash-grotesk",
-  display: "swap",
-  preload: true,
-});
-
-const kumbh = Kumbh_Sans({
-  variable: "--font-kumbh",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -51,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={dmSans.variable} suppressHydrationWarning>
       <head>
         <link
           rel="preconnect"
@@ -73,9 +45,7 @@ export default function RootLayout({ children }) {
           fetchPriority="high"
         />
       </head>
-      <body
-        className={`${clashGrotesk.variable} ${kumbh.variable} antialiased`}
-      >
+      <body className={`${dmSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
