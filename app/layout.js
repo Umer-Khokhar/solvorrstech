@@ -52,6 +52,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="preconnect"
+          href="https://ik.imagekit.io"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://ik.imagekit.io/solvorrtech/Solvorr_Tech_Media/images/solvorr-light.webp?updatedAt=1770817367474"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="https://ik.imagekit.io/solvorrtech/Solvorr_Tech_Media/images/solvorr-dark.webp?updatedAt=1770817367465"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+      </head>
       <body
         className={`${clashGrotesk.variable} ${kumbh.variable} antialiased`}
       >

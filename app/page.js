@@ -1,11 +1,23 @@
-import {
-  Services,
-  Collaboration,
-  Hero,
-  OurStory,
-  Work,
-} from "@/app/components";
+import { Services, Hero, OurStory } from "@/app/components";
 import { ButtonGradient } from "./assets/svg";
+import dynamic from "next/dynamic";
+
+const Collaboration = dynamic(
+  () => import("@/app/components").then((mod) => mod.Collaboration),
+  { ssr: true },
+);
+const Work = dynamic(() => import("@/app/components").then((mod) => mod.Work), {
+  ssr: true,
+});
+const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"), {
+  ssr: true,
+});
+const MasonryTestimonials = dynamic(
+  () => import("@/app/components/Testimonials"),
+  { ssr: true },
+);
+const Faqs = dynamic(() => import("@/app/components/Faqs"), { ssr: true });
+const Cta = dynamic(() => import("@/app/components/Cta"), { ssr: true });
 
 export const metadata = {
   title: "Solvorr Tech | Custom Dashboards, Automation & Integrations",
@@ -31,13 +43,6 @@ export const metadata = {
   },
 };
 
-import PortfolioSection from "@/app/components/PortfolioSection";
-import { robot } from "./assets";
-import MasonryTestimonials from "@/app/components/Testimonials";
-import Faqs from "@/app/components/Faqs";
-import Cta from "@/app/components/Cta";
-import WhyChooseUs from "./components/WhyChooseUs";
-import { TechBackground } from "@/app/components/index.js";
 const Home = () => {
   return (
     <>

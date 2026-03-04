@@ -7,18 +7,20 @@ import { TechBackground } from ".";
 const Hero = () => {
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <TechBackground />
+      <div className="hidden lg:block">
+        <TechBackground />
+      </div>
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] animation-delay-2000 animate-pulse" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] animate-pulse hidden sm:block" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] animation-delay-2000 animate-pulse hidden sm:block" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto space-y-12">
           {/* Top Badge */}
           <FadeIn delay={0.2}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm transition-transform hover:scale-105 cursor-default">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-slate-900/50 sm:backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm transition-transform hover:scale-105 cursor-default">
               <div className="flex -space-x-2">
                 {[...Array(4)].map((_, i) => (
                   <div
@@ -55,16 +57,16 @@ const Hero = () => {
             </div>
           </FadeIn>
 
-          {/* Main Headline */}
           <div className="space-y-6 max-w-4xl">
-            <BlurIn isLCP>
-              <h1 className="h1 font-bold tracking-tight">
-                Build Structured Growth Systems for Service driven Businesses
-              </h1>
-            </BlurIn>
+            <h1 className="h1 font-bold tracking-tight animate-premium-lcp">
+              Build Structured Growth Systems for Service driven Businesses
+            </h1>
             <FadeIn delay={0.4}>
               <p className="body-1 text-n-3 dark:text-n-4 max-w-3xl mx-auto">
-                We design Operations Dashboards, Workflow Automation, and Local Search & Visibility strategies that bring clarity to leads, invoicing, workflows, and digital presence without operational chaos.
+                We design Operations Dashboards, Workflow Automation, and Local
+                Search & Visibility strategies that bring clarity to leads,
+                invoicing, workflows, and digital presence without operational
+                chaos.
               </p>
             </FadeIn>
           </div>

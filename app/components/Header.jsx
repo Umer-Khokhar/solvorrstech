@@ -12,13 +12,7 @@ import { solvorrLogoDark, solvorrLogoLight } from "@/app/assets";
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(false);
-  const [openMobileSubMenu, setOpenMobileSubMenu] = useState(false);
-  const [mounted, setMounted] = useState(false); // add this
-  const { resolvedTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []); // add this
-
-  const isDark = mounted && resolvedTheme === "dark";
+  const { theme, resolvedTheme } = useTheme();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -39,10 +33,22 @@ export default function Header() {
             aria-label="Solvorr Tech - Home"
           >
             <img
-              src={isDark ? solvorrLogoDark : solvorrLogoLight}
+              src={solvorrLogoLight}
               alt="Solvorr Tech"
               width={150}
-              className="h-auto"
+              height={40}
+              fetchPriority="high"
+              loading="eager"
+              className="h-auto block dark:hidden"
+            />
+            <img
+              src={solvorrLogoDark}
+              alt="Solvorr Tech"
+              width={150}
+              height={40}
+              fetchPriority="high"
+              loading="eager"
+              className="h-auto hidden dark:block"
             />
           </Link>
 
