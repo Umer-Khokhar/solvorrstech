@@ -1,6 +1,5 @@
 import { Star, Zap, Shield, Globe } from "lucide-react";
 import Image from "next/image";
-import { BlurIn, FadeIn, StaggerContainer, StaggerItem } from "./animations";
 import { PremiumButton, OutlineButton } from "./Button";
 import { TechBackground } from ".";
 
@@ -19,7 +18,10 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto space-y-12">
           {/* Top Badge */}
-          <FadeIn delay={0.2}>
+          <div
+            className="animate-premium-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-slate-900/50 sm:backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm transition-transform hover:scale-105 cursor-default">
               <div className="flex -space-x-2">
                 {[...Array(4)].map((_, i) => (
@@ -55,24 +57,30 @@ const Hero = () => {
                 </span>
               </div>
             </div>
-          </FadeIn>
+          </div>
 
           <div className="space-y-6 max-w-4xl">
             <h1 className="h1 font-bold tracking-tight animate-premium-lcp">
               Build Structured Growth Systems for Service driven Businesses
             </h1>
-            <FadeIn delay={0.4}>
+            <div
+              className="animate-premium-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <p className="body-1 text-n-3 dark:text-n-4 max-w-3xl mx-auto">
                 We design Operations Dashboards, Workflow Automation, and Local
                 Search & Visibility strategies that bring clarity to leads,
                 invoicing, workflows, and digital presence without operational
                 chaos.
               </p>
-            </FadeIn>
+            </div>
           </div>
 
           {/* CTA Buttons */}
-          <FadeIn delay={0.6}>
+          <div
+            className="animate-premium-fade-in"
+            style={{ animationDelay: "0.5s" }}
+          >
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <PremiumButton
                 size="lg"
@@ -91,22 +99,24 @@ const Hero = () => {
                 View Our Work
               </OutlineButton>
             </div>
-          </FadeIn>
+          </div>
 
           {/* Trust Section */}
           <div className="pt-8 w-full">
-            <FadeIn delay={0.8}>
+            <div
+              className="animate-premium-fade-in"
+              style={{ animationDelay: "0.7s" }}
+            >
               <p className="text-xs font-bold tracking-widest text-n-4/60 uppercase mb-8">
                 Trusted by innovative teams
               </p>
-            </FadeIn>
-            <StaggerContainer
-              delayChildren={1}
-              staggerChildren={0.1}
-              className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-80"
-            >
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-80">
               {/* Brand 1 */}
-              <StaggerItem>
+              <div
+                className="animate-premium-fade-in"
+                style={{ animationDelay: "0.8s" }}
+              >
                 <div className="group flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300 cursor-default">
                   <div className="w-8 h-8 rounded bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-blue-500/20">
                     A
@@ -115,9 +125,12 @@ const Hero = () => {
                     Acme Corp
                   </span>
                 </div>
-              </StaggerItem>
+              </div>
               {/* Brand 2 */}
-              <StaggerItem>
+              <div
+                className="animate-premium-fade-in"
+                style={{ animationDelay: "0.9s" }}
+              >
                 <div className="group flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300 cursor-default">
                   <div className="w-8 h-8 rounded bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-purple-500/20">
                     G
@@ -126,9 +139,12 @@ const Hero = () => {
                     GlobalTech
                   </span>
                 </div>
-              </StaggerItem>
+              </div>
               {/* Brand 3 */}
-              <StaggerItem>
+              <div
+                className="animate-premium-fade-in"
+                style={{ animationDelay: "1.0s" }}
+              >
                 <div className="group flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300 cursor-default">
                   <div className="w-8 h-8 rounded bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-orange-500/20">
                     S
@@ -137,9 +153,12 @@ const Hero = () => {
                     Startup.io
                   </span>
                 </div>
-              </StaggerItem>
+              </div>
               {/* Brand 4 */}
-              <StaggerItem>
+              <div
+                className="animate-premium-fade-in"
+                style={{ animationDelay: "1.1s" }}
+              >
                 <div className="group flex items-center gap-2 grayscale hover:grayscale-0 transition-all duration-300 cursor-default">
                   <div className="w-8 h-8 rounded bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-emerald-500/20">
                     N
@@ -148,28 +167,37 @@ const Hero = () => {
                     NextLevel
                   </span>
                 </div>
-              </StaggerItem>
-            </StaggerContainer>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Decorative Floating Elements */}
         <div className="hidden lg:block">
-          <FadeIn delay={1.2} direction="none">
+          <div
+            className="animate-premium-fade-in"
+            style={{ animationDelay: "1.2s" }}
+          >
             <div className="absolute top-1/4 left-10 w-16 h-16 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl flex items-center justify-center animate-[float_6s_ease-in-out_infinite] rotate-[-10deg] border border-slate-100 dark:border-slate-700">
               <Zap className="w-8 h-8 text-yellow-500" />
             </div>
-          </FadeIn>
-          <FadeIn delay={1.4} direction="none">
+          </div>
+          <div
+            className="animate-premium-fade-in"
+            style={{ animationDelay: "1.4s" }}
+          >
             <div className="absolute bottom-1/3 right-10 w-20 h-20 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl flex items-center justify-center animate-[float_7s_ease-in-out_infinite_1s] rotate-[10deg] border border-slate-100 dark:border-slate-700">
               <Globe className="w-10 h-10 text-blue-500" />
             </div>
-          </FadeIn>
-          <FadeIn delay={1.6} direction="none">
+          </div>
+          <div
+            className="animate-premium-fade-in"
+            style={{ animationDelay: "1.6s" }}
+          >
             <div className="absolute top-1/3 right-[15%] w-12 h-12 bg-white dark:bg-slate-800 rounded-xl shadow-xl flex items-center justify-center animate-[float_5s_ease-in-out_infinite_0.5s] border border-slate-100 dark:border-slate-700">
               <Shield className="w-6 h-6 text-green-500" />
             </div>
-          </FadeIn>
+          </div>
         </div>
       </div>
 

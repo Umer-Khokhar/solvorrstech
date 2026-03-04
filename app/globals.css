@@ -130,7 +130,7 @@ body {
   --color-color-6: #a78bfa;
   --color-color-7: #1e3a8a;
 
-  --animate-premium-lcp: premiumFadeInBlur 1s cubic-bezier(0.2, 0.65, 0.3, 0.9) 0.1s forwards;
+  --animate-premium-lcp: premiumFadeInBlur 1s cubic-bezier(0.2, 0.65, 0.3, 0.9) 0.1s both;
 
   @keyframes premiumFadeInBlur {
     0% {
@@ -141,6 +141,19 @@ body {
     100% {
       opacity: 1;
       filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+
+  --animate-premium-fade-in: premiumFadeIn 0.8s cubic-bezier(0.2, 0.65, 0.3, 0.9) both;
+
+  @keyframes premiumFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
       transform: translateY(0);
     }
   }

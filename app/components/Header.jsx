@@ -12,6 +12,7 @@ import { solvorrLogoDark, solvorrLogoLight } from "@/app/assets";
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(false);
+  const [openMobileSubMenu, setOpenMobileSubMenu] = useState(false);
   const { theme, resolvedTheme } = useTheme();
 
   const navItems = [
