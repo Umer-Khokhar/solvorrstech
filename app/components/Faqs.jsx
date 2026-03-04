@@ -1,54 +1,71 @@
 "use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus, MessageCircle, HelpCircle } from "lucide-react";
-import { FadeIn, StaggerContainer, StaggerItem } from "./animations";
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { PlusIcon, MessageCircle, HelpCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+} from "@/components/ui/accordion";
+import { FadeIn } from "./animations";
 import { TechBackground } from ".";
 
 export default function Faqs() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const faqs = [
+    {
+      id: "1",
+      question: "What does Solvorr Tech specialize in?",
+      answer:
+        "Solvorr Tech builds structured business systems that help growing companies manage operations and improve visibility. We specialize in Business Operations Dashboards, Workflow Automation, and Local Search & Visibility Optimization to bring clarity and efficiency to core processes.",
+    },
+    {
+      id: "2",
+      question: "Who are your services best suited for?",
+      answer:
+        "Our services are designed for growing small and mid-sized businesses that rely on structured operations, lead management, and local visibility. If your business is managing leads, invoicing, or internal processes manually, we help centralize and streamline those systems.",
+    },
+    {
+      id: "3",
+      question: "Do you build fully custom dashboards?",
+      answer:
+        "We design dashboards around your workflow while maintaining a structured framework to ensure reliability and scalability. This approach allows us to deliver tailored systems without introducing unnecessary complexity or instability.",
+    },
+    {
+      id: "4",
+      question: "What kind of automation do you implement?",
+      answer:
+        "We implement practical workflow automation such as lead routing, follow-up reminders, invoice notifications, and tool integrations. Our focus is on reducing repetitive tasks and improving operational consistency without over-engineering your processes.",
+    },
+    {
+      id: "5",
+      question:
+        "What results can we expect from Local Search & Visibility Optimization?",
+      answer:
+        "Our approach focuses on strengthening your local search presence through structured optimization. This improves discoverability, credibility, and long-term visibility on Google Search and Maps, supporting consistent inbound inquiries over time.",
+    },
+    {
+      id: "6",
+      question: "Do you provide ongoing support after implementation?",
+      answer:
+        "Yes. We provide structured post-deployment support to ensure stability, usability, and continuous improvement. As your business evolves, we can refine workflows, expand modules, and optimize visibility strategies accordingly.",
+    },
+  ];
 
- const faqs = [
-  {
-    id: 1,
-    question: "What does Solvorr Tech specialize in?",
-    answer:
-      "Solvorr Tech builds structured business systems that help growing companies manage operations and improve visibility. We specialize in Business Operations Dashboards, Workflow Automation, and Local Search & Visibility Optimization to bring clarity and efficiency to core processes.",
-  },
-  {
-    id: 2,
-    question: "Who are your services best suited for?",
-    answer:
-      "Our services are designed for growing small and mid-sized businesses that rely on structured operations, lead management, and local visibility. If your business is managing leads, invoicing, or internal processes manually, we help centralize and streamline those systems.",
-  },
-  {
-    id: 3,
-    question: "Do you build fully custom dashboards?",
-    answer:
-      "We design dashboards around your workflow while maintaining a structured framework to ensure reliability and scalability. This approach allows us to deliver tailored systems without introducing unnecessary complexity or instability.",
-  },
-  {
-    id: 4,
-    question: "What kind of automation do you implement?",
-    answer:
-      "We implement practical workflow automation such as lead routing, follow-up reminders, invoice notifications, and tool integrations. Our focus is on reducing repetitive tasks and improving operational consistency without over-engineering your processes.",
-  },
-  {
-    id: 5,
-    question: "What results can we expect from Local Search & Visibility Optimization?",
-    answer:
-      "Our approach focuses on strengthening your local search presence through structured optimization. This improves discoverability, credibility, and long-term visibility on Google Search and Maps, supporting consistent inbound inquiries over time.",
-  },
-  {
-    id: 6,
-    question: "Do you provide ongoing support after implementation?",
-    answer:
-      "Yes. We provide structured post-deployment support to ensure stability, usability, and continuous improvement. As your business evolves, we can refine workflows, expand modules, and optimize visibility strategies accordingly.",
-  },
-];
-
-  const toggleFAQ = (id) => {
-    setActiveIndex(activeIndex === id ? null : id);
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 10,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index,
+        duration: 0.4,
+      },
+    }),
   };
 
   return (
@@ -60,10 +77,10 @@ export default function Faqs() {
       </div>
 
       {/* Ambient Gradient Orbs */}
-      <div className="absolute top-20 left-[-100px] w-[500px] h-[500px] bg-blue-500/10 dark:bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-20 left-[-100px] w-[500px] h-[500px] bg-color-1/10 dark:bg-color-1/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-20 right-[-100px] w-[500px] h-[500px] bg-purple-500/10 dark:bg-purple-600/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <FadeIn>
@@ -76,7 +93,7 @@ export default function Faqs() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
               Frequently Asked <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-color-1 to-purple-500">
                 Questions
@@ -92,76 +109,70 @@ export default function Faqs() {
           </FadeIn>
         </div>
 
-        {/* FAQ List */}
-        <StaggerContainer className="space-y-4" delayChildren={0.6}>
-          {faqs.map((faq, index) => {
-            const isActive = activeIndex === faq.id;
-
-            return (
-              <StaggerItem key={faq.id}>
-                <div
-                  className={`
-                                        group rounded-2xl border transition-all duration-300
-                                        ${
-                                          isActive
-                                            ? "bg-n-8/50 border-color-1/50 shadow-lg shadow-color-1/5"
-                                            : "bg-n-8/70 border-n-4/40 dark:border-white/10 hover:border-color-1/30 hover:bg-n-7/70"
-                                        }
-                                    `}
+        {/* FAQ List with new Accordion Layout */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Accordion
+            type="single"
+            collapsible
+            className="border-n-6/10 dark:border-white/10 bg-white/5 dark:bg-n-8/30 w-full rounded-2xl border p-2 backdrop-blur-sm shadow-2xl"
+            defaultValue="1"
+          >
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={faq.id}
+                custom={index}
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+              >
+                <AccordionItem
+                  value={faq.id}
+                  className={cn(
+                    "bg-transparent my-2 overflow-hidden rounded-xl border border-n-6/10 dark:border-white/10 px-2 transition-all duration-300",
+                    "hover:border-color-1/30 data-[state=open]:border-color-1/50 data-[state=open]:bg-n-8/50 data-[state=open]:dark:bg-white/5 data-[state=open]:shadow-lg shadow-color-1/5",
+                  )}
                 >
-                  <button
-                    onClick={() => toggleFAQ(faq.id)}
-                    className="w-full text-left p-6 md:p-8 focus:outline-none"
-                  >
-                    <div className="flex items-center justify-between gap-4">
-                      <h3
-                        className={`
-                                                text-lg md:text-xl font-semibold transition-colors
-                                                ${isActive ? "text-color-1" : "text-gray-900 dark:text-white group-hover:text-color-1"}
-                                            `}
-                      >
-                        {faq.question}
-                      </h3>
-                      <div
-                        className={`
-                                                flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center
-                                                transition-all duration-300 border
-                                                ${
-                                                  isActive
-                                                    ? "bg-color-1 text-white border-color-1 rotate-180"
-                                                    : "bg-white/5 border-white/10 text-gray-500 group-hover:border-color-1/50 group-hover:text-color-1"
-                                                }
-                                            `}
-                      >
-                        {isActive ? (
-                          <Minus className="w-5 h-5" />
-                        ) : (
-                          <Plus className="w-5 h-5" />
-                        )}
-                      </div>
-                    </div>
-
-                    <AnimatePresence>
-                      {isActive && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="pt-4 text-gray-600 dark:text-gray-400 leading-relaxed text-base md:text-lg pr-8 border-t border-gray-100 dark:border-white/5 mt-4">
-                            {faq.answer}
-                          </div>
-                        </motion.div>
+                  <AccordionPrimitive.Header className="flex">
+                    <AccordionPrimitive.Trigger
+                      className={cn(
+                        "group flex flex-1 items-center justify-between gap-4 py-5 text-left text-lg font-semibold",
+                        "text-gray-900 dark:text-white hover:text-color-1 dark:hover:text-color-1 transition-all duration-300 outline-none",
+                        "data-[state=open]:text-color-1",
                       )}
-                    </AnimatePresence>
-                  </button>
-                </div>
-              </StaggerItem>
-            );
-          })}
-        </StaggerContainer>
+                    >
+                      {faq.question}
+                      <PlusIcon
+                        size={20}
+                        className={cn(
+                          "text-color-1/70 shrink-0 transition-transform duration-300 ease-out",
+                          "group-data-[state=open]:rotate-45 group-data-[state=open]:text-color-1",
+                        )}
+                        aria-hidden="true"
+                      />
+                    </AccordionPrimitive.Trigger>
+                  </AccordionPrimitive.Header>
+                  <AccordionContent
+                    className={cn(
+                      "text-gray-600 dark:text-gray-400 overflow-hidden pt-0 pb-5",
+                      "data-[state=open]:animate-accordion-down",
+                      "data-[state=closed]:animate-accordion-up",
+                    )}
+                  >
+                    <div className="border-n-6/10 dark:border-white/5 border-t pt-4 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+            ))}
+          </Accordion>
+        </motion.div>
 
         {/* Footer / Contact CTA */}
         <FadeIn delay={1}>
