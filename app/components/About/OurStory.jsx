@@ -57,7 +57,7 @@ export default function OurStorySection() {
                   href="/about"
                   rightIcon={<ArrowRight className="w-5 h-5" />}
                 >
-                  Learn More
+                  Learn More About Us
                 </PremiumButton>
               </div>
             </FadeIn>

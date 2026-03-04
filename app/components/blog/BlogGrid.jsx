@@ -47,6 +47,7 @@ const BlogGrid = () => {
                 <Link
                   href={`/blog/${data.slug.toLowerCase()}`}
                   className="group block h-full"
+                  aria-label={`Read article: ${data.title}`}
                 >
                   <div className="relative h-full flex flex-col bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/20 dark:border-white/5 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:border-color-1/50">
                     {/* Image Section */}

@@ -47,9 +47,6 @@ export const metadata = {
   verification: {
     google: "mM4EivVNrdAxp4KkLLvDL_6thFebjQbLJ3rYG3L0q9Q",
   },
-  alternates: {
-    canonical: "https://www.solvorrtech.com",
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -55,7 +55,11 @@ const TiltCard = ({ service }) => {
   };
 
   return (
-    <Link href={`/${service.slug}`} className="block h-full w-full">
+    <Link
+      href={`/${service.slug}`}
+      className="block h-full w-full"
+      aria-label={`Explore our ${service.title} service`}
+    >
       <motion.div
         ref={cardRef}
         onMouseMove={handleMouseMove}

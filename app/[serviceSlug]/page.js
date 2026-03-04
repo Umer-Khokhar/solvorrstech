@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
     creator: "Solvorr Tech",
     publisher: "Solvorr Tech",
     alternates: {
-      canonical: `/${service.slug}`,
+      canonical: `${baseUrl}/${service.slug}`,
     },
     robots: {
       index: true,

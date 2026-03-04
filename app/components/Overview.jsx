@@ -214,7 +214,7 @@ const Overview = ({ content }) => {
                   Start Project
                 </PrimaryButton>
                 <OutlineButton size="lg" href="/about" className="rounded-full">
-                  Learn More
+                  About Solvorr Tech
                 </OutlineButton>
               </div>
             </motion.div>

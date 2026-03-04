@@ -12,6 +12,56 @@ import {
   AuthorCard,
 } from "@/app/components/blog/BlogPostComponents";
 
+const baseUrl = "https://www.solvorrtech.com";
+
+export async function generateStaticParams() {
+  return blogs.map((blog) => ({
+    postSlug: blog.slug,
+  }));
+}
+
+export async function generateMetadata({ params }) {
+  const { postSlug } = await params;
+  const blog = blogs.find((b) => b.slug.toLowerCase() === postSlug);
+
+  if (!blog) {
+    return { title: "Post Not Found | Solvorr Tech Blog" };
+  }
+
+  return {
+    title: `${blog.title} | Solvorr Tech Blog`,
+    description: blog.subtitle,
+    keywords: blog.tags?.join(", "),
+    authors: [{ name: blog.author?.name || "Solvorr Tech" }],
+    alternates: {
+      canonical: `${baseUrl}/blog/${blog.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      locale: "en_US",
+      url: `${baseUrl}/blog/${blog.slug}`,
+      title: blog.title,
+      description: blog.subtitle,
+      siteName: "Solvorr Tech",
+      images: [
+        {
+          url: blog.featuredImage || "/overview.png",
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.subtitle,
+      images: [blog.featuredImage || "/overview.png"],
+      creator: "@solvorrtech",
+    },
+  };
+}
+
 // Main Blog Post Page Component
 export default function BlogPostPage({ params }) {
   const ReactParams = React.use(params);

@@ -11,6 +11,12 @@ import { BlurIn, FadeIn } from "./components/animations";
 import { PremiumButton, OutlineButton } from "./components/Button";
 import { TechBackground } from "./components";
 
+export const metadata = {
+  title: "Page Not Found | Solvorr Tech",
+  description:
+    "The page you are looking for could not be found. Return to the Solvorr Tech homepage to explore our custom dashboards, automation, and integration services.",
+};
+
 export default function NotFound() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[4.75rem] lg:pt-[5.25rem]">
