@@ -68,10 +68,9 @@ const Hero = () => {
               style={{ animationDelay: "0.3s" }}
             >
               <p className="body-1 text-n-3 dark:text-n-4 max-w-3xl mx-auto">
-                We design Operations Dashboards, Workflow Automation, and Local
-                Search & Visibility strategies that bring clarity to leads,
-                invoicing, workflows, and digital presence without operational
-                chaos.
+                We design dashboards, automation, and local visibility systems
+                that organize leads, invoicing, and workflows so your business
+                operates with clarity instead of chaos.
               </p>
             </div>
           </div>

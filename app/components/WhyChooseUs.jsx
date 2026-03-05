@@ -16,62 +16,61 @@ import { TechBackground } from ".";
 const features = [
   {
     icon: Wrench,
-    title: "Structured System Design",
-    subtitle: "Built for Real Operations",
+    title: "Built Around Real Business Workflows",
+    subtitle: "Systems That Match Your Operations",
     description:
-      "We design custom dashboards and operational systems tailored to how your business actually runs — centralizing client management, financial tracking, inventory, and workflows into one structured platform.",
+      "We design systems around how businesses actually operate. Instead of forcing teams into rigid software, we structure solutions that align with your workflow — from managing leads and clients to organizing daily operations.",
     gradientFrom: "from-blue-500",
     gradientTo: "to-cyan-500",
-    stat: "Custom",
-    statLabel: "Built Around Your Workflow",
-    highlights: ["Centralized Data", "Role-Based Access"],
+    stat: "Practical",
+    statLabel: "Workflow-Driven Design",
+    highlights: ["Operational Structure", "Business-Focused Systems"],
     colSpan: "lg:col-span-2",
     size: "large",
   },
   {
     icon: Cpu,
-    title: "Reliable Automation",
-    subtitle: "Process Efficiency",
+    title: "Automation That Reduces Manual Work",
+    subtitle: "Reliable Process Efficiency",
     description:
-      "We automate repetitive tasks and connect your tools through secure integrations, reducing manual work and improving operational consistency.",
+      "We streamline repetitive processes and connect your tools through structured workflows. This reduces manual tasks, improves response time, and keeps your operations running consistently.",
     gradientFrom: "from-purple-500",
     gradientTo: "to-pink-500",
-    stat: "24/7",
-    statLabel: "Automated Workflows",
-    highlights: ["API Integrations", "Workflow Logic"],
+    stat: "Efficient",
+    statLabel: "Workflow Automation",
+    highlights: ["Process Automation", "System Integrations"],
     colSpan: "lg:col-span-1",
     size: "medium",
   },
   {
     icon: Lightbulb,
-    title: "Operational Clarity",
-    subtitle: "Data You Can Trust",
+    title: "Clarity Through Structured Data",
+    subtitle: "Insights You Can Trust",
     description:
-      "Our dashboards provide clear visibility into clients, revenue, and performance — helping you make decisions based on structured, real-time data instead of scattered information.",
+      "Our systems organize your operational data into clear dashboards so you always know what is happening across leads, clients, and revenue — without relying on scattered information.",
     gradientFrom: "from-green-500",
     gradientTo: "to-emerald-500",
-    stat: "Live",
-    statLabel: "Performance Tracking",
-    highlights: ["Real-Time Insights", "Clear Reporting"],
+    stat: "Clear",
+    statLabel: "Operational Visibility",
+    highlights: ["Centralized Data", "Clear Reporting"],
     colSpan: "lg:col-span-1",
     size: "medium",
   },
   {
     icon: Eye,
-    title: "Scalable Infrastructure",
-    subtitle: "Built to Grow With You",
+    title: "Designed for Long-Term Growth",
+    subtitle: "Systems That Scale With You",
     description:
-      "We don’t build short-term fixes. Our systems are designed to support growing teams, increasing client volume, and expanding operational complexity without breaking your workflow.",
+      "We focus on building structured foundations that support growing teams and increasing operational complexity, so your systems continue to work as your business expands.",
     gradientFrom: "from-orange-500",
     gradientTo: "to-red-500",
-    stat: "Flexible",
-    statLabel: "Scalable Architecture",
+    stat: "Scalable",
+    statLabel: "Growth-Ready Systems",
     highlights: ["Future-Ready Design", "Long-Term Stability"],
     colSpan: "lg:col-span-2",
     size: "large",
   },
 ];
-
 
 const BentoCard = ({ feature }) => {
   const Icon = feature.icon;
@@ -205,9 +204,11 @@ export default function WhyChooseUs() {
             <h2 className="h2 font-bold text-n-1 dark:text-white mb-6">
               Why Businesses Trust Our Systems
             </h2>
-            <p className="body-1 text-n-3 dark:text-n-4 px-4 md:px-0 max-w-2xl mx-auto">
-              Our expertise lies in replacing spreadsheets, manual processes, and disconnected tools with centralized systems that give founders real control over their operations.
-            </p>
+            {/* <p className="body-1 text-n-3 dark:text-n-4 px-4 md:px-0 max-w-2xl mx-auto">
+              Our expertise lies in replacing spreadsheets, manual processes,
+              and disconnected tools with centralized systems that give founders
+              real control over their operations.
+            </p> */}
           </div>
         </FadeIn>
 

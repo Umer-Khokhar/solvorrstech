@@ -34,19 +34,20 @@ export default function OurStorySection() {
             <div className="space-y-6 text-lg text-n-3 leading-relaxed">
               <FadeIn direction="left" delay={0.2}>
                 <p>
-                  Solvorr Tech was built for businesses that are tired of
-                  running operations on scattered tools and manual processes. We
-                  saw growing companies lose time, revenue visibility, and
-                  efficiency because their systems were not built to scale.
+                  Solvorr Tech was created for businesses that are tired of
+                  managing operations across scattered tools, spreadsheets, and
+                  manual processes. As companies grow, this fragmentation often
+                  leads to missed follow-ups, unclear revenue visibility, and
+                  workflows that become harder to manage.
                 </p>
               </FadeIn>
               <FadeIn direction="left" delay={0.4}>
                 <p>
-                  Our mission is to replace that chaos with structured
-                  infrastructure. Through custom dashboards, workflow
-                  automation, and seamless integrations, we create centralized
-                  business systems that improve control, reduce operational
-                  friction, and support sustainable growth.
+                  We focus on bringing structure to that chaos. By building
+                  operational dashboards, automation workflows, and
+                  strengthening online search visibility, we help businesses
+                  centralize their processes, gain clear insight into leads and
+                  revenue, and create a stronger digital foundation for growth.
                 </p>
               </FadeIn>
             </div>
@@ -80,8 +81,9 @@ export default function OurStorySection() {
                     Our Mission
                   </h3>
                   <p className="text-n-3 text-sm leading-relaxed">
-                    To simplify complexity. We craft smart, scalable digital
-                    products that solve real problems efficiently.
+                    To bring structure to growing businesses through clear
+                    systems, smarter workflows, and reliable operational
+                    foundations.
                   </p>
                 </div>
               </StaggerItem>
@@ -96,8 +98,8 @@ export default function OurStorySection() {
                     Our Vision
                   </h3>
                   <p className="text-n-3 text-sm leading-relaxed">
-                    A world where every business leverages technology seamlessly
-                    bridging creativity and functionality.
+                    A future where businesses run on connected systems instead
+                    of scattered tools.
                   </p>
                 </div>
               </StaggerItem>

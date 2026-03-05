@@ -16,6 +16,8 @@ import {
   Maximize2,
   Layers,
   ShieldCheck,
+  Globe,
+  MapPin,
 } from "lucide-react";
 import Section from "../Section";
 import { TechBackground } from "../index.js";
@@ -118,37 +120,39 @@ const ContactUs = () => {
             <BentoCard className="flex-1" delay={0.2}>
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-color-2 flex items-center justify-center border border-color-1/20 text-white">
-                  <Terminal className="w-6 h-6 font-bold" />
+                  <Globe className="w-6 h-6 font-bold" />
                 </div>
                 <h4 className="text-lg font-bold tracking-tight text-n-1 dark:text-white">
-                  Contact Info
+                  Global Presence
                 </h4>
               </div>
 
               <div className="space-y-4">
                 <div className="group/item">
                   <p className="text-[10px] font-mono text-n-4 uppercase tracking-[0.2em] mb-1">
-                    Email
+                    Direct Email
                   </p>
                   <a
-                    href="mailto:hello@solvorr.tech"
+                    href="mailto:hello@solvorrtech.com"
                     className="text-lg font-medium text-n-1 dark:text-white hover:text-color-1 flex items-center gap-2 group/link transition-colors truncate"
                   >
                     hello@solvorrtech.com
                     <ArrowUpRight className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-all -translate-y-1" />
                   </a>
                 </div>
+
                 <div className="group/item">
                   <p className="text-[10px] font-mono text-n-4 uppercase tracking-[0.2em] mb-1">
-                    Phone
+                    Service Regions
                   </p>
-                  <a
-                    href="tel:+15550000000"
-                    className="text-lg font-medium text-n-1 dark:text-white hover:text-color-1 flex items-center gap-2 group/link transition-colors"
-                  >
-                    +92 321 8437500
-                    <ArrowUpRight className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-all -translate-y-1" />
-                  </a>
+                  <p className="text-sm font-medium text-n-1 dark:text-white flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-color-1" />
+                    United Kingdom
+                  </p>
+                  <p className="text-sm font-medium text-n-1 dark:text-white flex items-center gap-2 mt-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-color-2" />
+                    United Arab Emirates
+                  </p>
                 </div>
               </div>
             </BentoCard>
@@ -181,28 +185,40 @@ const ContactUs = () => {
             <BentoCard className="flex-1" delay={0.4}>
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-color-4 flex items-center justify-center border border-emerald-500/20 text-white">
-                  <Clock className="w-6 h-6 font-bold" />
+                  <MapPin className="w-6 h-6 font-bold" />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold tracking-tight text-n-1 dark:text-white">
-                    Office Hours
+                    Operations
                   </h4>
                   <span className="text-[9px] font-mono text-emerald-500 uppercase flex items-center gap-1">
                     <span className="w-1 h-1 rounded-full bg-emerald-500" />{" "}
-                    Open Now
+                    Global Team
                   </span>
                 </div>
               </div>
-              <div className="p-3 rounded-2xl bg-n-7 dark:bg-white/5 border border-n-6/30">
-                <div className="flex justify-between items-center text-[10px] font-mono text-n-4">
-                  <span>Mon-Fri</span>
-                  <span className="text-n-1 dark:text-white">
-                    09:00 - 18:00 EST
-                  </span>
+
+              <div className="space-y-3">
+                <div className="p-3 rounded-2xl bg-n-7 dark:bg-white/5 border border-n-6/30">
+                  <p className="text-[14px] font-mono text-n-4 uppercase tracking-wider mb-1">
+                    Primary Dev Center
+                  </p>
+                  <p className="text-sm font-medium text-n-1 dark:text-white">
+                    Pakistan
+                  </p>
                 </div>
-                <div className="flex justify-between items-center text-[10px] font-mono text-n-4 mt-1">
-                  <span>Weekend</span>
-                  <span className="text-orange-500">Scheduled Support</span>
+
+                <div className="p-3 rounded-2xl bg-n-7 dark:bg-white/5 border border-n-6/30">
+                  <div className="flex justify-between items-center text-[14px] font-mono text-n-4">
+                    <span>Mon-Fri</span>
+                    <span className="text-n-1 dark:text-white">
+                      9:00 AM - 5:00 PM
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center text-[13px] font-mono text-n-4 mt-1 opacity-60">
+                    <span>Support</span>
+                    <span className="">24/7 Monitoring</span>
+                  </div>
                 </div>
               </div>
             </BentoCard>

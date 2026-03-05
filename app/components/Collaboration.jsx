@@ -8,17 +8,15 @@ const Collaboration = () => {
   return (
     <div className={`py-[4rem] z-20 relative transition-colors duration-300`}>
       <div className="container lg:flex z-10">
-        <div className="max-w-[35rem]">
+        <div className="max-w-[40rem]">
           <FadeIn direction="left">
-            <h2 className="h2 mb-4 md:mb-8">
-              Our Process – From Idea to Reality
-            </h2>
+            <h2 className="h2 mb-4 md:mb-8">Our System Building Process</h2>
           </FadeIn>
           <FadeIn direction="left" delay={0.2}>
             <p className={"body-2 mb-6 text-n-3"}>
-              We follow a structured and efficient approach to turn your ideas
-              into a powerful digital presence. Our process ensures that every
-              project is well-planned, user-friendly, and future-proof.
+              We follow a structured approach to understand your operations,
+              design the right system, and implement solutions that improve
+              visibility, efficiency, and long term scalability.
             </p>
           </FadeIn>
 
@@ -37,7 +35,7 @@ const Collaboration = () => {
           </StaggerContainer>
 
           <FadeIn direction="up" delay={0.8}>
-            <PrimaryButton>Try it now</PrimaryButton>
+            <PrimaryButton>Schedule a Consultation</PrimaryButton>
           </FadeIn>
         </div>
 

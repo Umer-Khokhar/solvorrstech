@@ -55,10 +55,11 @@ const AboutHero = () => {
               variants={fadeIn}
               className="text-lg md:text-xl text-n-3 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light"
             >
-              At Solvorr Tech, we believe growth should be supported by strong
-              internal systems. Our focus is simple design structured dashboards
-              and automation that give businesses clarity, efficiency, and
-              scalable operational foundations.
+              At Solvorr Tech, we believe business growth should be supported by
+              clear systems and strong visibility. We help growing businesses
+              organize leads, clients, and workflows through structured
+              dashboards and automation, while improving their local search
+              presence so the right customers can discover them.
             </motion.p>
 
             <motion.div

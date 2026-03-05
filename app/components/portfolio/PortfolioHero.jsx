@@ -44,23 +44,14 @@ const PortfolioHero = () => {
         <div className="container relative z-10">
           <div className="relative lg:h-screen flex flex-col md:flex-row items-center lg:justify-between xl:mx-auto">
             {/* content section  */}
-            <div className="relative z-20 max-w-xl">
+            <div className="relative z-20 max-w-2xl">
               <motion.h1
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
                 className="h1 mb-4 lg:mb-8 flex flex-wrap"
               >
-                {title.split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    variants={charVariants}
-                    className="inline-block"
-                    style={{ whiteSpace: char === " " ? "pre" : "normal" }}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
+                {title}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
@@ -68,9 +59,10 @@ const PortfolioHero = () => {
                 transition={{ delay: 0.8, duration: 1 }}
                 className="body-1 text-n-3 mb-8 leading-relaxed"
               >
-                Explore the structured dashboards, automation workflows, and
-                integrated systems we’ve built to improve operational clarity,
-                streamline processes, and support scalable business growth.
+                Explore the dashboards, automation workflows, and search
+                visibility systems we’ve built to help businesses organize
+                operations, streamline processes, and strengthen their digital
+                presence for scalable growth.
               </motion.p>
 
               <motion.div
